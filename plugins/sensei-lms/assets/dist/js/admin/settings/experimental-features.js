@@ -1,0 +1,3 @@
+/******/jQuery(document).ready((function(s){s(".sensei-settings_progress-storage-feature").on("change",(function(){s(this).is(":checked")?s(".sensei-settings__progress-storage-settings").show():s(".sensei-settings__progress-storage-settings").hide()})),s(".sensei-settings_progress-storage-synchronization").on("change",(function(){var e=s(this).data("saved-state"),t=s(".sensei-settings_progress-storage-repository");s(this).is(":checked")?e>0&&t.prop("disabled",!1):(
+// ensure comments are selected
+t.filter('[value="comments"]').prop("checked",!0),t.prop("disabled",!0))}))}));

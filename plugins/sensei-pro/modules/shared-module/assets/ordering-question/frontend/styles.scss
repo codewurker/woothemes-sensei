@@ -1,0 +1,130 @@
+body,
+.quiz ol#sensei-quiz-list, // For greater specificity.
+#left-area .wp-block-sensei-pro-question { // For greater specificity in Divi.
+	.sensei-ordering-answers {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		&__active {
+			z-index: 100;
+		}
+	}
+
+	.wp-block-sensei-lms-question-answers__ordering-answers {
+		list-style: disc;
+		margin: 0 0 0 1em;
+		padding: 0;
+
+		li {
+			display: list-item;
+			line-height: 1;
+			list-style: disc;
+			margin-top: 20px;
+		}
+	}
+
+	.sensei-ordering-answer {
+		border: 1px solid currentColor;
+		border-radius: 2px;
+		width: 100%;
+		user-select: none;
+		touch-action: none;
+		transition: unset;
+		margin: 0 0 20px;
+
+		&--draggable {
+			cursor: grab;
+			transition: none;
+			position: relative;
+
+			.sensei-ordering-answer__label {
+				cursor: grab;
+			}
+		}
+
+		&--dragging {
+			cursor: grabbing;
+			z-index: 200;
+			background-color: #fff;
+			color: #1e1e1e;
+
+			.sensei-ordering-answer__label {
+				cursor: grabbing;
+			}
+		}
+
+		.sensei-ordering-answer__icon {
+			fill: currentColor;
+
+			svg {
+				display: block;
+			}
+		}
+
+		.sensei-ordering-answer__label {
+			display: flex;
+			margin: 0;
+			align-content: center;
+			align-items: center;
+			gap: 10px;
+			padding: 14px;
+		}
+
+		.sensei-ordering-answer__content {
+			flex: 1;
+		}
+
+		&--correct,
+		&--wrong {
+			border: 2px solid var(--result-color);
+			margin-left: 0;
+			box-shadow: inset 0 0 1px var(--result-color);
+			cursor: initial;
+
+			&:hover {
+				border-color: var(--result-color);
+			}
+
+			.sensei-ordering-answer__content {
+				flex-basis: 90%;
+			}
+
+			.sensei-ordering-answer__label {
+				cursor: initial;
+			}
+
+			.sensei-ordering-answer__result-icon {
+				display: flex;
+
+				&::after {
+					box-sizing: border-box;
+					color: var(--result-color);
+					content: var(--icon);
+					font-family: dashicons, sans-serif;
+					font-size: 1.5rem;
+					line-height: 1;
+				}
+			}
+		}
+	}
+}
+
+.sensei-ordering-answer {
+	&--correct {
+		--icon: "\f15e";
+		--result-color: #5c936b;
+	}
+
+	&--wrong {
+		--icon: "\f335";
+		--result-color: #cf8b25;
+	}
+}
+
+@media screen and (max-width: (783px)) {
+	.sensei-ordering-answer__icon {
+		order: 2;
+	}
+}

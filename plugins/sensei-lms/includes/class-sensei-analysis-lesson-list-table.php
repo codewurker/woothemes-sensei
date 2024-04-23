@@ -1,0 +1,467 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+/**
+ * Admin Analysis Lesson Data Table in Sensei.
+ *
+ * @package Analytics
+ * @author Automattic
+ *
+ * @since 1.2.0
+ */
+class Sensei_Analysis_Lesson_List_Table extends Sensei_List_Table {
+
+	public $lesson_id;
+	public $course_id;
+	public $page_slug;
+
+	/**
+	 * Constructor
+	 *
+	 * @since  1.2.0
+	 */
+	public function __construct( $lesson_id = 0 ) {
+		$this->lesson_id = intval( $lesson_id );
+		$this->course_id = intval( get_post_meta( $this->lesson_id, '_lesson_course', true ) );
+		$this->page_slug = Sensei_Analysis::PAGE_SLUG;
+
+		// Load Parent token into constructor
+		parent::__construct( 'analysis_lesson' );
+
+		// Actions
+		add_action( 'sensei_before_list_table', array( $this, 'data_table_header' ) );
+		add_action( 'sensei_after_list_table', array( $this, 'data_table_footer' ) );
+		remove_action( 'sensei_before_list_table', array( $this, 'table_search_form' ), 5 );
+
+		add_filter( 'sensei_list_table_search_button_text', array( $this, 'search_button' ) );
+	}
+
+	/**
+	 * Define the columns that are going to be used in the table
+	 *
+	 * @since  1.7.0
+	 * @return array $columns, the array of columns to use with the table
+	 */
+	function get_columns() {
+		$columns = array(
+			'title'     => __( 'Student', 'sensei-lms' ),
+			'started'   => __( 'Date Started', 'sensei-lms' ),
+			'completed' => __( 'Date Completed', 'sensei-lms' ),
+			'status'    => __( 'Status', 'sensei-lms' ),
+			'grade'     => __( 'Grade', 'sensei-lms' ),
+		);
+		/**
+		 * Filter the columns that are going to be used in the table
+		 *
+		 * @hook sensei_analysis_lesson_columns
+		 *
+		 * @param {array}                             $columns    The array of columns to use with the table.
+		 * @param {Sensei_Analysis_Lesson_List_Table} $list_table The current instance of the class
+		 * @return {array} The array of columns to use with the table.
+		 */
+		$columns = apply_filters( 'sensei_analysis_lesson_columns', $columns, $this );
+		return $columns;
+	}
+
+	/**
+	 * get_columns Define the columns that are going to be used in the table
+	 *
+	 * @since  1.7.0
+	 * @return array $columns, the array of columns to use with the table
+	 */
+	function get_sortable_columns() {
+		$columns = array(
+			'completed' => array( 'comment_date', false ),
+		);
+
+		/**
+		 * Filter the sortable columns that are going to be used in the table
+		 *
+		 * @hook sensei_analysis_lesson_columns_sortable
+		 *
+		 * @param {array}                             $columns    The array of sortable columns to use with the table.
+		 * @param {Sensei_Analysis_Lesson_List_Table} $list_table The current instance of the class
+		 * @return {array} The array of soratable columns to use with the table.
+		 */
+		$columns = apply_filters( 'sensei_analysis_lesson_columns_sortable', $columns, $this );
+		return $columns;
+	}
+
+	/**
+	 * Prepare the table with different parameters, pagination, columns and table elements
+	 *
+	 * @since  1.7.0
+	 * @return void
+	 */
+	public function prepare_items() {
+		// Handle orderby (needs work)
+		$orderby = '';
+		if ( ! empty( $_GET['orderby'] ) ) {
+			if ( array_key_exists( esc_html( $_GET['orderby'] ), $this->get_sortable_columns() ) ) {
+				$orderby = esc_html( $_GET['orderby'] );
+			}
+		}
+
+		// Handle order
+		$order = 'ASC';
+		if ( ! empty( $_GET['order'] ) ) {
+			$order = ( 'ASC' == strtoupper( $_GET['order'] ) ) ? 'ASC' : 'DESC';
+		}
+
+		// Handle search, need 4.1 version of WP to be able to restrict statuses to known post_ids
+		$search = false;
+		if ( ! empty( $_GET['s'] ) ) {
+			$search = esc_html( $_GET['s'] );
+		}
+		$this->search = $search;
+
+		$per_page = $this->get_items_per_page( 'sensei_comments_per_page' );
+		/**
+		 * Filter the number of items per page that are going to be used in the table
+		 *
+		 * @hook sensei_comments_per_page
+		 *
+		 * @param {int} $per_page The number of items per page to use with the table.
+		 * @param {string} $type The type of items to display.
+		 * @return {int} The number of items per page to use with the table.
+		 */
+		$per_page = apply_filters( 'sensei_comments_per_page', $per_page, 'sensei_comments' );
+
+		$paged  = $this->get_pagenum();
+		$offset = 0;
+		if ( ! empty( $paged ) ) {
+			$offset = $per_page * ( $paged - 1 );
+		}
+
+		$args = array(
+			'number'  => $per_page,
+			'offset'  => $offset,
+			'orderby' => $orderby,
+			'order'   => $order,
+		);
+		if ( $this->search ) {
+			$args['search'] = $this->search;
+		}
+
+		$this->items = $this->get_lesson_statuses( $args );
+
+		$total_items = $this->total_items;
+		$total_pages = ceil( $total_items / $per_page );
+		$this->set_pagination_args(
+			array(
+				'total_items' => $total_items,
+				'total_pages' => $total_pages,
+				'per_page'    => $per_page,
+			)
+		);
+	}
+
+	/**
+	 * Generate a csv report with different parameters, pagination, columns and table elements
+	 *
+	 * @since  1.7.0
+	 * @return data
+	 */
+	public function generate_report( $report ) {
+
+		$data = array();
+
+		$this->csv_output = true;
+
+		// Handle orderby
+		$orderby = '';
+		if ( ! empty( $_GET['orderby'] ) ) {
+			if ( array_key_exists( esc_html( $_GET['orderby'] ), $this->get_sortable_columns() ) ) {
+				$orderby = esc_html( $_GET['orderby'] );
+			}
+		}
+
+		// Handle order
+		$order = 'ASC';
+		if ( ! empty( $_GET['order'] ) ) {
+			$order = ( 'ASC' == strtoupper( $_GET['order'] ) ) ? 'ASC' : 'DESC';
+		}
+
+		// Handle search
+		$search = false;
+		if ( ! empty( $_GET['s'] ) ) {
+			$search = esc_html( $_GET['s'] );
+		}
+		$this->search = $search;
+
+		$args = array(
+			'number'  => '',
+			'offset'  => 0,
+			'orderby' => $orderby,
+			'order'   => $order,
+		);
+		if ( $this->search ) {
+			$args['search'] = $this->search;
+		}
+
+		// Start the csv with the column headings
+		$column_headers = array();
+		$columns        = $this->get_columns();
+		foreach ( $columns as $key => $title ) {
+			$column_headers[] = $title;
+		}
+		$data[] = $column_headers;
+
+		$this->items = $this->get_lesson_statuses( $args );
+
+		// Process each row
+		foreach ( $this->items as $item ) {
+			$data[] = $this->get_row_data( $item );
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Generates the overall array for a single item in the display
+	 *
+	 * @since  1.7.0
+	 * @param object $item The current item
+	 */
+	protected function get_row_data( $item ) {
+		$user_start_date = get_comment_meta( $item->comment_ID, 'start', true );
+		$user_end_date   = $item->comment_date;
+
+		$grade = null;
+		if ( 'complete' == $item->comment_approved ) {
+			$status = __( 'Completed', 'sensei-lms' );
+			$grade  = __( 'No Grade', 'sensei-lms' );
+		} elseif ( 'graded' == $item->comment_approved ) {
+			$status = __( 'Graded', 'sensei-lms' );
+			$grade  = get_comment_meta( $item->comment_ID, 'grade', true );
+		} elseif ( 'passed' == $item->comment_approved ) {
+			$status = __( 'Passed', 'sensei-lms' );
+			$grade  = get_comment_meta( $item->comment_ID, 'grade', true );
+		} elseif ( 'failed' == $item->comment_approved ) {
+			$status = __( 'Failed', 'sensei-lms' );
+			$grade  = get_comment_meta( $item->comment_ID, 'grade', true );
+		} elseif ( 'ungraded' == $item->comment_approved ) {
+			$status = __( 'Ungraded', 'sensei-lms' );
+		} else {
+			$status        = __( 'In Progress', 'sensei-lms' );
+			$user_end_date = '';
+		}
+
+		// Output users data
+		$user_name = Sensei_Learner::get_full_name( $item->user_id );
+
+		if ( ! $this->csv_output ) {
+			$url = add_query_arg(
+				array(
+					'page'      => $this->page_slug,
+					'user_id'   => $item->user_id,
+					'course_id' => $this->course_id,
+				),
+				admin_url( 'admin.php' )
+			);
+
+			$user_name = '<strong><a class="row-title" href="' . esc_url( $url ) . '">' . esc_html( $user_name ) . '</a></strong>';
+			$status    = sprintf( '<span class="%s">%s</span>', esc_attr( $item->comment_approved ), esc_html( $status ) );
+			if ( is_numeric( $grade ) ) {
+				$grade .= '%';
+			}
+		}
+
+		$column_data = apply_filters(
+			'sensei_analysis_lesson_column_data',
+			array(
+				'title'     => $user_name,
+				'started'   => $user_start_date,
+				'completed' => $user_end_date,
+				'status'    => $status,
+				'grade'     => $grade,
+			),
+			$item,
+			$this
+		);
+
+		$escaped_column_data = array();
+
+		foreach ( $column_data as $key => $data ) {
+			$escaped_column_data[ $key ] = wp_kses_post( $data );
+		}
+
+		return $escaped_column_data;
+	}
+
+	/**
+	 * Return array of lesson statuses
+	 *
+	 * @since  1.7.0
+	 * @return array statuses
+	 */
+	private function get_lesson_statuses( $args ) {
+
+		$activity_args = array(
+			'post_id' => $this->lesson_id,
+			'type'    => 'sensei_lesson_status',
+			'number'  => $args['number'],
+			'offset'  => $args['offset'],
+			'orderby' => $args['orderby'],
+			'order'   => $args['order'],
+			'status'  => 'any',
+		);
+
+		// Searching users on statuses requires sub-selecting the statuses by user_ids
+		if ( $this->search ) {
+			$user_args = array(
+				'search' => '*' . $this->search . '*',
+				'fields' => 'ID',
+			);
+			/**
+			 * Filter the user arguments used to search for users
+			 *
+			 * @hook sensei_analysis_lesson_search_users
+			 *
+			 * @param {array} $user_args The arguments to find users.
+			 * @return {array} The array of user argument.
+			 */
+			$user_args = apply_filters( 'sensei_analysis_lesson_search_users', $user_args );
+			if ( ! empty( $user_args ) ) {
+				$learners_search = new WP_User_Query( $user_args );
+				// Store for reuse on counts
+				$activity_args['user_id'] = (array) $learners_search->get_results();
+			}
+		}
+
+		/**
+		 * Filter the arguments used to search for activity
+		 *
+		 * @hook sensei_analysis_lesson_filter_statuses
+		 *
+		 * @param {array} $activity_args The arguments to find activity.
+		 * @return {array} The array of activity argument.
+		 */
+		$activity_args = apply_filters( 'sensei_analysis_lesson_filter_statuses', $activity_args );
+
+		// WP_Comment_Query doesn't support SQL_CALC_FOUND_ROWS, so instead do this twice
+		$this->total_items = Sensei_Utils::sensei_check_for_activity(
+			array_merge(
+				$activity_args,
+				array(
+					'count'  => true,
+					'offset' => 0,
+					'number' => 0,
+				)
+			)
+		);
+
+		// Ensure we change our range to fit (in case a search threw off the pagination) - Should this be added to all views?
+		if ( $this->total_items < $activity_args['offset'] ) {
+			$new_paged               = floor( $this->total_items / $activity_args['number'] );
+			$activity_args['offset'] = $new_paged * $activity_args['number'];
+		}
+		$statuses = Sensei_Utils::sensei_check_for_activity( $activity_args, true );
+		// Need to always return an array, even with only 1 item
+		if ( ! is_array( $statuses ) ) {
+			$statuses = array( $statuses );
+		}
+		return $statuses;
+	}
+
+	/**
+	 * no_items sets output when no items are found
+	 * Overloads the parent method
+	 *
+	 * @since  1.2.0
+	 * @return void
+	 */
+	public function no_items() {
+		esc_html_e( 'No students found.', 'sensei-lms' );
+	}
+
+	/**
+	 * data_table_header output for table heading
+	 *
+	 * @since  1.2.0
+	 * @return void
+	 */
+	public function data_table_header() {
+		echo '<strong>' . esc_html__( 'Students taking this Lesson', 'sensei-lms' ) . '</strong>';
+	}
+
+	/**
+	 * Extra controls to be displayed between bulk actions and pagination.
+	 *
+	 * @param string $which The location of the extra table nav markup: 'top' or 'bottom'.
+	 */
+	public function extra_tablenav( $which ) {
+		?>
+		<div class="alignleft actions">
+			<?php
+			parent::extra_tablenav( $which );
+			?>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Output search form for table.
+	 */
+	public function table_search_form() {
+		if ( empty( $_REQUEST['s'] ) && ! $this->has_items() ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			return;
+		}
+
+		/**
+		 * Filter the search button text for the list table.
+		 *
+		 * @hook sensei_list_table_search_button_text
+		 *
+		 * @param {string} $text The text for the search button.
+		 * @return {string} The text for the search button.
+		 */
+		$this->search_box( apply_filters( 'sensei_list_table_search_button_text', __( 'Search Users', 'sensei-lms' ) ), 'search_id' );
+	}
+
+	/**
+	 * data_table_footer output for table footer
+	 *
+	 * @since  1.2.0
+	 * @return void
+	 */
+	public function data_table_footer() {
+		$lesson = get_post( $this->lesson_id );
+		$report = sanitize_title( $lesson->post_title ) . '-learners-overview';
+		$url    = add_query_arg(
+			array(
+				'page'                   => $this->page_slug,
+				'lesson_id'              => $this->lesson_id,
+				'sensei_report_download' => $report,
+			),
+			admin_url( 'admin.php' )
+		);
+		echo '<a class="button button-primary" href="' . esc_url( wp_nonce_url( $url, 'sensei_csv_download', '_sdl_nonce' ) ) . '">' . esc_html__( 'Export all rows (CSV)', 'sensei-lms' ) . '</a>';
+	}
+
+	/**
+	 * the text for the search button
+	 *
+	 * @since  1.7.0
+	 * @return string $text
+	 */
+	public function search_button( $text = '' ) {
+
+		$text = __( 'Search Students', 'sensei-lms' );
+
+		return $text;
+
+	}
+}
+
+
+/**
+ * Class WooThemes_Sensei_Analysis_Lesson_List_Table
+ *
+ * @ignore only for backward compatibility
+ * @since 1.9.0
+ * @ignore
+ */
+class WooThemes_Sensei_Analysis_Lesson_List_Table extends Sensei_Analysis_Lesson_List_Table {}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle name="Sensei Pro (WC Paid Courses)">
+  <domain name="sensei-pro">
+    <project name="Sensei Pro (WC Paid Courses)" slug="sensei-pro">
+      <source>
+        <directory>plugins/sensei-pro</directory>
+      </source>
+      <target>
+        <directory>plugins/sensei-pro/lang</directory>
+      </target>
+      <template>
+        <file>plugins/sensei-pro/lang/sensei-pro.pot</file>
+      </template>
+    </project>
+  </domain>
+  <domain name="sensei-lms">
+    <project name="Sensei LMS" slug="sensei-lms">
+      <source>
+        <directory>plugins/sensei-lms</directory>
+      </source>
+      <target>
+        <directory>plugins/sensei-lms/lang</directory>
+      </target>
+      <template>
+        <file>plugins/sensei-lms/lang/sensei-lms.pot</file>
+      </template>
+    </project>
+  </domain>
+</bundle>
