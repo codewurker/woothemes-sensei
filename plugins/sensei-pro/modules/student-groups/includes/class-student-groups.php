@@ -955,6 +955,10 @@ class Student_Groups {
 	 * @return void
 	 */
 	public function add_groups_submenu_page() {
+		if ( ! current_user_can( 'manage_sensei' ) ) {
+			return;
+		}
+
 		add_submenu_page(
 			'sensei',
 			__( 'Groups', 'sensei-pro' ),

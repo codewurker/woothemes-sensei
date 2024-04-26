@@ -130,7 +130,12 @@ class Task_Sell_Course_With_WooCommerce {
 			return false;
 		}
 
-		return get_edit_post_link( $last_course[0]->ID, '&' );
+		return add_query_arg(
+			[
+				'show-course-sell-tour' => 'true',
+			],
+			get_edit_post_link( $last_course[0]->ID, '&' )
+		);
 	}
 
 	/**

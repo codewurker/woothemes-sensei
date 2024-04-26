@@ -1,5 +1,14 @@
 *** Sensei Pro (WC Paid Courses) ***
 
+2024-04-25 - version 4.24.0.1.24.0
+* Sensei LMS: Version bump to 4.24.0 https://raw.githubusercontent.com/Automattic/sensei/version/4.24.0/changelog.txt
+* Sensei Pro: Version bump to 1.24.0
+	* Sanitize user's display name
+	* Add support for VideoPress block on video integrations
+	* Fix students' last activity date in Groups
+	* Sell course with woocommerce tour not appearing
+	* Show Groups in menu only for admins
+
 2024-04-15 - version 4.23.1.1.23.1
 * Sensei LMS: Version bump to 4.23.1 https://raw.githubusercontent.com/Automattic/sensei/version/4.23.1/changelog.txt
 * Sensei Pro: Version bump to 1.23.1

@@ -63,6 +63,8 @@ class ComposerStaticInitbc69057726243faa562ab94e67ae6f6c
         'Sensei\\Internal\\Emails\\Email_Seeder_Data' => __DIR__ . '/../..' . '/includes/internal/emails/class-email-seeder-data.php',
         'Sensei\\Internal\\Emails\\Email_Sender' => __DIR__ . '/../..' . '/includes/internal/emails/class-email-sender.php',
         'Sensei\\Internal\\Emails\\Email_Settings_Tab' => __DIR__ . '/../..' . '/includes/internal/emails/class-email-settings-tab.php',
+        'Sensei\\Internal\\Emails\\Email_Subscription' => __DIR__ . '/../..' . '/includes/internal/emails/class-email-subscription.php',
+        'Sensei\\Internal\\Emails\\Email_User_Profile_Settings' => __DIR__ . '/../..' . '/includes/internal/emails/class-email-user-profile-settings.php',
         'Sensei\\Internal\\Emails\\Generators\\Course_Completed' => __DIR__ . '/../..' . '/includes/internal/emails/generators/class-course-completed.php',
         'Sensei\\Internal\\Emails\\Generators\\Course_Created' => __DIR__ . '/../..' . '/includes/internal/emails/generators/class-course-created.php',
         'Sensei\\Internal\\Emails\\Generators\\Course_Teachers_Trait' => __DIR__ . '/../..' . '/includes/internal/emails/generators/class-course-teachers-trait.php',

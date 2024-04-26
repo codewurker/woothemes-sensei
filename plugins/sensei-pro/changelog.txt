@@ -1,5 +1,15 @@
 # Sensei Pro Changelog
 
+## 1.24.0 - 2024-04-25
+### Security
+- Sanitize user's display name
+
+### Fixed
+- Add support for VideoPress block on video integrations
+- Fix students' last activity date in Groups
+- Sell course with woocommerce tour not appearing
+- Show Groups in menu only for admins
+
 ## 1.23.1 - 2024-04-15
 ### Fixed
 - "wp_style_is was called incorrectly" debug warning

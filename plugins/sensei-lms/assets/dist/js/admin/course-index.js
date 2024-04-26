@@ -55,5 +55,5 @@ e=o(47701),
 /**
  * WordPress dependencies
  */
-o.n(e)()((function(){jQuery(".sensei-show-more").on("click",(function(e){e.preventDefault(),jQuery(e.target).addClass("hidden").siblings().removeClass("hidden")}))}))})
+o.n(e)()((()=>{jQuery(".sensei-show-more").on("click",(e=>{e.preventDefault(),jQuery(e.target).addClass("hidden").siblings().removeClass("hidden")}))}))})
 /******/();

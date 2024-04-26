@@ -55,5 +55,5 @@ e=o(47701),
 /**
  * WordPress dependencies
  */
-o.n(e)()((function(){var e,r,t;jQuery(".sensei-date-picker").datepicker({dateFormat:"yy-mm-dd"});var o=null===(e=Intl)||void 0===e||null===(r=e.DateTimeFormat())||void 0===r||null===(t=r.resolvedOptions())||void 0===t?void 0:t.timeZone;o&&jQuery('.sensei-analysis__top-filters input[name="timezone"]').val(o)}))})
+o.n(e)()((()=>{var e,r,t;jQuery(".sensei-date-picker").datepicker({dateFormat:"yy-mm-dd"});const o=null===(e=Intl)||void 0===e||null===(r=e.DateTimeFormat())||void 0===r||null===(t=r.resolvedOptions())||void 0===t?void 0:t.timeZone;o&&jQuery('.sensei-analysis__top-filters input[name="timezone"]').val(o)}))})
 /******/();

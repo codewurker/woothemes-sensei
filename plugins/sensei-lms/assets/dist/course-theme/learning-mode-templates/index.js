@@ -1,74 +1,176 @@
 /******/(()=>{// webpackBootstrap
 /******/var e={
 /***/76061:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */var n;r.d(t,{
-/* harmony export */c3:()=>/* binding */a
-/* harmony export */,po:()=>/* binding */l
-/* harmony export */,zd:()=>/* binding */s
+/***/(e,t,n)=>{"use strict";
+/* harmony export */var r;n.d(t,{
+/* harmony export */c3:()=>/* binding */l
+/* harmony export */,po:()=>/* binding */i
+/* harmony export */,zd:()=>/* binding */a
 /* harmony export */,vX:()=>/* binding */o
 /* harmony export */,cQ:()=>/* binding */c
-/* harmony export */,fW:()=>/* binding */u
-/* harmony export */});var i=(null===(n=window.sensei)||void 0===n?void 0:n.learningModeTemplateSetting)||{},a=i.value,l=i.name,s=i.options,o=i.customizeUrl,c=i.formId,u=i.section}
+/* harmony export */,fW:()=>/* binding */m
+/* harmony export */});const s=(null===(r=window.sensei)||void 0===r?void 0:r.learningModeTemplateSetting)||{},l=s.value,i=s.name,a=s.options,o=s.customizeUrl,c=s.formId,m=s.section}
 /***/,
 /***/42616:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */M:()=>/* binding */s
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */M:()=>/* binding */a
 /* harmony export */});
-/* harmony import */var n=r(69307),i=r(65736),a=r(55609),l=r(76061),__=i.__,s=function(e){var t=e.upsell,r=e.name,i=e.isActive,s=(0,n.useCallback)((function(){var e=document.querySelector("#".concat(l/* .formId */.cQ,' input[name="_wp_http_referer"]')),t=e.getAttribute("value");e.setAttribute("value","".concat(t,"#").concat(l/* .tabId */.fW))}),[]);// Update the _wp_http_referer so it opens the current settings
+/* harmony import */var r=n(69307),s=n(65736),l=n(55609),i=n(76061);
+/* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+/**
+ * Renders the template action buttons.
+ *
+ * @param {Object}  props
+ * @param {string}  props.name         The name of the template.
+ * @param {Object}  props.upsell       The template upsell data.
+ * @param {string}  props.upsell.title The upsell cta title.
+ * @param {string}  props.upsell.url   The upsell url.
+ * @param {boolean} props.isActive     Tells if this template is activated.
+ */
+const a=e=>{const{upsell:t,name:n,isActive:a}=e,o=(0,r.useCallback)((()=>{const e=document.querySelector(`#${i/* .formId */.cQ} input[name="_wp_http_referer"]`),t=e.getAttribute("value");e.setAttribute("value",`${t}#${i/* .tabId */.fW}`)}),[]);
+// Update the _wp_http_referer so it opens the current settings
 // tab after page refresh.
-return(0,n.createElement)(n.Fragment,null,t&&(0,n.createElement)(a.Button,{isPrimary:!0,href:t.url,target:"_blank"},t.title),!i&&!t&&(0,n.createElement)(a.Button,{isPrimary:!0,type:"submit",value:r,name:l/* .inputName */.po,form:l/* .formId */.cQ,onClick:s},__("Activate","sensei-lms")),i&&(0,n.createElement)(a.Button,{isPrimary:!0,href:l/* .customizeUrl */.vX},__("Customize","sensei-lms")))};
-/* harmony import */}
-/***/,
+return(0,r.createElement)(r.Fragment,null,t&&(0,r.createElement)(l.Button,{isPrimary:!0,href:t.url,target:"_blank"},t.title),!a&&!t&&(0,r.createElement)(l.Button,{isPrimary:!0,type:"submit",value:n,name:i/* .inputName */.po,form:i/* .formId */.cQ,onClick:o},(0,s.__)("Activate","sensei-lms")),a&&(0,r.createElement)(l.Button,{isPrimary:!0,href:i/* .customizeUrl */.vX},(0,s.__)("Customize","sensei-lms")))};
+/***/},
 /***/34412:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
 /* harmony export */k:()=>/* binding */c
 /* harmony export */});
-/* harmony import */var n=r(69307),i=r(90005),a=r.n(i),l=r(65736),s=r(73552),o=r(42616),__=l.__,c=function(e){var t=e.title,r=e.isActive,i=e.upsell;return(0,n.createElement)("div",{className:a()({"sensei-lm-template-option__footer":!0,"sensei-lm-template-option__footer--active":r})},(0,n.createElement)(s/* .TemplateOptionTitle */.w,{isActive:r,tag:r?t:null==i?void 0:i.tag},r?__("Active","sensei-lms"):t),(0,n.createElement)("div",{className:"sensei-lm-template-option__actions"},(0,n.createElement)(o/* .TemplateActions */.M,e)))};
-/* harmony import */}
-/***/,
+/* harmony import */var r=n(69307),s=n(90005),l=n.n(s),i=n(65736),a=n(73552),o=n(42616);
+/* harmony import */
+/**
+ * External dependencies
+ */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+/**
+ * Renders the Learning Mode template option's footer.
+ *
+ * @param {Object} props
+ * @param {string} props.name       The name of the template.
+ * @param {string} props.title      The title of the template.
+ * @param {string} props.isActive   Tells if the current template is activated.
+ * @param {Object} props.upsell     The upsell data.
+ * @param {string} props.upsell.tag The upsell tag.
+ */
+const c=e=>{const{title:t,isActive:n,upsell:s}=e;return(0,r.createElement)("div",{className:l()({"sensei-lm-template-option__footer":!0,"sensei-lm-template-option__footer--active":n})},(0,r.createElement)(a/* .TemplateOptionTitle */.w,{isActive:n,tag:n?t:null==s?void 0:s.tag},n?(0,i.__)("Active","sensei-lms"):t),(0,r.createElement)("div",{className:"sensei-lm-template-option__actions"},(0,r.createElement)(o/* .TemplateActions */.M,e)))};
+/***/},
 /***/46067:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */q:()=>/* binding */a
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */q:()=>/* binding */l
 /* harmony export */});
-/* harmony import */var n=r(69307),i=r(65736),__=i.__,a=function(e){var t=e.title,r=e.url,i=e.onPreview;return(0,n.createElement)("div",{className:"sensei-lm-template-option__thumbnail",onKeyPress:i,onClick:i,tabIndex:"0",role:"option",title:t},(0,n.createElement)("img",{alt:t,src:r}),(0,n.createElement)("div",{className:"sensei-lm-template-option__preview"},(0,n.createElement)("h4",{className:"sensei-lm-template-option__preview-title"},__("Preview","sensei-lms"))))};
-/* harmony import */}
-/***/,
+/* harmony import */var r=n(69307),s=n(65736);
+/* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Renders the Learning Mode template thumbnail.
+ *
+ * @param {Object}   props
+ * @param {string}   props.title     The title of the template.
+ * @param {string}   props.url       The url of the image.
+ * @param {Function} props.onPreview The callback to show preview.
+ */
+const l=e=>{let{title:t,url:n,onPreview:l}=e;return(0,r.createElement)("div",{className:"sensei-lm-template-option__thumbnail",onKeyPress:l,onClick:l,tabIndex:"0",role:"option",title:t},(0,r.createElement)("img",{alt:t,src:n}),(0,r.createElement)("div",{className:"sensei-lm-template-option__preview"},(0,r.createElement)("h4",{className:"sensei-lm-template-option__preview-title"},(0,s.__)("Preview","sensei-lms"))))};
+/***/},
 /***/73552:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */w:()=>/* binding */l
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */w:()=>/* binding */i
 /* harmony export */});
-/* harmony import */var n=r(69307),i=r(90005),a=r.n(i),l=function(e){var t=e.children,r=e.isActive,i=e.tag,l=void 0===i?"":i;return(0,n.createElement)("h4",{className:a()({"sensei-lm-template-option__title":!0,"sensei-lm-template-option__title--active":r})},t,l&&(0,n.createElement)(n.Fragment,null,": ",(0,n.createElement)("span",{className:"sensei-lm-template-option__title-tag"},l)))};
-/* harmony import */}
-/***/,
+/* harmony import */var r=n(69307),s=n(90005),l=n.n(s);
+/* harmony import */
+/**
+ * External dependencies
+ */
+/**
+ * Renders a template option title.
+ *
+ * @param {Object}  props
+ * @param {string}  props.children The title.
+ * @param {string}  props.tag      A tag for template to indicate it belongs to some group of templates. E.g.: "PREMIUM"
+ * @param {boolean} props.isActive If the template is activated.
+ */
+const i=e=>{let{children:t,isActive:n,tag:s=""}=e;return(0,r.createElement)("h4",{className:l()({"sensei-lm-template-option__title":!0,"sensei-lm-template-option__title--active":n})},t,s&&(0,r.createElement)(r.Fragment,null,": ",(0,r.createElement)("span",{className:"sensei-lm-template-option__title-tag"},s)))};
+/***/},
 /***/31491:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */P:()=>/* binding */l
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */P:()=>/* binding */i
 /* harmony export */});
-/* harmony import */var n=r(69307),i=r(34412),a=r(46067),l=function(e){var t=e.name,r=e.title,l=e.screenshots,s=e.onPreview,o=(0,n.useCallback)((function(){return s(t)}),[s,t]);return(0,n.createElement)("li",{className:"sensei-lm-template-option__container"},(0,n.createElement)(a/* .TemplateOptionThumbnail */.q,{title:r,url:l.thumbnail,onPreview:o}),(0,n.createElement)(i/* .TemplateOptionFooter */.k,e))};
-/* harmony import */}
-/***/,
+/* harmony import */var r=n(69307),s=n(34412),l=n(46067);
+/* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+/**
+ * Renders the individual template.
+ *
+ * @param {Object}   props
+ * @param {string}   props.name                  The name of the template.
+ * @param {string}   props.title                 The title of the template.
+ * @param {Object}   props.screenshots           The urls to screenshot images of the template.
+ * @param {string}   props.screenshots.thumbnail The url to the thumbnail screenshot of the template.
+ * @param {Function} props.onPreview             The callback that handles the preview.
+ */
+const i=e=>{const{name:t,title:n,screenshots:i,onPreview:a}=e,o=(0,r.useCallback)((()=>a(t)),[a,t]);return(0,r.createElement)("li",{className:"sensei-lm-template-option__container"},(0,r.createElement)(l/* .TemplateOptionThumbnail */.q,{title:n,url:i.thumbnail,onPreview:o}),(0,r.createElement)(s/* .TemplateOptionFooter */.k,e))};
+/***/},
 /***/36522:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */w:()=>/* binding */s
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */w:()=>/* binding */a
 /* harmony export */});
-/* harmony import */var n=r(69307),i=r(55609),a=r(65736),l=r(42616),__=a.__,s=function(e){var t=e.onClose,r=e.title,s=e.screenshots;return(0,n.createElement)(i.Modal,{onRequestClose:t,title:(0,a.sprintf)(__("Preview %1$s","sensei-lms"),r),className:"sensei-lm-template-preview__modal"},(0,n.createElement)("div",{className:"sensei-lm-template-preview__container"},(0,n.createElement)("div",{className:"sensei-lm-template-preview__img"},(0,n.createElement)("img",{alt:r,src:s.full})),(0,n.createElement)("div",{className:"sensei-lm-template-preview__footer"},(0,n.createElement)(i.Button,{className:"sensei-lm-template-preview__cancel-btn",onClick:t,variant:"tertiary"},__("Cancel","sensei-lms")),(0,n.createElement)(l/* .TemplateActions */.M,e))))};
-/* harmony import */}
-/***/,
+/* harmony import */var r=n(69307),s=n(55609),l=n(65736),i=n(42616);
+/* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+/**
+ * Renders the template preview.
+ *
+ * @param {Object}   props
+ * @param {Function} props.onClose          Handles the modal closing.
+ * @param {string}   props.title            The title of the template.
+ * @param {Object}   props.screenshots      The url of the screenshots.
+ * @param {string}   props.screenshots.full The url of the full size screenshot.
+ */
+const a=e=>{const{onClose:t,title:n,screenshots:a}=e;return(0,r.createElement)(s.Modal,{onRequestClose:t,title:(0,l.sprintf)((0,l.__)("Preview %1$s","sensei-lms"),n),className:"sensei-lm-template-preview__modal"},(0,r.createElement)("div",{className:"sensei-lm-template-preview__container"},(0,r.createElement)("div",{className:"sensei-lm-template-preview__img"},(0,r.createElement)("img",{alt:n,src:a.full})),(0,r.createElement)("div",{className:"sensei-lm-template-preview__footer"},(0,r.createElement)(s.Button,{className:"sensei-lm-template-preview__cancel-btn",onClick:t,variant:"tertiary"},(0,l.__)("Cancel","sensei-lms")),(0,r.createElement)(i/* .TemplateActions */.M,e))))};
+/***/},
 /***/76153:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */k:()=>/* binding */c
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */k:()=>/* binding */o
 /* harmony export */});
-/* harmony import */var n=r(25773),i=r(66886),a=r(69307),l=r(76061),s=r(31491),o=r(36522),c=function(){var e=(0,a.useState)(null),t=(0,i/* ["default"] */.Z)(e,2),r=t[0],c=t[1],u=l/* .templates */.zd[r]||{},m=(0,a.useCallback)((function(e){return c(e)}),[]),p=(0,a.useCallback)((function(){return c(null)}),[]);return(0,a.createElement)(a.Fragment,null,Object.keys(l/* .templates */.zd).map((function(e){var t=l/* .templates */.zd[e];return(0,a.createElement)(s/* .TemplateOption */.P,(0,n/* ["default"] */.Z)({},t,{key:t.name,isActive:l/* .activeTemplateName */.c3===t.name,onPreview:m}))})),r&&(0,a.createElement)(o/* .TemplatePreview */.w,(0,n/* ["default"] */.Z)({},u,{onClose:p,isActive:l/* .activeTemplateName */.c3===u.name})))};
-/* harmony import */}
-/***/,
+/* harmony import */var r=n(25773),s=n(69307),l=n(76061),i=n(31491),a=n(36522);
+/* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+const o=()=>{const[e,t]=(0,s.useState)(null),n=l/* .templates */.zd[e]||{},o=(0,s.useCallback)((e=>t(e)),[]),c=(0,s.useCallback)((()=>t(null)),[]);return(0,s.createElement)(s.Fragment,null,Object.keys(l/* .templates */.zd).map((e=>{const t=l/* .templates */.zd[e];return(0,s.createElement)(i/* .TemplateOption */.P,(0,r/* ["default"] */.Z)({},t,{key:t.name,isActive:l/* .activeTemplateName */.c3===t.name,onPreview:o}))})),e&&(0,s.createElement)(a/* .TemplatePreview */.w,(0,r/* ["default"] */.Z)({},n,{onClose:c,isActive:l/* .activeTemplateName */.c3===n.name})))};
+/***/},
 /***/55609:
 /***/e=>{"use strict";e.exports=window.wp.components}
 /***/,
@@ -79,73 +181,34 @@ return(0,n.createElement)(n.Fragment,null,t&&(0,n.createElement)(a.Button,{isPri
 /***/e=>{"use strict";e.exports=window.wp.i18n}
 /***/,
 /***/90005:
-/***/(e,t)=>{var r;
+/***/(e,t)=>{var n;
 /*!
 	Copyright (c) 2018 Jed Watson.
 	Licensed under the MIT License (MIT), see
 	http://jedwatson.github.io/classnames
 */
-/* global define */!function(){"use strict";var n={}.hasOwnProperty;function i(){for(var e="",t=0;t<arguments.length;t++){var r=arguments[t];r&&(e=l(e,a(r)))}return e}function a(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return i.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var t="";for(var r in e)n.call(e,r)&&e[r]&&(t=l(t,r));return t}function l(e,t){return t?e?e+" "+t:e+t:e}e.exports?(i.default=i,e.exports=i):void 0===(r=function(){return i}.apply(t,[]))||(e.exports=r)}()}
+/* global define */!function(){"use strict";var r={}.hasOwnProperty;function s(){for(var e="",t=0;t<arguments.length;t++){var n=arguments[t];n&&(e=i(e,l(n)))}return e}function l(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return s.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var t="";for(var n in e)r.call(e,n)&&e[n]&&(t=i(t,n));return t}function i(e,t){return t?e?e+" "+t:e+t:e}e.exports?(s.default=s,e.exports=s):void 0===(n=function(){return s}.apply(t,[]))||(e.exports=n)}()}
 /***/,
-/***/1793:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */function n(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}
-/***/r.d(t,{
-/* harmony export */Z:()=>/* binding */n
-/* harmony export */})},
-/***/66470:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */function n(e){if(Array.isArray(e))return e}
-/***/r.d(t,{
-/* harmony export */Z:()=>/* binding */n
-/* harmony export */})},
 /***/25773:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */function n(){return n=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},n.apply(this,arguments)}
-/***/r.d(t,{
-/* harmony export */Z:()=>/* binding */n
-/* harmony export */})},
-/***/22446:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */function n(e,t){var r=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null!=r){var n,i,a=[],_n=!0,l=!1;try{for(r=r.call(e);!(_n=(n=r.next()).done)&&(a.push(n.value),!t||a.length!==t);_n=!0);}catch(e){l=!0,i=e}finally{try{_n||null==r.return||r.return()}finally{if(l)throw i}}return a}}
-/***/r.d(t,{
-/* harmony export */Z:()=>/* binding */n
-/* harmony export */})},
-/***/53764:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */function n(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}
-/***/r.d(t,{
-/* harmony export */Z:()=>/* binding */n
-/* harmony export */})},
-/***/66886:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */Z:()=>/* binding */s
-/* harmony export */});
-/* harmony import */var n=r(66470),i=r(22446),a=r(64013),l=r(53764);
-/* harmony import */function s(e,t){return(0,n/* ["default"] */.Z)(e)||(0,i/* ["default"] */.Z)(e,t)||(0,a/* ["default"] */.Z)(e,t)||(0,l/* ["default"] */.Z)()}
-/***/},
-/***/64013:
-/***/(e,t,r)=>{"use strict";
-/* harmony export */r.d(t,{
-/* harmony export */Z:()=>/* binding */i
-/* harmony export */});
-/* harmony import */var n=r(1793);function i(e,t){if(e){if("string"==typeof e)return(0,n/* ["default"] */.Z)(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?(0,n/* ["default"] */.Z)(e,t):void 0}}
+/***/(e,t,n)=>{"use strict";
+/* harmony export */function r(){return r=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},r.apply(this,arguments)}
 /***/
-/******/}},t={};
+/******/n.d(t,{
+/* harmony export */Z:()=>/* binding */r
+/* harmony export */})}},t={};
 /************************************************************************/
 /******/ // The module cache
 /******/
 /******/
 /******/ // The require function
-/******/function r(n){
+/******/function n(r){
 /******/ // Check if module is in cache
-/******/var i=t[n];
-/******/if(void 0!==i)
-/******/return i.exports;
+/******/var s=t[r];
+/******/if(void 0!==s)
+/******/return s.exports;
 /******/
 /******/ // Create a new module (and put it into the cache)
-/******/var a=t[n]={
+/******/var l=t[r]={
 /******/ // no module.id needed
 /******/ // no module.loaded needed
 /******/exports:{}
@@ -155,31 +218,38 @@ return(0,n.createElement)(n.Fragment,null,t&&(0,n.createElement)(a.Button,{isPri
 /******/
 /******/
 /******/ // Return the exports of the module
-/******/return e[n](a,a.exports,r),a.exports;
+/******/return e[r](l,l.exports,n),l.exports;
 /******/}
 /******/
 /************************************************************************/
 /******/ /* webpack/runtime/compat get default export */
 /******/
 /******/ // getDefaultExport function for compatibility with non-harmony modules
-/******/r.n=e=>{
+/******/n.n=e=>{
 /******/var t=e&&e.__esModule?
 /******/()=>e.default
 /******/:()=>e
 /******/;
-/******/return r.d(t,{a:t}),t;
+/******/return n.d(t,{a:t}),t;
 /******/},
 /******/ // define getter functions for harmony exports
-/******/r.d=(e,t)=>{
-/******/for(var n in t)
-/******/r.o(t,n)&&!r.o(e,n)&&
-/******/Object.defineProperty(e,n,{enumerable:!0,get:t[n]})
+/******/n.d=(e,t)=>{
+/******/for(var r in t)
+/******/n.o(t,r)&&!n.o(e,r)&&
+/******/Object.defineProperty(e,r,{enumerable:!0,get:t[r]})
 /******/;
 /******/},
-/******/r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)
+/******/n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)
 /******/,
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (()=>{"use strict";
-/* harmony import */var e=r(69307),t=r(76153),n=document.getElementById("sensei-lm-block-template__options");
-/* harmony import */(0,e.render)((0,e.createElement)(t/* .TemplateSelector */.k,null),n)})()})
+/* harmony import */var e=n(69307),t=n(76153);
+/* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+const r=document.getElementById("sensei-lm-block-template__options");(0,e.render)((0,e.createElement)(t/* .TemplateSelector */.k,null),r)})()})
 /******/();

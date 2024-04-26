@@ -1,5 +1,8 @@
 # Sensei Interactive Blocks Changelog
 
+## 2024-04-25 - version 1.4.5
+* Add support for VideoPress block on video integrations
+
 ## 2024-03-20 - version 1.4.4
 * Update button of the question block to have the correct styles on some themes where it was broken
 

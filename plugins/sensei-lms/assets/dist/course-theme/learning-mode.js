@@ -1,11 +1,11 @@
 /******/(()=>{// webpackBootstrap
 /******/var e={
 /***/96539:
-/***/(e,t,n)=>{var r=n(77400).Symbol;
-/** Built-in value references. */e.exports=r}
+/***/(e,t,o)=>{var n=o(77400).Symbol;
+/** Built-in value references. */e.exports=n}
 /***/,
 /***/99736:
-/***/(e,t,n)=>{var r=n(96539),o=n(34840),i=n(21258),s=r?r.toStringTag:void 0;
+/***/(e,t,o)=>{var n=o(96539),r=o(34840),s=o(21258),i=n?n.toStringTag:void 0;
 /** `Object#toString` result references. */e.exports=
 /**
  * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -14,10 +14,10 @@
  * @param {*} value The value to query.
  * @returns {string} Returns the `toStringTag`.
  */
-function(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":s&&s in Object(e)?o(e):i(e)}}
+function(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":i&&i in Object(e)?r(e):s(e)}}
 /***/,
 /***/74833:
-/***/(e,t,n)=>{var r=n(56127),o=/^\s+/;
+/***/(e,t,o)=>{var n=o(56127),r=/^\s+/;
 /** Used to match leading whitespace. */e.exports=
 /**
  * The base implementation of `_.trim`.
@@ -26,7 +26,7 @@ function(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":s&&s 
  * @param {string} string The string to trim.
  * @returns {string} Returns the trimmed string.
  */
-function(e){return e?e.slice(0,r(e)+1).replace(o,""):e}}
+function(e){return e?e.slice(0,n(e)+1).replace(r,""):e}}
 /***/,
 /***/39120:
 /***/e=>{
@@ -34,7 +34,7 @@ function(e){return e?e.slice(0,r(e)+1).replace(o,""):e}}
 var t="object"==typeof window&&window&&window.Object===Object&&window;e.exports=t}
 /***/,
 /***/34840:
-/***/(e,t,n)=>{var r=n(96539),o=Object.prototype,i=o.hasOwnProperty,s=o.toString,c=r?r.toStringTag:void 0;
+/***/(e,t,o)=>{var n=o(96539),r=Object.prototype,s=r.hasOwnProperty,i=r.toString,c=n?n.toStringTag:void 0;
 /** Used for built-in method references. */e.exports=
 /**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -43,7 +43,7 @@ var t="object"==typeof window&&window&&window.Object===Object&&window;e.exports=
  * @param {*} value The value to query.
  * @returns {string} Returns the raw `toStringTag`.
  */
-function(e){var t=i.call(e,c),n=e[c];try{e[c]=void 0;var r=!0}catch(e){}var o=s.call(e);return r&&(t?e[c]=n:delete e[c]),o}}
+function(e){var t=s.call(e,c),o=e[c];try{e[c]=void 0;var n=!0}catch(e){}var r=i.call(e);return n&&(t?e[c]=o:delete e[c]),r}}
 /***/,
 /***/21258:
 /***/e=>{
@@ -64,8 +64,8 @@ var t=Object.prototype.toString;
 function(e){return t.call(e)}}
 /***/,
 /***/77400:
-/***/(e,t,n)=>{var r=n(39120),o="object"==typeof self&&self&&self.Object===Object&&self,i=r||o||Function("return this")();
-/** Detect free variable `self`. */e.exports=i}
+/***/(e,t,o)=>{var n=o(39120),r="object"==typeof self&&self&&self.Object===Object&&self,s=n||r||Function("return this")();
+/** Detect free variable `self`. */e.exports=s}
 /***/,
 /***/56127:
 /***/e=>{
@@ -78,10 +78,10 @@ var t=/\s/;
  * @private
  * @param {string} string The string to inspect.
  * @returns {number} Returns the index of the last non-whitespace character.
- */e.exports=function(e){for(var n=e.length;n--&&t.test(e.charAt(n)););return n}}
+ */e.exports=function(e){for(var o=e.length;o--&&t.test(e.charAt(o)););return o}}
 /***/,
 /***/66726:
-/***/(e,t,n)=>{var r=n(11611),o=n(82846),i=n(91936),s=Math.max,c=Math.min;
+/***/(e,t,o)=>{var n=o(11611),r=o(82846),s=o(91936),i=Math.max,c=Math.min;
 /** Error message constants. */e.exports=
 /**
  * Creates a debounced function that delays invoking `func` until after `wait`
@@ -137,23 +137,23 @@ var t=/\s/;
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
-function(e,t,n){var a,u,l,d,f,v,p=0,m=!1,y=!1,b=!0;if("function"!=typeof e)throw new TypeError("Expected a function");function w(t){var n=a,r=u;return a=u=void 0,p=t,d=e.apply(r,n)}function h(e){var n=e-v;
+function(e,t,o){var a,u,d,l,f,m,p=0,v=!1,b=!1,w=!0;if("function"!=typeof e)throw new TypeError("Expected a function");function y(t){var o=a,n=u;return a=u=void 0,p=t,l=e.apply(n,o)}function h(e){var o=e-m;
 // Either this is the first call, activity has stopped and we're at the
 // trailing edge, the system time has gone backwards and we're treating
 // it as the trailing edge, or we've hit the `maxWait` limit.
-return void 0===v||n>=t||n<0||y&&e-p>=l}function g(){var e=o();if(h(e))return O(e);
+return void 0===m||o>=t||o<0||b&&e-p>=d}function g(){var e=r();if(h(e))return x(e);
 // Restart the timer.
-f=setTimeout(g,function(e){var n=t-(e-v);return y?c(n,l-(e-p)):n}(e))}function O(e){
+f=setTimeout(g,function(e){var o=t-(e-m);return b?c(o,d-(e-p)):o}(e))}function x(e){
 // Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-return f=void 0,b&&a?w(e):(a=u=void 0,d)}function j(){var e=o(),n=h(e);if(a=arguments,u=this,v=e,n){if(void 0===f)return function(e){
+return f=void 0,w&&a?y(e):(a=u=void 0,l)}function S(){var e=r(),o=h(e);if(a=arguments,u=this,m=e,o){if(void 0===f)return function(e){
 // Invoke the leading edge.
 // Reset any `maxWait` timer.
 return p=e,
 // Start the timer for the trailing edge.
-f=setTimeout(g,t),m?w(e):d}(v);if(y)
+f=setTimeout(g,t),v?y(e):l}(m);if(b)
 // Handle invocations in a tight loop.
-return clearTimeout(f),f=setTimeout(g,t),w(v)}return void 0===f&&(f=setTimeout(g,t)),d}return t=i(t)||0,r(n)&&(m=!!n.leading,l=(y="maxWait"in n)?s(i(n.maxWait)||0,t):l,b="trailing"in n?!!n.trailing:b),j.cancel=function(){void 0!==f&&clearTimeout(f),p=0,a=v=u=f=void 0},j.flush=function(){return void 0===f?d:O(o())},j}}
+return clearTimeout(f),f=setTimeout(g,t),y(m)}return void 0===f&&(f=setTimeout(g,t)),l}return t=s(t)||0,n(o)&&(v=!!o.leading,d=(b="maxWait"in o)?i(s(o.maxWait)||0,t):d,w="trailing"in o?!!o.trailing:w),S.cancel=function(){void 0!==f&&clearTimeout(f),p=0,a=m=u=f=void 0},S.flush=function(){return void 0===f?l:x(r())},S}}
 /***/,
 /***/11611:
 /***/e=>{e.exports=
@@ -213,7 +213,7 @@ function(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}}
 function(e){return null!=e&&"object"==typeof e}}
 /***/,
 /***/55193:
-/***/(e,t,n)=>{var r=n(99736),o=n(92360);
+/***/(e,t,o)=>{var n=o(99736),r=o(92360);
 /** `Object#toString` result references. */e.exports=
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -232,10 +232,10 @@ function(e){return null!=e&&"object"==typeof e}}
  * _.isSymbol('abc');
  * // => false
  */
-function(e){return"symbol"==typeof e||o(e)&&"[object Symbol]"==r(e)}}
+function(e){return"symbol"==typeof e||r(e)&&"[object Symbol]"==n(e)}}
 /***/,
 /***/82846:
-/***/(e,t,n)=>{var r=n(77400);
+/***/(e,t,o)=>{var n=o(77400);
 /**
  * Gets the timestamp of the number of milliseconds that have elapsed since
  * the Unix epoch (1 January 1970 00:00:00 UTC).
@@ -251,10 +251,10 @@ function(e){return"symbol"==typeof e||o(e)&&"[object Symbol]"==r(e)}}
  *   console.log(_.now() - stamp);
  * }, _.now());
  * // => Logs the number of milliseconds it took for the deferred invocation.
- */e.exports=function(){return r.Date.now()}}
+ */e.exports=function(){return n.Date.now()}}
 /***/,
 /***/91936:
-/***/(e,t,n)=>{var r=n(74833),o=n(11611),i=n(55193),s=/^[-+]0x[0-9a-f]+$/i,c=/^0b[01]+$/i,a=/^0o[0-7]+$/i,u=parseInt;
+/***/(e,t,o)=>{var n=o(74833),r=o(11611),s=o(55193),i=/^[-+]0x[0-9a-f]+$/i,c=/^0b[01]+$/i,a=/^0o[0-7]+$/i,u=parseInt;
 /** Used as references for various `Number` constants. */e.exports=
 /**
  * Converts `value` to a number.
@@ -279,13 +279,15 @@ function(e){return"symbol"==typeof e||o(e)&&"[object Symbol]"==r(e)}}
  * _.toNumber('3.2');
  * // => 3.2
  */
-function(e){if("number"==typeof e)return e;if(i(e))return NaN;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=r(e);var n=c.test(e);return n||a.test(e)?u(e.slice(2),n?2:8):s.test(e)?NaN:+e}}
+function(e){if("number"==typeof e)return e;if(s(e))return NaN;if(r(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=r(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=n(e);var o=c.test(e);return o||a.test(e)?u(e.slice(2),o?2:8):i.test(e)?NaN:+e}}
 /***/,
 /***/49977:
-/***/(e,t,n)=>{"use strict";
-/* harmony import */var r=n(66726),o=n.n(r);
-/* harmony import */ // eslint-disable-next-line @wordpress/no-global-event-listener
-window.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector("#wpadminbar");function t(){if(e){var t=e.getBoundingClientRect(),n=t.top,r=t.height,o=Math.max(0,r+n);document.documentElement.style.setProperty("--sensei-wpadminbar-offset",o+"px")}}e&&(t(),// eslint-disable-next-line @wordpress/no-global-event-listener
+/***/(e,t,o)=>{"use strict";
+/* harmony import */var n=o(66726),r=o.n(n);
+/* harmony import */
+// eslint-disable-next-line @wordpress/no-global-event-listener
+window.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector("#wpadminbar");function t(){if(!e)return;const{top:t,height:o}=e.getBoundingClientRect(),n=Math.max(0,o+t);document.documentElement.style.setProperty("--sensei-wpadminbar-offset",n+"px")}e&&(t(),
+// eslint-disable-next-line @wordpress/no-global-event-listener
 window.addEventListener("scroll",t,{capture:!1,passive:!0}),
 /**
    * The debounce has 2 reasons here:
@@ -294,24 +296,28 @@ window.addEventListener("scroll",t,{capture:!1,passive:!0}),
    *    needs to be completed in order to make the correct calc.
    */
 // eslint-disable-next-line @wordpress/no-global-event-listener
-window.addEventListener("resize",o()(t,500)))}))}
+window.addEventListener("resize",r()(t,500)))}))}
 /***/,
 /***/68825:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */n.d(t,{
-/* harmony export */F:()=>/* binding */i
+/***/(e,t,o)=>{"use strict";
+/* harmony export */o.d(t,{
+/* harmony export */F:()=>/* binding */s
 /* harmony export */});
-/* harmony import */var r=n(47701),o=n.n(r),i=function(){o()((function(){var e=document.querySelectorAll('[data-id="complete-lesson-form"]'),t=document.querySelectorAll('[data-id="complete-lesson-button"]'),n=document.querySelectorAll(".sensei-course-theme-course-progress-bar-inner"),r=function(e,n){e.preventDefault(),t.forEach((function(e){e.setAttribute("disabled","disabled"),e.classList.add("is-busy")})),setTimeout((function(){n.submit()}),1e3)},o=function(e){var t=e.target;r(e,t),n.forEach((function(e){var t=e.dataset,n=(+t.completed+1)/+t.count*100;// Percentage with one more completed.
-e.style.width="".concat(n,"%")}))};e.forEach((function(e){e.addEventListener("submit",o)}))}))};
-/* harmony import */}
-/***/,
-/***/1487:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */n.d(t,{
-/* harmony export */R:()=>/* binding */i
-/* harmony export */});
-/* harmony import */var r=n(64649),o=n(50189);
+/* harmony import */var n=o(47701),r=o.n(n);
 /* harmony import */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Initializes complete lesson transition.
+ */
+const s=()=>{r()((()=>{const e=document.querySelectorAll('[data-id="complete-lesson-form"]'),t=document.querySelectorAll('[data-id="complete-lesson-button"]'),o=document.querySelectorAll(".sensei-course-theme-course-progress-bar-inner"),n=(e,o)=>{e.preventDefault(),t.forEach((e=>{e.setAttribute("disabled","disabled"),e.classList.add("is-busy")})),setTimeout((()=>{o.submit()}),1e3)},r=e=>{const t=e.target;n(e,t),o.forEach((e=>{const{completed:t,count:o}=e.dataset,n=(+t+1)/+o*100;
+// Percentage with one more completed.
+e.style.width=`${n}%`}))};e.forEach((e=>{e.addEventListener("submit",r)}))}))};
+/***/},
+/***/1487:
+/***/(e,t,o)=>{"use strict";
+/* harmony export */
 /**
  * @module ContactTeacher
  * @description Responsible for making a seamless ajax post of the
@@ -322,27 +328,26 @@ e.style.width="".concat(n,"%")}))};e.forEach((function(e){e.addEventListener("su
  *
  * @param {Object} ev The contact teacher form submit event.
  */
-function i(e){var t;
+function n(e){var t;
 // If the fetch api is not available then bail.
-if(window.fetch){var n=null===(t=document.querySelector('link[rel="https://api.w.org/"]'))||void 0===t?void 0:t.href;// If the rest api is not available then bail.
-if(n){// Prevent browser from refreshing.
-e.preventDefault();var i=e.target,s=i.querySelector("button.sensei-contact-teacher-form__submit"),c=i.parentElement.querySelector(".sensei-contact-teacher-close");s.classList.add("sensei-course-theme__button","is-busy"),s.disabled=!0;var a=["sensei_message_teacher_nonce","_wpnonce","post_id","contact_message"].reduce((function(e,t){return(0,o/* ["default"] */.Z)((0,o/* ["default"] */.Z)({},e),{},(0,r/* ["default"] */.Z)({},t,i.elements[t].value))}),{});window.fetch("".concat(n,"sensei-internal/v1/messages?_locale=user"),{method:"POST",body:JSON.stringify(a),headers:{"Content-Type":"application/json","X-WP-Nonce":a._wpnonce}}).then((function(){i.classList.add("is-success"),c.focus()})).catch((function(){// TODO: Show submit failed message.
-}))}}}
-/***/},
+if(!window.fetch)return;const o=null===(t=document.querySelector('link[rel="https://api.w.org/"]'))||void 0===t?void 0:t.href;
+// If the rest api is not available then bail.
+if(!o)return;
+// Prevent browser from refreshing.
+e.preventDefault();const n=e.target,r=n.querySelector("button.sensei-contact-teacher-form__submit"),s=n.parentElement.querySelector(".sensei-contact-teacher-close");r.classList.add("sensei-course-theme__button","is-busy"),r.disabled=!0;const i=["sensei_message_teacher_nonce","_wpnonce","post_id","contact_message"].reduce(((e,t)=>({...e,[t]:n.elements[t].value})),{});window.fetch(`${o}sensei-internal/v1/messages?_locale=user`,{method:"POST",body:JSON.stringify(i),headers:{"Content-Type":"application/json","X-WP-Nonce":i._wpnonce}}).then((()=>{n.classList.add("is-success"),s.focus()})).catch((()=>{}))}
+/***/o.d(t,{
+/* harmony export */R:()=>/* binding */n
+/* harmony export */})},
 /***/91729:
-/***/(e,t,n)=>{"use strict";
-/* harmony import */var r=n(47701);
+/***/(e,t,o)=>{"use strict";
+/* harmony import */var n=o(47701);
 /* harmony import */
 /**
  * Update video height when its width changes to keep original aspect ratio.
  *
  * @param {HTMLElement} block Container to track. Must have an <iframe> width and height attributes.
  */
-function o(e){var t,n,r,o=function(){return e.querySelector("iframe")},i=o(),s=i&&(n=(t=i).width,(r=t.height)&&n?+n/+r:null);function c(){if(i=o()){var e=i,t=e.offsetHeight,n=e.offsetWidth/s;n&&n!==t&&i.style.setProperty("height","".concat(n,"px"))}}s&&(new window.ResizeObserver(c).observe(e),c())}n.n(r)()((
-/**
- * WordPress dependencies
- */
-function(){document.querySelectorAll(".sensei-course-theme-lesson-video").forEach(o)}
+function r(e){const t=()=>e.querySelector("iframe");let o=t();const n=o&&
 /**
  * Get aspect ratio from element width and height attribute.
  *
@@ -350,95 +355,52 @@ function(){document.querySelectorAll(".sensei-course-theme-lesson-video").forEac
  * @param {string}      element.width
  * @param {string}      element.height
  * @return {null|number} Width / Height aspect ratio.
- */))}
+ */
+function(e){let{width:t,height:o}=e;return o&&t?+t/+o:null}(o);function r(){if(o=t(),!o)return;const{offsetHeight:e,offsetWidth:r}=o,s=r/n;s&&s!==e&&o.style.setProperty("height",`${s}px`)}n&&(new window.ResizeObserver(r).observe(e),r())}o.n(n)()((
+/**
+ * WordPress dependencies
+ */
+function(){document.querySelectorAll(".sensei-course-theme-lesson-video").forEach(r)}))}
 /***/,
 /***/40365:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */n.d(t,{
-/* harmony export */w:()=>/* binding */s
+/***/(e,t,o)=>{"use strict";
+/* harmony export */o.d(t,{
+/* harmony export */w:()=>/* binding */i
 /* harmony export */});
 /**
  * Focus mode class name and session storage key.
  *
  * @type {string}
  */
-var r="sensei-course-theme--focus-mode",o="sensei-course-theme__sidebar--hidden",i=function(){var e=window.sessionStorage.getItem(r);if(e)try{var t=JSON.parse(e);"boolean"==typeof t&&s(t,!0)}catch(e){}},s=function(e,t){var n=document.body.classList,i=document.querySelector(".sensei-course-theme__sidebar"),s=n.contains(r),c=void 0===e?!s:e;c?t&&(null==i||i.classList.add(o)):null==i||i.classList.remove(o),n.toggle(r,c),window.sessionStorage.setItem(r,JSON.stringify(c))};// eslint-disable-next-line @wordpress/no-global-event-listener
-window.addEventListener("DOMContentLoaded",(function(){var e;i(),setTimeout((function(){document.body.classList.add("".concat(r,"--animated"))}),500),null===(e=document.querySelector(".sensei-course-theme__sidebar"))||void 0===e||e.addEventListener("transitionend",(function(e){var t;"left"===e.propertyName&&document.body.classList.contains(r)&&(null===(t=document.querySelector(".sensei-course-theme__sidebar"))||void 0===t||t.classList.add(o))}))}))}
+const n="sensei-course-theme--focus-mode",r="sensei-course-theme__sidebar--hidden",s=()=>{const e=window.sessionStorage.getItem(n);if(e)try{const t=JSON.parse(e);"boolean"==typeof t&&i(t,!0)}catch(e){}},i=(e,t)=>{const{classList:o}=document.body,s=document.querySelector(".sensei-course-theme__sidebar"),i=o.contains(n),c=void 0===e?!i:e;c?t&&(null==s||s.classList.add(r)):null==s||s.classList.remove(r),o.toggle(n,c),window.sessionStorage.setItem(n,JSON.stringify(c))};
+// eslint-disable-next-line @wordpress/no-global-event-listener
+window.addEventListener("DOMContentLoaded",(()=>{var e;s(),setTimeout((()=>{document.body.classList.add(`${n}--animated`)}),500),null===(e=document.querySelector(".sensei-course-theme__sidebar"))||void 0===e||e.addEventListener("transitionend",(e=>{var t;"left"===e.propertyName&&document.body.classList.contains(n)&&(null===(t=document.querySelector(".sensei-course-theme__sidebar"))||void 0===t||t.classList.add(r))}))}))}
 /***/,
 /***/91971:
-/***/(e,t,n)=>{"use strict";
-/* harmony import */var r=n(66886),o=0,i="scroll",s=function(e){var t=e<0?["up","down"]:["down","up"],n=(0,r/* ["default"] */.Z)(t,2),o=n[0],s=n[1];document.body.classList.remove("".concat(i,"-").concat(s)),document.body.classList.add("".concat(i,"-").concat(o))};// eslint-disable-next-line @wordpress/no-global-event-listener
-window.addEventListener("scroll",(function(){var e=document.documentElement,t=e.scrollTop,n=e.scrollHeight,r=e.clientHeight,c=t-o;o=Math.max(0,t),s(c);var a=n-t-r<100;document.body.classList.toggle("".concat(i,"-bottom"),a)}),{capture:!1,passive:!0})}
+/***/()=>{let e=0;const t="scroll",o=e=>{const[o,n]=e<0?["up","down"]:["down","up"];document.body.classList.remove(`${t}-${n}`),document.body.classList.add(`${t}-${o}`)};
+/**
+ * Detect if a scroll movement is upward or downward.
+ */
+// eslint-disable-next-line @wordpress/no-global-event-listener
+window.addEventListener("scroll",(()=>{const{scrollTop:n,scrollHeight:r,clientHeight:s}=document.documentElement,i=n-e;e=Math.max(0,n),o(i);const c=r-n-s<100;document.body.classList.toggle(`${t}-bottom`,c)}),{capture:!1,passive:!0})}
 /***/,
 /***/47701:
 /***/e=>{"use strict";e.exports=window.wp.domReady}
-/***/,
-/***/1793:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */function r(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}
-/***/n.d(t,{
-/* harmony export */Z:()=>/* binding */r
-/* harmony export */})},
-/***/66470:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */function r(e){if(Array.isArray(e))return e}
-/***/n.d(t,{
-/* harmony export */Z:()=>/* binding */r
-/* harmony export */})},
-/***/64649:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */function r(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}
-/***/n.d(t,{
-/* harmony export */Z:()=>/* binding */r
-/* harmony export */})},
-/***/22446:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */function r(e,t){var n=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null!=n){var r,o,i=[],_n=!0,s=!1;try{for(n=n.call(e);!(_n=(r=n.next()).done)&&(i.push(r.value),!t||i.length!==t);_n=!0);}catch(e){s=!0,o=e}finally{try{_n||null==n.return||n.return()}finally{if(s)throw o}}return i}}
-/***/n.d(t,{
-/* harmony export */Z:()=>/* binding */r
-/* harmony export */})},
-/***/53764:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */function r(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}
-/***/n.d(t,{
-/* harmony export */Z:()=>/* binding */r
-/* harmony export */})},
-/***/50189:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */n.d(t,{
-/* harmony export */Z:()=>/* binding */i
-/* harmony export */});
-/* harmony import */var r=n(64649);function o(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function i(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?o(Object(n),!0).forEach((function(t){(0,r/* ["default"] */.Z)(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):o(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}
-/***/},
-/***/66886:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */n.d(t,{
-/* harmony export */Z:()=>/* binding */c
-/* harmony export */});
-/* harmony import */var r=n(66470),o=n(22446),i=n(64013),s=n(53764);
-/* harmony import */function c(e,t){return(0,r/* ["default"] */.Z)(e)||(0,o/* ["default"] */.Z)(e,t)||(0,i/* ["default"] */.Z)(e,t)||(0,s/* ["default"] */.Z)()}
-/***/},
-/***/64013:
-/***/(e,t,n)=>{"use strict";
-/* harmony export */n.d(t,{
-/* harmony export */Z:()=>/* binding */o
-/* harmony export */});
-/* harmony import */var r=n(1793);function o(e,t){if(e){if("string"==typeof e)return(0,r/* ["default"] */.Z)(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?(0,r/* ["default"] */.Z)(e,t):void 0}}
 /***/
-/******/}},t={};
+/******/},t={};
 /************************************************************************/
 /******/ // The module cache
 /******/
 /******/
 /******/ // The require function
-/******/function n(r){
+/******/function o(n){
 /******/ // Check if module is in cache
-/******/var o=t[r];
-/******/if(void 0!==o)
-/******/return o.exports;
+/******/var r=t[n];
+/******/if(void 0!==r)
+/******/return r.exports;
 /******/
 /******/ // Create a new module (and put it into the cache)
-/******/var i=t[r]={
+/******/var s=t[n]={
 /******/ // no module.id needed
 /******/ // no module.loaded needed
 /******/exports:{}
@@ -448,38 +410,38 @@ window.addEventListener("scroll",(function(){var e=document.documentElement,t=e.
 /******/
 /******/
 /******/ // Return the exports of the module
-/******/return e[r](i,i.exports,n),i.exports;
+/******/return e[n](s,s.exports,o),s.exports;
 /******/}
 /******/
 /************************************************************************/
 /******/ /* webpack/runtime/compat get default export */
 /******/
 /******/ // getDefaultExport function for compatibility with non-harmony modules
-/******/n.n=e=>{
+/******/o.n=e=>{
 /******/var t=e&&e.__esModule?
 /******/()=>e.default
 /******/:()=>e
 /******/;
-/******/return n.d(t,{a:t}),t;
+/******/return o.d(t,{a:t}),t;
 /******/},
 /******/ // define getter functions for harmony exports
-/******/n.d=(e,t)=>{
-/******/for(var r in t)
-/******/n.o(t,r)&&!n.o(e,r)&&
-/******/Object.defineProperty(e,r,{enumerable:!0,get:t[r]})
+/******/o.d=(e,t)=>{
+/******/for(var n in t)
+/******/o.o(t,n)&&!o.o(e,n)&&
+/******/Object.defineProperty(e,n,{enumerable:!0,get:t[n]})
 /******/;
 /******/},
-/******/n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)
+/******/o.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)
 /******/,
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (()=>{"use strict";
-/* harmony import */n(49977),n(91729),n(91971)
-/* harmony import */;var e=n(68825),t=n(1487),r=n(40365);
+/* harmony import */o(49977),o(91729),o(91971)
+/* harmony import */;var e=o(68825),t=o(1487),n=o(40365);
 /**
  * Internal dependencies
  */
 window.sensei||(window.sensei={})
 /**
  * Show or hide the sidebar in mobile mode.
- */;window.sensei.courseTheme={toggleFocusMode:r/* .toggleFocusMode */.w,toggleSidebar:function(){document.body.classList.toggle("sensei-course-theme--sidebar-open")}},window.sensei.submitContactTeacher=t/* .submitContactTeacher */.R,(0,e/* .initCompleteLessonTransition */.F)()})()})
+ */;window.sensei.courseTheme={toggleFocusMode:n/* .toggleFocusMode */.w,toggleSidebar:()=>{document.body.classList.toggle("sensei-course-theme--sidebar-open")}},window.sensei.submitContactTeacher=t/* .submitContactTeacher */.R,(0,e/* .initCompleteLessonTransition */.F)()})()})
 /******/();

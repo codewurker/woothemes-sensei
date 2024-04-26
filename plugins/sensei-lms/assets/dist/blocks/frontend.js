@@ -3,11 +3,7 @@
 /******/var e={
 /***/80503:
 /***/(e,t,n)=>{
-/* harmony import */var o=n(7705),i=document.activeElement,s=function(e){null==e||e.preventDefault();var t=(0,o/* .querySelectorAncestor */.Z)(e.target,"[data-sensei-modal]");if(t){// Put element's copy at the end of the body element.
-var n=t.cloneNode(!0);n.setAttribute("data-sensei-modal-clone",""),document.body.appendChild(n),["overlay","close"].forEach((function(e){n.querySelectorAll("[data-sensei-modal-".concat(e,"]")).forEach((function(e){e.addEventListener("click",a)}))})),// Open the modal.
-// Make sure the elements are opened only after they are painted by
-// the browser first. Otherwise the transition effects do not work.
-window.requestAnimationFrame((function(){return window.requestAnimationFrame((function(){n.setAttribute("data-sensei-modal-is-open",""),document.body.dispatchEvent(new CustomEvent("sensei-modal-open",{detail:n})),i=document.activeElement;var e=n.querySelector("[data-sensei-modal-content]");e&&(e.tabIndex=0,e.focus())}))}))}},a=function(e){null==e||e.preventDefault(),document.querySelectorAll("[data-sensei-modal-clone]").forEach((function(e){var t;e.remove(),document.body.dispatchEvent(new CustomEvent("sensei-modal-close",{detail:e})),null===(t=i)||void 0===t||t.focus()}))};
+/* harmony import */var s=n(7705);
 /* eslint @wordpress/no-global-active-element: 0 -- Not relevant out of React.  */
 /**
  * Internal dependencies
@@ -39,7 +35,22 @@ window.requestAnimationFrame((function(){return window.requestAnimationFrame((fu
  * The last focused element in the document.
  *
  * @type {Element}
- */ // Init modal when the DOM is fully ready.
+ */let l=document.activeElement;
+/**
+ * Opens the modal
+ * @param {MouseEvent} ev The click event.
+ */const o=e=>{null==e||e.preventDefault();const t=(0,s/* .querySelectorAncestor */.Z)(e.target,"[data-sensei-modal]");if(!t)return;
+// Put element's copy at the end of the body element.
+const n=t.cloneNode(!0);n.setAttribute("data-sensei-modal-clone",""),document.body.appendChild(n),["overlay","close"].forEach((e=>{n.querySelectorAll(`[data-sensei-modal-${e}]`).forEach((e=>{e.addEventListener("click",i)}))})),
+// Open the modal.
+// Make sure the elements are opened only after they are painted by
+// the browser first. Otherwise the transition effects do not work.
+window.requestAnimationFrame((()=>window.requestAnimationFrame((()=>{n.setAttribute("data-sensei-modal-is-open",""),document.body.dispatchEvent(new CustomEvent("sensei-modal-open",{detail:n})),l=document.activeElement;const e=n.querySelector("[data-sensei-modal-content]");e&&(e.tabIndex=0,e.focus())}))))},i=e=>{null==e||e.preventDefault(),document.querySelectorAll("[data-sensei-modal-clone]").forEach((e=>{var t;e.remove(),document.body.dispatchEvent(new CustomEvent("sensei-modal-close",{detail:e})),null===(t=l)||void 0===t||t.focus()}))};
+/**
+ * Closes the opened modal
+ * @param {MouseEvent} ev The click event.
+ */
+// Init modal when the DOM is fully ready.
 // eslint-disable-next-line @wordpress/no-global-event-listener
 window.addEventListener("load",(
 /**
@@ -47,19 +58,20 @@ window.addEventListener("load",(
  */
 function(){
 // Attach open events.
-document.querySelectorAll("[data-sensei-modal-open]").forEach((function(e){e.addEventListener("click",s)})),// Attach close event on Escape key.
+document.querySelectorAll("[data-sensei-modal-open]").forEach((e=>{e.addEventListener("click",o)})),
+// Attach close event on Escape key.
 // eslint-disable-next-line @wordpress/no-global-event-listener
-document.addEventListener("keydown",(function(e){"Escape"===e.key&&a(e)}))})),
+document.addEventListener("keydown",(e=>{"Escape"===e.key&&i(e)}))})),
 /**
  * Support for closing the Modal on Esc key.
  */
 // eslint-disable-next-line @wordpress/no-global-event-listener
-document.addEventListener("keydown",(function(e){["Esc","Escape"].includes(e.key)&&a()}))}
+document.addEventListener("keydown",(e=>{["Esc","Escape"].includes(e.key)&&i()}))}
 /***/,
 /***/7705:
 /***/(e,t,n)=>{
 /* harmony export */n.d(t,{
-/* harmony export */Z:()=>/* binding */o
+/* harmony export */Z:()=>/* binding */s
 /* harmony export */});
 /**
  * Finds the first ancestor matching the CSS selector.
@@ -68,7 +80,7 @@ document.addEventListener("keydown",(function(e){["Esc","Escape"].includes(e.key
  * @param {string}      selector The CSS selector.
  * @return {HTMLElement|null} The parent element if found or null otherwise.
  */
-var o=function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return t.parentElement?t.parentElement.matches(n)?t.parentElement:e(t.parentElement,n):null};
+const s=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return e.parentElement?e.parentElement.matches(t)?e.parentElement:s(e.parentElement,t):null};
 /***/
 /******/}},t={};
 /************************************************************************/
@@ -76,14 +88,14 @@ var o=function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]
 /******/
 /******/
 /******/ // The require function
-/******/function n(o){
+/******/function n(s){
 /******/ // Check if module is in cache
-/******/var i=t[o];
-/******/if(void 0!==i)
-/******/return i.exports;
+/******/var l=t[s];
+/******/if(void 0!==l)
+/******/return l.exports;
 /******/
 /******/ // Create a new module (and put it into the cache)
-/******/var s=t[o]={
+/******/var o=t[s]={
 /******/ // no module.id needed
 /******/ // no module.loaded needed
 /******/exports:{}
@@ -93,7 +105,7 @@ var o=function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]
 /******/
 /******/
 /******/ // Return the exports of the module
-/******/return e[o](s,s.exports,n),s.exports;
+/******/return e[s](o,o.exports,n),o.exports;
 /******/}
 /******/
 /************************************************************************/
@@ -101,9 +113,9 @@ var o=function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]
 /******/
 /******/ // define getter functions for harmony exports
 /******/n.d=(e,t)=>{
-/******/for(var o in t)
-/******/n.o(t,o)&&!n.o(e,o)&&
-/******/Object.defineProperty(e,o,{enumerable:!0,get:t[o]})
+/******/for(var s in t)
+/******/n.o(t,s)&&!n.o(e,s)&&
+/******/Object.defineProperty(e,s,{enumerable:!0,get:t[s]})
 /******/;
 /******/},
 /******/n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)
@@ -115,5 +127,5 @@ var o=function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]
  * Internal dependencies
  */
 // eslint-disable-next-line @wordpress/no-global-event-listener
-window.addEventListener("load",(function(){0!==document.querySelectorAll(".sensei-collapsible__toggle").length&&document.querySelectorAll(".sensei-collapsible").forEach((function(e){var t=e.querySelector(".sensei-collapsible__content"),n=e.querySelector(".sensei-collapsible__toggle");if(t&&n){var o=t.offsetHeight+"px";if(t.classList.contains("sensei-collapsed")){var i=t.style.transition;t.style.transition="unset",t.style.maxHeight="unset",o=t.offsetHeight+"px",t.style.visibility="hidden",t.style.maxHeight=0,t.style.transition=i}else t.style.maxHeight=o;n.addEventListener("click",(function(e){e.preventDefault();var i=t.classList.toggle("sensei-collapsed");n.classList.toggle("sensei-collapsed",i),n.setAttribute("aria-expanded",!i),i?t.style.maxHeight="0px":(t.style.visibility="",t.style.maxHeight=o)})),t.addEventListener("transitionend",(function(e){"max-height"===e.propertyName&&t.classList.contains("sensei-collapsed")&&(t.style.visibility="hidden")}))}}))}))})()})
+window.addEventListener("load",(()=>{if(0===document.querySelectorAll(".sensei-collapsible__toggle").length)return;document.querySelectorAll(".sensei-collapsible").forEach((e=>{const t=e.querySelector(".sensei-collapsible__content"),n=e.querySelector(".sensei-collapsible__toggle");if(!t||!n)return;let s=t.offsetHeight+"px";if(t.classList.contains("sensei-collapsed")){const e=t.style.transition;t.style.transition="unset",t.style.maxHeight="unset",s=t.offsetHeight+"px",t.style.visibility="hidden",t.style.maxHeight=0,t.style.transition=e}else t.style.maxHeight=s;n.addEventListener("click",(e=>{e.preventDefault();const l=t.classList.toggle("sensei-collapsed");n.classList.toggle("sensei-collapsed",l),n.setAttribute("aria-expanded",!l),l?t.style.maxHeight="0px":(t.style.visibility="",t.style.maxHeight=s)})),t.addEventListener("transitionend",(e=>{"max-height"===e.propertyName&&t.classList.contains("sensei-collapsed")&&(t.style.visibility="hidden")}))}))}))})()})
 /******/();

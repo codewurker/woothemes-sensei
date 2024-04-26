@@ -2,14 +2,14 @@
 # This file is distributed under the GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html.
 msgid ""
 msgstr ""
-"Project-Id-Version: Sensei Pro 1.23.1\n"
+"Project-Id-Version: Sensei Pro 1.24.0\n"
 "Report-Msgid-Bugs-To: https://woocommerce.com/support\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-04-12T17:22:05+00:00\n"
+"POT-Creation-Date: 2024-04-25T12:42:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: sensei-pro\n"
@@ -958,7 +958,7 @@ msgstr ""
 msgid "Could not complete the data migration process. Please, contact support."
 msgstr ""
 
-#: modules/interactive-blocks/includes/class-interactive-blocks.php:282
+#: modules/interactive-blocks/includes/class-interactive-blocks.php:286
 #: modules/premium-patterns/includes/class-premium-patterns.php:79
 msgid "Sensei LMS"
 msgstr ""
@@ -1333,8 +1333,8 @@ msgstr ""
 #: modules/student-groups/includes/class-student-groups.php:526
 #: modules/student-groups/includes/class-student-groups.php:662
 #: modules/student-groups/includes/class-student-groups.php:673
-#: modules/student-groups/includes/class-student-groups.php:960
-#: modules/student-groups/includes/class-student-groups.php:961
+#: modules/student-groups/includes/class-student-groups.php:964
+#: modules/student-groups/includes/class-student-groups.php:965
 #: assets/dist/block-visibility/script.js:9
 msgid "Groups"
 msgstr ""
@@ -2566,11 +2566,15 @@ msgid "Interactive VideoPress"
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
-msgid "Interactive YouTube"
+msgid "Interactive VideoPress Embed"
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
-msgid "Interactive Vimeo"
+msgid "Interactive YouTube Embed"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Interactive Vimeo Embed"
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1

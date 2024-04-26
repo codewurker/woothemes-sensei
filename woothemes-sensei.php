@@ -3,7 +3,7 @@
  * Plugin Name: Sensei Pro (WC Paid Courses)
  * Plugin URI: https://senseilms.com
  * Description: Whether you want to teach, tutor or train, we have you covered.
- * Version: 4.23.1.1.23.1
+ * Version: 4.24.0.1.24.0
  * Author: Automattic
  * Author URI: https://automattic.com
  * License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -11,7 +11,7 @@
  * Tested up to: 6.5
  * Requires PHP: 7.4
  * WC requires at least: 4.0
- * WC tested up to: 8.7
+ * WC tested up to: 8.8
  * Text Domain: sensei-compat
  * Domain Path: /languages
  *

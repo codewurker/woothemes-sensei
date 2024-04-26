@@ -1,23 +1,23 @@
 /******/(()=>{// webpackBootstrap
 /******/"use strict";
-/******/var e,t={
+/******/var e,r={
 /***/47701:
 /***/e=>{e.exports=window.wp.domReady;
 /***/
-/******/}},n={};
+/******/}},t={};
 /************************************************************************/
 /******/ // The module cache
 /******/
 /******/
 /******/ // The require function
-/******/function r(e){
+/******/function n(e){
 /******/ // Check if module is in cache
-/******/var o=n[e];
+/******/var o=t[e];
 /******/if(void 0!==o)
 /******/return o.exports;
 /******/
 /******/ // Create a new module (and put it into the cache)
-/******/var i=n[e]={
+/******/var a=t[e]={
 /******/ // no module.id needed
 /******/ // no module.loaded needed
 /******/exports:{}
@@ -27,31 +27,31 @@
 /******/
 /******/
 /******/ // Return the exports of the module
-/******/return t[e](i,i.exports,r),i.exports;
+/******/return r[e](a,a.exports,n),a.exports;
 /******/}
 /******/
 /************************************************************************/
 /******/ /* webpack/runtime/compat get default export */
 /******/
 /******/ // getDefaultExport function for compatibility with non-harmony modules
-/******/r.n=e=>{
-/******/var t=e&&e.__esModule?
+/******/n.n=e=>{
+/******/var r=e&&e.__esModule?
 /******/()=>e.default
 /******/:()=>e
 /******/;
-/******/return r.d(t,{a:t}),t;
+/******/return n.d(r,{a:r}),r;
 /******/},
 /******/ // define getter functions for harmony exports
-/******/r.d=(e,t)=>{
-/******/for(var n in t)
-/******/r.o(t,n)&&!r.o(e,n)&&
-/******/Object.defineProperty(e,n,{enumerable:!0,get:t[n]})
+/******/n.d=(e,r)=>{
+/******/for(var t in r)
+/******/n.o(r,t)&&!n.o(e,t)&&
+/******/Object.defineProperty(e,t,{enumerable:!0,get:r[t]})
 /******/;
 /******/},
-/******/r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t)
+/******/n.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r)
 /******/,
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-e=r(47701),
+e=n(47701),
 /**
  * WordPress dependencies
  */
@@ -59,5 +59,5 @@ e=r(47701),
  * Handles uploading a file for a file upload question.
  *
  */
-r.n(e)()((function(){document.querySelectorAll(".sensei-lms-question-block__file-input").forEach((function(e){e.addEventListener("change",(function(e){var t,n=e.target,r=null===(t=n.files)||void 0===t?void 0:t[0],o=n.parentElement.parentElement.querySelector(".sensei-lms-question-block__file-upload-name");o&&(o.innerText=r&&r.name)}))}))}))})
+n.n(e)()((()=>{document.querySelectorAll(".sensei-lms-question-block__file-input").forEach((e=>{e.addEventListener("change",(e=>{var r;const t=e.target,n=null===(r=t.files)||void 0===r?void 0:r[0],o=t.parentElement.parentElement.querySelector(".sensei-lms-question-block__file-upload-name");o&&(o.innerText=n&&n.name)}))}))}))})
 /******/();
