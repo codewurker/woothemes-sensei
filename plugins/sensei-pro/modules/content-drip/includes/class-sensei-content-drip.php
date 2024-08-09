@@ -85,6 +85,13 @@ class Sensei_Content_Drip {
 	private $dir;
 
 	/**
+	 * Assets class instance.
+	 *
+	 * @var \Sensei_Pro\Assets
+	 */
+	private $assets;
+
+	/**
 	 * The plugin assets directory.
 	 *
 	 * @var    string
@@ -110,6 +117,62 @@ class Sensei_Content_Drip {
 	 * @since  1.0.0
 	 */
 	private $cron_hook;
+
+	/**
+	 * Email Settings class instance.
+	 *
+	 * @var Scd_Ext_Settings
+	 */
+	public $settings;
+
+	/**
+	 * Utilities class instance.
+	 *
+	 * @var Scd_Ext_Utils
+	 */
+	public $utils;
+
+	/**
+	 * Access Control class instance.
+	 *
+	 * @var Scd_Ext_Access_Control
+	 */
+	public $access_control;
+
+	/**
+	 * Lesson Frontend class instance.
+	 *
+	 * @var Scd_Ext_Lesson_Frontend
+	 */
+	public $lesson_frontend;
+
+	/**
+	 * Lesson Admin class instance.
+	 *
+	 * @var Scd_Ext_Lesson_Admin
+	 */
+	public $lesson_admin;
+
+	/**
+	 * Quiz Frontend class instance.
+	 *
+	 * @var Scd_Ext_Quiz_Frontend
+	 */
+	public $quiz_frontend;
+
+	/**
+	 * Email functionality class instance.
+	 *
+	 * @var Scd_Ext_Drip_Email
+	 */
+	public $drip_email;
+
+	/**
+	 * Manual Drip functionality class instance.
+	 *
+	 * @var Scd_Ext_Manual_Drip
+	 */
+	public $manual_drip;
 
 	/**
 	 * Constructor function.

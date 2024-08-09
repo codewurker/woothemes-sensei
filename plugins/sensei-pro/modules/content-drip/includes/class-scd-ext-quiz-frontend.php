@@ -32,15 +32,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * - get_quiz_lesson_id
  */
 class Scd_Ext_Quiz_Frontend {
-
 	/**
-	 * The message shown in place of quiz content
+	 * The message format.
 	 *
-	 * @var    string
-	 * @access protected
-	 * @since  1.0.0
+	 * @var string
 	 */
-	protected $drip_message;
+	private $message_format;
 
 	/**
 	 * Constructor function

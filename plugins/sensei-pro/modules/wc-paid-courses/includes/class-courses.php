@@ -813,7 +813,7 @@ final class Courses {
 		 * @param int $course_id  Course ID.
 		 * @param int $product_id Product ID removed from the course.
 		 */
-		do_action( "sensei_wc_paid_courses_course_product_${action}", $course_id, $product_id );
+		do_action( "sensei_wc_paid_courses_course_product_{$action}", $course_id, $product_id );
 
 		/**
 		 * Fires after add or remove a product from a course.

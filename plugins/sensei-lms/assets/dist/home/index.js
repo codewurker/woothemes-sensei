@@ -323,7 +323,7 @@ setError:e=>({type:"SET_ERROR",error:e})},d={getExtensions:e=>{let{extensionSlug
 /**
    * Loads the extensions during initialization.
    */
-*getExtensions(){const e=yield(0,l.apiFetch)({path:"/sensei-internal/v1/sensei-extensions?type=plugin"});yield u.setEntities({extensions:(0,n.keyBy)(e.extensions,"product_slug")}),yield u.setExtensions(e.extensions.map((e=>e.product_slug)))}},h={SET_EXTENSIONS:(e,t)=>{let{extensionSlugs:s}=e;return{...t,extensionSlugs:s}},SET_EXTENSIONS_STATUS:(e,t)=>{let{slugs:s,status:n}=e;return{...t,entities:{...t.entities,extensions:Object.keys(t.entities.extensions).reduce(((e,r)=>({...e,[r]:{...t.entities.extensions[r],status:s.includes(r)?n:t.entities.extensions[r].status}})),{})}}},SET_CONNECTION_STATUS:(e,t)=>{let{connected:s}=e;return{...t,connected:s}},SET_LAYOUT:(e,t)=>{let{layout:s}=e;return{...t,layout:s}},SET_ENTITIES:(e,t)=>{let{entities:s}=e;return{...t,entities:(0,n.merge)({},t.entities,s)}},ADD_TO_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:[...t.queue,s]}},REMOVE_FROM_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:t.queue.filter((e=>!(0,n.isEqual)(e,s)))}},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},DEFAULT:(e,t)=>t},p=(0,r.createReduxStore)("sensei/extensions",{reducer:(0,i/* .createReducerFromActionMap */.lA)(h,{
+*getExtensions(){const e=yield(0,l.apiFetch)({path:"/sensei-internal/v1/sensei-extensions?type=plugin"});yield u.setEntities({extensions:(0,n.keyBy)(e.extensions,"product_slug")}),yield u.setExtensions(e.extensions.map((e=>e.product_slug)))}},h={SET_EXTENSIONS:(e,t)=>{let{extensionSlugs:s}=e;return{...t,extensionSlugs:s}},SET_EXTENSIONS_STATUS:(e,t)=>{let{slugs:s,status:n}=e;return{...t,entities:{...t.entities,extensions:Object.keys(t.entities.extensions).reduce(((e,r)=>({...e,[r]:{...t.entities.extensions[r],status:s.includes(r)?n:t.entities.extensions[r].status}})),{})}}},SET_CONNECTION_STATUS:(e,t)=>{let{connected:s}=e;return{...t,connected:s}},SET_LAYOUT:(e,t)=>{let{layout:s}=e;return{...t,layout:s}},SET_ENTITIES:(e,t)=>{let{entities:s}=e;return{...t,entities:(0,n.merge)({},t.entities,s)}},ADD_TO_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:[...t.queue,s]}},REMOVE_FROM_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:t.queue.filter((e=>!(0,n.isEqual)(e,s)))}},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},DEFAULT:(e,t)=>t},p=(0,i/* .createStore */.MT)("sensei/extensions",{reducer:(0,i/* .createReducerFromActionMap */.lA)(h,{
 /**
    * Extensions list. It is mapped with the entities and served through the selectors.
    */
@@ -335,7 +335,7 @@ extensionSlugs:[],
 entities:{extensions:{}},connected:!1,layout:[],queue:[],error:null}),actions:u,selectors:d,resolvers:_,controls:l.controls});
 /**
  * Default store state.
- */(0,r.register)(p)}
+ */}
 /***/,
 /***/26e3:
 /***/(e,t,s)=>{"use strict";
@@ -903,14 +903,18 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /***/20832:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */lA:()=>/* binding */n
+/* harmony export */lA:()=>/* binding */l
+/* harmony export */,MT:()=>/* binding */a
 /* harmony export */});
-/* unused harmony exports composeFetchAction, createStore */
-/* harmony import */s(9818);
+/* unused harmony export composeFetchAction */
+/* harmony import */var n=s(9818);
 /* harmony import */
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:r}=window,l=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)},a=(e,t)=>{if(r[e])return r[e];const s=(0,n.createReduxStore)(e,t);return(0,n.register)(s),r[e]=s,s};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -919,18 +923,6 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const n=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/67959:

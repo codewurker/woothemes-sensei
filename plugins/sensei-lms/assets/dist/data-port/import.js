@@ -942,7 +942,7 @@ function(){const e={};return(t,r)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /***/20832:
 /***/(e,t,r)=>{"use strict";
 /* harmony export */r.d(t,{
-/* harmony export */GI:()=>/* binding */s
+/* harmony export */GI:()=>/* binding */n
 /* harmony export */});
 /* unused harmony exports createReducerFromActionMap, createStore */
 /* harmony import */r(9818);
@@ -950,16 +950,9 @@ function(){const e={};return(t,r)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /**
  * WordPress dependencies
  */
-/**
- * Compose an action creator with the given start, success and error actions.
- *
- * @param {string}   startAction   Start action type.
- * @param {Function} fetchFn       The action creator to be wrapped. Should return the resolved data.
- * @param {string}   successAction Success action type.
- * @param {string}   errorAction   Error action type.
- * @return {Function} The wrapped action creator.
- */
-const s=(e,t,r,s)=>function*(){e&&(yield{type:e});try{const e=yield*t(...arguments);yield{type:r,data:e}}catch(e){yield{type:s,error:e}}}
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:s}=window,n=(e,t,r,s)=>function*(){e&&(yield{type:e});try{const e=yield*t(...arguments);yield{type:r,data:e}}catch(e){yield{type:s,error:e}}}
 /**
  * Create reducer from a map of action type keys and reducer function.
  *
@@ -970,6 +963,15 @@ const s=(e,t,r,s)=>function*(){e&&(yield{type:e});try{const e=yield*t(...argumen
  * @param {Object} defaultState Default state.
  *
  * @return {Function} Store reducer.
+ */;
+/**
+ * Compose an action creator with the given start, success and error actions.
+ *
+ * @param {string}   startAction   Start action type.
+ * @param {Function} fetchFn       The action creator to be wrapped. Should return the resolved data.
+ * @param {string}   successAction Success action type.
+ * @param {string}   errorAction   Error action type.
+ * @return {Function} The wrapped action creator.
  */}
 /***/,
 /***/22866:

@@ -1,4 +1,9 @@
 /**
+ * WordPress dependencies
+ */
+import { __ } from '@wordpress/i18n';
+
+/**
  * Internal dependencies
  */
 import meta from './block.json';
@@ -15,6 +20,17 @@ export { default as addTransformButtonToVideoBlocks } from './add-transform-butt
  */
 const interactiveVideoBlock = {
 	...meta,
+	title: __( 'Interactive Video', 'sensei-pro' ),
+	description: __( 'Interactive Video Block.', 'sensei-pro' ),
+	keywords: [
+		__( 'sensei', 'sensei-pro' ),
+		__( 'video', 'sensei-pro' ),
+		__( 'interactive', 'sensei-pro' ),
+		__( 'videopress', 'sensei-pro' ),
+		__( 'youtube', 'sensei-pro' ),
+		__( 'vimeo', 'sensei-pro' ),
+		__( 'timeline', 'sensei-pro' ),
+	],
 	icon,
 	variations,
 	transforms,

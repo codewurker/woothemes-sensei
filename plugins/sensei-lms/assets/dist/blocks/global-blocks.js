@@ -438,7 +438,7 @@ const r=[{label:(0,o.__)("Not Started","sensei-lms"),value:"not-started",showBlo
  */
 const i=e=>{let{courseStatus:t,setCourseStatus:s,useCourseStatusContext:i=!1}=e;const c=(0,o.useContext)(n/* ["default"] */.Z);
 // Render nothing if we should use the context but it is not available.
-if(i&&(null==c||!c.courseStatus))return null;const u=i?c.courseStatus:t,d=i?c.setCourseStatus:s;return(0,o.createElement)(r.Toolbar,null,(0,o.createElement)(a/* ["default"] */.Z,{options:l/* ["default"] */.Z,optionsLabel:"Course Status",value:u,onChange:d}))};
+if(i&&(null==c||!c.courseStatus))return null;const u=i?c.courseStatus:t,d=i?c.setCourseStatus:s;return(0,o.createElement)(r.ToolbarGroup,null,(0,o.createElement)(a/* ["default"] */.Z,{options:l/* ["default"] */.Z,optionsLabel:"Course Status",value:u,onChange:d}))};
 /* harmony default export */}
 /***/,
 /***/69895:
@@ -803,10 +803,10 @@ IGNORE_LESSON:(e,t)=>{let{lessonId:s}=e;const o=t.completedLessons.filter((e=>e!
    *
    * @return {Object} The new state.
    */
-TRACK_LESSON:(e,t)=>{let{lessonId:s}=e;const o=[...t.trackedLessons];return o.includes(s)?t:(o.push(s),{...t,trackedLessons:o})},DEFAULT:(e,t)=>t},u="sensei/course-status";
+TRACK_LESSON:(e,t)=>{let{lessonId:s}=e;const o=[...t.trackedLessons];return o.includes(s)?t:(o.push(s),{...t,trackedLessons:o})},DEFAULT:(e,t)=>t},u=(0,n/* .createStore */.MT)("sensei/course-status",{reducer:(0,n/* .createReducerFromActionMap */.lA)(c,{completedLessons:[],trackedLessons:[]}),actions:a,selectors:i,controls:l.controls});
 /**
  * Status store actions.
- */(0,o.registerStore)(u,{reducer:(0,n/* .createReducerFromActionMap */.lA)(c,{completedLessons:[],trackedLessons:[]}),actions:a,selectors:i,controls:l.controls})}
+ */}
 /***/,
 /***/33614:
 /***/(e,t,s)=>{"use strict";
@@ -925,7 +925,7 @@ const p=(0,n.compose)((0,c/* .withColorSettings */.ku)({barColor:{style:"backgro
  * @param {Object}           props.popoverProps     Props passed to the popover component.
  * @param {Function}         props.getMenuItemProps Render function for a menu item. Should return a props object.
  */
-const c=e=>{let{options:t,optionsLabel:s,icon:l,value:c,onChange:u,toggleProps:d,getMenuItemProps:m,popoverProps:p,...v}=e;const g=t.find((e=>c===e.value));return(0,r.createElement)(a.Dropdown,(0,o/* ["default"] */.Z)({className:"sensei-toolbar-dropdown",popoverProps:{isAlternate:!0,position:"bottom right left",focusOnMount:!0,...p,className:n()(null==p?void 0:p.className,"sensei-toolbar-dropdown__popover")},renderToggle:e=>{let{isOpen:t,onToggle:s}=e;return(0,r.createElement)(a.Button,(0,o/* ["default"] */.Z)({onClick:s,icon:l,"aria-expanded":t,"aria-haspopup":"true"},d,{children:null!=d&&d.children?d.children(g):null==g?void 0:g.label}))},renderContent:e=>{let{onClose:l}=e;return(0,r.createElement)(a.NavigableMenu,{role:"menu",stopNavigationEvents:!0},(0,r.createElement)(a.MenuGroup,{label:s},t.map((e=>{const t=e.value===(null==g?void 0:g.value),s=null==m?void 0:m(e);return(0,r.createElement)(a.MenuItem,(0,o/* ["default"] */.Z)({key:e.value,role:"menuitemradio",isSelected:t,icon:t?i/* ["default"] */.Z:null,className:n()("sensei-toolbar-dropdown__option",{"is-selected":t},null==s?void 0:s.className),onClick:()=>{u(e.value),l()},children:e.label},s))}))))}},v))};
+const c=e=>{let{options:t,optionsLabel:s,icon:l,value:c,onChange:u,toggleProps:d,getMenuItemProps:m,popoverProps:p,...v}=e;const g=t.find((e=>c===e.value));return(0,r.createElement)(a.ToolbarDropdownMenu,(0,o/* ["default"] */.Z)({className:"sensei-toolbar-dropdown",popoverProps:{variant:"toolbar",position:"bottom right left",focusOnMount:!0,...p,className:n()(null==p?void 0:p.className,"sensei-toolbar-dropdown__popover")},label:s,icon:null!=l?l:null,text:null!=d&&d.children?d.children(g):null==g?void 0:g.label},v),(e=>{let{onClose:l}=e;return(0,r.createElement)(a.MenuGroup,{label:s},t.map((e=>{const t=e.value===(null==g?void 0:g.value),s=null==m?void 0:m(e);return(0,r.createElement)(a.MenuItem,(0,o/* ["default"] */.Z)({key:e.value,role:"menuitemradio",isSelected:t,icon:t?i/* ["default"] */.Z:null,className:n()("sensei-toolbar-dropdown__option",{"is-selected":t},null==s?void 0:s.className),onClick:()=>{u(e.value),l()},children:e.label},s))})))}))};
 /* harmony default export */}
 /***/,
 /***/53227:
@@ -1147,14 +1147,18 @@ function(e){let{message:t}=e;const s=(0,r.useBlockProps)();return(0,o.createElem
 /***/20832:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */lA:()=>/* binding */o
+/* harmony export */lA:()=>/* binding */l
+/* harmony export */,MT:()=>/* binding */n
 /* harmony export */});
-/* unused harmony exports composeFetchAction, createStore */
-/* harmony import */s(9818);
+/* unused harmony export composeFetchAction */
+/* harmony import */var o=s(9818);
 /* harmony import */
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:r}=window,l=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,o=arguments.length>1?arguments[1]:void 0;return(e[o.type]||e.DEFAULT)(o,s)},n=(e,t)=>{if(r[e])return r[e];const s=(0,o.createReduxStore)(e,t);return(0,o.register)(s),r[e]=s,s};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -1163,18 +1167,6 @@ function(e){let{message:t}=e;const s=(0,r.useBlockProps)();return(0,o.createElem
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const o=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,o=arguments.length>1?arguments[1]:void 0;return(e[o.type]||e.DEFAULT)(o,s)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/67227:
@@ -1260,7 +1252,7 @@ if(!e||null===e.match("#"))return e;let t=0,s=0,o=0;const r=4===e.length?`#${e[1
 /***/e=>{"use strict";e.exports=JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"sensei-lms/course-overview","title":"Course Overview","category":"sensei-lms","description":"Displays a link to the course.","textdomain":"sensei-lms","usesContext":["postType"],"example":{}}')}
 /***/,
 /***/7695:
-/***/e=>{"use strict";e.exports=JSON.parse('{"name":"sensei-lms/course-progress","title":"Course Progress","description":"Display the user\'s progress in the course. This block is only displayed if the user is enrolled.","category":"sensei-lms","textdomain":"sensei-lms","keywords":["progress","bar","course"],"supports":{"html":false},"attributes":{"textColor":{"type":"string"},"customTextColor":{"type":"string","default":""},"barColor":{"type":"string"},"customBarColor":{"type":"string"},"defaultBarColor":{"type":"string"},"barBackgroundColor":{"type":"string"},"customBarBackgroundColor":{"type":"string"},"height":{"type":"integer"},"borderRadius":{"type":"integer"},"isPreview":{"type":"boolean"}},"usesContext":["postType"],"example":{"attributes":{"customBarBackgroundColor":"#999999","isPreview":true}}}')}
+/***/e=>{"use strict";e.exports=JSON.parse('{"apiVersion":2,"name":"sensei-lms/course-progress","title":"Course Progress","description":"Display the user\'s progress in the course. This block is only displayed if the user is enrolled.","category":"sensei-lms","textdomain":"sensei-lms","keywords":["progress","bar","course"],"supports":{"html":false},"attributes":{"textColor":{"type":"string"},"customTextColor":{"type":"string","default":""},"barColor":{"type":"string"},"customBarColor":{"type":"string"},"defaultBarColor":{"type":"string"},"barBackgroundColor":{"type":"string"},"customBarBackgroundColor":{"type":"string"},"height":{"type":"integer"},"borderRadius":{"type":"integer"},"isPreview":{"type":"boolean"}},"usesContext":["postType"],"example":{"attributes":{"customBarBackgroundColor":"#999999","isPreview":true}}}')}
 /***/
 /******/},t={};
 /************************************************************************/

@@ -127,6 +127,9 @@ class WooCommerce_Memberships_Cancelled_Orders_Notice {
 	 */
 	private function dismiss_notice() {
 		$notice_state = $this->get_notice_state();
+		if ( false === $notice_state ) {
+			$notice_state = [];
+		}
 
 		$notice_state['status'] = 'dismissed';
 

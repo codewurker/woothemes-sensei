@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  *
  * TABLE OF CONTENTS
- * - drip_message
  * - __construct
  * - is_lesson_access_blocked
  * - is_absolute_drip_type_content_blocked
@@ -30,26 +29,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * - get_lesson_drip_date
  */
 class Scd_Ext_Access_Control {
-
-	/**
-	 * The message shown in place of lesson content
-	 *
-	 * @var    string
-	 * @access protected
-	 * @since  1.0.0
-	 */
-	protected $drip_message;
-
 	/**
 	 * Constructor function
 	 */
 	public function __construct() {
-		// set a formatted  message shown to user when the content has not yet dripped.
-		$this->message_format = Sensei_Content_Drip()->utils->check_for_translation(
-			'This lesson will become available on [date].',
-			'scd_drip_message'
-		);
-
 		// Handle lessons for which to block access through Sensei.
 		add_filter( 'sensei_can_user_view_lesson', [ $this, 'can_user_view_lesson' ], 10, 2 );
 	}

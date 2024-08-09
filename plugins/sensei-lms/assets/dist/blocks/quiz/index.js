@@ -218,7 +218,7 @@ const i=e=>{let{className:t,id:s,label:r,value:i,help:c,iconRight:u,onChange:d,.
  * @param {string}   props.suffix              Input suffix.
  * @param {boolean}  props.hideLabelFromVision Hides label.
  */
-const c=e=>{let{className:t,id:s,label:r,value:c,help:u,allowReset:d=!1,resetLabel:m,onChange:p,suffix:g,hideLabelFromVision:_,...h}=e;return(0,l.createElement)(a.BaseControl,{id:s,label:r,help:u,hideLabelFromVision:_},(0,l.createElement)("div",{className:"sensei-number-control"},(0,l.createElement)("div",{className:"sensei-number-control__input-container"},(0,l.createElement)("input",(0,n/* ["default"] */.Z)({className:o()("sensei-number-control__input components-text-control__input",t),type:"number",id:s,onChange:e=>{p(parseInt(e.target.value,10)||h.min||0)},value:null===c?"":c},h)),g&&(0,l.createElement)("span",{className:"sensei-number-control__input-suffix"},g)),d&&(0,l.createElement)(a.Button,{className:"sensei-number-control__button",isSmall:!0,isSecondary:!0,onClick:()=>p(null)},m||(0,i.__)("Reset","sensei-lms"))))};
+const c=e=>{let{className:t,id:s,label:r,value:c,help:u,allowReset:d=!1,resetLabel:m,onChange:p,suffix:g,hideLabelFromVision:h,..._}=e;return(0,l.createElement)(a.BaseControl,{id:s,label:r,help:u,hideLabelFromVision:h},(0,l.createElement)("div",{className:"sensei-number-control"},(0,l.createElement)("div",{className:"sensei-number-control__input-container"},(0,l.createElement)("input",(0,n/* ["default"] */.Z)({className:o()("sensei-number-control__input components-text-control__input",t),type:"number",id:s,onChange:e=>{p(parseInt(e.target.value,10)||_.min||0)},value:null===c?"":c},_)),g&&(0,l.createElement)("span",{className:"sensei-number-control__input-suffix"},g)),d&&(0,l.createElement)(a.Button,{className:"sensei-number-control__button",isSmall:!0,isSecondary:!0,onClick:()=>p(null)},m||(0,i.__)("Reset","sensei-lms"))))};
 /* harmony default export */}
 /***/,
 /***/81042:
@@ -253,7 +253,7 @@ const c=e=>{let{className:t,id:s,label:r,value:c,help:u,allowReset:d=!1,resetLab
  * @param {Object}           props.popoverProps     Props passed to the popover component.
  * @param {Function}         props.getMenuItemProps Render function for a menu item. Should return a props object.
  */
-const c=e=>{let{options:t,optionsLabel:s,icon:r,value:c,onChange:u,toggleProps:d,getMenuItemProps:m,popoverProps:p,...g}=e;const _=t.find((e=>c===e.value));return(0,l.createElement)(a.Dropdown,(0,n/* ["default"] */.Z)({className:"sensei-toolbar-dropdown",popoverProps:{isAlternate:!0,position:"bottom right left",focusOnMount:!0,...p,className:o()(null==p?void 0:p.className,"sensei-toolbar-dropdown__popover")},renderToggle:e=>{let{isOpen:t,onToggle:s}=e;return(0,l.createElement)(a.Button,(0,n/* ["default"] */.Z)({onClick:s,icon:r,"aria-expanded":t,"aria-haspopup":"true"},d,{children:null!=d&&d.children?d.children(_):null==_?void 0:_.label}))},renderContent:e=>{let{onClose:r}=e;return(0,l.createElement)(a.NavigableMenu,{role:"menu",stopNavigationEvents:!0},(0,l.createElement)(a.MenuGroup,{label:s},t.map((e=>{const t=e.value===(null==_?void 0:_.value),s=null==m?void 0:m(e);return(0,l.createElement)(a.MenuItem,(0,n/* ["default"] */.Z)({key:e.value,role:"menuitemradio",isSelected:t,icon:t?i/* ["default"] */.Z:null,className:o()("sensei-toolbar-dropdown__option",{"is-selected":t},null==s?void 0:s.className),onClick:()=>{u(e.value),r()},children:e.label},s))}))))}},g))};
+const c=e=>{let{options:t,optionsLabel:s,icon:r,value:c,onChange:u,toggleProps:d,getMenuItemProps:m,popoverProps:p,...g}=e;const h=t.find((e=>c===e.value));return(0,l.createElement)(a.ToolbarDropdownMenu,(0,n/* ["default"] */.Z)({className:"sensei-toolbar-dropdown",popoverProps:{variant:"toolbar",position:"bottom right left",focusOnMount:!0,...p,className:o()(null==p?void 0:p.className,"sensei-toolbar-dropdown__popover")},label:s,icon:null!=r?r:null,text:null!=d&&d.children?d.children(h):null==h?void 0:h.label},g),(e=>{let{onClose:r}=e;return(0,l.createElement)(a.MenuGroup,{label:s},t.map((e=>{const t=e.value===(null==h?void 0:h.value),s=null==m?void 0:m(e);return(0,l.createElement)(a.MenuItem,(0,n/* ["default"] */.Z)({key:e.value,role:"menuitemradio",isSelected:t,icon:t?i/* ["default"] */.Z:null,className:o()("sensei-toolbar-dropdown__option",{"is-selected":t},null==s?void 0:s.className),onClick:()=>{u(e.value),r()},children:e.label},s))})))}))};
 /* harmony default export */}
 /***/,
 /***/2434:
@@ -621,7 +621,7 @@ const i={parent:["sensei-lms/quiz-question"],category:"sensei-lms",supports:{htm
  * @param {Object}   props.attributes.categoryName Category name.
  * @param {Function} props.setAttributes           Set block attributes.
  */
-const g=(0,o.compose)(u/* .withBlockMeta */.vf,(0,d/* .withBlockValidation */.z)(m/* .validateCategoryQuestionBlock */.g))((e=>{var t,s;const{attributes:{options:{number:o=1,category:u}},clientId:d,setAttributes:g}=e,_=(0,a/* .useQuestionNumber */.Q)(d),[,h]=(0,i/* .useQuestionCategories */.J)(),v=o&&1!==o?`${_} - ${_+o-1}`:_,b=(0,l.createElement)("h2",{className:"sensei-lms-question-block__index"},v,"."),E=null!==(t=null===(s=h(u))||void 0===s?void 0:s.name)&&void 0!==t?t:e.attributes.categoryName,k=E===e.attributes.categoryName;return(0,l.useEffect)((()=>{E&&!k&&g({categoryName:E})}),[E,k,g]),(0,l.createElement)(l.Fragment,null,(0,l.createElement)(c/* ["default"] */.Z,e),(0,l.createElement)("div",{className:"sensei-lms-question-block sensei-lms-category-question-block "+(u?"":"is-draft")},b,(0,l.createElement)("h2",{className:"sensei-lms-question-block__title"},E?(0,l.createElement)("strong",null,E):(0,r.__)("Category Question","sensei-lms"),E&&o>0&&" ("+(0,r.sprintf)(
+const g=(0,o.compose)(u/* .withBlockMeta */.vf,(0,d/* .withBlockValidation */.z)(m/* .validateCategoryQuestionBlock */.g))((e=>{var t,s;const{attributes:{options:{number:o=1,category:u}},clientId:d,setAttributes:g}=e,h=(0,a/* .useQuestionNumber */.Q)(d),[,_]=(0,i/* .useQuestionCategories */.J)(),v=o&&1!==o?`${h} - ${h+o-1}`:h,b=(0,l.createElement)("h2",{className:"sensei-lms-question-block__index"},v,"."),E=null!==(t=null===(s=_(u))||void 0===s?void 0:s.name)&&void 0!==t?t:e.attributes.categoryName,w=E===e.attributes.categoryName;return(0,l.useEffect)((()=>{E&&!w&&g({categoryName:E})}),[E,w,g]),(0,l.createElement)(l.Fragment,null,(0,l.createElement)(c/* ["default"] */.Z,e),(0,l.createElement)("div",{className:"sensei-lms-question-block sensei-lms-category-question-block "+(u?"":"is-draft")},b,(0,l.createElement)("h2",{className:"sensei-lms-question-block__title"},E?(0,l.createElement)("strong",null,E):(0,r.__)("Category Question","sensei-lms"),E&&o>0&&" ("+(0,r.sprintf)(
 // translators: placeholder is number of questions to show from category.
 (0,r._n)("%d question","%d questions",o,"sensei-lms"),o)+")")),(0,l.createElement)(p/* .QuestionValidationNotice */.me,(0,n/* ["default"] */.Z)({},e,{getErrorMessages:m/* .getCategoryQuestionBlockValidationErrorMessages */.h})))}));
 /* harmony default export */}
@@ -647,9 +647,9 @@ const g=(0,o.compose)(u/* .withBlockMeta */.vf,(0,d/* .withBlockValidation */.z)
  *
  * @return {number|boolean} The number of questions in a category or false if unknown.
  */
-const d=e=>{var t,s;let{attributes:{options:a={}},setAttributes:d}=e;const m=function(e){return d({...arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},options:{...a,...e}})},[p,g]=(0,u/* .useQuestionCategories */.J)(),[_,h]=(0,n.useState)(null),v=((e,t)=>{const[s,l]=(0,n.useState)({});return(0,n.useEffect)((()=>{e&&!s.hasOwnProperty(e)&&i()({path:`/wp/v2/questions?question-category=${e}`,method:"GET",parse:!1}).then((t=>{s[e]=+t.headers.get("X-WP-Total"),l({...s})})).catch((e=>{e.json().then((e=>t(e.message)))}))}),[e,s,t]),!!s.hasOwnProperty(e)&&s[e]})(a.category,h),b=[{value:"",label:""},...(p||[]).map((e=>({value:e.id,label:e.name})))];return(0,n.createElement)(l.InspectorControls,null,(0,n.createElement)(r.PanelBody,{title:(0,o.__)("Category Question Settings","sensei-lms"),initialOpen:!0},!b.length&&(0,n.createElement)(r.Notice,{status:"warning",isDismissible:!1},(0,o.__)("No question categories exist.","sensei-lms")),b.length>0&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(r.SelectControl,{label:(0,o.__)("Category","sensei-lms"),options:b,value:null!==(t=a.category)&&void 0!==t?t:"",onChange:e=>{var t;const s=g(+e);m({category:null!==(t=+e)&&void 0!==t?t:null},{categoryName:null==s?void 0:s.name}),h(null)}}),(0,n.createElement)(c/* ["default"] */.Z,{label:(0,o.__)("Number of Questions","sensei-lms"),min:1,step:1,value:null!==(s=a.number)&&void 0!==s?s:1,onChange:e=>e&&m({number:e||1})}),null!==_&&(0,n.createElement)(r.Notice,{status:"error",isDismissible:!1},(0,o.sprintf)(
+const d=e=>{var t,s;let{attributes:{options:a={}},setAttributes:d}=e;const m=function(e){return d({...arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},options:{...a,...e}})},[p,g]=(0,u/* .useQuestionCategories */.J)(),[h,_]=(0,n.useState)(null),v=((e,t)=>{const[s,l]=(0,n.useState)({});return(0,n.useEffect)((()=>{e&&!s.hasOwnProperty(e)&&i()({path:`/wp/v2/questions?question-category=${e}`,method:"GET",parse:!1}).then((t=>{s[e]=+t.headers.get("X-WP-Total"),l({...s})})).catch((e=>{e.json().then((e=>t(e.message)))}))}),[e,s,t]),!!s.hasOwnProperty(e)&&s[e]})(a.category,_),b=[{value:"",label:""},...(p||[]).map((e=>({value:e.id,label:e.name})))];return(0,n.createElement)(l.InspectorControls,null,(0,n.createElement)(r.PanelBody,{title:(0,o.__)("Category Question Settings","sensei-lms"),initialOpen:!0},!b.length&&(0,n.createElement)(r.Notice,{status:"warning",isDismissible:!1},(0,o.__)("No question categories exist.","sensei-lms")),b.length>0&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(r.SelectControl,{label:(0,o.__)("Category","sensei-lms"),options:b,value:null!==(t=a.category)&&void 0!==t?t:"",onChange:e=>{var t;const s=g(+e);m({category:null!==(t=+e)&&void 0!==t?t:null},{categoryName:null==s?void 0:s.name}),_(null)}}),(0,n.createElement)(c/* ["default"] */.Z,{label:(0,o.__)("Number of Questions","sensei-lms"),min:1,step:1,value:null!==(s=a.number)&&void 0!==s?s:1,onChange:e=>e&&m({number:e||1})}),null!==h&&(0,n.createElement)(r.Notice,{status:"error",isDismissible:!1},(0,o.sprintf)(
 // translators: The underlying error message.
-(0,o.__)("An error occurred while retrieving questions: %s","sensei-lms"),_)),!1!==v&&null===_&&a.number>v&&(0,n.createElement)(r.Notice,{status:"warning",isDismissible:!1},(0,o.sprintf)(
+(0,o.__)("An error occurred while retrieving questions: %s","sensei-lms"),h)),!1!==v&&null===h&&a.number>v&&(0,n.createElement)(r.Notice,{status:"warning",isDismissible:!1},(0,o.sprintf)(
 // translators: Placeholder is number of questions in category.
 (0,o._n)("The selected category has %d question.","The selected category has %d questions.",v,"sensei-lms"),v)))))};
 /**
@@ -938,7 +938,7 @@ return e.media&&l.push((e=>{switch(e.type){case"image":return(0,r.createBlock)("
 /* harmony export */s.d(t,{
 /* harmony export */Z:()=>x
 /* harmony export */});
-/* harmony import */var n=s(25773),l=s(69307),r=s(52175),o=s(9818),a=s(94333),i=s(65736),c=s(92694),u=s(90677),d=s(1647),m=s(32365),p=s(55354),g=s(25137),_=s(3295),h=s(80688),v=s(61831),b=s(69395),E=s(31835),k=s(32505),w=s(61209),f=s(2889),y=s(88166),q=s(28900),C=s(81622),S=s(24558),Z=s(90005),B=s.n(Z);
+/* harmony import */var n=s(25773),l=s(69307),r=s(52175),o=s(9818),a=s(94333),i=s(65736),c=s(92694),u=s(90677),d=s(1647),m=s(32365),p=s(55354),g=s(25137),h=s(3295),_=s(80688),v=s(61831),b=s(69395),E=s(31835),w=s(32505),k=s(61209),f=s(2889),y=s(88166),q=s(28900),C=s(81622),S=s(24558),Z=s(90005),B=s.n(Z);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -964,9 +964,9 @@ let N=Object.entries(b/* ["default"] */.Z).map((e=>{let[t,s]=e;return{...s,label
  * @param {number} grade Question grade.
  * @return {string} Grade text.
  */
-const x=(0,a.compose)(h/* .withBlockMeta */.vf,(0,u/* .withBlockValidation */.z)(f/* .validateQuestionBlock */.O))((e=>{var t;const{attributes:{title:s,type:a,answer:c={},options:u,shared:h,editable:Z=!0},setAttributes:x,clientId:A,context:P}=e,{removeBlock:T,selectBlock:z}=(0,o.useDispatch)("core/block-editor"),I=(0,l.useCallback)((()=>{const e=(0,o.select)("core/block-editor").getBlocks(A);e.length&&z(e[0].clientId)}),[A,z]),R=(0,g/* .useQuestionNumber */.Q)(A),F=a&&b/* ["default"] */.Z[a],O=null==F?void 0:F.feedback,M=(0,v/* .useHasSelected */.g9)(e),Q=P&&!("sensei-lms/quizId"in P),V=s||M||Q,U=!Q&&(0,l.createElement)("h2",{className:"sensei-lms-question-block__index"},R,"."),D=e.meta.showValidationErrors&&(null===(t=e.meta.validationErrors)||void 0===t?void 0:t.length),H=(0,l.createElement)("div",{className:"sensei-lms-question-block__grade grade"},(G=u.grade,
+const x=(0,a.compose)(_/* .withBlockMeta */.vf,(0,u/* .withBlockValidation */.z)(f/* .validateQuestionBlock */.O))((e=>{var t;const{attributes:{title:s,type:a,answer:c={},options:u,shared:_,editable:Z=!0},setAttributes:x,clientId:P,context:A}=e,{removeBlock:T,selectBlock:I}=(0,o.useDispatch)("core/block-editor"),z=(0,l.useCallback)((()=>{const e=(0,o.select)("core/block-editor").getBlocks(P);e.length&&I(e[0].clientId)}),[P,I]),R=(0,g/* .useQuestionNumber */.Q)(P),F=a&&b/* ["default"] */.Z[a],M=null==F?void 0:F.feedback,O=(0,v/* .useHasSelected */.g9)(e),Q=A&&!("sensei-lms/quizId"in A),V=s||O||Q,D=!Q&&(0,l.createElement)("h2",{className:"sensei-lms-question-block__index"},R,"."),U=e.meta.showValidationErrors&&(null===(t=e.meta.validationErrors)||void 0===t?void 0:t.length),G=(0,l.createElement)("div",{className:"sensei-lms-question-block__grade grade"},(H=u.grade,
 // Translators: placeholder is the grade for the questions.
-(0,i.sprintf)((0,i._n)("%d point","%d points",G,"sensei-lms"),G)));var G;
+(0,i.sprintf)((0,i._n)("%d point","%d points",H,"sensei-lms"),H)));var H;
 /**
  * Quiz question block editor.
  *
@@ -975,7 +975,7 @@ const x=(0,a.compose)(h/* .withBlockMeta */.vf,(0,u/* .withBlockValidation */.z)
  * @param {Object}   props.attributes.title Question title.
  * @param {Function} props.setAttributes    Set block attributes.
  * @param {Object}   props.meta             Block metadata.
- */const[L,j]=(0,l.useState)(!1),W=(0,l.useMemo)((()=>({answer:c,setAttributes:x,AnswerBlock:F,hasSelected:M,canHaveFeedback:O,answerFeedback:{showAnswerFeedback:L,toggleAnswerFeedback:j},options:u})),[F,c,M,x,L,O,u]),$=(0,l.useMemo)((()=>[[m/* ["default"].name */.Z.name,{}],[p/* ["default"].name */.Z.name,{}],...O?[[d/* .answerFeedbackCorrectBlock.name */.p.name,{}],[d/* .answerFeedbackIncorrectBlock.name */.h.name,{}]]:[]]),[O]),K=(0,r.useBlockProps)({className:B()("sensei-lms-question-block",{"is-draft":!s,"is-invalid":D,"show-answer-feedback":L})});return Z?(0,l.createElement)("div",K,(0,l.createElement)("div",{className:"sensei-lms-question-block__header"},U,Q&&(0,l.createElement)(S/* ["default"] */.Z,e),(0,l.createElement)("h2",{className:"sensei-lms-question-block__title"},(0,l.createElement)(_/* ["default"] */.Z,{placeholder:(0,i.__)("Question Title","sensei-lms"),value:s,onChange:e=>x({title:e}),onEnter:I,onRemove:()=>T(A)})),F.subtitle&&(0,l.createElement)(F.subtitle,{isQuestionSelected:M}),V&&H),M&&h&&(0,l.createElement)(E/* .SharedQuestionNotice */.Ud,null),V&&(0,l.createElement)(k/* .QuestionContext.Provider */.G.Provider,{value:W},(0,l.createElement)(r.InnerBlocks,{template:$,templateInsertUpdatesSelection:!1,templateLock:"all",renderAppender:null})),(0,l.createElement)(E/* .QuestionValidationNotice */.me,(0,n/* ["default"] */.Z)({},e,{getErrorMessages:f/* .getQuestionBlockValidationErrorMessages */.b})),(0,l.createElement)(r.BlockControls,null,(0,l.createElement)(l.Fragment,null,(0,l.createElement)(C/* .QuestionTypeToolbar */.C,{value:a,onSelect:e=>x({type:e}),options:N}),(0,l.createElement)(w/* .QuestionGradeToolbar */.G,{value:u.grade,onChange:e=>x({options:{...u,grade:e}})}))),(0,l.createElement)(q/* ["default"] */.Z,(0,n/* ["default"] */.Z)({controls:null==F?void 0:F.settings},e))):(0,l.createElement)(y/* ["default"] */.Z,(0,n/* ["default"] */.Z)({},e,{questionGrade:H,questionIndex:U,AnswerBlock:F}))}))}
+ */const[j,L]=(0,l.useState)(!1),W=(0,l.useMemo)((()=>({answer:c,setAttributes:x,AnswerBlock:F,hasSelected:O,canHaveFeedback:M,answerFeedback:{showAnswerFeedback:j,toggleAnswerFeedback:L},options:u})),[F,c,O,x,j,M,u]),$=(0,l.useMemo)((()=>[[m/* ["default"].name */.Z.name,{}],[p/* ["default"].name */.Z.name,{}],...M?[[d/* .answerFeedbackCorrectBlock.name */.p.name,{}],[d/* .answerFeedbackIncorrectBlock.name */.h.name,{}]]:[]]),[M]),K=(0,r.useBlockProps)({className:B()("sensei-lms-question-block",{"is-draft":!s,"is-invalid":U,"show-answer-feedback":j})});return Z?(0,l.createElement)("div",K,(0,l.createElement)("div",{className:"sensei-lms-question-block__header"},D,Q&&(0,l.createElement)(S/* ["default"] */.Z,e),(0,l.createElement)("h2",{className:"sensei-lms-question-block__title"},(0,l.createElement)(h/* ["default"] */.Z,{placeholder:(0,i.__)("Question Title","sensei-lms"),value:s,onChange:e=>x({title:e}),onEnter:z,onRemove:()=>T(P)})),F.subtitle&&(0,l.createElement)(F.subtitle,{isQuestionSelected:O}),V&&G),O&&_&&(0,l.createElement)(E/* .SharedQuestionNotice */.Ud,null),V&&(0,l.createElement)(w/* .QuestionContext.Provider */.G.Provider,{value:W},(0,l.createElement)(r.InnerBlocks,{template:$,templateInsertUpdatesSelection:!1,templateLock:"all",renderAppender:null})),(0,l.createElement)(E/* .QuestionValidationNotice */.me,(0,n/* ["default"] */.Z)({},e,{getErrorMessages:f/* .getQuestionBlockValidationErrorMessages */.b})),(0,l.createElement)(r.BlockControls,null,(0,l.createElement)(C/* .QuestionTypeToolbar */.C,{value:a,onSelect:e=>x({type:e}),options:N}),(0,l.createElement)(k/* .QuestionGradeToolbar */.G,{value:u.grade,onChange:e=>x({options:{...u,grade:e}})})),(0,l.createElement)(q/* ["default"] */.Z,(0,n/* ["default"] */.Z)({controls:null==F?void 0:F.settings},e))):(0,l.createElement)(y/* ["default"] */.Z,(0,n/* ["default"] */.Z)({},e,{questionGrade:G,questionIndex:D,AnswerBlock:F}))}))}
 /***/,
 /***/94366:
 /***/(e,t,s)=>{"use strict";
@@ -1020,7 +1020,7 @@ const i=e=>{const t=(0,l.useMemo)((()=>(0,o/* ["default"] */.Z)()),[]);return(0,
  * @param {number}   props.value    Grade value.
  * @param {Function} props.onChange Grade setter.
  */
-const o=e=>{let{value:t,onChange:s}=e;return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(l.ToolbarGroup,{className:"sensei-lms-question-block__grade-toolbar"},(0,n.createElement)(r/* .QuestionGradeControl */.y,{value:t,onChange:s})))};
+const o=e=>{let{value:t,onChange:s}=e;return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(l.ToolbarGroup,{className:"sensei-lms-question-block__grade-toolbar"},(0,n.createElement)(l.ToolbarItem,{as:r/* .QuestionGradeControl */.y,value:t,onChange:s})))};
 /***/},
 /***/28900:
 /***/(e,t,s)=>{"use strict";
@@ -1068,7 +1068,7 @@ const c=e=>{let{controls:t=[],attributes:{options:s={}},setAttributes:c,...u}=e;
  * @param {Function} props.onSelect Selection callback.
  * @param {Array}    props.options  Question options.
  */
-const i=e=>{let{value:t,onSelect:s,options:i}=e;return(0,n.createElement)(l.Toolbar,{className:"sensei-lms-question-block__type-selector__toolbar"},(0,n.createElement)(a/* ["default"] */.Z,{className:"sensei-lms-question-block__type-selector",label:(0,o.__)("Question Type","sensei-lms"),options:i,value:t,onChange:e=>s(e),optionsLabel:(0,o.__)("Question Type","sensei-lms"),popoverProps:{className:"sensei-lms-question-block__type-selector__popover"},toggleProps:{children:e=>(0,n.createElement)("b",null,null==e?void 0:e.title)},getMenuItemProps:e=>{let t=(0,n.createElement)("div",null,(0,n.createElement)("strong",null," ",e.title),(0,n.createElement)("div",{className:"sensei-lms-question-block__type-selector__option__description"},e.description));
+const i=e=>{let{value:t,onSelect:s,options:i}=e;return(0,n.createElement)(l.ToolbarGroup,{className:"sensei-lms-question-block__type-selector__toolbar"},(0,n.createElement)(a/* ["default"] */.Z,{className:"sensei-lms-question-block__type-selector",label:(0,o.__)("Question Type","sensei-lms"),options:i,value:t,onChange:e=>s(e),optionsLabel:(0,o.__)("Question Type","sensei-lms"),popoverProps:{className:"sensei-lms-question-block__type-selector__popover"},toggleProps:{children:e=>(0,n.createElement)("b",null,null==e?void 0:e.title)},getMenuItemProps:e=>{let t=(0,n.createElement)("div",null,(0,n.createElement)("strong",null," ",e.title),(0,n.createElement)("div",{className:"sensei-lms-question-block__type-selector__option__description"},e.description));
 /**
        * Filters the children of the menu item.
        *
@@ -1225,9 +1225,9 @@ const o=e=>{let{options:{randomOrder:t=!1},setOptions:s}=e;return(0,n.createElem
 /***/24558:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */Z:()=>i
+/* harmony export */Z:()=>d
 /* harmony export */});
-/* harmony import */var n=s(69307),l=s(55609),r=s(65736),o=s(72067),a=s(61831);
+/* harmony import */var n=s(69307),l=s(55609),r=s(65736),o=s(72067),a=s(12238),i=s(61831);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1235,13 +1235,7 @@ const o=e=>{let{options:{randomOrder:t=!1},setOptions:s}=e;return(0,n.createElem
 /**
  * Internal dependencies
  */
-/**
- * Additional controls for a question block in the single question editor.
- *
- * @param {Object} props Question block props.
- */
-const i=e=>{const{meta:{validationErrors:t,showValidationErrors:s},setMeta:i}=e,c=(0,n.useCallback)((function(){i({showValidationErrors:!(arguments.length>0&&void 0!==arguments[0])||arguments[0]})}),[i]);if((0,a/* .usePostSavingEffect */.H3)((()=>c(!1)),[c]),null==t||!t.length)return null;const u=(0,n.createElement)(l.Notice,{isDismissible:!1,status:"warning",className:"sensei-lms-quiz-block__pre-publish-validation__notice",actions:s?[]:[{label:(0,r.__)("View issues","sensei-lms"),onClick:()=>c(!0),className:"is-link"}]},(0,r.__)("This question is incomplete.","sensei-lms"));return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(o.PluginPostStatusInfo,null,u),(0,n.createElement)(o.PluginPrePublishPanel,{title:(0,r.__)("Validation","sensei-lms"),initialOpen:!0},(0,n.createElement)(a/* .Effect */.Qm,{onMount:c}),u,(0,n.createElement)("p",null,(0,r.__)("Incomplete questions added to a quiz won't be displayed to the student.","sensei-lms"))))};
-/* harmony default export */}
+const c=a.PluginPostStatusInfo||o.PluginPostStatusInfo,u=a.PluginPrePublishPanel||o.PluginPrePublishPanel,d=e=>{const{meta:{validationErrors:t,showValidationErrors:s},setMeta:o}=e,a=(0,n.useCallback)((function(){o({showValidationErrors:!(arguments.length>0&&void 0!==arguments[0])||arguments[0]})}),[o]);if((0,i/* .usePostSavingEffect */.H3)((()=>a(!1)),[a]),null==t||!t.length)return null;const d=(0,n.createElement)(l.Notice,{isDismissible:!1,status:"warning",className:"sensei-lms-quiz-block__pre-publish-validation__notice",actions:s?[]:[{label:(0,r.__)("View issues","sensei-lms"),onClick:()=>a(!0),className:"is-link"}]},(0,r.__)("This question is incomplete.","sensei-lms"));return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(c,null,d),(0,n.createElement)(u,{title:(0,r.__)("Validation","sensei-lms"),initialOpen:!0},(0,n.createElement)(i/* .Effect */.Qm,{onMount:a}),d,(0,n.createElement)("p",null,(0,r.__)("Incomplete questions added to a quiz won't be displayed to the student.","sensei-lms"))))}}
 /***/,
 /***/9608:
 /***/(e,t,s)=>{"use strict";
@@ -1363,7 +1357,7 @@ const r=e=>{const t=(0,n.useSelect)((t=>t("core/block-editor").getBlocks(e)),[])
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
 /* harmony export */I:()=>/* binding */g
-/* harmony export */,K:()=>/* binding */_
+/* harmony export */,K:()=>/* binding */h
 /* harmony export */});
 /* harmony import */var n=s(25773),l=s(69307),r=s(55609),o=s(65736),a=s(80768),i=s(81042);
 /* harmony import */
@@ -1380,7 +1374,7 @@ const c="single",u="multi",d=[{label:(0,o.__)("Single page","sensei-lms"),value:
  * @param {Object}   props                  Component props.
  * @param {Object}   props.settings         Pagination settings object.
  * @param {Function} props.updatePagination Update pagination options function.
- */,p=e=>{let{settings:t,updatePagination:s,...r}=e;const{paginationNumber:i}=t;return(0,l.createElement)(l.Fragment,null,(0,l.createElement)(a/* ["default"] */.Z,(0,n/* ["default"] */.Z)({label:(0,o.__)("Number of Questions","sensei-lms"),min:1,step:1,hideLabelFromVision:!0,suffix:(0,o._n)("question","questions",i,"sensei-lms"),value:i,onChange:e=>s({paginationNumber:e})},r)),(0,l.createElement)("span",null,(0,o.__)("per page","sensei-lms")))},g=e=>{let{settings:t,updatePagination:s}=e;const{paginationNumber:n,showProgressBar:i,progressBarRadius:g,progressBarHeight:_}=t;return(0,l.createElement)(l.Fragment,null,(0,l.createElement)(r.PanelBody,{title:(0,o.__)("Pagination","sensei-lms"),initialOpen:!0},(0,l.createElement)(r.PanelRow,{className:"sensei-lms-quiz-block-settings__pagination"},(0,l.createElement)(r.SelectControl,{label:(0,o.__)("Pagination","sensei-lms"),hideLabelFromVision:!0,value:null===n?c:u,options:d,onChange:m(s)})),null!==n&&(0,l.createElement)(r.PanelRow,{className:"sensei-lms-quiz-block-settings__question-count"},(0,l.createElement)(p,{settings:t,updatePagination:s})),null!==n&&(0,l.createElement)(l.Fragment,null,(0,l.createElement)(r.PanelRow,null,(0,l.createElement)(r.ToggleControl,{checked:i,label:(0,o.__)("Show Progress Bar","sensei-lms"),value:g,onChange:e=>s({showProgressBar:e})})),(0,l.createElement)(r.PanelRow,{className:"sensei-lms-quiz-block-settings__progress-bar"},(0,l.createElement)(a/* ["default"] */.Z,{label:(0,o.__)("Radius","sensei-lms"),min:1,step:1,suffix:(0,o.__)("PX","sensei-lms"),value:g,onChange:e=>s({progressBarRadius:e})}),(0,l.createElement)(a/* ["default"] */.Z,{label:(0,o.__)("Height","sensei-lms"),min:1,step:1,suffix:(0,o.__)("PX","sensei-lms"),value:_,onChange:e=>s({progressBarHeight:e})})))))},_=e=>{let{settings:t,updatePagination:s}=e;const{paginationNumber:n}=t;return(0,l.createElement)(l.Fragment,null,(0,l.createElement)(r.Toolbar,null,(0,l.createElement)(i/* ["default"] */.Z,{options:d,optionsLabel:(0,o.__)("Quiz pagination","sensei-lms"),value:null===n?c:u,onChange:m(s)})),null!==n&&(0,l.createElement)(r.ToolbarGroup,{className:"sensei-lms-quiz-block__toolbar-group"},(0,l.createElement)(p,{settings:t,updatePagination:s})))}}
+ */,p=e=>{let{settings:t,updatePagination:s,...r}=e;const{paginationNumber:i}=t;return(0,l.createElement)(l.Fragment,null,(0,l.createElement)(a/* ["default"] */.Z,(0,n/* ["default"] */.Z)({label:(0,o.__)("Number of Questions","sensei-lms"),min:1,step:1,hideLabelFromVision:!0,suffix:(0,o._n)("question","questions",i,"sensei-lms"),value:i,onChange:e=>s({paginationNumber:e})},r)),(0,l.createElement)("span",null,(0,o.__)("per page","sensei-lms")))},g=e=>{let{settings:t,updatePagination:s}=e;const{paginationNumber:n,showProgressBar:i,progressBarRadius:g,progressBarHeight:h}=t;return(0,l.createElement)(l.Fragment,null,(0,l.createElement)(r.PanelBody,{title:(0,o.__)("Pagination","sensei-lms"),initialOpen:!0},(0,l.createElement)(r.PanelRow,{className:"sensei-lms-quiz-block-settings__pagination"},(0,l.createElement)(r.SelectControl,{label:(0,o.__)("Pagination","sensei-lms"),hideLabelFromVision:!0,value:null===n?c:u,options:d,onChange:m(s)})),null!==n&&(0,l.createElement)(r.PanelRow,{className:"sensei-lms-quiz-block-settings__question-count"},(0,l.createElement)(p,{settings:t,updatePagination:s})),null!==n&&(0,l.createElement)(l.Fragment,null,(0,l.createElement)(r.PanelRow,null,(0,l.createElement)(r.ToggleControl,{checked:i,label:(0,o.__)("Show Progress Bar","sensei-lms"),value:g,onChange:e=>s({showProgressBar:e})})),(0,l.createElement)(r.PanelRow,{className:"sensei-lms-quiz-block-settings__progress-bar"},(0,l.createElement)(a/* ["default"] */.Z,{label:(0,o.__)("Radius","sensei-lms"),min:1,step:1,suffix:(0,o.__)("PX","sensei-lms"),value:g,onChange:e=>s({progressBarRadius:e})}),(0,l.createElement)(a/* ["default"] */.Z,{label:(0,o.__)("Height","sensei-lms"),min:1,step:1,suffix:(0,o.__)("PX","sensei-lms"),value:h,onChange:e=>s({progressBarHeight:e})})))))},h=e=>{let{settings:t,updatePagination:s}=e;const{paginationNumber:n}=t;return(0,l.createElement)(l.Fragment,null,(0,l.createElement)(r.ToolbarGroup,null,(0,l.createElement)(i/* ["default"] */.Z,{options:d,optionsLabel:(0,o.__)("Quiz pagination","sensei-lms"),value:null===n?c:u,onChange:m(s)})),null!==n&&(0,l.createElement)(r.ToolbarGroup,{className:"sensei-lms-quiz-block__toolbar-group"},(0,l.createElement)(r.ToolbarItem,{as:p,settings:t,updatePagination:s})))}}
 /***/,
 /***/1933:
 /***/(e,t,s)=>{"use strict";
@@ -1430,7 +1424,7 @@ const o=e=>{let{selectedQuestionIds:t,setSelectedQuestionIds:s,onAdd:o,closeModa
  * @param {Object}   props.filters            Filters object.
  * @param {Function} props.setFilters         Filters state setter.
  */
-const d=e=>{let{questionCategories:t,filters:s,setFilters:d}=e;const{searchValue:m}=(0,n.useState)(s.search),p=(0,c/* .useQuestionTypes */.j)(),g=(e,t)=>(0,u.debounce)((t=>{d((s=>({...s,[e]:t})))}),t),_=[{value:"",label:(0,o.__)("Type","sensei-lms")},...(p||[]).map((e=>{var t;return{value:e.id,label:null===(t=i/* ["default"] */.Z[e.slug])||void 0===t?void 0:t.title}}))],h=[{value:"",label:(0,o.__)("Category","sensei-lms")},...(t||[]).map((e=>({value:e.id,label:e.name})))];return(0,n.createElement)("ul",{className:"sensei-lms-quiz-block__questions-modal__filters"},(0,n.createElement)("li",null,(0,n.createElement)(l.SelectControl,{options:_,value:s["question-type"],onChange:g("question-type",0)})),(0,n.createElement)("li",null,(0,n.createElement)(l.SelectControl,{options:h,value:s["question-category"],onChange:g("question-category",0)})),(0,n.createElement)("li",null,(0,n.createElement)(a/* ["default"] */.Z,{className:"sensei-lms-quiz-block__questions-modal__search-input",placeholder:(0,o.__)("Search questions","sensei-lms"),iconRight:r/* ["default"] */.Z,value:m,onChange:g("search",400)})))};
+const d=e=>{let{questionCategories:t,filters:s,setFilters:d}=e;const{searchValue:m}=(0,n.useState)(s.search),p=(0,c/* .useQuestionTypes */.j)(),g=(e,t)=>(0,u.debounce)((t=>{d((s=>({...s,[e]:t})))}),t),h=[{value:"",label:(0,o.__)("Type","sensei-lms")},...(p||[]).map((e=>{var t;return{value:e.id,label:null===(t=i/* ["default"] */.Z[e.slug])||void 0===t?void 0:t.title}}))],_=[{value:"",label:(0,o.__)("Category","sensei-lms")},...(t||[]).map((e=>({value:e.id,label:e.name})))];return(0,n.createElement)("ul",{className:"sensei-lms-quiz-block__questions-modal__filters"},(0,n.createElement)("li",null,(0,n.createElement)(l.SelectControl,{options:h,value:s["question-type"],onChange:g("question-type",0)})),(0,n.createElement)("li",null,(0,n.createElement)(l.SelectControl,{options:_,value:s["question-category"],onChange:g("question-category",0)})),(0,n.createElement)("li",null,(0,n.createElement)(a/* ["default"] */.Z,{className:"sensei-lms-quiz-block__questions-modal__search-input",placeholder:(0,o.__)("Search questions","sensei-lms"),iconRight:r/* ["default"] */.Z,value:m,onChange:g("search",400)})))};
 /* harmony default export */}
 /***/,
 /***/72318:
@@ -1456,7 +1450,7 @@ const d=e=>{let{questionCategories:t,filters:s,setFilters:d}=e;const{searchValue
  * @param {string}   props.clientId Quiz block ID.
  * @param {Function} props.onClose  Close callback.
  */
-const d=e=>{let{clientId:t,onClose:s}=e;const d=(0,u/* .useAddExistingQuestions */.j)(t),[m,p]=(0,n.useState)({search:"","question-type":"","question-category":""}),[g,_]=(0,n.useState)(!1),[h,v]=(0,n.useState)([]),[b]=(0,c/* .useQuestionCategories */.J)();return(0,n.createElement)(l.Modal,{className:"sensei-lms-quiz-block__questions-modal",title:(0,r.__)("Questions","sensei-lms"),onRequestClose:s},g&&(0,n.createElement)(l.Notice,{status:"error",isDismissible:!1,className:"sensei-lms-quiz-block__questions-modal__notice"},(0,r.__)("Unable to add the selected question(s). Please make sure you are still logged in and try again.","sensei-lms")),(0,n.createElement)(o/* ["default"] */.Z,{questionCategories:b,filters:m,setFilters:p}),(0,n.createElement)(a/* ["default"] */.Z,{clientId:t,questionCategories:b,filters:m,selectedQuestionIds:h,setSelectedQuestionIds:v}),(0,n.createElement)(i/* ["default"] */.Z,{selectedQuestionIds:h,setSelectedQuestionIds:v,onAdd:d,closeModal:s,setErrorAddingSelected:_}))};
+const d=e=>{let{clientId:t,onClose:s}=e;const d=(0,u/* .useAddExistingQuestions */.j)(t),[m,p]=(0,n.useState)({search:"","question-type":"","question-category":""}),[g,h]=(0,n.useState)(!1),[_,v]=(0,n.useState)([]),[b]=(0,c/* .useQuestionCategories */.J)();return(0,n.createElement)(l.Modal,{className:"sensei-lms-quiz-block__questions-modal",title:(0,r.__)("Questions","sensei-lms"),onRequestClose:s},g&&(0,n.createElement)(l.Notice,{status:"error",isDismissible:!1,className:"sensei-lms-quiz-block__questions-modal__notice"},(0,r.__)("Unable to add the selected question(s). Please make sure you are still logged in and try again.","sensei-lms")),(0,n.createElement)(o/* ["default"] */.Z,{questionCategories:b,filters:m,setFilters:p}),(0,n.createElement)(a/* ["default"] */.Z,{clientId:t,questionCategories:b,filters:m,selectedQuestionIds:_,setSelectedQuestionIds:v}),(0,n.createElement)(i/* ["default"] */.Z,{selectedQuestionIds:_,setSelectedQuestionIds:v,onAdd:d,closeModal:s,setErrorAddingSelected:h}))};
 /* harmony default export */}
 /***/,
 /***/12842:
@@ -1491,7 +1485,7 @@ const m=(0,r.useSelect)((e=>e("core/block-editor").getBlocks(t))).map((e=>{var t
 // Questions by current filter.
 let p=(0,r.useSelect)((e=>e("core").getEntityRecords("postType","question",{per_page:100,...(0,l.omitBy)(c,(e=>""===e))})),[c]);if(!p||!s)return(0,n.createElement)("div",{className:"sensei-lms-quiz-block__questions-modal__questions sensei-lms-quiz-block__questions-modal__questions--loading"},(0,n.createElement)(o.Spinner,null));
 // Filter out already added questions.
-p=p.filter((e=>!m.includes(e.id)));const g=(0,l.keyBy)(s,"id"),_=p.length>0&&p.every((e=>u.includes(e.id))),h=e=>t=>{d(t?t=>[...t,e]:t=>t.filter((t=>t!==e)))};return(0,n.createElement)("div",{className:"sensei-lms-quiz-block__questions-modal__questions"},(0,n.createElement)("table",{className:"sensei-lms-quiz-block__questions-modal__table"},(0,n.createElement)("thead",null,(0,n.createElement)("tr",null,(0,n.createElement)("th",{className:"sensei-lms-quiz-block__questions-modal__question-checkbox"},(0,n.createElement)(o.CheckboxControl,{title:(0,a.__)("Toggle all visible questions selection.","sensei-lms"),checked:_,onChange:e=>{const t=p.map((e=>e.id));d((s=>e?(0,l.uniq)([...s,...t]):s.filter((e=>!t.includes(e)))))}})),(0,n.createElement)("th",null,(0,a.__)("Question","sensei-lms")),(0,n.createElement)("th",null,(0,a.__)("Type","sensei-lms")),(0,n.createElement)("th",null,(0,a.__)("Category","sensei-lms")))),(0,n.createElement)("tbody",null,0===p.length?(0,n.createElement)("tr",null,(0,n.createElement)("td",{colSpan:"4"},(0,n.createElement)("p",null,(0,a.__)("No questions found.","sensei-lms")))):p.map((e=>{var t;const s=null===(t=i/* ["default"] */.Z[e["question-type-slug"]])||void 0===t?void 0:t.title,l=e["question-category"].map((e=>{var t;return null===(t=g[e])||void 0===t?void 0:t.name})).join(", "),r=e.id,a=e.title.raw;return(0,n.createElement)("tr",{key:e.id},(0,n.createElement)("td",null,(0,n.createElement)(o.CheckboxControl,{id:`question-${r}`,title:a,checked:u.includes(r),onChange:h(r)})),(0,n.createElement)("td",{className:"sensei-lms-quiz-block__questions-modal__question-title"},(0,n.createElement)("label",{htmlFor:`question-${r}`,title:a},a)),(0,n.createElement)("td",null,s),(0,n.createElement)("td",null,l))})))))};
+p=p.filter((e=>!m.includes(e.id)));const g=(0,l.keyBy)(s,"id"),h=p.length>0&&p.every((e=>u.includes(e.id))),_=e=>t=>{d(t?t=>[...t,e]:t=>t.filter((t=>t!==e)))};return(0,n.createElement)("div",{className:"sensei-lms-quiz-block__questions-modal__questions"},(0,n.createElement)("table",{className:"sensei-lms-quiz-block__questions-modal__table"},(0,n.createElement)("thead",null,(0,n.createElement)("tr",null,(0,n.createElement)("th",{className:"sensei-lms-quiz-block__questions-modal__question-checkbox"},(0,n.createElement)(o.CheckboxControl,{title:(0,a.__)("Toggle all visible questions selection.","sensei-lms"),checked:h,onChange:e=>{const t=p.map((e=>e.id));d((s=>e?(0,l.uniq)([...s,...t]):s.filter((e=>!t.includes(e)))))}})),(0,n.createElement)("th",null,(0,a.__)("Question","sensei-lms")),(0,n.createElement)("th",null,(0,a.__)("Type","sensei-lms")),(0,n.createElement)("th",null,(0,a.__)("Category","sensei-lms")))),(0,n.createElement)("tbody",null,0===p.length?(0,n.createElement)("tr",null,(0,n.createElement)("td",{colSpan:"4"},(0,n.createElement)("p",null,(0,a.__)("No questions found.","sensei-lms")))):p.map((e=>{var t;const s=null===(t=i/* ["default"] */.Z[e["question-type-slug"]])||void 0===t?void 0:t.title,l=e["question-category"].map((e=>{var t;return null===(t=g[e])||void 0===t?void 0:t.name})).join(", "),r=e.id,a=e.title.raw;return(0,n.createElement)("tr",{key:e.id},(0,n.createElement)("td",null,(0,n.createElement)(o.CheckboxControl,{id:`question-${r}`,title:a,checked:u.includes(r),onChange:_(r)})),(0,n.createElement)("td",{className:"sensei-lms-quiz-block__questions-modal__question-title"},(0,n.createElement)("label",{htmlFor:`question-${r}`,title:a},a)),(0,n.createElement)("td",null,s),(0,n.createElement)("td",null,l))})))))};
 /* harmony default export */}
 /***/,
 /***/93856:
@@ -1514,7 +1508,7 @@ p=p.filter((e=>!m.includes(e.id)));const g=(0,l.keyBy)(s,"id"),_=p.length>0&&p.e
  * @param {string}   props.clientId  Quiz block ID.
  * @param {Function} props.openModal Open modal callback.
  */
-const p=e=>{let{clientId:t,openModal:s}=e;const{insertBlock:p}=(0,r.useDispatch)("core/block-editor"),g=(0,u/* .useNextQuestionIndex */.K)(t),_=e=>{p((0,l.createBlock)(e.name),g,t,!0)},h=(0,m.applyFilters)("sensei-lms.Quiz.appender-controls",[{id:"new-question",title:(0,o.__)("New Question","sensei-lms"),icon:i/* ["default"].icon */.Z.icon,onClick:()=>_(i/* ["default"] */.Z)},{id:"category-question",title:(0,o.__)("Category Question(s)","sensei-lms"),icon:a/* ["default"] */.Z,onClick:()=>_(c/* ["default"] */.Z)},{id:"existing-question",title:(0,o.__)("Existing Question(s)","sensei-lms"),icon:a/* ["default"] */.Z,onClick:s}]),v=(0,o.__)("Add new or existing question(s)","sensei-lms");return(0,n.createElement)(d/* ["default"] */.Z,{controls:h,text:v,label:v})};
+const p=e=>{let{clientId:t,openModal:s}=e;const{insertBlock:p}=(0,r.useDispatch)("core/block-editor"),g=(0,u/* .useNextQuestionIndex */.K)(t),h=e=>{p((0,l.createBlock)(e.name),g,t,!0)},_=(0,m.applyFilters)("sensei-lms.Quiz.appender-controls",[{id:"new-question",title:(0,o.__)("New Question","sensei-lms"),icon:i/* ["default"].icon */.Z.icon,onClick:()=>h(i/* ["default"] */.Z)},{id:"category-question",title:(0,o.__)("Category Question(s)","sensei-lms"),icon:a/* ["default"] */.Z,onClick:()=>h(c/* ["default"] */.Z)},{id:"existing-question",title:(0,o.__)("Existing Question(s)","sensei-lms"),icon:a/* ["default"] */.Z,onClick:s}]),v=(0,o.__)("Add new or existing question(s)","sensei-lms");return(0,n.createElement)(d/* ["default"] */.Z,{controls:_,text:v,label:v})};
 /* harmony default export */}
 /***/,
 /***/13400:
@@ -1522,7 +1516,7 @@ const p=e=>{let{clientId:t,openModal:s}=e;const{insertBlock:p}=(0,r.useDispatch)
 /* harmony export */s.d(t,{
 /* harmony export */Z:()=>E
 /* harmony export */});
-/* harmony import */var n=s(69307),l=s(52175),r=s(65736),o=s(80688),a=s(75245),i=s(98399),c=s(37895),u=s(17932),d=s(93856),m=s(72318),p=s(17801),g=s(81421),_=s(17843),h=s(78977),v=s(55609);
+/* harmony import */var n=s(69307),l=s(52175),r=s(65736),o=s(80688),a=s(75245),i=s(98399),c=s(37895),u=s(17932),d=s(93856),m=s(72318),p=s(17801),g=s(81421),h=s(17843),_=s(78977),v=s(55609);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1530,7 +1524,7 @@ const p=e=>{let{clientId:t,openModal:s}=e;const{insertBlock:p}=(0,r.useDispatch)
 /**
  * Internal dependencies
  */
-const b=["sensei-lms/quiz-question","sensei-lms/quiz-category-question"],E=(0,o/* .withBlockMetaProvider */.n_)((e=>{var t,s;const{clientId:o}=e;(0,c/* .useQuizStructure */.R)(e),(0,a/* .useAutoInserter */.l)({name:i/* ["default"].name */.Z.name,selectFirstBlock:!e.attributes.isPostTemplate,isEmptyBlock:_/* .isQuestionEmpty */.tv},e),(0,g/* .useUpdateQuizHasQuestionsMeta */.E)(o);const[E,k]=(0,n.useState)(!1),w=(0,n.useCallback)((()=>(0,n.createElement)(d/* ["default"] */.Z,{clientId:o,openModal:()=>k(!0)})),[o]),f=null==e||null===(t=e.attributes)||void 0===t||null===(s=t.options)||void 0===s?void 0:s.pagination,y=(null==f?void 0:f.paginationNumber)&&(null==f?void 0:f.showProgressBar),q=(0,l.useBlockProps)();return(0,n.createElement)("div",q,(0,n.createElement)(u/* ["default"] */.Z,e),(0,n.createElement)("div",{className:"sensei-lms-quiz-block__separator"},(0,n.createElement)(v.Slot,{name:"SenseiQuizHeader"}),(0,n.createElement)("span",null,(0,n.createElement)("span",null,(0,r.__)("Lesson Quiz","sensei-lms")))),(0,n.createElement)(v.Slot,{name:"SenseiQuizBlockTop"}),y&&(0,n.createElement)(h/* ["default"] */.Z,{pagination:f}),(0,n.createElement)(l.InnerBlocks,{allowedBlocks:b,templateInsertUpdatesSelection:!1,renderAppender:w}),E&&(0,n.createElement)(m/* ["default"] */.Z,{clientId:o,onClose:()=>k(!1)
+const b=["sensei-lms/quiz-question","sensei-lms/quiz-category-question"],E=(0,o/* .withBlockMetaProvider */.n_)((e=>{var t,s;const{clientId:o}=e;(0,c/* .useQuizStructure */.R)(e),(0,a/* .useAutoInserter */.l)({name:i/* ["default"].name */.Z.name,selectFirstBlock:!e.attributes.isPostTemplate,isEmptyBlock:h/* .isQuestionEmpty */.tv},e),(0,g/* .useUpdateQuizHasQuestionsMeta */.E)(o);const[E,w]=(0,n.useState)(!1),k=(0,n.useCallback)((()=>(0,n.createElement)(d/* ["default"] */.Z,{clientId:o,openModal:()=>w(!0)})),[o]),f=null==e||null===(t=e.attributes)||void 0===t||null===(s=t.options)||void 0===s?void 0:s.pagination,y=(null==f?void 0:f.paginationNumber)&&(null==f?void 0:f.showProgressBar),q=(0,l.useBlockProps)();return(0,n.createElement)("div",q,(0,n.createElement)(u/* ["default"] */.Z,e),(0,n.createElement)("div",{className:"sensei-lms-quiz-block__separator"},(0,n.createElement)(v.Slot,{name:"SenseiQuizHeader"}),(0,n.createElement)("span",null,(0,n.createElement)("span",null,(0,r.__)("Lesson Quiz","sensei-lms")))),(0,n.createElement)(v.Slot,{name:"SenseiQuizBlockTop"}),y&&(0,n.createElement)(_/* ["default"] */.Z,{pagination:f}),(0,n.createElement)(l.InnerBlocks,{allowedBlocks:b,templateInsertUpdatesSelection:!1,renderAppender:k}),E&&(0,n.createElement)(m/* ["default"] */.Z,{clientId:o,onClose:()=>w(!1)
 /* Temporary solution. See https://github.com/WordPress/gutenberg/pull/29911 */}),(0,n.createElement)("div",{className:"sensei-lms-quiz-block__separator"}),(0,n.createElement)(p/* ["default"] */.Z,e))}));
 /**
  * Quiz block editor.
@@ -1562,7 +1556,7 @@ const o=e=>{const{pagination:t}=e,s={style:{...(null==t?void 0:t.progressBarColo
 /***/17801:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */Z:()=>_
+/* harmony export */Z:()=>h
 /* harmony export */});
 /* harmony import */var n=s(69307),l=s(52175),r=s(55609),o=s(9818),a=s(92694),i=s(65736),c=s(80768),u=s(17843),d=s(87632),m=s(43235),p=s(14151),g=s(24280);
 /* harmony import */
@@ -1582,9 +1576,9 @@ const o=e=>{const{pagination:t}=e,s={style:{...(null==t?void 0:t.progressBarColo
  * @param {Function} props.setAttributes      Set attributes function.
  * @param {string}   props.clientId           Block ID.
  */
-const _=e=>{let{attributes:{options:t},setAttributes:s,clientId:_}=e;const{passRequired:h,quizPassmark:v,autoGrade:b,allowRetakes:E,randomQuestionOrder:k,showQuestions:w,failedShowAnswerFeedback:f,failedShowCorrectAnswers:y,failedIndicateIncorrect:q,buttonTextColor:C,buttonBackgroundColor:S,pagination:Z}=t,B=e=>n=>s({options:{...t,[e]:n}})
+const h=e=>{let{attributes:{options:t},setAttributes:s,clientId:h}=e;const{passRequired:_,quizPassmark:v,autoGrade:b,allowRetakes:E,randomQuestionOrder:w,showQuestions:k,failedShowAnswerFeedback:f,failedShowCorrectAnswers:y,failedIndicateIncorrect:q,buttonTextColor:C,buttonBackgroundColor:S,pagination:Z}=t,B=e=>n=>s({options:{...t,[e]:n}})
 // Update the pagination options function used for block settings.
-,N=e=>s({options:{...t,pagination:{...Z,...e}}}),x=(0,p/* .useOpenQuizSettings */.V)(_),A=(0,o.useSelect)((e=>e("core/block-editor").getBlock(_).innerBlocks.filter((e=>!(0,u/* .isQuestionEmpty */.tv)(e.attributes)))),[_]).reduce(((e,t)=>e+("category-question"===t.attributes.type?t.attributes.options.number:1)),0),P=(0,a.applyFilters)("senseiQuizTimerHide",!1);return(0,n.useEffect)((()=>{w>A&&s({options:{...t,showQuestions:A}})}),[t,A,s,w]),(0,n.createElement)(n.Fragment,null,(0,n.createElement)("div",{className:"sensei-lms-quiz-block__settings-quick-nav"},(0,n.createElement)(r.Button,{onClick:x,icon:g/* ["default"] */.Z},(0,i.__)("Quiz settings","sensei-lms"))),(0,n.createElement)(l.InspectorControls,null,(0,n.createElement)("div",{className:"sensei-lms-quiz-block__settings-wrapper"},(0,n.createElement)(r.PanelBody,{title:(0,i.__)("Quiz settings","sensei-lms"),initialOpen:!0},(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:h,onChange:B("passRequired"),label:(0,i.__)("Pass Required","sensei-lms")})),h&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.RangeControl,{label:(0,i.__)("Passing Grade (%)","sensei-lms"),value:v,onChange:B("quizPassmark"),min:0,max:100,initialPosition:100})),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)("div",null,(0,n.createElement)(r.BaseControl,{id:"sensei-lms-quiz-block-failed-feedback-options",className:"sensei-lms-subsection-control",help:(0,i.__)("What students see when reviewing their quiz after grading.","sensei-lms")},(0,n.createElement)("h3",null,(0,i.__)("If student does not pass quiz","sensei-lms"))),(0,n.createElement)(r.ToggleControl,{checked:q,onChange:B("failedIndicateIncorrect"),label:(0,i.__)("Indicate which questions are incorrect.","sensei-lms")}),(0,n.createElement)(r.ToggleControl,{checked:y,onChange:B("failedShowCorrectAnswers"),label:(0,i.__)("Show correct answers.","sensei-lms")}),(0,n.createElement)(r.ToggleControl,{checked:f,onChange:B("failedShowAnswerFeedback"),label:(0,i.__)("Show “Answer Feedback” text.","sensei-lms")}))),(0,n.createElement)("hr",null)),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:b,onChange:B("autoGrade"),label:(0,i.__)("Auto Grade","sensei-lms"),help:(0,i.__)("Automatically grade Multiple Choice, True/False and Gap Fill questions that have a non-zero point value.","sensei-lms")})),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:E,onChange:B("allowRetakes"),label:(0,i.__)("Allow Retakes","sensei-lms")})),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:k,onChange:B("randomQuestionOrder"),label:(0,i.__)("Random Question Order","sensei-lms")})),k&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(c/* ["default"] */.Z,{id:"sensei-quiz-settings-show-questions",label:(0,i.__)("Number of Questions","sensei-lms"),help:(0,i.__)("Display a random selection of questions.","sensei-lms"),allowReset:!0,resetLabel:(0,i.__)("All","sensei-lms"),min:0,max:A,step:1,value:w,placeholder:(0,i.__)("All","sensei-lms"),onChange:B("showQuestions")}))),(0,n.createElement)(r.Slot,{name:"SenseiQuizSettings"}),!P&&(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(m/* ["default"] */.Z,null))),(0,n.createElement)(d/* .PaginationSidebarSettings */.I,{settings:Z,updatePagination:N}),(0,n.createElement)(l.PanelColorSettings,{title:(0,i.__)("Color settings","sensei-lms"),initialOpen:!1,colorSettings:[{value:C||void 0,onChange:B("buttonTextColor"),label:(0,i.__)("Button text color","sensei-lms")},{value:S||void 0,onChange:B("buttonBackgroundColor"),label:(0,i.__)("Button background color","sensei-lms")},{value:(null==Z?void 0:Z.progressBarColor)||void 0,onChange:e=>N({progressBarColor:e}),label:(0,i.__)("Progress bar color","sensei-lms")},{value:(null==Z?void 0:Z.progressBarBackground)||void 0,onChange:e=>N({progressBarBackground:e}),label:(0,i.__)("Progress bar background color","sensei-lms")}]}))),(0,n.createElement)(l.BlockControls,null,(0,n.createElement)(d/* .PaginationToolbarSettings */.K,{settings:Z,updatePagination:N})))};
+,N=e=>s({options:{...t,pagination:{...Z,...e}}}),x=(0,p/* .useOpenQuizSettings */.V)(h),P=(0,o.useSelect)((e=>e("core/block-editor").getBlock(h).innerBlocks.filter((e=>!(0,u/* .isQuestionEmpty */.tv)(e.attributes)))),[h]).reduce(((e,t)=>e+("category-question"===t.attributes.type?t.attributes.options.number:1)),0),A=(0,a.applyFilters)("senseiQuizTimerHide",!1);return(0,n.useEffect)((()=>{k>P&&s({options:{...t,showQuestions:P}})}),[t,P,s,k]),(0,n.createElement)(n.Fragment,null,(0,n.createElement)("div",{className:"sensei-lms-quiz-block__settings-quick-nav"},(0,n.createElement)(r.Button,{onClick:x,icon:g/* ["default"] */.Z},(0,i.__)("Quiz settings","sensei-lms"))),(0,n.createElement)(l.InspectorControls,null,(0,n.createElement)("div",{className:"sensei-lms-quiz-block__settings-wrapper"},(0,n.createElement)(r.PanelBody,{title:(0,i.__)("Quiz settings","sensei-lms"),initialOpen:!0},(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:_,onChange:B("passRequired"),label:(0,i.__)("Pass Required","sensei-lms")})),_&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.RangeControl,{label:(0,i.__)("Passing Grade (%)","sensei-lms"),value:v,onChange:B("quizPassmark"),min:0,max:100,initialPosition:100})),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)("div",null,(0,n.createElement)(r.BaseControl,{id:"sensei-lms-quiz-block-failed-feedback-options",className:"sensei-lms-subsection-control",help:(0,i.__)("What students see when reviewing their quiz after grading.","sensei-lms")},(0,n.createElement)("h3",null,(0,i.__)("If student does not pass quiz","sensei-lms"))),(0,n.createElement)(r.ToggleControl,{checked:q,onChange:B("failedIndicateIncorrect"),label:(0,i.__)("Indicate which questions are incorrect.","sensei-lms")}),(0,n.createElement)(r.ToggleControl,{checked:y,onChange:B("failedShowCorrectAnswers"),label:(0,i.__)("Show correct answers.","sensei-lms")}),(0,n.createElement)(r.ToggleControl,{checked:f,onChange:B("failedShowAnswerFeedback"),label:(0,i.__)("Show “Answer Feedback” text.","sensei-lms")}))),(0,n.createElement)("hr",null)),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:b,onChange:B("autoGrade"),label:(0,i.__)("Auto Grade","sensei-lms"),help:(0,i.__)("Automatically grade Multiple Choice, True/False and Gap Fill questions that have a non-zero point value.","sensei-lms")})),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:E,onChange:B("allowRetakes"),label:(0,i.__)("Allow Retakes","sensei-lms")})),(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(r.ToggleControl,{checked:w,onChange:B("randomQuestionOrder"),label:(0,i.__)("Random Question Order","sensei-lms")})),w&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(c/* ["default"] */.Z,{id:"sensei-quiz-settings-show-questions",label:(0,i.__)("Number of Questions","sensei-lms"),help:(0,i.__)("Display a random selection of questions.","sensei-lms"),allowReset:!0,resetLabel:(0,i.__)("All","sensei-lms"),min:0,max:P,step:1,value:k,placeholder:(0,i.__)("All","sensei-lms"),onChange:B("showQuestions")}))),(0,n.createElement)(r.Slot,{name:"SenseiQuizSettings"}),!A&&(0,n.createElement)(r.PanelRow,null,(0,n.createElement)(m/* ["default"] */.Z,null))),(0,n.createElement)(d/* .PaginationSidebarSettings */.I,{settings:Z,updatePagination:N}),(0,n.createElement)(l.PanelColorSettings,{title:(0,i.__)("Color settings","sensei-lms"),initialOpen:!1,colorSettings:[{value:C||void 0,onChange:B("buttonTextColor"),label:(0,i.__)("Button text color","sensei-lms")},{value:S||void 0,onChange:B("buttonBackgroundColor"),label:(0,i.__)("Button background color","sensei-lms")},{value:(null==Z?void 0:Z.progressBarColor)||void 0,onChange:e=>N({progressBarColor:e}),label:(0,i.__)("Progress bar color","sensei-lms")},{value:(null==Z?void 0:Z.progressBarBackground)||void 0,onChange:e=>N({progressBarBackground:e}),label:(0,i.__)("Progress bar background color","sensei-lms")}]}))),(0,n.createElement)(l.BlockControls,null,(0,n.createElement)(d/* .PaginationToolbarSettings */.K,{settings:Z,updatePagination:N})))};
 /* harmony default export */}
 /***/,
 /***/43235:
@@ -1606,9 +1600,9 @@ const o=()=>(0,n.createElement)("div",{className:"sensei-lms-quiz-block-settings
 /***/17932:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */Z:()=>d
+/* harmony export */Z:()=>h
 /* harmony export */});
-/* harmony import */var n=s(69307),l=s(55609),r=s(9818),o=s(72067),a=s(65736),i=s(80688),c=s(61831);
+/* harmony import */var n=s(69307),l=s(55609),r=s(9818),o=s(72067),a=s(12238),i=s(65736),c=s(52175),u=s(80688),d=s(61831);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1616,25 +1610,9 @@ const o=()=>(0,n.createElement)("div",{className:"sensei-lms-quiz-block-settings
 /**
  * Internal dependencies
  */
-/**
- * Notice about incomplete questions in the quiz.
- *
- * @param {Object}   props
- * @param {number}   props.count   Incomplete question count.
- * @param {Function} props.onClick Callback for notice action.
- */
-const u=e=>{let{count:t,onClick:s}=e;return(0,n.createElement)("div",null,(0,n.createElement)(l.Notice,{isDismissible:!1,status:"warning",className:"sensei-lms-quiz-block__pre-publish-validation__notice",actions:[{label:(0,a.__)("View issues","sensei-lms"),onClick:s,className:"is-link"}]},(0,a.sprintf)(
+const m=a.PluginPostStatusInfo||o.PluginPostStatusInfo,p=a.PluginPrePublishPanel||o.PluginPrePublishPanel,g=e=>{let{count:t,onClick:s}=e;return(0,n.createElement)("div",null,(0,n.createElement)(l.Notice,{isDismissible:!1,status:"warning",className:"sensei-lms-quiz-block__pre-publish-validation__notice",actions:[{label:(0,i.__)("View issues","sensei-lms"),onClick:s,className:"is-link"}]},(0,i.sprintf)(
 // Translators: placeholder is the numer of incomplete questions.
-(0,a._n)("There is %d incomplete question in this lesson's quiz.","There are %d incomplete questions in this lesson's quiz.",t,"sensei-lms"),t)))},d=e=>{let{clientId:t,setMeta:s}=e;const l=(0,r.useSelect)((e=>{const s=e("core/block-editor").getBlocks(t),n=e(i/* .BLOCK_META_STORE */.fv).getMultipleBlockMeta(s.map((e=>e.clientId)),"validationErrors");return s.map((e=>({...e,errors:n[e.clientId]}))).filter((e=>{var t;return null===(t=e.errors)||void 0===t?void 0:t.length}))}),[t]),d=(0,n.useCallback)((function(){s({showValidationErrors:!(arguments.length>0&&void 0!==arguments[0])||arguments[0]})}),[s]),{selectBlock:m}=(0,r.useDispatch)("core/block-editor");if((0,c/* .usePostSavingEffect */.H3)((()=>d(!1)),[d]),!l.length)return null;const p=(0,n.createElement)(u,{onClick:()=>{l.length&&(d(!0),m(l[0].clientId))},count:l.length});return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(o.PluginPostStatusInfo,null,p),(0,n.createElement)(o.PluginPrePublishPanel,{title:(0,a.__)("Lesson Quiz","sensei-lms"),initialOpen:!0},(0,n.createElement)(c/* .Effect */.Qm,{onMount:d}),p,(0,n.createElement)("p",null,(0,a.__)("Incomplete questions won't be displayed to the student when taking the quiz.","sensei-lms"))))};
-/**
- * Collect and act on validation results for the questions in the quiz.
- *
- * Displays notices in the pre-publish and post status panels if there are incomplete questions.
- *
- * @param {Object}   props
- * @param {string}   props.clientId
- * @param {Function} props.setMeta
- */}
+(0,i._n)("There is %d incomplete question in this lesson's quiz.","There are %d incomplete questions in this lesson's quiz.",t,"sensei-lms"),t)))},h=e=>{let{clientId:t,setMeta:s}=e;const l=(e=>{const{questionBlocks:t}=(0,r.useSelect)((t=>({questionBlocks:t(c.store).getBlocks(e)})),[e]),s=(0,n.useMemo)((()=>t.map((e=>e.clientId))),[t]),{errors:l}=(0,r.useSelect)((e=>({errors:e(u/* .BLOCK_META_STORE */.fv).getMultipleBlockMeta(s,"validationErrors")})),[e,s]);return(0,n.useMemo)((()=>t.map((e=>({...e,errors:l[e.clientId]}))).filter((e=>{var t;return null===(t=e.errors)||void 0===t?void 0:t.length}))),[t,l])})(t),o=(0,n.useCallback)((function(){s({showValidationErrors:!(arguments.length>0&&void 0!==arguments[0])||arguments[0]})}),[s]),{selectBlock:a}=(0,r.useDispatch)(c.store);if((0,d/* .usePostSavingEffect */.H3)((()=>o(!1)),[o]),!l.length)return null;const h=(0,n.createElement)(g,{onClick:()=>{l.length&&(o(!0),a(l[0].clientId))},count:l.length});return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(m,null,h),(0,n.createElement)(p,{title:(0,i.__)("Lesson Quiz","sensei-lms"),initialOpen:!0},(0,n.createElement)(d/* .Effect */.Qm,{onMount:o}),h,(0,n.createElement)("p",null,(0,i.__)("Incomplete questions won't be displayed to the student when taking the quiz.","sensei-lms"))))}}
 /***/,
 /***/21069:
 /***/(e,t,s)=>{"use strict";
@@ -1819,18 +1797,18 @@ n=(0,l.omit)(n,Object.keys(t))),
 /***/80688:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */fv:()=>/* binding */u
-/* harmony export */,n_:()=>/* binding */p
+/* harmony export */fv:()=>/* binding */d
+/* harmony export */,n_:()=>/* binding */g
 /* harmony export */,vf:()=>/* binding */_
 /* harmony export */});
 /* unused harmony exports useBlockMeta, useBlockMetaContext, setBlockMeta */
-/* harmony import */var n=s(25773),l=s(69307),r=s(94333),o=s(9818),a=s(92819),i=s(20832);
+/* harmony import */var n=s(25773),l=s(69307),r=s(92819),o=s(67455),a=s(94333),i=s(9818),c=s(20832);
 /* harmony import */
 /**
- * WordPress dependencies
+ * External dependencies
  */
 /**
- * External dependencies
+ * WordPress dependencies
  */
 /**
  * Internal dependencies
@@ -1838,7 +1816,7 @@ n=(0,l.omit)(n,Object.keys(t))),
 /**
  * Block metadata store definition.
  */
-const c={reducer:(0,i/* .createReducerFromActionMap */.lA)({SET_BLOCK_META:(e,t)=>{let{clientId:s,metadata:n}=e;return{...t,[s]:{...t[s]||{},...n}}},CLEAR:(e,t)=>t?{...e,[t]:void 0}:{},DEFAULT:e=>e},{}),actions:{
+const u={reducer:(0,c/* .createReducerFromActionMap */.lA)({SET_BLOCK_META:(e,t)=>{let{clientId:s,metadata:n}=e;return{...t,[s]:{...t[s]||{},...n}}},CLEAR:(e,t)=>t?{...e,[t]:void 0}:{},DEFAULT:e=>e},{}),actions:{
 /**
      * Set metadata for a block.
      *
@@ -1871,14 +1849,14 @@ getBlockMeta:function(e,t){var s;let n=arguments.length>2&&void 0!==arguments[2]
      * @param {string}   [key]     Only return metadata for the given key.
      * @return {Object} Blocks metadata, indexed by block ID.
      */
-getMultipleBlockMeta:function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],s=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;const n=null!=t&&t.length?(0,a.pick)(e,t):{...e};return s?(0,a.mapValues)(n,s):n}}},u=(0,i/* .createStore */.MT)("sensei/block-metadata",c),d=(0,l.createContext)({}),m=e=>{const t=(0,o.useSelect)((t=>t(u).getBlockMeta(e)),[e]),{setBlockMeta:s}=(0,o.useDispatch)(u),n=g(),r=(0,l.useCallback)((t=>s(e,t)),[e,s]);return[(0,l.useMemo)((()=>({...n,...t})),[t,n]),r]},p=(0,r.createHigherOrderComponent)((e=>_((t=>{const[s]=m(t.clientId);return(0,l.createElement)(d.Provider,{value:s},(0,l.createElement)(e,t))}))),"withBlockMetaProvider"),g=()=>(0,l.useContext)(d)
+getMultipleBlockMeta:(0,o/* ["default"] */.Z)((function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],s=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;const n=null!=t&&t.length?(0,r.pick)(e,t):e;return s?(0,r.mapValues)(n,s):n}),(e=>[e]))}},d=(0,c/* .createStore */.MT)("sensei/block-metadata",u),m=(0,l.createContext)({}),p=e=>{const t=(0,i.useSelect)((t=>t(d).getBlockMeta(e)),[e]),{setBlockMeta:s}=(0,i.useDispatch)(d),n=h(),r=(0,l.useCallback)((t=>s(e,t)),[e,s]);return[(0,l.useMemo)((()=>({...n,...t})),[t,n]),r]},g=(0,a.createHigherOrderComponent)((e=>_((t=>{const[s]=p(t.clientId);return(0,l.createElement)(m.Provider,{value:s},(0,l.createElement)(e,t))}))),"withBlockMetaProvider"),h=()=>(0,l.useContext)(m)
 /**
  * Attach metadata store to the block.
  * Provides the following props:
  *
  * @property {Object}   meta    Block metadata.
  * @property {Function} setMeta Block metadata setter.
- */,_=(0,r.createHigherOrderComponent)((e=>t=>{const[s,r]=m(t.clientId);return(0,l.createElement)(e,(0,n/* ["default"] */.Z)({},t,{meta:s,setMeta:r}))}),"withBlockMeta");
+ */,_=(0,a.createHigherOrderComponent)((e=>t=>{const[s,r]=p(t.clientId);return(0,l.createElement)(e,(0,n/* ["default"] */.Z)({},t,{meta:s,setMeta:r}))}),"withBlockMeta");
 /**
  * Block metadata store.
  *
@@ -1958,9 +1936,9 @@ const r=e=>(0,l.createHigherOrderComponent)((t=>s=>(((e,t)=>{let{attributes:s,se
  * @param {boolean} props.hideDefault             Hide default settings for edit view only.
  * @param {boolean} props.label                   Label.
  */
-const c=e=>{let{totalCount:t,completedCount:s,hidePercentage:r,wrapperAttributes:c,barWrapperAttributes:u,barAttributes:d,countersClassName:m,completedCountClassName:p,hideDefault:g,label:_}=e;const h=Math.round(s/t*100)||0,v=Math.max(g?0:3,h),b=(0,i.useBlockProps)(c);return(0,l.createElement)("div",b,(0,l.createElement)("section",{className:o()("sensei-progress-bar__heading",m)},(0,l.createElement)("div",{className:o()("sensei-progress-bar__label",p)},(0,a.sprintf)(
+const c=e=>{let{totalCount:t,completedCount:s,hidePercentage:r,wrapperAttributes:c,barWrapperAttributes:u,barAttributes:d,countersClassName:m,completedCountClassName:p,hideDefault:g,label:h}=e;const _=Math.round(s/t*100)||0,v=Math.max(g?0:3,_),b=(0,i.useBlockProps)(c);return(0,l.createElement)("div",b,(0,l.createElement)("section",{className:o()("sensei-progress-bar__heading",m)},(0,l.createElement)("div",{className:o()("sensei-progress-bar__label",p)},(0,a.sprintf)(
 // translators: Placeholder %1$d is the completed progress count, %2$d is the total count and %3$s is the label for progress bar.
-(0,a.__)("%1$d of %2$d %3$s completed","sensei-lms"),s,t,_||""),!r&&` (${h}%)`)),(0,l.createElement)("div",(0,n/* ["default"] */.Z)({role:"progressbar","aria-valuenow":h,"aria-valuemin":"0","aria-valuemax":"100"},u,{className:o()("sensei-progress-bar__bar",null==u?void 0:u.className)}),(0,l.createElement)("div",(0,n/* ["default"] */.Z)({},d,{className:o()("sensei-progress-bar__progress",null==d?void 0:d.className),style:{...(null==d?void 0:d.style)&&d.style,width:`${v}%`}}))))};
+(0,a.__)("%1$d of %2$d %3$s completed","sensei-lms"),s,t,h||""),!r&&` (${_}%)`)),(0,l.createElement)("div",(0,n/* ["default"] */.Z)({role:"progressbar","aria-valuenow":_,"aria-valuemin":"0","aria-valuemax":"100"},u,{className:o()("sensei-progress-bar__bar",null==u?void 0:u.className)}),(0,l.createElement)("div",(0,n/* ["default"] */.Z)({},d,{className:o()("sensei-progress-bar__progress",null==d?void 0:d.className),style:{...(null==d?void 0:d.style)&&d.style,width:`${v}%`}}))))};
 /* harmony default export */}
 /***/,
 /***/3295:
@@ -2028,9 +2006,9 @@ const c=(0,l.forwardRef)(((e,t)=>{let{onChange:s,onKeyDown:r,value:c,onEnter:u,o
  * @param {Function} opts.isEmptyBlock     Callback to check if block is empty.
  * @param {Object}   parentProps           Block properties.
  */
-const a=(e,t)=>{let{name:s,attributes:a={},selectFirstBlock:i=!1,isEmptyBlock:c}=e;const{clientId:u}=t,{__unstableMarkNextChangeAsNotPersistent:d=o.noop,insertBlock:m}=(0,l.useDispatch)("core/block-editor"),p=(0,l.useSelect)((e=>e("core/block-editor").getBlocks(u))),g=0===p.length,_=(0,r.useCallback)((()=>{const e=(0,n.createBlock)(s,a),t=g&&i;d(),m(e,void 0,u,t)}),[d,m,u,s,a,g,i]),h=p.length&&p[p.length-1],v=h&&c(h.attributes);
+const a=(e,t)=>{let{name:s,attributes:a={},selectFirstBlock:i=!1,isEmptyBlock:c}=e;const{clientId:u}=t,{__unstableMarkNextChangeAsNotPersistent:d=o.noop,insertBlock:m}=(0,l.useDispatch)("core/block-editor"),p=(0,l.useSelect)((e=>e("core/block-editor").getBlocks(u))),g=0===p.length,h=(0,r.useCallback)((()=>{const e=(0,n.createBlock)(s,a),t=g&&i;d(),m(e,void 0,u,t)}),[d,m,u,s,a,g,i]),_=p.length&&p[p.length-1],v=_&&c(_.attributes);
 // console.log( 'dentro', useDispatch );
-(0,r.useEffect)((()=>{v||_()}),[v,_])};
+(0,r.useEffect)((()=>{v||h()}),[v,h])};
 /***/},
 /***/92239:
 /***/(e,t,s)=>{"use strict";
@@ -2069,8 +2047,8 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /***/20832:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */lA:()=>/* binding */l
-/* harmony export */,MT:()=>/* binding */r
+/* harmony export */lA:()=>/* binding */r
+/* harmony export */,MT:()=>/* binding */o
 /* harmony export */});
 /* unused harmony export composeFetchAction */
 /* harmony import */var n=s(9818);
@@ -2078,6 +2056,9 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:l}=window,r=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)},o=(e,t)=>{if(l[e])return l[e];const s=(0,n.createReduxStore)(e,t);return(0,n.register)(s),l[e]=s,s};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -2086,18 +2067,6 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const l=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)},r=(e,t)=>{if(n.createReduxStore){const s=(0,n.createReduxStore)(e,t);return(0,n.register)(s),s}return(0,n.registerStore)(e,t),e};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/61831:
@@ -2160,21 +2129,21 @@ const r=e=>{let{isSelected:t,clientId:s}=e;return(0,n.useSelect)((e=>e("core/blo
  * @param {Function} opts.readBlock          Extract structure from block.
  * @param {Function} opts.setServerStructure Set the server structure which is used to track differences.
  */
-function a(e){let{storeName:t,getEndpoint:s,saveError:a,fetchError:i,clearError:c,updateBlock:u,blockExists:d,readBlock:m,setServerStructure:p,...g}=e;const _={
+function a(e){let{storeName:t,getEndpoint:s,saveError:a,fetchError:i,clearError:c,updateBlock:u,blockExists:d,readBlock:m,setServerStructure:p,...g}=e;const h={
 /**
      * Fetch structure data from REST API.
      */
-*loadStructure(){try{const e=yield*s(),t=yield(0,l.apiFetch)({path:`/sensei-internal/v1/${e}`,method:"GET"});yield _.setResult(t)}catch(e){yield null==i?void 0:i(e)}},
+*loadStructure(){try{const e=yield*s(),t=yield(0,l.apiFetch)({path:`/sensei-internal/v1/${e}`,method:"GET"});yield h.setResult(t)}catch(e){yield null==i?void 0:i(e)}},
 /**
      * Persist editor's structure to the REST API.
      */
-*saveStructure(){const e=yield(0,r.select)(t).getEditorStructure();try{const t=yield*s(),n=yield(0,l.apiFetch)({path:`/sensei-internal/v1/${t}`,method:"POST",data:e});yield _.setResult(n)}catch(e){yield null==a?void 0:a(e)}},
+*saveStructure(){const e=yield(0,r.select)(t).getEditorStructure();try{const t=yield*s(),n=yield(0,l.apiFetch)({path:`/sensei-internal/v1/${t}`,method:"POST",data:e});yield h.setResult(n)}catch(e){yield null==a?void 0:a(e)}},
 /**
      * Set fetched structure.
      *
      * @param {Array} serverStructure
      */
-*setResult(e){yield _.setServerStructure(e),yield u(e)},
+*setResult(e){yield h.setServerStructure(e),yield u(e)},
 /**
      * Keep last fetched server state for comparison.
      *
@@ -2194,24 +2163,24 @@ setEditorStructure:e=>({type:"SET_EDITOR_STRUCTURE",editorStructure:e}),
 /**
      * Post is saving. Save the structure too if it has changed.
      */
-*startPostSave(){yield{type:"START_SAVE"};const e=m();yield _.setEditorStructure(e),yield null==c?void 0:c(),e&&((0,r.select)(t).hasUnsavedEditorChanges()&&(yield*_.saveStructure()),yield{type:"FINISH_SAVE"})},
+*startPostSave(){yield{type:"START_SAVE"};const e=m();yield h.setEditorStructure(e),yield null==c?void 0:c(),e&&((0,r.select)(t).hasUnsavedEditorChanges()&&(yield*h.saveStructure()),yield{type:"FINISH_SAVE"})},
 /**
      * Finished saving post and structure.
      * Check if either needs to be saved again due to new changes.
      */
-*finishPostSave(){yield{type:"FINISH_POST_SAVE"};const{hasUnsavedServerUpdates:e}=(0,r.select)(t);e()&&(yield*_.savePost())},
+*finishPostSave(){yield{type:"FINISH_POST_SAVE"};const{hasUnsavedServerUpdates:e}=(0,r.select)(t);e()&&(yield*h.savePost())},
 /**
      * Set linked block.
      *
      * @param {string} clientId Block ID.
      */
-*setBlock(e){yield{type:"SET_BLOCK",clientId:e}}},h={SET_SERVER_STRUCTURE:(e,t)=>{let{serverStructure:s}=e;const l=!t.editorStructure,r=p?p(s):s,o=!l&&!(0,n.isEqual)(r,t.editorStructure);return{...t,serverStructure:r,hasUnsavedServerUpdates:o,hasUnsavedEditorChanges:!1}},SET_EDITOR_STRUCTURE:(e,t)=>{let{editorStructure:s}=e;const l=!(0,n.isEqual)(t.serverStructure,s);return{...t,editorStructure:s,hasUnsavedEditorChanges:l&&!!s}},START_SAVE:(e,t)=>({...t,isSavingStructure:!0}),FINISH_SAVE:(e,t)=>({...t,isSavingStructure:!1}),SAVE_POST:(e,t)=>({...t,hasUnsavedServerUpdates:!1}),SET_BLOCK:(e,t)=>{let{clientId:s}=e;return{...t,clientId:s}},DEFAULT:(e,t)=>t};return{unsubscribe:(()=>{let e=!1,s=!1,n=!1;return(0,r.subscribe)((function(){const l=(0,r.select)("core/editor"),o=(0,r.select)("core/edit-post");if(!l||!o)return;
+*setBlock(e){yield{type:"SET_BLOCK",clientId:e}}},_={SET_SERVER_STRUCTURE:(e,t)=>{let{serverStructure:s}=e;const l=!t.editorStructure,r=p?p(s):s,o=!l&&!(0,n.isEqual)(r,t.editorStructure);return{...t,serverStructure:r,hasUnsavedServerUpdates:o,hasUnsavedEditorChanges:!1}},SET_EDITOR_STRUCTURE:(e,t)=>{let{editorStructure:s}=e;const l=!(0,n.isEqual)(t.serverStructure,s);return{...t,editorStructure:s,hasUnsavedEditorChanges:l&&!!s}},START_SAVE:(e,t)=>({...t,isSavingStructure:!0}),FINISH_SAVE:(e,t)=>({...t,isSavingStructure:!1}),SAVE_POST:(e,t)=>({...t,hasUnsavedServerUpdates:!1}),SET_BLOCK:(e,t)=>{let{clientId:s}=e;return{...t,clientId:s}},DEFAULT:(e,t)=>t};return{unsubscribe:(()=>{let e=!1,s=!1,n=!1;return(0,r.subscribe)((function(){const l=(0,r.select)("core/editor"),o=(0,r.select)("core/edit-post");if(!l||!o)return;
 // Check if the block exists.
 if(!d())return;const a=(0,r.select)(t).getIsSavingStructure(),i=l.isSavingPost()&&!l.isAutosavingPost();i&&(s=!0);const c=o.isSavingMetaBoxes();c&&(n=!0),e||i||c||!s||!n?e&&!a&&(
 // Call finishPostSave when structure has finished saving.
 e=!1,(0,r.dispatch)(t).finishPostSave()):(
 // Start saving structure when post has finished saving.
-e=!0,s=!1,n=!1,(0,r.dispatch)(t).startPostSave())}))})(),store:(0,r.registerStore)(t,{reducer:(0,o/* .createReducerFromActionMap */.lA)({...h,...null==g?void 0:g.reducers},{serverStructure:null,editorStructure:null,isSavingStructure:!1,hasUnsavedServerUpdates:!1,hasUnsavedEditorChanges:!1,clientId:null}),actions:{..._,...null==g?void 0:g.actions},selectors:{hasUnsavedServerUpdates:e=>{let{hasUnsavedServerUpdates:t}=e;return t},hasUnsavedEditorChanges:e=>{let{hasUnsavedEditorChanges:t}=e;return t},getIsSavingStructure:e=>{let{isSavingStructure:t}=e;return t},getServerStructure:e=>{let{serverStructure:t}=e;return t},getEditorStructure:e=>{let{editorStructure:t}=e;return t},getBlock:e=>{let{clientId:t}=e;return t},...null==g?void 0:g.selectors},controls:{...l.controls,...null==g?void 0:g.controls}})}}
+e=!0,s=!1,n=!1,(0,r.dispatch)(t).startPostSave())}))})(),store:(0,r.registerStore)(t,{reducer:(0,o/* .createReducerFromActionMap */.lA)({..._,...null==g?void 0:g.reducers},{serverStructure:null,editorStructure:null,isSavingStructure:!1,hasUnsavedServerUpdates:!1,hasUnsavedEditorChanges:!1,clientId:null}),actions:{...h,...null==g?void 0:g.actions},selectors:{hasUnsavedServerUpdates:e=>{let{hasUnsavedServerUpdates:t}=e;return t},hasUnsavedEditorChanges:e=>{let{hasUnsavedEditorChanges:t}=e;return t},getIsSavingStructure:e=>{let{isSavingStructure:t}=e;return t},getServerStructure:e=>{let{serverStructure:t}=e;return t},getEditorStructure:e=>{let{editorStructure:t}=e;return t},getBlock:e=>{let{clientId:t}=e;return t},...null==g?void 0:g.selectors},controls:{...l.controls,...null==g?void 0:g.controls}})}}
 /***/},
 /***/47369:
 /***/(e,t,s)=>{"use strict";
@@ -2316,6 +2285,170 @@ if(o[6]=15&o[6]|64,o[8]=63&o[8]|128,t)for(var a=0;a<16;++a)t[r+a]=o[a];return t|
 /***/s.d(t,{
 /* harmony export */Z:()=>/* binding */n
 /* harmony export */})},
+/***/67455:
+/***/(e,t,s)=>{"use strict";
+/* harmony export */s.d(t,{
+/* harmony export */Z:()=>/* export default binding */o
+/* harmony export */});
+/** @typedef {(...args: any[]) => *[]} GetDependants */
+/** @typedef {() => void} Clear */
+/**
+ * @typedef {{
+ *   getDependants: GetDependants,
+ *   clear: Clear
+ * }} EnhancedSelector
+ */
+/**
+ * Internal cache entry.
+ *
+ * @typedef CacheNode
+ *
+ * @property {?CacheNode|undefined} [prev] Previous node.
+ * @property {?CacheNode|undefined} [next] Next node.
+ * @property {*[]} args Function arguments for cache entry.
+ * @property {*} val Function result.
+ */
+/**
+ * @typedef Cache
+ *
+ * @property {Clear} clear Function to clear cache.
+ * @property {boolean} [isUniqueByDependants] Whether dependants are valid in
+ * considering cache uniqueness. A cache is unique if dependents are all arrays
+ * or objects.
+ * @property {CacheNode?} [head] Cache head.
+ * @property {*[]} [lastDependants] Dependants from previous invocation.
+ */
+/**
+ * Arbitrary value used as key for referencing cache object in WeakMap tree.
+ *
+ * @type {{}}
+ */
+var n={};
+/**
+ * Returns the first argument as the sole entry in an array.
+ *
+ * @template T
+ *
+ * @param {T} value Value to return.
+ *
+ * @return {[T]} Value returned as entry in array.
+ */function l(e){return[e]}
+/**
+ * Returns true if the value passed is object-like, or false otherwise. A value
+ * is object-like if it can support property assignment, e.g. object or array.
+ *
+ * @param {*} value Value to test.
+ *
+ * @return {boolean} Whether value is object-like.
+ */
+/**
+ * Returns true if entries within the two arrays are strictly equal by
+ * reference from a starting index.
+ *
+ * @param {*[]} a First array.
+ * @param {*[]} b Second array.
+ * @param {number} fromIndex Index from which to start comparison.
+ *
+ * @return {boolean} Whether arrays are shallowly equal.
+ */
+function r(e,t,s){var n;if(e.length!==t.length)return!1;for(n=s;n<e.length;n++)if(e[n]!==t[n])return!1;return!0}
+/**
+ * Returns a memoized selector function. The getDependants function argument is
+ * called before the memoized selector and is expected to return an immutable
+ * reference or array of references on which the selector depends for computing
+ * its own return value. The memoize cache is preserved only as long as those
+ * dependant references remain the same. If getDependants returns a different
+ * reference(s), the cache is cleared and the selector value regenerated.
+ *
+ * @template {(...args: *[]) => *} S
+ *
+ * @param {S} selector Selector function.
+ * @param {GetDependants=} getDependants Dependant getter returning an array of
+ * references used in cache bust consideration.
+ */
+/* harmony default export */function o(e,t){
+/** @type {WeakMap<*,*>} */
+var s,o=t||l;
+/** @type {GetDependants} */
+/**
+	 * Resets root memoization cache.
+	 */
+function a(){s=new WeakMap}
+/* eslint-disable jsdoc/check-param-names */
+/**
+	 * The augmented selector call, considering first whether dependants have
+	 * changed before passing it to underlying memoize function.
+	 *
+	 * @param {*}    source    Source object for derivation.
+	 * @param {...*} extraArgs Additional arguments to pass to selector.
+	 *
+	 * @return {*} Selector result.
+	 */
+/* eslint-enable jsdoc/check-param-names */function i(){var t,l,a,i,c,u=arguments.length;
+// Create copy of arguments (avoid leaking deoptimization).
+for(i=new Array(u),a=0;a<u;a++)i[a]=arguments[a];for(t=
+/**
+	 * Returns the cache for a given dependants array. When possible, a WeakMap
+	 * will be used to create a unique cache for each set of dependants. This
+	 * is feasible due to the nature of WeakMap in allowing garbage collection
+	 * to occur on entries where the key object is no longer referenced. Since
+	 * WeakMap requires the key to be an object, this is only possible when the
+	 * dependant is object-like. The root cache is created as a hierarchy where
+	 * each top-level key is the first entry in a dependants set, the value a
+	 * WeakMap where each key is the next dependant, and so on. This continues
+	 * so long as the dependants are object-like. If no dependants are object-
+	 * like, then the cache is shared across all invocations.
+	 *
+	 * @see isObjectLike
+	 *
+	 * @param {*[]} dependants Selector dependants.
+	 *
+	 * @return {Cache} Cache object.
+	 */
+function(e){var t,l,r,o,a,i=s,c=!0;for(t=0;t<e.length;t++){
+// Can only compose WeakMap from object-like key.
+if(!(a=l=e[t])||"object"!=typeof a){c=!1;break}
+// Does current segment of cache already have a WeakMap?
+i.has(l)?
+// Traverse into nested WeakMap.
+i=i.get(l):(
+// Create, set, and traverse into a new one.
+r=new WeakMap,i.set(l,r),i=r)}
+// We use an arbitrary (but consistent) object as key for the last item
+// in the WeakMap to serve as our running cache.
+return i.has(n)||((o=
+/**
+ * Creates and returns a new cache object.
+ *
+ * @return {Cache} Cache object.
+ */
+function(){
+/** @type {Cache} */
+var e={clear:function(){e.head=null}};return e}()).isUniqueByDependants=c,i.set(n,o)),i.get(n)}(c=o.apply(null,i)),
+// If not guaranteed uniqueness by dependants (primitive type), shallow
+// compare against last dependants and, if references have changed,
+// destroy cache to recalculate result.
+t.isUniqueByDependants||(t.lastDependants&&!r(c,t.lastDependants,0)&&t.clear(),t.lastDependants=c),l=t.head;l;){
+// Check whether node arguments match arguments
+if(r(l.args,i,1))
+// Return immediately
+// At this point we can assume we've found a match
+// Surface matched node to head if not already
+return l!==t.head&&(
+// Adjust siblings to point to each other.
+/** @type {CacheNode} */l.prev.next=l.next,l.next&&(l.next.prev=l.prev),l.next=t.head,l.prev=null,
+/** @type {CacheNode} */t.head.prev=l,t.head=l),l.val;l=l.next}
+// No cached value found. Continue to insertion phase:
+return l=/** @type {CacheNode} */{
+// Generate the result from original function
+val:e.apply(null,i)},
+// Avoid including the source object in the cache.
+i[0]=null,l.args=i,
+// Don't need to check whether node is already head, since it would
+// have been returned above already if it was
+// Shift existing head down list
+t.head&&(t.head.prev=l,l.next=t.head),t.head=l,l.val}return i.getDependants=o,i.clear=a,a(),/** @type {S & EnhancedSelector} */i}
+/***/},
 /***/38842:
 /***/e=>{"use strict";e.exports=JSON.parse('{"name":"sensei-lms/quiz-category-question","title":"Category Question","description":"Pull questions from a question category.","parent":["sensei-lms/quiz"],"category":"sensei-lms","textdomain":"sensei-lms","supports":{"html":false},"attributes":{"id":{"type":"integer"},"type":{"type":"string","default":"category-question"},"categoryName":{"type":"string"},"options":{"type":"object","default":{"category":null,"number":1}}}}')}
 /***/,

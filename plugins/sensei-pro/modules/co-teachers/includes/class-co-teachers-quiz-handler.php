@@ -26,6 +26,13 @@ class Co_Teachers_Quiz_Handler {
 	private static $instance;
 
 	/**
+	 * Assets class instance.
+	 *
+	 * @var \Sensei_Pro\Assets
+	 */
+	private $assets;
+
+	/**
 	 * Main Co-Teachers instance.
 	 *
 	 * @var Co_Teachers

@@ -1395,8 +1395,8 @@ liveResize:{mutation:!0,resize:!0,rootElementSelector:"#root"}},callbacks:{onNex
 /* harmony export */n.d(t,{
 /* harmony export */si:()=>/* binding */c
 /* harmony export */});
-/* unused harmony exports DEFAULT_STATE, actions, selectors, reducers, store */
-/* harmony import */var r=n(9818),o=n(20832),s=n(23418),i=n(86989),a=n.n(i);
+/* unused harmony exports DEFAULT_STATE, actions, selectors, reducers */
+/* harmony import */var r=n(23418),o=n(86989),s=n.n(o),i=n(20832);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1404,7 +1404,7 @@ liveResize:{mutation:!0,resize:!0,rootElementSelector:"#root"}},callbacks:{onNex
 /**
  * Internal dependencies
  */
-const c="sensei/tour",u={
+const a={
 /**
    * Sets whether the tour should be shown.
    *
@@ -1414,7 +1414,7 @@ const c="sensei/tour",u={
    *
    * @return {Object} The setTourShowStatus action.
    */
-setTourShowStatus:(e,t,n)=>(t&&a()({path:"sensei-internal/v1/tour",method:"POST",data:{complete:!e,tour_id:n}}),{type:"SET_TOUR_SHOW_STATUS",showTour:e})},l=(0,r.createReduxStore)(c,{reducer:(0,o/* .createReducerFromActionMap */.lA)({
+setTourShowStatus:(e,t,n)=>(t&&s()({path:"sensei-internal/v1/tour",method:"POST",data:{complete:!e,tour_id:n}}),{type:"SET_TOUR_SHOW_STATUS",showTour:e})},c=(0,i/* .createStore */.MT)("sensei/tour",{reducer:(0,i/* .createReducerFromActionMap */.lA)({
 /**
    * Sets the show tour status.
    *
@@ -1424,7 +1424,7 @@ setTourShowStatus:(e,t,n)=>(t&&a()({path:"sensei-internal/v1/tour",method:"POST"
    *
    * @return {Object} The new state.
    */
-SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:n}=e;return{...t,showTour:n}},DEFAULT:(e,t)=>t},{showTour:!0}),actions:u,selectors:{
+SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:n}=e;return{...t,showTour:n}},DEFAULT:(e,t)=>t},{showTour:!0}),actions:a,selectors:{
 /**
    * Get if the tour should be shown.
    *
@@ -1433,7 +1433,10 @@ SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:n}=e;return{...t,showTour:n}},DEFAULT:
    *
    * @return {boolean} If the tour should be shown.
    */
-shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:s.controls});(0,r.register)(l)}
+shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:r.controls});
+/**
+ * Tour store actions.
+ */}
 /***/,
 /***/52994:
 /***/(e,t,n)=>{"use strict";
@@ -1495,11 +1498,11 @@ const l=e=>{const t=document.querySelector(e);t&&t.scrollIntoView({behavior:"smo
 /***/72575:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */HF:()=>/* binding */x
-/* harmony export */,ZP:()=>/* binding */k
+/* harmony export */HF:()=>/* binding */y
+/* harmony export */,ZP:()=>/* binding */x
 /* harmony export */});
 /* unused harmony exports getQuizBlock, getFirstQuestionBlock, getFirstBooleanQuestionBlock, focusOnQuizBlock, focusOnQuestionBlock, focusOnBooleanQuestionBlock, ensureBooleanQuestionIsInEditor */
-/* harmony import */var r=n(69307),o=n(65736),s=n(4981),i=n(55609),a=n(9818),c=n(52175),u=n(72067),l=n(12238),d=n(69973),f=n(52994);
+/* harmony import */var r=n(69307),o=n(65736),s=n(4981),i=n(55609),a=n(9818),c=n(52175),u=n(72067),l=n(69973),d=n(52994);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1507,7 +1510,7 @@ const l=e=>{const t=document.querySelector(e);t&&t.scrollIntoView({behavior:"smo
 /**
  * Internal dependencies
  */
-const p=()=>(0,d/* .getFirstBlockByName */.H4)("sensei-lms/quiz",(0,a.select)(c.store).getBlocks()),m=()=>(0,d/* .getFirstBlockByName */.H4)("sensei-lms/quiz-question",(0,a.select)(c.store).getBlocks()),h=()=>{const e=p();if(!e)return null;const t=(0,a.select)(c.store).getBlocks(e.clientId).find((e=>"boolean"===e.attributes.type));return t||null},v=()=>{const e=p();e&&(0,a.dispatch)(l.store).selectBlock(e.clientId)},g=()=>{const e=m();e&&(0,a.dispatch)(l.store).selectBlock(e.clientId)},b=()=>{const e=h();e&&(0,a.dispatch)(l.store).selectBlock(e.clientId)},w=()=>{null===h()&&y()},y=()=>{const e=p();if(e){const{insertBlock:t}=(0,a.dispatch)(c.store);t((0,s.createBlock)("sensei-lms/quiz-question",{type:"boolean"}),0,e.clientId)}},x=e=>{
+const f=()=>(0,l/* .getFirstBlockByName */.H4)("sensei-lms/quiz",(0,a.select)(c.store).getBlocks()),p=()=>(0,l/* .getFirstBlockByName */.H4)("sensei-lms/quiz-question",(0,a.select)(c.store).getBlocks()),m=()=>{const e=f();if(!e)return null;const t=(0,a.select)(c.store).getBlocks(e.clientId).find((e=>"boolean"===e.attributes.type));return t||null},h=()=>{const e=f();e&&(0,a.dispatch)(c.store).selectBlock(e.clientId)},v=()=>{const e=p();e&&(0,a.dispatch)(c.store).selectBlock(e.clientId)},g=()=>{const e=m();e&&(0,a.dispatch)(c.store).selectBlock(e.clientId)},b=()=>{null===m()&&w()},w=()=>{const e=f();if(e){const{insertBlock:t}=(0,a.dispatch)(c.store);t((0,s.createBlock)("sensei-lms/quiz-question",{type:"boolean"}),0,e.clientId)}},y=e=>{
 // Close answer feedback as the happy path next step.
 if("adding-answer-feedback"!==e.slug){const e=document.querySelector(".sensei-lms-question-block__answer-feedback-toggle__header");
 // Click to close only when it's open.
@@ -1519,65 +1522,65 @@ if((window.innerWidth||document.documentElement.clientWidth)<782){const{closeGen
  *
  * @return {Array.<TourStep>} An array containing the tour steps.
  */
-function k(){return[{slug:"welcome",meta:{heading:(0,o.__)("Welcome to the Quiz block","sensei-lms"),descriptions:{desktop:(0,o.__)("Take this short tour to learn the fundamentals of the Quiz block.","sensei-lms"),mobile:null},referenceElements:{desktop:""}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:()=>{(0,f/* .performStepActionsAsync */.Bm)([
+function x(){return[{slug:"welcome",meta:{heading:(0,o.__)("Welcome to the Quiz block","sensei-lms"),descriptions:{desktop:(0,o.__)("Take this short tour to learn the fundamentals of the Quiz block.","sensei-lms"),mobile:null},referenceElements:{desktop:""}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:()=>{(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on the Quiz block.
-{action:()=>{v()}},
+{action:()=>{h()}},
 // Highlight quiz block.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)(['[data-type="sensei-lms/quiz"]'])},delay:400}])}},{slug:"change-question-type",meta:{heading:(0,o.__)("Changing the question type","sensei-lms"),descriptions:{desktop:(0,o.__)("There are a variety of question types for you to choose from including Multiple Choice, True/False and File Upload. We’ll show how to configure a True/False question, but the other question types work similarly.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:()=>{(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)(['[data-type="sensei-lms/quiz"]'])},delay:400}])}},{slug:"change-question-type",meta:{heading:(0,o.__)("Changing the question type","sensei-lms"),descriptions:{desktop:(0,o.__)("There are a variety of question types for you to choose from including Multiple Choice, True/False and File Upload. We’ll show how to configure a True/False question, but the other question types work similarly.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:()=>{(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on question block.
-{action:()=>{g()}},
+{action:()=>{v()}},
 // Click on type selector.
-{action:()=>{const e=".sensei-lms-question-block__type-selector button",t=document.querySelector(e);(0,f/* .highlightElementsWithBorders */.QH)([e]),t&&t.click()},delay:400},
+{action:()=>{const e=".sensei-lms-question-block__type-selector button",t=document.querySelector(e);(0,d/* .highlightElementsWithBorders */.QH)([e]),t&&t.click()},delay:400},
 // Highlight options and select true/false type.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([".sensei-lms-question-block__type-selector__popover"]);const e=m();(0,a.dispatch)(c.store).updateBlockAttributes(e.clientId,{type:"boolean"})},delay:400}])}},{slug:"adding-a-question",meta:{heading:(0,o.__)("Adding a question","sensei-lms"),descriptions:{desktop:(0,o.__)("Click on an existing question to select it. Then type your question in the Question Title field.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([".sensei-lms-question-block__type-selector__popover"]);const e=p();(0,a.dispatch)(c.store).updateBlockAttributes(e.clientId,{type:"boolean"})},delay:400}])}},{slug:"adding-a-question",meta:{heading:(0,o.__)("Adding a question","sensei-lms"),descriptions:{desktop:(0,o.__)("Click on an existing question to select it. Then type your question in the Question Title field.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on question block.
-{action:()=>{g()}},
+{action:()=>{v()}},
 // Focus on title field.
-{action:()=>{const e=".sensei-lms-question-block__title .sensei-lms-single-line-input",t=document.querySelector(e);(0,f/* .highlightElementsWithBorders */.QH)([e]),t&&t.focus(),(0,f/* .scrollToCenter */.XT)(e)},delay:400}])}},{slug:"adding-question-description",meta:{heading:(0,o.__)("Adding a question description","sensei-lms"),descriptions:{desktop:(0,o.__)("Enter any additional details about the question in the Question Description. This is optional.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".wp-block-sensei-lms-question-description .rich-text";(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{const e=".sensei-lms-question-block__title .sensei-lms-single-line-input",t=document.querySelector(e);(0,d/* .highlightElementsWithBorders */.QH)([e]),t&&t.focus(),(0,d/* .scrollToCenter */.XT)(e)},delay:400}])}},{slug:"adding-question-description",meta:{heading:(0,o.__)("Adding a question description","sensei-lms"),descriptions:{desktop:(0,o.__)("Enter any additional details about the question in the Question Description. This is optional.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".wp-block-sensei-lms-question-description .rich-text";(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on question block.
-{action:()=>{g()}},
+{action:()=>{v()}},
 // Focus on description field.
-{action:()=>{const t=document.querySelector(e);t&&t.focus(),(0,f/* .scrollToCenter */.XT)(e)},delay:400},
+{action:()=>{const t=document.querySelector(e);t&&t.focus(),(0,d/* .scrollToCenter */.XT)(e)},delay:400},
 // Highlight description field.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e])},delay:400}])}},{slug:"setting-correct-answer",meta:{heading:(0,o.__)("Setting the correct answer","sensei-lms"),descriptions:{desktop:(0,o.__)("Click the Right or Wrong toggle to set the correct answer.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e])},delay:400}])}},{slug:"setting-correct-answer",meta:{heading:(0,o.__)("Setting the correct answer","sensei-lms"),descriptions:{desktop:(0,o.__)("Click the Right or Wrong toggle to set the correct answer.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on question block.
-{action:()=>{w(),b()}},
+{action:()=>{b(),g()}},
 // Highlight and focus correct answer toggle.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([".sensei-lms-question-block__answer--true-false__option:nth-child(1) .sensei-lms-question-block__answer--true-false__toggle",".sensei-lms-question-block__answer--true-false__option:nth-child(2) .sensei-lms-question-block__answer--true-false__toggle"]);const e=document.querySelector(".sensei-lms-question-block__answer--true-false__toggle");e&&e.focus()},delay:400}])}},{slug:"adding-answer-feedback",meta:{heading:(0,o.__)("Adding answer feedback","sensei-lms"),descriptions:{desktop:(0,o.__)("Add feedback by opening the Answer Feedback section of the question block. This feedback is shown after the quiz has been graded.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".sensei-lms-question-block__answer-feedback-toggle__header";(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([".sensei-lms-question-block__answer--true-false__option:nth-child(1) .sensei-lms-question-block__answer--true-false__toggle",".sensei-lms-question-block__answer--true-false__option:nth-child(2) .sensei-lms-question-block__answer--true-false__toggle"]);const e=document.querySelector(".sensei-lms-question-block__answer--true-false__toggle");e&&e.focus()},delay:400}])}},{slug:"adding-answer-feedback",meta:{heading:(0,o.__)("Adding answer feedback","sensei-lms"),descriptions:{desktop:(0,o.__)("Add feedback by opening the Answer Feedback section of the question block. This feedback is shown after the quiz has been graded.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".sensei-lms-question-block__answer-feedback-toggle__header";(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on question block.
-{action:()=>{w(),b()}},
+{action:()=>{b(),g()}},
 // Highlight answer feedback.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e])},delay:400},
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e])},delay:400},
 // Open answer feedback.
 {action:()=>{const t=document.querySelector(e);
 // Open answer feedback if it's not already open.
 null===document.querySelector(".wp-block-sensei-lms-quiz-question.is-selected.show-answer-feedback")&&t&&(t.focus(),t.click())},delay:400},
 // Focus on answer feedback field and highlight answer feedback areas.
-{action:()=>{const e=".sensei-lms-question__answer-feedback__content .block-editor-rich-text__editable";document.querySelector(e).focus(),(0,f/* .scrollToCenter */.XT)(e),(0,f/* .highlightElementsWithBorders */.QH)([".sensei-lms-question__answer-feedback--correct",".sensei-lms-question__answer-feedback--incorrect"])},delay:400}])}},{slug:"adding-a-new-or-existing-question",meta:{heading:(0,o.__)("Adding a new or existing question","sensei-lms"),descriptions:{desktop:(0,o.__)("Click + to open the inserter. Then click the New Question or Existing Question(s) option.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".wp-block-sensei-lms-quiz .block-editor-inserter__toggle";(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{const e=".sensei-lms-question__answer-feedback__content .block-editor-rich-text__editable";document.querySelector(e).focus(),(0,d/* .scrollToCenter */.XT)(e),(0,d/* .highlightElementsWithBorders */.QH)([".sensei-lms-question__answer-feedback--correct",".sensei-lms-question__answer-feedback--incorrect"])},delay:400}])}},{slug:"adding-a-new-or-existing-question",meta:{heading:(0,o.__)("Adding a new or existing question","sensei-lms"),descriptions:{desktop:(0,o.__)("Click + to open the inserter. Then click the New Question or Existing Question(s) option.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".wp-block-sensei-lms-quiz .block-editor-inserter__toggle";(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on quiz block.
-{action:()=>{v()}},
+{action:()=>{h()}},
 // Click on the inserter.
 {action:()=>{const t=document.querySelector(e);t&&t.click()},delay:400},
 // Highlight inserter button.
-{action:()=>{(0,f/* .scrollToCenter */.XT)(e),(0,f/* .highlightElementsWithBorders */.QH)([e])}},
+{action:()=>{(0,d/* .scrollToCenter */.XT)(e),(0,d/* .highlightElementsWithBorders */.QH)([e])}},
 // Highlight options.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([".components-dropdown-menu__popover"])},delay:400}])}},{slug:"configure-question-settings",meta:{heading:(0,o.__)("Configuring the question settings","sensei-lms"),descriptions:{desktop:(0,r.createInterpolateElement)((0,o.__)("Question settings are available in the sidebar after selecting a question. View the <link_to_question_block_doc>doc</link_to_question_block_doc> to learn more about each one.","sensei-lms"),{link_to_question_block_doc:(0,r.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/questions/#settings",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,f/* .performStepActionsAsync */.Bm)([
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([".components-dropdown-menu__popover"])},delay:400}])}},{slug:"configure-question-settings",meta:{heading:(0,o.__)("Configuring the question settings","sensei-lms"),descriptions:{desktop:(0,r.createInterpolateElement)((0,o.__)("Question settings are available in the sidebar after selecting a question. View the <link_to_question_block_doc>doc</link_to_question_block_doc> to learn more about each one.","sensei-lms"),{link_to_question_block_doc:(0,r.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/questions/#settings",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,d/* .performStepActionsAsync */.Bm)([
 // Focus on question block.
-{action:()=>{g()}},
-// Highlight question block and open sidebar settings.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([".wp-block-sensei-lms-quiz-question"]);const{openGeneralSidebar:e}=(0,a.dispatch)(u.store);e("edit-post/block")},delay:400},
-// Highlight sidebar.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([".block-editor-block-inspector .components-panel__body"],"inset")},delay:400}])}},{slug:"configure-quiz-settings",meta:{heading:(0,o.__)("Configuring the quiz settings","sensei-lms"),descriptions:{desktop:(0,r.createInterpolateElement)((0,o.__)("Quiz settings are available in the sidebar after clicking the Quiz settings link. View the <link_to_quiz_block_doc>doc</link_to_quiz_block_doc> to learn more about each one.","sensei-lms"),{link_to_quiz_block_doc:(0,r.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/quizzes/#quiz-settings",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".sensei-lms-quiz-block__settings-quick-nav button";(0,f/* .performStepActionsAsync */.Bm)([
-// Focus on quiz block.
 {action:()=>{v()}},
+// Highlight question block and open sidebar settings.
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([".wp-block-sensei-lms-quiz-question"]);const{openGeneralSidebar:e}=(0,a.dispatch)(u.store);e("edit-post/block")},delay:400},
+// Highlight sidebar.
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([".block-editor-block-inspector .components-panel__body"],"inset")},delay:400}])}},{slug:"configure-quiz-settings",meta:{heading:(0,o.__)("Configuring the quiz settings","sensei-lms"),descriptions:{desktop:(0,r.createInterpolateElement)((0,o.__)("Quiz settings are available in the sidebar after clicking the Quiz settings link. View the <link_to_quiz_block_doc>doc</link_to_quiz_block_doc> to learn more about each one.","sensei-lms"),{link_to_quiz_block_doc:(0,r.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/quizzes/#quiz-settings",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{const e=".sensei-lms-quiz-block__settings-quick-nav button";(0,d/* .performStepActionsAsync */.Bm)([
+// Focus on quiz block.
+{action:()=>{h()}},
 // Click on settings to open.
 {action:()=>{const t=document.querySelector(e);t&&(t.focus(),t.click())},delay:400},
 // Highlight settings button.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e])}},
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e])}},
 // Highlight sidebar.
-{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([".sensei-lms-quiz-block__settings-wrapper"],"inset")},delay:400}])}},{slug:"congratulations",meta:{heading:(0,o.__)("Congratulations!","sensei-lms"),descriptions:{desktop:(0,r.createInterpolateElement)((0,o.__)("You've mastered the basics. View the quiz <link_to_quiz_doc>docs</link_to_quiz_doc> to learn more","sensei-lms"),{link_to_quiz_doc:(0,r.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/quizzes/",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{
+{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([".sensei-lms-quiz-block__settings-wrapper"],"inset")},delay:400}])}},{slug:"congratulations",meta:{heading:(0,o.__)("Congratulations!","sensei-lms"),descriptions:{desktop:(0,r.createInterpolateElement)((0,o.__)("You've mastered the basics. View the quiz <link_to_quiz_doc>docs</link_to_quiz_doc> to learn more","sensei-lms"),{link_to_quiz_doc:(0,r.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/quizzes/",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{
 // Run the clean up.
-(0,f/* .performStepActionsAsync */.Bm)([])}}]}
+(0,d/* .performStepActionsAsync */.Bm)([])}}]}
 /***/},
 /***/69973:
 /***/(e,t,n)=>{"use strict";
@@ -1619,14 +1622,18 @@ const o={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
 /***/20832:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */lA:()=>/* binding */r
+/* harmony export */lA:()=>/* binding */s
+/* harmony export */,MT:()=>/* binding */i
 /* harmony export */});
-/* unused harmony exports composeFetchAction, createStore */
-/* harmony import */n(9818);
+/* unused harmony export composeFetchAction */
+/* harmony import */var r=n(9818);
 /* harmony import */
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:o}=window,s=(e,t)=>function(){let n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,r=arguments.length>1?arguments[1]:void 0;return(e[r.type]||e.DEFAULT)(r,n)},i=(e,t)=>{if(o[e])return o[e];const n=(0,r.createReduxStore)(e,t);return(0,r.register)(n),o[e]=n,n};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -1635,18 +1642,6 @@ const o={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const r=(e,t)=>function(){let n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,r=arguments.length>1?arguments[1]:void 0;return(e[r.type]||e.DEFAULT)(r,n)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/61282:
@@ -1872,9 +1867,6 @@ function(e){for(var n=0,r=0;r<e.length;r++)n=(n<<5)-n+e.charCodeAt(r),n|=0;retur
 /***/,
 /***/72067:
 /***/e=>{"use strict";e.exports=window.wp.editPost}
-/***/,
-/***/12238:
-/***/e=>{"use strict";e.exports=window.wp.editor}
 /***/,
 /***/69307:
 /***/e=>{"use strict";e.exports=window.wp.element}

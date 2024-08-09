@@ -648,7 +648,7 @@ class WooCommerce_Memberships implements \Sensei_Course_Enrolment_Provider_Inter
 		// Clear post cache for the membership before recalculating enrolments.
 		$membership = wc_memberships_get_user_membership( $user_id, $plan_id );
 		if ( $membership ) {
-			clean_post_cache( $membership );
+			clean_post_cache( $membership->get_id() );
 		}
 
 		// Clear WC Memberships cache for this User and Plan.

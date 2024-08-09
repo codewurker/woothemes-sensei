@@ -6,7 +6,7 @@
 /* harmony export */Z:()=>c
 /* harmony export */});
 /* harmony import */var o=n(24246),r=n(65736),s=n(90005),i=n.n(s),a=n(92819);
-/* harmony import */n(49384);const c=({activePageIndex:e,numberOfPages:t,onChange:n,classNames:s,children:c})=>{const u=i()("pagination-control",s);return(0,o.jsxs)("ul",{className:u,"aria-label":(0,r.__)("Pagination control"),children:[(0,a.times)(t,(s=>(0,o.jsx)("li",{"aria-current":s===e?"page":void 0,children:(0,o.jsx)("button",{className:i()("pagination-control__page",{"is-current":s===e}),disabled:s===e,"aria-label":(0,r.sprintf)(
+/* harmony import */n(49384);const c=({activePageIndex:e,numberOfPages:t,onChange:n,classNames:s,children:c})=>{const l=i()("pagination-control",s);return(0,o.jsxs)("ul",{className:l,"aria-label":(0,r.__)("Pagination control"),children:[(0,a.times)(t,(s=>(0,o.jsx)("li",{"aria-current":s===e?"page":void 0,children:(0,o.jsx)("button",{className:i()("pagination-control__page",{"is-current":s===e}),disabled:s===e,"aria-label":(0,r.sprintf)(
 /* translators: 1: current page number 2: total number of pages */
 (0,r.__)("Page %1$d of %2$d"),s+1,t),onClick:()=>n(s)})},`${t}-${s}`))),c&&(0,o.jsx)("li",{className:"pagination-control__last-item",children:c})]})};
 /* harmony default export */}
@@ -22,7 +22,7 @@
 /**
  * Internal dependencies
  */
-const a=({onMinimize:e,onDismiss:t,onNextStepProgression:n,onPreviousStepProgression:a,tourContainerRef:c,isMinimized:u})=>(0,r/* ["default"] */.Z)(c)?u?(0,o.jsx)((function(){return(0,i/* ["default"] */.Z)({onEscape:t("esc-key-minimized")}),null}),{}):(0,o.jsx)((function(){return(0,i/* ["default"] */.Z)({onEscape:e,onArrowRight:n,onArrowLeft:a}),(0,s/* ["default"] */.Z)(c),null}),{}):null;
+const a=({onMinimize:e,onDismiss:t,onNextStepProgression:n,onPreviousStepProgression:a,tourContainerRef:c,isMinimized:l})=>(0,r/* ["default"] */.Z)(c)?l?(0,o.jsx)((function(){return(0,i/* ["default"] */.Z)({onEscape:t("esc-key-minimized")}),null}),{}):(0,o.jsx)((function(){return(0,i/* ["default"] */.Z)({onEscape:e,onArrowRight:n,onArrowLeft:a}),(0,s/* ["default"] */.Z)(c),null}),{}):null;
 /* harmony default export */}
 //# sourceMappingURL=keyboard-navigation.js.map
 /***/,
@@ -42,7 +42,7 @@ const a=({onMinimize:e,onDismiss:t,onNextStepProgression:n,onPreviousStepProgres
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>b
 /* harmony export */});
-/* harmony import */var o=n(24246),r=n(5157),s=n(69307),i=n(90005),a=n.n(i),c=n(69570),u=n(39129),l=n(94795),d=n(63630),f=n(64870),p=n(21303),m=n(390),h=n(55422),v=n(3897);
+/* harmony import */var o=n(24246),r=n(5157),s=n(69307),i=n(90005),a=n.n(i),c=n(69570),l=n(39129),u=n(94795),d=n(63630),f=n(64870),p=n(21303),m=n(390),h=n(55422),v=n(3897);
 /* harmony import */
 /**
  * External Dependencies
@@ -50,7 +50,7 @@ const a=({onMinimize:e,onDismiss:t,onNextStepProgression:n,onPreviousStepProgres
 /**
  * Internal Dependencies
  */
-const g=(e,t)=>{"function"==typeof t&&t(e)},b=({config:e})=>{const[t,n]=(0,s.useState)(0),[i,b]=(0,s.useState)(null),[y,w]=(0,s.useState)(e.isMinimized??!1),[x,Z]=(0,s.useState)(null),[k,C]=(0,s.useState)(!1),S=(0,s.useRef)(null),_=(0,r/* .useMobileBreakpoint */._z)(),O=e.steps.length-1,j=e.steps[t].referenceElements?.[_?"mobile":"desktop"]||null,E=j?document.querySelector(j):null;(0,s.useEffect)((()=>{e.isMinimized&&w(!0)}),[e.isMinimized]);const F=(0,s.useCallback)((()=>!1!==e.options?.effects?.arrowIndicator&&!(!E||y||!k)),[e.options?.effects?.arrowIndicator,y,E,k]),T=(0,s.useCallback)((()=>!!e.options?.effects?.spotlight&&!y),[e.options?.effects?.spotlight,y]),M=(0,s.useCallback)((()=>!(T()||!e.options?.effects?.overlay)&&!y),[e.options?.effects?.overlay,y,T]),P=(0,s.useCallback)((n=>()=>{e.closeHandler(e.steps,t,n)}),[e,t]),z=(0,s.useCallback)((()=>{O>t&&n(t+1),g(t,e.options?.callbacks?.onNextStep)}),[e.options?.callbacks?.onNextStep,t,O]),R=(0,s.useCallback)((()=>{t&&n(t-1),g(t,e.options?.callbacks?.onPreviousStep)}),[e.options?.callbacks?.onPreviousStep,t]),A=(0,s.useCallback)((o=>{n(o),g(t,e.options?.callbacks?.onGoToStep)}),[e.options?.callbacks?.onGoToStep,t]),N=(0,s.useCallback)((()=>{w(!0),g(t,e.options?.callbacks?.onMinimize)}),[e.options?.callbacks?.onMinimize,t]),I=(0,s.useCallback)((()=>{w(!1),g(t,e.options?.callbacks?.onMaximize)}),[e.options?.callbacks?.onMaximize,t]),{styles:L,attributes:B,update:D}=(0,c/* .usePopper */.D)(E,x,{strategy:"fixed",placement:e?.placement??"bottom",modifiers:[{name:"preventOverflow",options:{rootBoundary:"document",padding:16}},{name:"arrow",options:{padding:12}},{name:"offset",options:{offset:[0,F()?12:10]}},{name:"flip",options:{fallbackPlacements:["top","left","right"]}},(0,s.useMemo)((()=>(0,d/* .liveResizeModifier */._)(e.options?.effects?.liveResize)),[e.options?.effects?.liveResize]),...e.options?.popperModifiers||[]]}),q=!y&&E&&k?{style:L?.popper,...B?.popper}:null,H=!y&&E&&k?{style:L?.arrow,...B?.arrow}:null;
+const g=(e,t)=>{"function"==typeof t&&t(e)},b=({config:e})=>{const[t,n]=(0,s.useState)(0),[i,b]=(0,s.useState)(null),[y,w]=(0,s.useState)(e.isMinimized??!1),[x,Z]=(0,s.useState)(null),[k,C]=(0,s.useState)(!1),S=(0,s.useRef)(null),_=(0,r/* .useMobileBreakpoint */._z)(),O=e.steps.length-1,j=e.steps[t].referenceElements?.[_?"mobile":"desktop"]||null,E=j?document.querySelector(j):null;(0,s.useEffect)((()=>{e.isMinimized&&w(!0)}),[e.isMinimized]);const F=(0,s.useCallback)((()=>!1!==e.options?.effects?.arrowIndicator&&!(!E||y||!k)),[e.options?.effects?.arrowIndicator,y,E,k]),M=(0,s.useCallback)((()=>!!e.options?.effects?.spotlight&&!y),[e.options?.effects?.spotlight,y]),T=(0,s.useCallback)((()=>!(M()||!e.options?.effects?.overlay)&&!y),[e.options?.effects?.overlay,y,M]),P=(0,s.useCallback)((n=>()=>{e.closeHandler(e.steps,t,n)}),[e,t]),A=(0,s.useCallback)((()=>{O>t&&n(t+1),g(t,e.options?.callbacks?.onNextStep)}),[e.options?.callbacks?.onNextStep,t,O]),R=(0,s.useCallback)((()=>{t&&n(t-1),g(t,e.options?.callbacks?.onPreviousStep)}),[e.options?.callbacks?.onPreviousStep,t]),z=(0,s.useCallback)((o=>{n(o),g(t,e.options?.callbacks?.onGoToStep)}),[e.options?.callbacks?.onGoToStep,t]),B=(0,s.useCallback)((()=>{w(!0),g(t,e.options?.callbacks?.onMinimize)}),[e.options?.callbacks?.onMinimize,t]),I=(0,s.useCallback)((()=>{w(!1),g(t,e.options?.callbacks?.onMaximize)}),[e.options?.callbacks?.onMaximize,t]),{styles:L,attributes:N,update:D}=(0,c/* .usePopper */.D)(E,x,{strategy:"fixed",placement:e?.placement??"bottom",modifiers:[{name:"preventOverflow",options:{rootBoundary:"document",padding:16}},{name:"arrow",options:{padding:12}},{name:"offset",options:{offset:[0,F()?12:10]}},{name:"flip",options:{fallbackPlacements:["top","left","right"]}},(0,s.useMemo)((()=>(0,d/* .liveResizeModifier */._)(e.options?.effects?.liveResize)),[e.options?.effects?.liveResize]),...e.options?.popperModifiers||[]]}),q=!y&&E&&k?{style:L?.popper,...N?.popper}:null,H=!y&&E&&k?{style:L?.arrow,...N?.arrow}:null;
 /*
      * Focus first interactive element when step renders.
      */
@@ -61,7 +61,7 @@ const g=(e,t)=>{"function"==typeof t&&t(e)},b=({config:e})=>{const[t,n]=(0,s.use
      */
 (0,s.useEffect)((()=>{
 // If no reference element to position step near
-E?(C(!1),D&&D().then((()=>C(!0))).catch((()=>C(!0)))):C(!0)}),[D,E]),(0,s.useEffect)((()=>{E&&e.options?.effects?.autoScroll&&E.scrollIntoView(e.options.effects.autoScroll)}),[e.options?.effects?.autoScroll,E]);const $=a()("tour-kit-frame",_?"is-mobile":"is-desktop",{"is-visible":k},(0,l/* .classParser */.s)(e.options?.classNames));return(0,u/* ["default"] */.Z)(t,e.options?.callbacks?.onStepViewOnce),(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(f/* ["default"] */.Z,{onMinimize:N,onDismiss:P,onNextStepProgression:z,onPreviousStepProgression:R,tourContainerRef:S,isMinimized:y}),(0,o.jsxs)("div",{className:$,ref:S,children:[M()&&(0,o.jsx)(m/* ["default"] */.Z,{visible:!0}),T()&&(0,o.jsx)(h/* ["default"] */.Z,{referenceElement:E,liveResize:e.options?.effects?.liveResize||{},...e.options?.effects?.spotlight||{}}),(0,o.jsxs)("div",{className:"tour-kit-frame__container",ref:Z,...q,children:[F()&&(0,o.jsx)("div",{className:"tour-kit-frame__arrow","data-popper-arrow":!0,...H}),y?(0,o.jsx)(p/* ["default"] */.Z,{config:e,steps:e.steps,currentStepIndex:t,onMaximize:I,onDismiss:P}):(0,o.jsx)(v/* ["default"] */.Z,{config:e,steps:e.steps,currentStepIndex:t,onMinimize:N,onDismiss:P,onNextStep:z,onPreviousStep:R,onGoToStep:A,setInitialFocusedElement:b})]})]})]})}}
+E?(C(!1),D&&D().then((()=>C(!0))).catch((()=>C(!0)))):C(!0)}),[D,E]),(0,s.useEffect)((()=>{E&&e.options?.effects?.autoScroll&&E.scrollIntoView(e.options.effects.autoScroll)}),[e.options?.effects?.autoScroll,E]);const V=a()("tour-kit-frame",_?"is-mobile":"is-desktop",{"is-visible":k},(0,u/* .classParser */.s)(e.options?.classNames));return(0,l/* ["default"] */.Z)(t,e.options?.callbacks?.onStepViewOnce),(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(f/* ["default"] */.Z,{onMinimize:B,onDismiss:P,onNextStepProgression:A,onPreviousStepProgression:R,tourContainerRef:S,isMinimized:y}),(0,o.jsxs)("div",{className:V,ref:S,children:[T()&&(0,o.jsx)(m/* ["default"] */.Z,{visible:!0}),M()&&(0,o.jsx)(h/* ["default"] */.Z,{referenceElement:E,liveResize:e.options?.effects?.liveResize||{},...e.options?.effects?.spotlight||{}}),(0,o.jsxs)("div",{className:"tour-kit-frame__container",ref:Z,...q,children:[F()&&(0,o.jsx)("div",{className:"tour-kit-frame__arrow","data-popper-arrow":!0,...H}),y?(0,o.jsx)(p/* ["default"] */.Z,{config:e,steps:e.steps,currentStepIndex:t,onMaximize:I,onDismiss:P}):(0,o.jsx)(v/* ["default"] */.Z,{config:e,steps:e.steps,currentStepIndex:t,onMinimize:B,onDismiss:P,onNextStep:A,onPreviousStep:R,onGoToStep:z,setInitialFocusedElement:b})]})]})]})}}
 //# sourceMappingURL=tour-kit-frame.js.map
 /***/,
 /***/21303:
@@ -102,7 +102,7 @@ const i=({visible:e})=>(0,o.jsx)("div",{className:s()("tour-kit-overlay",{"is-vi
 /* harmony export */u:()=>/* binding */d
 /* harmony export */,Z:()=>f
 /* harmony export */});
-/* harmony import */var o=n(24246),r=n(69307),s=n(90005),i=n.n(s),a=n(69570),c=n(63630),u=n(390),l=n(11441);
+/* harmony import */var o=n(24246),r=n(69307),s=n(90005),i=n.n(s),a=n(69570),c=n(63630),l=n(390),u=n(11441);
 /* harmony import */const d="wp-tour-kit-spotlit",f=({referenceElement:e,styles:t,interactivity:n,liveResize:s})=>{const[f,p]=(0,r.useState)(null),m=e?.getBoundingClientRect(),h=[{name:"flip",enabled:!1},{name:"preventOverflow",options:{mainAxis:!1}},(0,r.useMemo)((()=>({name:"offset",options:{offset:({placement:e,reference:t,popper:n})=>"bottom"===e?[0,-(t.height+(n.height-t.height)/2)]:[0,0]}})),[]),
 // useMemo because https://popper.js.org/react-popper/v2/faq/#why-i-get-render-loop-whenever-i-put-a-function-inside-the-popper-configuration
 (0,r.useMemo)((()=>(0,c/* .liveResizeModifier */._)(s)),[s])],{styles:v,attributes:g}=(0,a/* .usePopper */.D)(e,f,{strategy:"fixed",placement:"bottom",modifiers:h}),b=m?{width:`${m.width}px`,height:`${m.height}px`}:null,y=e?{style:{...b&&b,...v?.popper,...t&&t},...g?.popper}:null;
@@ -110,7 +110,7 @@ const i=({visible:e})=>(0,o.jsx)("div",{className:s()("tour-kit-overlay",{"is-vi
      * Add a .wp-spotlit class to the referenced element so that we can
      * apply CSS styles to it, for whatever purposes such as interactivity
      */
-return(0,r.useEffect)((()=>(e?.classList.add(d),()=>{e?.classList.remove(d)})),[e]),(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(l/* .SpotlightInteractivity */.l,{...n}),(0,o.jsx)(u/* ["default"] */.Z,{visible:!y}),(0,o.jsx)("div",{className:i()("tour-kit-spotlight",{"is-visible":!!y}),ref:p,...y})]})}}
+return(0,r.useEffect)((()=>(e?.classList.add(d),()=>{e?.classList.remove(d)})),[e]),(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(u/* .SpotlightInteractivity */.l,{...n}),(0,o.jsx)(l/* ["default"] */.Z,{visible:!y}),(0,o.jsx)("div",{className:i()("tour-kit-spotlight",{"is-visible":!!y}),ref:p,...y})]})}}
 //# sourceMappingURL=tour-kit-spotlight.js.map
 /***/,
 /***/3897:
@@ -126,7 +126,7 @@ return(0,r.useEffect)((()=>(e?.classList.add(d),()=>{e?.classList.remove(d)})),[
 /**
  * Internal Dependencies
  */
-const c=({config:e,steps:t,currentStepIndex:n,onMinimize:s,onDismiss:c,onNextStep:u,onPreviousStep:l,setInitialFocusedElement:d,onGoToStep:f})=>{const p=(0,r/* .useMobileBreakpoint */._z)(),m=i()("tour-kit-step",`is-step-${n}`,(0,a/* .classParser */.s)(e.steps[n].options?.classNames?.[p?"mobile":"desktop"]));return(0,o.jsx)("div",{className:m,children:(0,o.jsx)(e.renderers.tourStep,{steps:t,currentStepIndex:n,onDismiss:c,onNextStep:u,onPreviousStep:l,onMinimize:s,setInitialFocusedElement:d,onGoToStep:f})})};
+const c=({config:e,steps:t,currentStepIndex:n,onMinimize:s,onDismiss:c,onNextStep:l,onPreviousStep:u,setInitialFocusedElement:d,onGoToStep:f})=>{const p=(0,r/* .useMobileBreakpoint */._z)(),m=i()("tour-kit-step",`is-step-${n}`,(0,a/* .classParser */.s)(e.steps[n].options?.classNames?.[p?"mobile":"desktop"]));return(0,o.jsx)("div",{className:m,children:(0,o.jsx)(e.renderers.tourStep,{steps:t,currentStepIndex:n,onDismiss:c,onNextStep:l,onPreviousStep:u,onMinimize:s,setInitialFocusedElement:d,onGoToStep:f})})};
 /* harmony default export */}
 //# sourceMappingURL=tour-kit-step.js.map
 /***/,
@@ -273,10 +273,10 @@ if(c[a]={resizeObserver:new ResizeObserver((()=>{i.update()})),mutationObserver:
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>d
 /* harmony export */});
-/* harmony import */var o=n(24246),r=n(55609),s=n(69307),i=n(65736),a=n(36414),c=n(62373),u=n(43032),l=n(21914);
-/* harmony import */const d=({steps:e,onMaximize:t,onDismiss:n,currentStepIndex:d})=>{const{__}=(0,u/* .useI18n */.QT)(),f=d+1,p=e.length-1+1;return(0,o.jsxs)(r.Flex,{gap:0,className:"wpcom-tour-kit-minimized",children:[(0,o.jsx)(r.Button,{onClick:t,"aria-label":__("Resume Tour","default"),children:(0,o.jsxs)(r.Flex,{gap:13,children:[(0,o.jsx)("p",{children:(0,s.createInterpolateElement)((0,i.sprintf)(
+/* harmony import */var o=n(24246),r=n(55609),s=n(69307),i=n(65736),a=n(36414),c=n(62373),l=n(43032),u=n(21914);
+/* harmony import */const d=({steps:e,onMaximize:t,onDismiss:n,currentStepIndex:d})=>{const{__}=(0,l/* .useI18n */.QT)(),f=d+1,p=e.length-1+1;return(0,o.jsxs)(r.Flex,{gap:0,className:"wpcom-tour-kit-minimized",children:[(0,o.jsx)(r.Button,{onClick:t,"aria-label":__("Resume Tour","default"),children:(0,o.jsxs)(r.Flex,{gap:13,children:[(0,o.jsx)("p",{children:(0,s.createInterpolateElement)((0,i.sprintf)(
 /* translators: 1: current page number, 2: total number of pages */
-__("Resume tour <span>(%1$d/%2$d)</span>","default"),f,p),{span:(0,o.jsx)("span",{className:"wpcom-tour-kit-minimized__tour-index"})})}),(0,o.jsx)(a/* ["default"] */.Z,{icon:l/* ["default"] */.Z,size:24})]})}),(0,o.jsx)(r.Button,{onClick:n("close-btn-minimized"),"aria-label":__("Close Tour","default"),children:(0,o.jsx)(a/* ["default"] */.Z,{icon:c/* ["default"] */.Z,size:24})})]})};
+__("Resume tour <span>(%1$d/%2$d)</span>","default"),f,p),{span:(0,o.jsx)("span",{className:"wpcom-tour-kit-minimized__tour-index"})})}),(0,o.jsx)(a/* ["default"] */.Z,{icon:u/* ["default"] */.Z,size:24})]})}),(0,o.jsx)(r.Button,{onClick:n("close-btn-minimized"),"aria-label":__("Close Tour","default"),children:(0,o.jsx)(a/* ["default"] */.Z,{icon:c/* ["default"] */.Z,size:24})})]})};
 /* harmony default export */}
 //# sourceMappingURL=wpcom-tour-kit-minimized.js.map
 /***/,
@@ -285,10 +285,10 @@ __("Resume tour <span>(%1$d/%2$d)</span>","default"),f,p),{span:(0,o.jsx)("span"
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>f
 /* harmony export */});
-/* harmony import */var o=n(24246),r=n(55609),s=n(69307),i=n(43032),a=n(90005),c=n.n(a),u=n(39167),l=n(51059),d=n(12168);
-/* harmony import */const f=()=>{const[e,t]=(0,s.useState)(),n=(0,u/* .useTourKitContext */.S)().config,a=n.options?.tourRating?.useTourRating?.()??e,{__}=(0,i/* .useI18n */.QT)();let f=!1;if(!n.options?.tourRating?.enabled)return null;
+/* harmony import */var o=n(24246),r=n(55609),s=n(69307),i=n(43032),a=n(90005),c=n.n(a),l=n(39167),u=n(51059),d=n(12168);
+/* harmony import */const f=()=>{const[e,t]=(0,s.useState)(),n=(0,l/* .useTourKitContext */.S)().config,a=n.options?.tourRating?.useTourRating?.()??e,{__}=(0,i/* .useI18n */.QT)();let f=!1;if(!n.options?.tourRating?.enabled)return null;
 // check is on tempRating to allow rerating in a restarted tour
-f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down";o!==a&&(f=!0,t(o),n.options?.tourRating?.onTourRate?.(o))};return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)("p",{className:"wpcom-tour-kit-rating__end-text",children:__("Did you find this guide helpful?","default")}),(0,o.jsxs)("div",{children:[(0,o.jsx)(r.Button,{"aria-label":__("Rate thumbs up","default"),className:c()("wpcom-tour-kit-rating__end-icon",{active:"thumbs-up"===a}),disabled:f,icon:d/* ["default"] */.Z,onClick:()=>p(!0),iconSize:24}),(0,o.jsx)(r.Button,{"aria-label":__("Rate thumbs down","default"),className:c()("wpcom-tour-kit-rating__end-icon",{active:"thumbs-down"===a}),disabled:f,icon:l/* ["default"] */.Z,onClick:()=>p(!1),iconSize:24})]})]})};
+f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down";o!==a&&(f=!0,t(o),n.options?.tourRating?.onTourRate?.(o))};return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)("p",{className:"wpcom-tour-kit-rating__end-text",children:__("Did you find this guide helpful?","default")}),(0,o.jsxs)("div",{children:[(0,o.jsx)(r.Button,{"aria-label":__("Rate thumbs up","default"),className:c()("wpcom-tour-kit-rating__end-icon",{active:"thumbs-up"===a}),disabled:f,icon:d/* ["default"] */.Z,onClick:()=>p(!0),iconSize:24}),(0,o.jsx)(r.Button,{"aria-label":__("Rate thumbs down","default"),className:c()("wpcom-tour-kit-rating__end-icon",{active:"thumbs-down"===a}),disabled:f,icon:u/* ["default"] */.Z,onClick:()=>p(!1),iconSize:24})]})]})};
 /* harmony default export */}
 //# sourceMappingURL=wpcom-tour-kit-rating.js.map
 /***/,
@@ -298,7 +298,7 @@ f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down
 /* harmony export */Z:()=>a
 /* harmony export */});
 /* harmony import */var o=n(24246),r=n(98578),s=n(55609),i=n(43032);
-/* harmony import */const a=({currentStepIndex:e,onDismiss:t,onGoToStep:n,onNextStep:a,onPreviousStep:c,setInitialFocusedElement:u,steps:l})=>{const{__}=(0,i/* .useI18n */.QT)(),d=0===e,f=l.length-1;return(0,o.jsx)(o.Fragment,{children:(0,o.jsx)(r/* ["default"] */.Z,{activePageIndex:e,numberOfPages:f+1,onChange:n,children:d?(0,o.jsxs)("div",{children:[(0,o.jsx)(s.Button,{isTertiary:!0,onClick:t("no-thanks-btn"),children:__("Skip","default")}),(0,o.jsx)(s.Button,{className:"wpcom-tour-kit-step-card-navigation__next-btn",isPrimary:!0,onClick:a,ref:u,children:__("Try it out!","default")})]}):(0,o.jsxs)("div",{children:[(0,o.jsx)(s.Button,{isTertiary:!0,onClick:c,children:__("Back","default")}),(0,o.jsx)(s.Button,{className:"wpcom-tour-kit-step-card-navigation__next-btn",isPrimary:!0,onClick:a,ref:u,children:__("Next","default")})]})})})};
+/* harmony import */const a=({currentStepIndex:e,onDismiss:t,onGoToStep:n,onNextStep:a,onPreviousStep:c,setInitialFocusedElement:l,steps:u})=>{const{__}=(0,i/* .useI18n */.QT)(),d=0===e,f=u.length-1;return(0,o.jsx)(o.Fragment,{children:(0,o.jsx)(r/* ["default"] */.Z,{activePageIndex:e,numberOfPages:f+1,onChange:n,children:d?(0,o.jsxs)("div",{children:[(0,o.jsx)(s.Button,{isTertiary:!0,onClick:t("no-thanks-btn"),children:__("Skip","default")}),(0,o.jsx)(s.Button,{className:"wpcom-tour-kit-step-card-navigation__next-btn",isPrimary:!0,onClick:a,ref:l,children:__("Try it out!","default")})]}):(0,o.jsxs)("div",{children:[(0,o.jsx)(s.Button,{isTertiary:!0,onClick:c,children:__("Back","default")}),(0,o.jsx)(s.Button,{className:"wpcom-tour-kit-step-card-navigation__next-btn",isPrimary:!0,onClick:a,ref:l,children:__("Next","default")})]})})})};
 /* harmony default export */}
 //# sourceMappingURL=wpcom-tour-kit-step-card-navigation.js.map
 /***/,
@@ -315,10 +315,10 @@ f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down
 /***/48881:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */Z:()=>l
+/* harmony export */Z:()=>u
 /* harmony export */});
-/* harmony import */var o=n(24246),r=n(15322),s=n(55609),i=n(43032),a=n(86301),c=n(67809),u=n(42904);
-/* harmony import */const l=({steps:e,currentStepIndex:t,onMinimize:n,onDismiss:l,onGoToStep:d,onNextStep:f,onPreviousStep:p,setInitialFocusedElement:m})=>{const{__}=(0,i/* .useI18n */.QT)(),h=e.length-1,{descriptions:v,heading:g,imgSrc:b}=e[t].meta,y=t===h,w=v[(0,r/* .isMobile */.tq)()?"mobile":"desktop"]??v.desktop,x=(0,r/* .getMediaQueryList */.O9)(r/* .MOBILE_BREAKPOINT */.Gh);return(0,o.jsxs)(s.Card,{className:"wpcom-tour-kit-step-card",isElevated:!0,children:[(0,o.jsx)(u/* ["default"] */.Z,{onDismiss:l,onMinimize:n}),b&&(0,o.jsx)(s.CardMedia,{className:"wpcom-tour-kit-step-card__media",children:(0,o.jsxs)("picture",{children:[b.mobile&&(0,o.jsx)("source",{srcSet:b.mobile.src,type:b.mobile.type,media:x?.media}),(0,o.jsx)("img",{alt:__("Tour Media","default"),src:b.desktop?.src})]})}),(0,o.jsxs)(s.CardBody,{children:[(0,o.jsx)("h2",{className:"wpcom-tour-kit-step-card__heading",children:g}),(0,o.jsxs)("p",{className:"wpcom-tour-kit-step-card__description",children:[w,y?(0,o.jsx)(s.Button,{className:"wpcom-tour-kit-step-card__description",isTertiary:!0,onClick:()=>d(0),ref:m,children:__("Restart tour","default")}):null]})]}),(0,o.jsx)(s.CardFooter,{children:y?(0,o.jsx)(a/* ["default"] */.Z,{}):(0,o.jsx)(c/* ["default"] */.Z,{currentStepIndex:t,onDismiss:l,onGoToStep:d,onNextStep:f,onPreviousStep:p,setInitialFocusedElement:m,steps:e})})]})};
+/* harmony import */var o=n(24246),r=n(15322),s=n(55609),i=n(43032),a=n(86301),c=n(67809),l=n(42904);
+/* harmony import */const u=({steps:e,currentStepIndex:t,onMinimize:n,onDismiss:u,onGoToStep:d,onNextStep:f,onPreviousStep:p,setInitialFocusedElement:m})=>{const{__}=(0,i/* .useI18n */.QT)(),h=e.length-1,{descriptions:v,heading:g,imgSrc:b}=e[t].meta,y=t===h,w=v[(0,r/* .isMobile */.tq)()?"mobile":"desktop"]??v.desktop,x=(0,r/* .getMediaQueryList */.O9)(r/* .MOBILE_BREAKPOINT */.Gh);return(0,o.jsxs)(s.Card,{className:"wpcom-tour-kit-step-card",isElevated:!0,children:[(0,o.jsx)(l/* ["default"] */.Z,{onDismiss:u,onMinimize:n}),b&&(0,o.jsx)(s.CardMedia,{className:"wpcom-tour-kit-step-card__media",children:(0,o.jsxs)("picture",{children:[b.mobile&&(0,o.jsx)("source",{srcSet:b.mobile.src,type:b.mobile.type,media:x?.media}),(0,o.jsx)("img",{alt:__("Tour Media","default"),src:b.desktop?.src})]})}),(0,o.jsxs)(s.CardBody,{children:[(0,o.jsx)("h2",{className:"wpcom-tour-kit-step-card__heading",children:g}),(0,o.jsxs)("p",{className:"wpcom-tour-kit-step-card__description",children:[w,y?(0,o.jsx)(s.Button,{className:"wpcom-tour-kit-step-card__description",isTertiary:!0,onClick:()=>d(0),ref:m,children:__("Restart tour","default")}):null]})]}),(0,o.jsx)(s.CardFooter,{children:y?(0,o.jsx)(a/* ["default"] */.Z,{}):(0,o.jsx)(c/* ["default"] */.Z,{currentStepIndex:t,onDismiss:u,onGoToStep:d,onNextStep:f,onPreviousStep:p,setInitialFocusedElement:m,steps:e})})]})};
 /* harmony default export */}
 //# sourceMappingURL=wpcom-tour-kit-step-card.js.map
 /***/,
@@ -328,7 +328,7 @@ f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down
 /* harmony export */Z:()=>s
 /* harmony export */});
 /* harmony import */var o=n(24246),r=n(48881);
-/* harmony import */const s=({steps:e,currentStepIndex:t,onDismiss:n,onNextStep:s,onPreviousStep:i,onMinimize:a,setInitialFocusedElement:c,onGoToStep:u})=>(0,o.jsx)(r/* ["default"] */.Z,{steps:e,currentStepIndex:t,onDismiss:n,onMinimize:a,onGoToStep:u,onNextStep:s,onPreviousStep:i,setInitialFocusedElement:c});
+/* harmony import */const s=({steps:e,currentStepIndex:t,onDismiss:n,onNextStep:s,onPreviousStep:i,onMinimize:a,setInitialFocusedElement:c,onGoToStep:l})=>(0,o.jsx)(r/* ["default"] */.Z,{steps:e,currentStepIndex:t,onDismiss:n,onMinimize:a,onGoToStep:l,onNextStep:s,onPreviousStep:i,setInitialFocusedElement:c});
 /* harmony default export */}
 //# sourceMappingURL=wpcom-tour-kit-step.js.map
 /***/,
@@ -394,7 +394,7 @@ f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down
 /***/5157:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */_z:()=>/* binding */l
+/* harmony export */_z:()=>/* binding */u
 /* harmony export */});
 /* unused harmony exports useBreakpoint, useDesktopBreakpoint, withBreakpoint, withMobileBreakpoint, withDesktopBreakpoint */
 /* harmony import */var o=n(25773),r=n(66886),s=n(99196),i=n.n(s),a=n(94333),c=n(15322);
@@ -412,7 +412,7 @@ f||void 0===e||(f=!0);const p=e=>{if(f)return;const o=e?"thumbs-up":"thumbs-down
  *
  * @returns {boolean} The current status for the breakpoint.
  */
-function u(e){var t=(0,s.useState)((function(){return{isActive:(0,c/* .isWithinBreakpoint */.kV)(e),breakpoint:e}})),n=(0,r/* ["default"] */.Z)(t,2),o=n[0],i=n[1];return(0,s.useEffect)((function(){// The unsubscribe function is the entire cleanup for the effect.
+function l(e){var t=(0,s.useState)((function(){return{isActive:(0,c/* .isWithinBreakpoint */.kV)(e),breakpoint:e}})),n=(0,r/* ["default"] */.Z)(t,2),o=n[0],i=n[1];return(0,s.useEffect)((function(){// The unsubscribe function is the entire cleanup for the effect.
 return(0,c/* .subscribeIsWithinBreakpoint */.Sp)(e,(function(t){i((function(n){
 // Ensure we bail out without rendering if nothing changes, by preserving state.
 return n.isActive===t&&n.breakpoint===e?n:{isActive:t,breakpoint:e}}))}))}),[e]),e===o.breakpoint?o.isActive:(0,c/* .isWithinBreakpoint */.kV)(e)}
@@ -421,7 +421,7 @@ return n.isActive===t&&n.breakpoint===e?n:{isActive:t,breakpoint:e}}))}))}),[e])
  * updated.
  *
  * @returns {boolean} The current status for the breakpoint.
- */function l(){return u(c/* .MOBILE_BREAKPOINT */.Gh)}
+ */function u(){return l(c/* .MOBILE_BREAKPOINT */.Gh)}
 /**
  * React hook for getting the status for the desktop breakpoint and keeping it
  * updated.
@@ -437,7 +437,7 @@ return n.isActive===t&&n.breakpoint===e?n:{isActive:t,breakpoint:e}}))}))}),[e])
  * @returns {Function} A function that given a component returns the
  * wrapped component.
  */
-(0,a.createHigherOrderComponent)((function(e){return(0,s.forwardRef)((function(t,n){var r=u(c/* .MOBILE_BREAKPOINT */.Gh);return i().createElement(e,(0,o/* ["default"] */.Z)({},t,{isBreakpointActive:r,ref:n}))}))}),"WithMobileBreakpoint"),(0,a.createHigherOrderComponent)((function(e){return(0,s.forwardRef)((function(t,n){var r=u(c/* .DESKTOP_BREAKPOINT */.oh);return i().createElement(e,(0,o/* ["default"] */.Z)({},t,{isBreakpointActive:r,ref:n}))}))}),"WithDesktopBreakpoint")
+(0,a.createHigherOrderComponent)((function(e){return(0,s.forwardRef)((function(t,n){var r=l(c/* .MOBILE_BREAKPOINT */.Gh);return i().createElement(e,(0,o/* ["default"] */.Z)({},t,{isBreakpointActive:r,ref:n}))}))}),"WithMobileBreakpoint"),(0,a.createHigherOrderComponent)((function(e){return(0,s.forwardRef)((function(t,n){var r=l(c/* .DESKTOP_BREAKPOINT */.oh);return i().createElement(e,(0,o/* ["default"] */.Z)({},t,{isBreakpointActive:r,ref:n}))}))}),"WithDesktopBreakpoint")
 /**
  * React higher order component for getting the status for the mobile
  * breakpoint and keeping it updated.
@@ -491,7 +491,7 @@ return n.isActive===t&&n.breakpoint===e?n:{isActive:t,breakpoint:e}}))}))}),[e])
 // [1] https://github.com/Automattic/wp-calypso/blob/HEAD/docs/coding-guidelines/css.md#media-queries
 // FIXME: We can't detect window size on the server, so until we have more intelligent detection,
 // use 769, which is just above the general maximum mobile screen width.
-const o=769,r="<480px",s=">960px",i="undefined"==typeof window||!window.matchMedia,a=()=>null;function c(e){return{addListener:()=>{},removeListener:()=>{},...e}}function u(e){const{min:t,max:n}=e??{};return void 0!==t&&void 0!==n?i?c({matches:o>t&&o<=n}):window.matchMedia(`(min-width: ${t+1}px) and (max-width: ${n}px)`):void 0!==t?i?c({matches:o>t}):window.matchMedia(`(min-width: ${t+1}px)`):void 0!==n&&(i?c({matches:o<=n}):window.matchMedia(`(max-width: ${n}px)`))}const l={"<480px":u({max:480}),"<660px":u({max:660}),"<782px":u({max:782}),"<800px":u({max:800}),"<960px":u({max:960}),"<1040px":u({max:1040}),"<1280px":u({max:1280}),"<1400px":u({max:1400}),">480px":u({min:480}),">660px":u({min:660}),">782px":u({min:782}),">800px":u({min:800}),">960px":u({min:960}),">1040px":u({min:1040}),">1280px":u({min:1280}),">1400px":u({min:1400}),"480px-660px":u({min:480,max:660}),"660px-960px":u({min:660,max:960}),"480px-960px":u({min:480,max:960})};function d(e){if(l.hasOwnProperty(e))return l[e];try{
+const o=769,r="<480px",s=">960px",i="undefined"==typeof window||!window.matchMedia,a=()=>null;function c(e){return{addListener:()=>{},removeListener:()=>{},...e}}function l(e){const{min:t,max:n}=e??{};return void 0!==t&&void 0!==n?i?c({matches:o>t&&o<=n}):window.matchMedia(`(min-width: ${t+1}px) and (max-width: ${n}px)`):void 0!==t?i?c({matches:o>t}):window.matchMedia(`(min-width: ${t+1}px)`):void 0!==n&&(i?c({matches:o<=n}):window.matchMedia(`(max-width: ${n}px)`))}const u={"<480px":l({max:480}),"<660px":l({max:660}),"<782px":l({max:782}),"<800px":l({max:800}),"<960px":l({max:960}),"<1040px":l({max:1040}),"<1280px":l({max:1280}),"<1400px":l({max:1400}),">480px":l({min:480}),">660px":l({min:660}),">782px":l({min:782}),">800px":l({min:800}),">960px":l({min:960}),">1040px":l({min:1040}),">1280px":l({min:1280}),">1400px":l({min:1400}),"480px-660px":l({min:480,max:660}),"660px-960px":l({min:660,max:960}),"480px-960px":l({min:480,max:960})};function d(e){if(u.hasOwnProperty(e))return u[e];try{
 // eslint-disable-next-line no-console
 console.warn("Undefined breakpoint used in `mobile-first-breakpoint`",e)}catch(e){}}
 /**
@@ -529,10 +529,10 @@ return n.addListener(e),()=>n.removeListener(e)}return a}
 /* harmony export */kZ:()=>/* binding */p
 /* harmony export */});
 /* unused harmony export createPopper */
-/* harmony import */var o=n(4165),r=n(30982),s=n(32801),i=n(21108),a=n(22669),c=n(28346),u=n(22924),l=n(53817),d={placement:"bottom",modifiers:[],strategy:"absolute"};
-/* harmony import */function f(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return!t.some((function(e){return!(e&&"function"==typeof e.getBoundingClientRect)}))}function p(e){void 0===e&&(e={});var t=e,n=t.defaultModifiers,p=void 0===n?[]:n,m=t.defaultOptions,h=void 0===m?d:m;return function(e,t,n){void 0===n&&(n=h);var m={placement:"bottom",orderedModifiers:[],options:Object.assign({},d,h),modifiersData:{},elements:{reference:e,popper:t},attributes:{},styles:{}},v=[],g=!1,b={state:m,setOptions:function(n){var o="function"==typeof n?n(m.options):n;y(),m.options=Object.assign({},h,m.options,o),m.scrollParents={reference:(0,l/* .isElement */.kK)(e)?(0,s/* ["default"] */.Z)(e):e.contextElement?(0,s/* ["default"] */.Z)(e.contextElement):[],popper:(0,s/* ["default"] */.Z)(t)};// Orders the modifiers based on their dependencies and `phase`
+/* harmony import */var o=n(4165),r=n(30982),s=n(32801),i=n(21108),a=n(22669),c=n(28346),l=n(22924),u=n(53817),d={placement:"bottom",modifiers:[],strategy:"absolute"};
+/* harmony import */function f(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return!t.some((function(e){return!(e&&"function"==typeof e.getBoundingClientRect)}))}function p(e){void 0===e&&(e={});var t=e,n=t.defaultModifiers,p=void 0===n?[]:n,m=t.defaultOptions,h=void 0===m?d:m;return function(e,t,n){void 0===n&&(n=h);var m={placement:"bottom",orderedModifiers:[],options:Object.assign({},d,h),modifiersData:{},elements:{reference:e,popper:t},attributes:{},styles:{}},v=[],g=!1,b={state:m,setOptions:function(n){var o="function"==typeof n?n(m.options):n;y(),m.options=Object.assign({},h,m.options,o),m.scrollParents={reference:(0,u/* .isElement */.kK)(e)?(0,s/* ["default"] */.Z)(e):e.contextElement?(0,s/* ["default"] */.Z)(e.contextElement):[],popper:(0,s/* ["default"] */.Z)(t)};// Orders the modifiers based on their dependencies and `phase`
 // properties
-var r=(0,a/* ["default"] */.Z)((0,u/* ["default"] */.Z)([].concat(p,m.options.modifiers)));// Strip out disabled modifiers
+var r=(0,a/* ["default"] */.Z)((0,l/* ["default"] */.Z)([].concat(p,m.options.modifiers)));// Strip out disabled modifiers
 return m.orderedModifiers=r.filter((function(e){return e.enabled})),m.orderedModifiers.forEach((function(e){var t=e.name,n=e.options,o=void 0===n?{}:n,r=e.effect;if("function"==typeof r){var s=r({state:m,name:t,instance:b,options:o}),i=function(){};v.push(s||i)}})),b.update()},
 // Sync update – it will always be executed, even if not necessary. This
 // is useful for low frequency updates where sync behavior simplifies the
@@ -551,7 +551,7 @@ m.reset=!1,m.placement=m.options.placement,// On each update cycle, the `modifie
 // is filled with the initial data specified by the modifier. This means
 // it doesn't persist and is fresh on each update.
 // To ensure persistent data, use `${name}#persistent`
-m.orderedModifiers.forEach((function(e){return m.modifiersData[e.name]=Object.assign({},e.data)}));for(var s=0;s<m.orderedModifiers.length;s++)if(!0!==m.reset){var a=m.orderedModifiers[s],c=a.fn,u=a.options,l=void 0===u?{}:u,d=a.name;"function"==typeof c&&(m=c({state:m,options:l,name:d,instance:b})||m)}else m.reset=!1,s=-1}}},
+m.orderedModifiers.forEach((function(e){return m.modifiersData[e.name]=Object.assign({},e.data)}));for(var s=0;s<m.orderedModifiers.length;s++)if(!0!==m.reset){var a=m.orderedModifiers[s],c=a.fn,l=a.options,u=void 0===l?{}:l,d=a.name;"function"==typeof c&&(m=c({state:m,options:u,name:d,instance:b})||m)}else m.reset=!1,s=-1}}},
 // Async and optimistically optimized update – it will not be executed if
 // not necessary (debounced to run at most once-per-tick)
 update:(0,c/* ["default"] */.Z)((function(){return new Promise((function(e){b.forceUpdate(),e(m)}))})),destroy:function(){y(),g=!0}};if(!f(e,t))return b;function y(){v.forEach((function(e){return e()})),v=[]}return b.setOptions(n).then((function(e){!g&&n.onFirstUpdate&&n.onFirstUpdate(e)})),b}}}// eslint-disable-next-line import/no-unused-modules
@@ -581,13 +581,13 @@ c>0&&(s=(0,r/* .round */.NM)(n.width)/c||1),a>0&&(i=(0,r/* .round */.NM)(n.heigh
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>/* binding */b
 /* harmony export */});
-/* harmony import */var o=n(71899),r=n(40553),s=n(20011),i=n(32801),a=n(21108),c=n(55565),u=n(76594),l=n(53817),d=n(31778),f=n(33087),p=n(25681),m=n(63465),h=n(14515),v=n(53295);
-/* harmony import */function g(e,t){return t===o/* .viewport */.Pj?(0,h/* ["default"] */.Z)((0,r/* ["default"] */.Z)(e)):(0,l/* .isElement */.kK)(t)?function(e){var t=(0,d/* ["default"] */.Z)(e);return t.top=t.top+e.clientTop,t.left=t.left+e.clientLeft,t.bottom=t.top+e.clientHeight,t.right=t.left+e.clientWidth,t.width=e.clientWidth,t.height=e.clientHeight,t.x=t.left,t.y=t.top,t}(t):(0,h/* ["default"] */.Z)((0,s/* ["default"] */.Z)((0,c/* ["default"] */.Z)(e)))}// A "clipping parent" is an overflowable container with the characteristic of
+/* harmony import */var o=n(71899),r=n(40553),s=n(20011),i=n(32801),a=n(21108),c=n(55565),l=n(76594),u=n(53817),d=n(31778),f=n(33087),p=n(25681),m=n(63465),h=n(14515),v=n(53295);
+/* harmony import */function g(e,t){return t===o/* .viewport */.Pj?(0,h/* ["default"] */.Z)((0,r/* ["default"] */.Z)(e)):(0,u/* .isElement */.kK)(t)?function(e){var t=(0,d/* ["default"] */.Z)(e);return t.top=t.top+e.clientTop,t.left=t.left+e.clientLeft,t.bottom=t.top+e.clientHeight,t.right=t.left+e.clientWidth,t.width=e.clientWidth,t.height=e.clientHeight,t.x=t.left,t.y=t.top,t}(t):(0,h/* ["default"] */.Z)((0,s/* ["default"] */.Z)((0,c/* ["default"] */.Z)(e)))}// A "clipping parent" is an overflowable container with the characteristic of
 // clipping (or hiding) overflowing elements with a position different from
 // `initial`
 // Gets the maximum area that the element is visible in due to any number of
 // clipping parents
-function b(e,t,n){var o="clippingParents"===t?function(e){var t=(0,i/* ["default"] */.Z)((0,f/* ["default"] */.Z)(e)),n=["absolute","fixed"].indexOf((0,u/* ["default"] */.Z)(e).position)>=0&&(0,l/* .isHTMLElement */.Re)(e)?(0,a/* ["default"] */.Z)(e):e;return(0,l/* .isElement */.kK)(n)?t.filter((function(e){return(0,l/* .isElement */.kK)(e)&&(0,p/* ["default"] */.Z)(e,n)&&"body"!==(0,m/* ["default"] */.Z)(e)})):[];// $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414
+function b(e,t,n){var o="clippingParents"===t?function(e){var t=(0,i/* ["default"] */.Z)((0,f/* ["default"] */.Z)(e)),n=["absolute","fixed"].indexOf((0,l/* ["default"] */.Z)(e).position)>=0&&(0,u/* .isHTMLElement */.Re)(e)?(0,a/* ["default"] */.Z)(e):e;return(0,u/* .isElement */.kK)(n)?t.filter((function(e){return(0,u/* .isElement */.kK)(e)&&(0,p/* ["default"] */.Z)(e,n)&&"body"!==(0,m/* ["default"] */.Z)(e)})):[];// $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414
 }(e):[].concat(t),r=[].concat(o,[n]),s=r[0],c=r.reduce((function(t,n){var o=g(e,n);return t.top=(0,v/* .max */.Fp)(o.top,t.top),t.right=(0,v/* .min */.VV)(o.right,t.right),t.bottom=(0,v/* .min */.VV)(o.bottom,t.bottom),t.left=(0,v/* .max */.Fp)(o.left,t.left),t}),g(e,s));return c.width=c.right-c.left,c.height=c.bottom-c.top,c.x=c.left,c.y=c.top,c}
 /***/},
 /***/4165:
@@ -595,11 +595,11 @@ function b(e,t,n){var o="clippingParents"===t?function(e){var t=(0,i/* ["default
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>/* binding */d
 /* harmony export */});
-/* harmony import */var o=n(31778),r=n(59866),s=n(63465),i=n(53817),a=n(41061),c=n(55565),u=n(62714),l=n(53295);
+/* harmony import */var o=n(31778),r=n(59866),s=n(63465),i=n(53817),a=n(41061),c=n(55565),l=n(62714),u=n(53295);
 /* harmony import */ // Returns the composite rect of an element relative to its offsetParent.
 // Composite means it takes into account transforms as well as layout.
-function d(e,t,n){void 0===n&&(n=!1);var d=(0,i/* .isHTMLElement */.Re)(t),f=(0,i/* .isHTMLElement */.Re)(t)&&function(e){var t=e.getBoundingClientRect(),n=(0,l/* .round */.NM)(t.width)/e.offsetWidth||1,o=(0,l/* .round */.NM)(t.height)/e.offsetHeight||1;return 1!==n||1!==o}(t),p=(0,c/* ["default"] */.Z)(t),m=(0,o/* ["default"] */.Z)(e,f),h={scrollLeft:0,scrollTop:0},v={x:0,y:0};return(d||!d&&!n)&&(("body"!==(0,s/* ["default"] */.Z)(t)||// https://github.com/popperjs/popper-core/issues/1078
-(0,u/* ["default"] */.Z)(p))&&(h=(0,r/* ["default"] */.Z)(t)),(0,i/* .isHTMLElement */.Re)(t)?((v=(0,o/* ["default"] */.Z)(t,!0)).x+=t.clientLeft,v.y+=t.clientTop):p&&(v.x=(0,a/* ["default"] */.Z)(p))),{x:m.left+h.scrollLeft-v.x,y:m.top+h.scrollTop-v.y,width:m.width,height:m.height}}
+function d(e,t,n){void 0===n&&(n=!1);var d=(0,i/* .isHTMLElement */.Re)(t),f=(0,i/* .isHTMLElement */.Re)(t)&&function(e){var t=e.getBoundingClientRect(),n=(0,u/* .round */.NM)(t.width)/e.offsetWidth||1,o=(0,u/* .round */.NM)(t.height)/e.offsetHeight||1;return 1!==n||1!==o}(t),p=(0,c/* ["default"] */.Z)(t),m=(0,o/* ["default"] */.Z)(e,f),h={scrollLeft:0,scrollTop:0},v={x:0,y:0};return(d||!d&&!n)&&(("body"!==(0,s/* ["default"] */.Z)(t)||// https://github.com/popperjs/popper-core/issues/1078
+(0,l/* ["default"] */.Z)(p))&&(h=(0,r/* ["default"] */.Z)(t)),(0,i/* .isHTMLElement */.Re)(t)?((v=(0,o/* ["default"] */.Z)(t,!0)).x+=t.clientLeft,v.y+=t.clientTop):p&&(v.x=(0,a/* ["default"] */.Z)(p))),{x:m.left+h.scrollLeft-v.x,y:m.top+h.scrollTop-v.y,width:m.width,height:m.height}}
 /***/},
 /***/76594:
 /***/(e,t,n)=>{"use strict";
@@ -627,7 +627,7 @@ e.document)||window.document).documentElement}
 /* harmony import */
 // Gets the entire size of the scrollable document area, even extending outside
 // of the `<html>` and `<body>` rect bounds if horizontally scrollable
-function c(e){var t,n=(0,o/* ["default"] */.Z)(e),c=(0,i/* ["default"] */.Z)(e),u=null==(t=e.ownerDocument)?void 0:t.body,l=(0,a/* .max */.Fp)(n.scrollWidth,n.clientWidth,u?u.scrollWidth:0,u?u.clientWidth:0),d=(0,a/* .max */.Fp)(n.scrollHeight,n.clientHeight,u?u.scrollHeight:0,u?u.clientHeight:0),f=-c.scrollLeft+(0,s/* ["default"] */.Z)(e),p=-c.scrollTop;return"rtl"===(0,r/* ["default"] */.Z)(u||n).direction&&(f+=(0,a/* .max */.Fp)(n.clientWidth,u?u.clientWidth:0)-l),{width:l,height:d,x:f,y:p}}
+function c(e){var t,n=(0,o/* ["default"] */.Z)(e),c=(0,i/* ["default"] */.Z)(e),l=null==(t=e.ownerDocument)?void 0:t.body,u=(0,a/* .max */.Fp)(n.scrollWidth,n.clientWidth,l?l.scrollWidth:0,l?l.clientWidth:0),d=(0,a/* .max */.Fp)(n.scrollHeight,n.clientHeight,l?l.scrollHeight:0,l?l.clientHeight:0),f=-c.scrollLeft+(0,s/* ["default"] */.Z)(e),p=-c.scrollTop;return"rtl"===(0,r/* ["default"] */.Z)(l||n).direction&&(f+=(0,a/* .max */.Fp)(n.clientWidth,l?l.clientWidth:0)-u),{width:u,height:d,x:f,y:p}}
 /***/},
 /***/82895:
 /***/(e,t,n)=>{"use strict";
@@ -664,15 +664,15 @@ return Math.abs(t.width-n)<=1&&(n=t.width),Math.abs(t.height-r)<=1&&(r=t.height)
 /***/21108:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */Z:()=>/* binding */l
+/* harmony export */Z:()=>/* binding */u
 /* harmony export */});
 /* harmony import */var o=n(62475),r=n(63465),s=n(76594),i=n(53817),a=n(78265),c=n(33087);
-/* harmony import */function u(e){return(0,i/* .isHTMLElement */.Re)(e)&&// https://github.com/popperjs/popper-core/issues/837
+/* harmony import */function l(e){return(0,i/* .isHTMLElement */.Re)(e)&&// https://github.com/popperjs/popper-core/issues/837
 "fixed"!==(0,s/* ["default"] */.Z)(e).position?e.offsetParent:null}// `.offsetParent` reports `null` for fixed elements, while absolute elements
 // return the containing block
 // Gets the closest ancestor positioned element. Handles some edge cases,
 // such as table ancestors and cross browser bugs.
-function l(e){for(var t=(0,o/* ["default"] */.Z)(e),n=u(e);n&&(0,a/* ["default"] */.Z)(n)&&"static"===(0,s/* ["default"] */.Z)(n).position;)n=u(n);return n&&("html"===(0,r/* ["default"] */.Z)(n)||"body"===(0,r/* ["default"] */.Z)(n)&&"static"===(0,s/* ["default"] */.Z)(n).position)?t:n||function(e){var t=-1!==navigator.userAgent.toLowerCase().indexOf("firefox");if(-1!==navigator.userAgent.indexOf("Trident")&&(0,i/* .isHTMLElement */.Re)(e)&&"fixed"===(0,s/* ["default"] */.Z)(e).position)return null;var n=(0,c/* ["default"] */.Z)(e);for((0,i/* .isShadowRoot */.Zq)(n)&&(n=n.host);(0,i/* .isHTMLElement */.Re)(n)&&["html","body"].indexOf((0,r/* ["default"] */.Z)(n))<0;){var o=(0,s/* ["default"] */.Z)(n);// This is non-exhaustive but covers the most common CSS properties that
+function u(e){for(var t=(0,o/* ["default"] */.Z)(e),n=l(e);n&&(0,a/* ["default"] */.Z)(n)&&"static"===(0,s/* ["default"] */.Z)(n).position;)n=l(n);return n&&("html"===(0,r/* ["default"] */.Z)(n)||"body"===(0,r/* ["default"] */.Z)(n)&&"static"===(0,s/* ["default"] */.Z)(n).position)?t:n||function(e){var t=-1!==navigator.userAgent.toLowerCase().indexOf("firefox");if(-1!==navigator.userAgent.indexOf("Trident")&&(0,i/* .isHTMLElement */.Re)(e)&&"fixed"===(0,s/* ["default"] */.Z)(e).position)return null;var n=(0,c/* ["default"] */.Z)(e);for((0,i/* .isShadowRoot */.Zq)(n)&&(n=n.host);(0,i/* .isHTMLElement */.Re)(n)&&["html","body"].indexOf((0,r/* ["default"] */.Z)(n))<0;){var o=(0,s/* ["default"] */.Z)(n);// This is non-exhaustive but covers the most common CSS properties that
 // create a containing block.
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block
 if("none"!==o.transform||"none"!==o.perspective||"paint"===o.contain||-1!==["transform","perspective"].indexOf(o.willChange)||t&&"filter"===o.willChange||t&&o.filter&&"none"!==o.filter)return n;n=n.parentNode}return null}(e)||t}
@@ -706,7 +706,7 @@ e.parentNode||(// DOM Element detected
 /* harmony export */Z:()=>/* binding */i
 /* harmony export */});
 /* harmony import */var o=n(62475),r=n(55565),s=n(41061);
-/* harmony import */function i(e){var t=(0,o/* ["default"] */.Z)(e),n=(0,r/* ["default"] */.Z)(e),i=t.visualViewport,a=n.clientWidth,c=n.clientHeight,u=0,l=0;// NB: This isn't supported on iOS <= 12. If the keyboard is open, the popper
+/* harmony import */function i(e){var t=(0,o/* ["default"] */.Z)(e),n=(0,r/* ["default"] */.Z)(e),i=t.visualViewport,a=n.clientWidth,c=n.clientHeight,l=0,u=0;// NB: This isn't supported on iOS <= 12. If the keyboard is open, the popper
 // can be obscured underneath it.
 // Also, `html.clientHeight` adds the bottom bar height in Safari iOS, even
 // if it isn't open, so if this isn't available, the popper will be detected
@@ -719,7 +719,7 @@ return i&&(a=i.width,c=i.height,// Uses Layout Viewport (like Chrome; Safari doe
 // Math.abs(win.innerWidth / visualViewport.scale - visualViewport.width) <
 // 0.001
 // Fallback here: "Not Safari" userAgent
-/^((?!chrome|android).)*safari/i.test(navigator.userAgent)||(u=i.offsetLeft,l=i.offsetTop)),{width:a,height:c,x:u+(0,s/* ["default"] */.Z)(e),y:l}}
+/^((?!chrome|android).)*safari/i.test(navigator.userAgent)||(l=i.offsetLeft,u=i.offsetTop)),{width:a,height:c,x:l+(0,s/* ["default"] */.Z)(e),y:u}}
 /***/},
 /***/62475:
 /***/(e,t,n)=>{"use strict";
@@ -790,7 +790,7 @@ until we get to the top window object. This list is what we attach scroll listen
 to, because if any of these parent elements scroll, we'll need to re-calculate the
 reference element's position.
 */
-function a(e,t){var n;void 0===t&&(t=[]);var c=(0,o/* ["default"] */.Z)(e),u=c===(null==(n=e.ownerDocument)?void 0:n.body),l=(0,s/* ["default"] */.Z)(c),d=u?[l].concat(l.visualViewport||[],(0,i/* ["default"] */.Z)(c)?c:[]):c,f=t.concat(d);return u?f:// $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
+function a(e,t){var n;void 0===t&&(t=[]);var c=(0,o/* ["default"] */.Z)(e),l=c===(null==(n=e.ownerDocument)?void 0:n.body),u=(0,s/* ["default"] */.Z)(c),d=l?[u].concat(u.visualViewport||[],(0,i/* ["default"] */.Z)(c)?c:[]):c,f=t.concat(d);return l?f:// $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
 f.concat(a((0,r/* ["default"] */.Z)(d)))}
 /***/},
 /***/71899:
@@ -802,8 +802,8 @@ f.concat(a((0,r/* ["default"] */.Z)(d)))}
 /* harmony export */,t$:()=>/* binding */i
 /* harmony export */,d7:()=>/* binding */a
 /* harmony export */,mv:()=>/* binding */c
-/* harmony export */,BL:()=>/* binding */u
-/* harmony export */,ut:()=>/* binding */l
+/* harmony export */,BL:()=>/* binding */l
+/* harmony export */,ut:()=>/* binding */u
 /* harmony export */,zV:()=>/* binding */d
 /* harmony export */,Pj:()=>/* binding */f
 /* harmony export */,k5:()=>/* binding */p
@@ -813,7 +813,7 @@ f.concat(a((0,r/* ["default"] */.Z)(d)))}
 /* harmony export */,xs:()=>/* binding */g
 /* harmony export */});
 /* unused harmony exports beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite */
-var o="top",r="bottom",s="right",i="left",a="auto",c=[o,r,s,i],u="start",l="end",d="clippingParents",f="viewport",p="popper",m="reference",h=c.reduce((function(e,t){return e.concat([t+"-"+u,t+"-"+l])}),[]),v=[].concat(c,[a]).reduce((function(e,t){return e.concat([t,t+"-"+u,t+"-"+l])}),[]),g=["beforeRead","read","afterRead","beforeMain","main","afterMain","beforeWrite","write","afterWrite"]}
+var o="top",r="bottom",s="right",i="left",a="auto",c=[o,r,s,i],l="start",u="end",d="clippingParents",f="viewport",p="popper",m="reference",h=c.reduce((function(e,t){return e.concat([t+"-"+l,t+"-"+u])}),[]),v=[].concat(c,[a]).reduce((function(e,t){return e.concat([t,t+"-"+l,t+"-"+u])}),[]),g=["beforeRead","read","afterRead","beforeMain","main","afterMain","beforeWrite","write","afterWrite"]}
 /***/,
 /***/46087:
 /***/(e,t,n)=>{"use strict";
@@ -837,9 +837,9 @@ Object.assign(i.style,n),Object.keys(s).forEach((function(e){var t=s[e];!1===t?i
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>f
 /* harmony export */});
-/* harmony import */var o=n(56066),r=n(30982),s=n(25681),i=n(21108),a=n(46159),c=n(944),u=n(62631),l=n(8104),d=n(71899);
+/* harmony import */var o=n(56066),r=n(30982),s=n(25681),i=n(21108),a=n(46159),c=n(944),l=n(62631),u=n(8104),d=n(71899);
 /* harmony import */ // eslint-disable-next-line import/no-unused-modules
-/* harmony default export */const f={name:"arrow",enabled:!0,phase:"main",fn:function(e){var t,n=e.state,s=e.name,f=e.options,p=n.elements.arrow,m=n.modifiersData.popperOffsets,h=(0,o/* ["default"] */.Z)(n.placement),v=(0,a/* ["default"] */.Z)(h),g=[d/* .left */.t$,d/* .right */.F2].indexOf(h)>=0?"height":"width";if(p&&m){var b=function(e,t){return e="function"==typeof e?e(Object.assign({},t.rects,{placement:t.placement})):e,(0,u/* ["default"] */.Z)("number"!=typeof e?e:(0,l/* ["default"] */.Z)(e,d/* .basePlacements */.mv))}(f.padding,n),y=(0,r/* ["default"] */.Z)(p),w="y"===v?d/* .top */.we:d/* .left */.t$,x="y"===v?d/* .bottom */.I:d/* .right */.F2,Z=n.rects.reference[g]+n.rects.reference[v]-m[v]-n.rects.popper[g],k=m[v]-n.rects.reference[v],C=(0,i/* ["default"] */.Z)(p),S=C?"y"===v?C.clientHeight||0:C.clientWidth||0:0,_=Z/2-k/2,O=b[w],j=S-y[g]-b[x],E=S/2-y[g]/2+_,F=(0,c/* .within */.u)(O,E,j),T=v;n.modifiersData[s]=((t={})[T]=F,t.centerOffset=F-E,t)}},effect:function(e){var t=e.state,n=e.options.element,o=void 0===n?"[data-popper-arrow]":n;null!=o&&("string"!=typeof o||(o=t.elements.popper.querySelector(o)))&&(0,s/* ["default"] */.Z)(t.elements.popper,o)&&(t.elements.arrow=o);// CSS selector
+/* harmony default export */const f={name:"arrow",enabled:!0,phase:"main",fn:function(e){var t,n=e.state,s=e.name,f=e.options,p=n.elements.arrow,m=n.modifiersData.popperOffsets,h=(0,o/* ["default"] */.Z)(n.placement),v=(0,a/* ["default"] */.Z)(h),g=[d/* .left */.t$,d/* .right */.F2].indexOf(h)>=0?"height":"width";if(p&&m){var b=function(e,t){return e="function"==typeof e?e(Object.assign({},t.rects,{placement:t.placement})):e,(0,l/* ["default"] */.Z)("number"!=typeof e?e:(0,u/* ["default"] */.Z)(e,d/* .basePlacements */.mv))}(f.padding,n),y=(0,r/* ["default"] */.Z)(p),w="y"===v?d/* .top */.we:d/* .left */.t$,x="y"===v?d/* .bottom */.I:d/* .right */.F2,Z=n.rects.reference[g]+n.rects.reference[v]-m[v]-n.rects.popper[g],k=m[v]-n.rects.reference[v],C=(0,i/* ["default"] */.Z)(p),S=C?"y"===v?C.clientHeight||0:C.clientWidth||0:0,_=Z/2-k/2,O=b[w],j=S-y[g]-b[x],E=S/2-y[g]/2+_,F=(0,c/* .within */.u)(O,E,j),M=v;n.modifiersData[s]=((t={})[M]=F,t.centerOffset=F-E,t)}},effect:function(e){var t=e.state,n=e.options.element,o=void 0===n?"[data-popper-arrow]":n;null!=o&&("string"!=typeof o||(o=t.elements.popper.querySelector(o)))&&(0,s/* ["default"] */.Z)(t.elements.popper,o)&&(t.elements.arrow=o);// CSS selector
 },requires:["popperOffsets"],requiresIfExists:["preventOverflow"]};
 /***/},
 /***/66938:
@@ -848,14 +848,14 @@ Object.assign(i.style,n),Object.keys(s).forEach((function(e){var t=s[e];!1===t?i
 /* harmony export */Z:()=>p
 /* harmony export */});
 /* unused harmony export mapToStyles */
-/* harmony import */var o=n(71899),r=n(21108),s=n(62475),i=n(55565),a=n(76594),c=n(56066),u=n(15262),l=n(53295),d={top:"auto",right:"auto",bottom:"auto",left:"auto"};
-/* harmony import */function f(e){var t,n=e.popper,c=e.popperRect,u=e.placement,f=e.variation,p=e.offsets,m=e.position,h=e.gpuAcceleration,v=e.adaptive,g=e.roundOffsets,b=e.isFixed,y=p.x,w=void 0===y?0:y,x=p.y,Z=void 0===x?0:x,k="function"==typeof g?g({x:w,y:Z}):{x:w,y:Z};w=k.x,Z=k.y;var C=p.hasOwnProperty("x"),S=p.hasOwnProperty("y"),_=o/* .left */.t$,O=o/* .top */.we,j=window;if(v){var E=(0,r/* ["default"] */.Z)(n),F="clientHeight",T="clientWidth";if(E===(0,s/* ["default"] */.Z)(n)&&(E=(0,i/* ["default"] */.Z)(n),"static"!==(0,a/* ["default"] */.Z)(E).position&&"absolute"===m&&(F="scrollHeight",T="scrollWidth")),u===o/* .top */.we||(u===o/* .left */.t$||u===o/* .right */.F2)&&f===o/* .end */.ut)O=o/* .bottom */.I,Z-=(b&&E===j&&j.visualViewport?j.visualViewport.height:// $FlowFixMe[prop-missing]
-E[F])-c.height,Z*=h?1:-1;if(u===o/* .left */.t$||(u===o/* .top */.we||u===o/* .bottom */.I)&&f===o/* .end */.ut)_=o/* .right */.F2,w-=(b&&E===j&&j.visualViewport?j.visualViewport.width:// $FlowFixMe[prop-missing]
-E[T])-c.width,w*=h?1:-1}var M,P=Object.assign({position:m},v&&d),z=!0===g?// Round the offsets to the nearest suitable subpixel based on the DPR.
+/* harmony import */var o=n(71899),r=n(21108),s=n(62475),i=n(55565),a=n(76594),c=n(56066),l=n(15262),u=n(53295),d={top:"auto",right:"auto",bottom:"auto",left:"auto"};
+/* harmony import */function f(e){var t,n=e.popper,c=e.popperRect,l=e.placement,f=e.variation,p=e.offsets,m=e.position,h=e.gpuAcceleration,v=e.adaptive,g=e.roundOffsets,b=e.isFixed,y=p.x,w=void 0===y?0:y,x=p.y,Z=void 0===x?0:x,k="function"==typeof g?g({x:w,y:Z}):{x:w,y:Z};w=k.x,Z=k.y;var C=p.hasOwnProperty("x"),S=p.hasOwnProperty("y"),_=o/* .left */.t$,O=o/* .top */.we,j=window;if(v){var E=(0,r/* ["default"] */.Z)(n),F="clientHeight",M="clientWidth";if(E===(0,s/* ["default"] */.Z)(n)&&(E=(0,i/* ["default"] */.Z)(n),"static"!==(0,a/* ["default"] */.Z)(E).position&&"absolute"===m&&(F="scrollHeight",M="scrollWidth")),l===o/* .top */.we||(l===o/* .left */.t$||l===o/* .right */.F2)&&f===o/* .end */.ut)O=o/* .bottom */.I,Z-=(b&&E===j&&j.visualViewport?j.visualViewport.height:// $FlowFixMe[prop-missing]
+E[F])-c.height,Z*=h?1:-1;if(l===o/* .left */.t$||(l===o/* .top */.we||l===o/* .bottom */.I)&&f===o/* .end */.ut)_=o/* .right */.F2,w-=(b&&E===j&&j.visualViewport?j.visualViewport.width:// $FlowFixMe[prop-missing]
+E[M])-c.width,w*=h?1:-1}var T,P=Object.assign({position:m},v&&d),A=!0===g?// Round the offsets to the nearest suitable subpixel based on the DPR.
 // Zooming can change the DPR, but it seems to report a value that will
 // cleanly divide the values into the appropriate subpixels.
-function(e){var t=e.x,n=e.y,o=window.devicePixelRatio||1;return{x:(0,l/* .round */.NM)(t*o)/o||0,y:(0,l/* .round */.NM)(n*o)/o||0}}({x:w,y:Z}):{x:w,y:Z};return w=z.x,Z=z.y,h?Object.assign({},P,((M={})[O]=S?"0":"",M[_]=C?"0":"",M.transform=(j.devicePixelRatio||1)<=1?"translate("+w+"px, "+Z+"px)":"translate3d("+w+"px, "+Z+"px, 0)",M)):Object.assign({},P,((t={})[O]=S?Z+"px":"",t[_]=C?w+"px":"",t.transform="",t))}// eslint-disable-next-line import/no-unused-modules
-/* harmony default export */const p={name:"computeStyles",enabled:!0,phase:"beforeWrite",fn:function(e){var t=e.state,n=e.options,o=n.gpuAcceleration,r=void 0===o||o,s=n.adaptive,i=void 0===s||s,a=n.roundOffsets,l=void 0===a||a,d={placement:(0,c/* ["default"] */.Z)(t.placement),variation:(0,u/* ["default"] */.Z)(t.placement),popper:t.elements.popper,popperRect:t.rects.popper,gpuAcceleration:r,isFixed:"fixed"===t.options.strategy};null!=t.modifiersData.popperOffsets&&(t.styles.popper=Object.assign({},t.styles.popper,f(Object.assign({},d,{offsets:t.modifiersData.popperOffsets,position:t.options.strategy,adaptive:i,roundOffsets:l})))),null!=t.modifiersData.arrow&&(t.styles.arrow=Object.assign({},t.styles.arrow,f(Object.assign({},d,{offsets:t.modifiersData.arrow,position:"absolute",adaptive:!1,roundOffsets:l})))),t.attributes.popper=Object.assign({},t.attributes.popper,{"data-popper-placement":t.placement})},data:{}};
+function(e){var t=e.x,n=e.y,o=window.devicePixelRatio||1;return{x:(0,u/* .round */.NM)(t*o)/o||0,y:(0,u/* .round */.NM)(n*o)/o||0}}({x:w,y:Z}):{x:w,y:Z};return w=A.x,Z=A.y,h?Object.assign({},P,((T={})[O]=S?"0":"",T[_]=C?"0":"",T.transform=(j.devicePixelRatio||1)<=1?"translate("+w+"px, "+Z+"px)":"translate3d("+w+"px, "+Z+"px, 0)",T)):Object.assign({},P,((t={})[O]=S?Z+"px":"",t[_]=C?w+"px":"",t.transform="",t))}// eslint-disable-next-line import/no-unused-modules
+/* harmony default export */const p={name:"computeStyles",enabled:!0,phase:"beforeWrite",fn:function(e){var t=e.state,n=e.options,o=n.gpuAcceleration,r=void 0===o||o,s=n.adaptive,i=void 0===s||s,a=n.roundOffsets,u=void 0===a||a,d={placement:(0,c/* ["default"] */.Z)(t.placement),variation:(0,l/* ["default"] */.Z)(t.placement),popper:t.elements.popper,popperRect:t.rects.popper,gpuAcceleration:r,isFixed:"fixed"===t.options.strategy};null!=t.modifiersData.popperOffsets&&(t.styles.popper=Object.assign({},t.styles.popper,f(Object.assign({},d,{offsets:t.modifiersData.popperOffsets,position:t.options.strategy,adaptive:i,roundOffsets:u})))),null!=t.modifiersData.arrow&&(t.styles.arrow=Object.assign({},t.styles.arrow,f(Object.assign({},d,{offsets:t.modifiersData.arrow,position:"absolute",adaptive:!1,roundOffsets:u})))),t.attributes.popper=Object.assign({},t.attributes.popper,{"data-popper-placement":t.placement})},data:{}};
 /***/},
 /***/65377:
 /***/(e,t,n)=>{"use strict";
@@ -865,20 +865,20 @@ function(e){var t=e.x,n=e.y,o=window.devicePixelRatio||1;return{x:(0,l/* .round 
 /* harmony import */var o=n(62475),r={passive:!0};
 // eslint-disable-next-line import/no-unused-modules
 // eslint-disable-next-line import/no-unused-modules
-/* harmony default export */const s={name:"eventListeners",enabled:!0,phase:"write",fn:function(){},effect:function(e){var t=e.state,n=e.instance,s=e.options,i=s.scroll,a=void 0===i||i,c=s.resize,u=void 0===c||c,l=(0,o/* ["default"] */.Z)(t.elements.popper),d=[].concat(t.scrollParents.reference,t.scrollParents.popper);return a&&d.forEach((function(e){e.addEventListener("scroll",n.update,r)})),u&&l.addEventListener("resize",n.update,r),function(){a&&d.forEach((function(e){e.removeEventListener("scroll",n.update,r)})),u&&l.removeEventListener("resize",n.update,r)}},data:{}};
+/* harmony default export */const s={name:"eventListeners",enabled:!0,phase:"write",fn:function(){},effect:function(e){var t=e.state,n=e.instance,s=e.options,i=s.scroll,a=void 0===i||i,c=s.resize,l=void 0===c||c,u=(0,o/* ["default"] */.Z)(t.elements.popper),d=[].concat(t.scrollParents.reference,t.scrollParents.popper);return a&&d.forEach((function(e){e.addEventListener("scroll",n.update,r)})),l&&u.addEventListener("resize",n.update,r),function(){a&&d.forEach((function(e){e.removeEventListener("scroll",n.update,r)})),l&&u.removeEventListener("resize",n.update,r)}},data:{}};
 /***/},
 /***/46190:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */Z:()=>l
+/* harmony export */Z:()=>u
 /* harmony export */});
-/* harmony import */var o=n(51037),r=n(56066),s=n(49432),i=n(30822),a=n(8341),c=n(71899),u=n(15262);
+/* harmony import */var o=n(51037),r=n(56066),s=n(49432),i=n(30822),a=n(8341),c=n(71899),l=n(15262);
 /* harmony import */ // eslint-disable-next-line import/no-unused-modules
-/* harmony default export */const l={name:"flip",enabled:!0,phase:"main",fn:function(e){var t=e.state,n=e.options,l=e.name;if(!t.modifiersData[l]._skip){for(var d=n.mainAxis,f=void 0===d||d,p=n.altAxis,m=void 0===p||p,h=n.fallbackPlacements,v=n.padding,g=n.boundary,b=n.rootBoundary,y=n.altBoundary,w=n.flipVariations,x=void 0===w||w,Z=n.allowedAutoPlacements,k=t.options.placement,C=(0,r/* ["default"] */.Z)(k),S=h||(C===k||!x?[(0,o/* ["default"] */.Z)(k)]:
+/* harmony default export */const u={name:"flip",enabled:!0,phase:"main",fn:function(e){var t=e.state,n=e.options,u=e.name;if(!t.modifiersData[u]._skip){for(var d=n.mainAxis,f=void 0===d||d,p=n.altAxis,m=void 0===p||p,h=n.fallbackPlacements,v=n.padding,g=n.boundary,b=n.rootBoundary,y=n.altBoundary,w=n.flipVariations,x=void 0===w||w,Z=n.allowedAutoPlacements,k=t.options.placement,C=(0,r/* ["default"] */.Z)(k),S=h||(C===k||!x?[(0,o/* ["default"] */.Z)(k)]:
 // eslint-disable-next-line import/no-unused-modules
-function(e){if((0,r/* ["default"] */.Z)(e)===c/* .auto */.d7)return[];var t=(0,o/* ["default"] */.Z)(e);return[(0,s/* ["default"] */.Z)(e),t,(0,s/* ["default"] */.Z)(t)]}(k)),_=[k].concat(S).reduce((function(e,n){return e.concat((0,r/* ["default"] */.Z)(n)===c/* .auto */.d7?(0,a/* ["default"] */.Z)(t,{placement:n,boundary:g,rootBoundary:b,padding:v,flipVariations:x,allowedAutoPlacements:Z}):n)}),[]),O=t.rects.reference,j=t.rects.popper,E=new Map,F=!0,T=_[0],M=0;M<_.length;M++){var P=_[M],z=(0,r/* ["default"] */.Z)(P),R=(0,u/* ["default"] */.Z)(P)===c/* .start */.BL,A=[c/* .top */.we,c/* .bottom */.I].indexOf(z)>=0,N=A?"width":"height",I=(0,i/* ["default"] */.Z)(t,{placement:P,boundary:g,rootBoundary:b,altBoundary:y,padding:v}),L=A?R?c/* .right */.F2:c/* .left */.t$:R?c/* .bottom */.I:c/* .top */.we;O[N]>j[N]&&(L=(0,o/* ["default"] */.Z)(L));var B=(0,o/* ["default"] */.Z)(L),D=[];if(f&&D.push(I[z]<=0),m&&D.push(I[L]<=0,I[B]<=0),D.every((function(e){return e}))){T=P,F=!1;break}E.set(P,D)}if(F)for(
+function(e){if((0,r/* ["default"] */.Z)(e)===c/* .auto */.d7)return[];var t=(0,o/* ["default"] */.Z)(e);return[(0,s/* ["default"] */.Z)(e),t,(0,s/* ["default"] */.Z)(t)]}(k)),_=[k].concat(S).reduce((function(e,n){return e.concat((0,r/* ["default"] */.Z)(n)===c/* .auto */.d7?(0,a/* ["default"] */.Z)(t,{placement:n,boundary:g,rootBoundary:b,padding:v,flipVariations:x,allowedAutoPlacements:Z}):n)}),[]),O=t.rects.reference,j=t.rects.popper,E=new Map,F=!0,M=_[0],T=0;T<_.length;T++){var P=_[T],A=(0,r/* ["default"] */.Z)(P),R=(0,l/* ["default"] */.Z)(P)===c/* .start */.BL,z=[c/* .top */.we,c/* .bottom */.I].indexOf(A)>=0,B=z?"width":"height",I=(0,i/* ["default"] */.Z)(t,{placement:P,boundary:g,rootBoundary:b,altBoundary:y,padding:v}),L=z?R?c/* .right */.F2:c/* .left */.t$:R?c/* .bottom */.I:c/* .top */.we;O[B]>j[B]&&(L=(0,o/* ["default"] */.Z)(L));var N=(0,o/* ["default"] */.Z)(L),D=[];if(f&&D.push(I[A]<=0),m&&D.push(I[L]<=0,I[N]<=0),D.every((function(e){return e}))){M=P,F=!1;break}E.set(P,D)}if(F)for(
 // `2` may be desired in some cases – research later
-var q=function(e){var t=_.find((function(t){var n=E.get(t);if(n)return n.slice(0,e).every((function(e){return e}))}));if(t)return T=t,"break"},H=x?3:1;H>0;H--){if("break"===q(H))break}t.placement!==T&&(t.modifiersData[l]._skip=!0,t.placement=T,t.reset=!0)}},requiresIfExists:["offset"],data:{_skip:!1}};
+var q=function(e){var t=_.find((function(t){var n=E.get(t);if(n)return n.slice(0,e).every((function(e){return e}))}));if(t)return M=t,"break"},H=x?3:1;H>0;H--){if("break"===q(H))break}t.placement!==M&&(t.modifiersData[u]._skip=!0,t.placement=M,t.reset=!0)}},requiresIfExists:["offset"],data:{_skip:!1}};
 /***/},
 /***/67801:
 /***/(e,t,n)=>{"use strict";
@@ -887,7 +887,7 @@ var q=function(e){var t=_.find((function(t){var n=E.get(t);if(n)return n.slice(0
 /* harmony export */});
 /* harmony import */var o=n(71899),r=n(30822);
 /* harmony import */function s(e,t,n){return void 0===n&&(n={x:0,y:0}),{top:e.top-t.height-n.y,right:e.right-t.width+n.x,bottom:e.bottom-t.height+n.y,left:e.left-t.width-n.x}}function i(e){return[o/* .top */.we,o/* .right */.F2,o/* .bottom */.I,o/* .left */.t$].some((function(t){return e[t]>=0}))}// eslint-disable-next-line import/no-unused-modules
-/* harmony default export */const a={name:"hide",enabled:!0,phase:"main",requiresIfExists:["preventOverflow"],fn:function(e){var t=e.state,n=e.name,o=t.rects.reference,a=t.rects.popper,c=t.modifiersData.preventOverflow,u=(0,r/* ["default"] */.Z)(t,{elementContext:"reference"}),l=(0,r/* ["default"] */.Z)(t,{altBoundary:!0}),d=s(u,o),f=s(l,a,c),p=i(d),m=i(f);t.modifiersData[n]={referenceClippingOffsets:d,popperEscapeOffsets:f,isReferenceHidden:p,hasPopperEscaped:m},t.attributes.popper=Object.assign({},t.attributes.popper,{"data-popper-reference-hidden":p,"data-popper-escaped":m})}};
+/* harmony default export */const a={name:"hide",enabled:!0,phase:"main",requiresIfExists:["preventOverflow"],fn:function(e){var t=e.state,n=e.name,o=t.rects.reference,a=t.rects.popper,c=t.modifiersData.preventOverflow,l=(0,r/* ["default"] */.Z)(t,{elementContext:"reference"}),u=(0,r/* ["default"] */.Z)(t,{altBoundary:!0}),d=s(l,o),f=s(u,a,c),p=i(d),m=i(f);t.modifiersData[n]={referenceClippingOffsets:d,popperEscapeOffsets:f,isReferenceHidden:p,hasPopperEscaped:m},t.attributes.popper=Object.assign({},t.attributes.popper,{"data-popper-reference-hidden":p,"data-popper-escaped":m})}};
 /***/},
 /***/16415:
 /***/(e,t,n)=>{"use strict";
@@ -899,7 +899,7 @@ var q=function(e){var t=_.find((function(t){var n=E.get(t);if(n)return n.slice(0
 /* harmony import */ // eslint-disable-next-line import/no-unused-modules
 /* harmony default export */const s={name:"offset",enabled:!0,phase:"main",requires:["popperOffsets"],fn:function(e){var t=e.state,n=e.options,s=e.name,i=n.offset,a=void 0===i?[0,0]:i,c=r/* .placements.reduce */.Ct.reduce((function(e,n){return e[n]=
 // eslint-disable-next-line import/no-unused-modules
-function(e,t,n){var s=(0,o/* ["default"] */.Z)(e),i=[r/* .left */.t$,r/* .top */.we].indexOf(s)>=0?-1:1,a="function"==typeof n?n(Object.assign({},t,{placement:e})):n,c=a[0],u=a[1];return c=c||0,u=(u||0)*i,[r/* .left */.t$,r/* .right */.F2].indexOf(s)>=0?{x:u,y:c}:{x:c,y:u}}(n,t.rects,a),e}),{}),u=c[t.placement],l=u.x,d=u.y;null!=t.modifiersData.popperOffsets&&(t.modifiersData.popperOffsets.x+=l,t.modifiersData.popperOffsets.y+=d),t.modifiersData[s]=c}};
+function(e,t,n){var s=(0,o/* ["default"] */.Z)(e),i=[r/* .left */.t$,r/* .top */.we].indexOf(s)>=0?-1:1,a="function"==typeof n?n(Object.assign({},t,{placement:e})):n,c=a[0],l=a[1];return c=c||0,l=(l||0)*i,[r/* .left */.t$,r/* .right */.F2].indexOf(s)>=0?{x:l,y:c}:{x:c,y:l}}(n,t.rects,a),e}),{}),l=c[t.placement],u=l.x,d=l.y;null!=t.modifiersData.popperOffsets&&(t.modifiersData.popperOffsets.x+=u,t.modifiersData.popperOffsets.y+=d),t.modifiersData[s]=c}};
 /***/},
 /***/66915:
 /***/(e,t,n)=>{"use strict";
@@ -919,9 +919,9 @@ t.modifiersData[n]=(0,o/* ["default"] */.Z)({reference:t.rects.reference,element
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>m
 /* harmony export */});
-/* harmony import */var o=n(71899),r=n(56066),s=n(46159),i=n(33736),a=n(944),c=n(30982),u=n(21108),l=n(30822),d=n(15262),f=n(89371),p=n(53295);
+/* harmony import */var o=n(71899),r=n(56066),s=n(46159),i=n(33736),a=n(944),c=n(30982),l=n(21108),u=n(30822),d=n(15262),f=n(89371),p=n(53295);
 /* harmony import */ // eslint-disable-next-line import/no-unused-modules
-/* harmony default export */const m={name:"preventOverflow",enabled:!0,phase:"main",fn:function(e){var t=e.state,n=e.options,m=e.name,h=n.mainAxis,v=void 0===h||h,g=n.altAxis,b=void 0!==g&&g,y=n.boundary,w=n.rootBoundary,x=n.altBoundary,Z=n.padding,k=n.tether,C=void 0===k||k,S=n.tetherOffset,_=void 0===S?0:S,O=(0,l/* ["default"] */.Z)(t,{boundary:y,rootBoundary:w,padding:Z,altBoundary:x}),j=(0,r/* ["default"] */.Z)(t.placement),E=(0,d/* ["default"] */.Z)(t.placement),F=!E,T=(0,s/* ["default"] */.Z)(j),M=(0,i/* ["default"] */.Z)(T),P=t.modifiersData.popperOffsets,z=t.rects.reference,R=t.rects.popper,A="function"==typeof _?_(Object.assign({},t.rects,{placement:t.placement})):_,N="number"==typeof A?{mainAxis:A,altAxis:A}:Object.assign({mainAxis:0,altAxis:0},A),I=t.modifiersData.offset?t.modifiersData.offset[t.placement]:null,L={x:0,y:0};if(P){if(v){var B,D="y"===T?o/* .top */.we:o/* .left */.t$,q="y"===T?o/* .bottom */.I:o/* .right */.F2,H="y"===T?"height":"width",$=P[T],V=$+O[D],W=$-O[q],U=C?-R[H]/2:0,G=E===o/* .start */.BL?z[H]:R[H],Q=E===o/* .start */.BL?-R[H]:-z[H],X=t.elements.arrow,K=C&&X?(0,c/* ["default"] */.Z)(X):{width:0,height:0},Y=t.modifiersData["arrow#persistent"]?t.modifiersData["arrow#persistent"].padding:(0,f/* ["default"] */.Z)(),J=Y[D],ee=Y[q],te=(0,a/* .within */.u)(0,z[H],K[H]),ne=F?z[H]/2-U-te-J-N.mainAxis:G-te-J-N.mainAxis,oe=F?-z[H]/2+U+te+ee+N.mainAxis:Q+te+ee+N.mainAxis,re=t.elements.arrow&&(0,u/* ["default"] */.Z)(t.elements.arrow),se=re?"y"===T?re.clientTop||0:re.clientLeft||0:0,ie=null!=(B=null==I?void 0:I[T])?B:0,ae=$+ne-ie-se,ce=$+oe-ie,ue=(0,a/* .within */.u)(C?(0,p/* .min */.VV)(V,ae):V,$,C?(0,p/* .max */.Fp)(W,ce):W);P[T]=ue,L[T]=ue-$}if(b){var le,de="x"===T?o/* .top */.we:o/* .left */.t$,fe="x"===T?o/* .bottom */.I:o/* .right */.F2,pe=P[M],me="y"===M?"height":"width",he=pe+O[de],ve=pe-O[fe],ge=-1!==[o/* .top */.we,o/* .left */.t$].indexOf(j),be=null!=(le=null==I?void 0:I[M])?le:0,ye=ge?he:pe-z[me]-R[me]-be+N.altAxis,we=ge?pe+z[me]+R[me]-be-N.altAxis:ve,xe=C&&ge?(0,a/* .withinMaxClamp */.q)(ye,pe,we):(0,a/* .within */.u)(C?ye:he,pe,C?we:ve);P[M]=xe,L[M]=xe-pe}t.modifiersData[m]=L}},requiresIfExists:["offset"]};
+/* harmony default export */const m={name:"preventOverflow",enabled:!0,phase:"main",fn:function(e){var t=e.state,n=e.options,m=e.name,h=n.mainAxis,v=void 0===h||h,g=n.altAxis,b=void 0!==g&&g,y=n.boundary,w=n.rootBoundary,x=n.altBoundary,Z=n.padding,k=n.tether,C=void 0===k||k,S=n.tetherOffset,_=void 0===S?0:S,O=(0,u/* ["default"] */.Z)(t,{boundary:y,rootBoundary:w,padding:Z,altBoundary:x}),j=(0,r/* ["default"] */.Z)(t.placement),E=(0,d/* ["default"] */.Z)(t.placement),F=!E,M=(0,s/* ["default"] */.Z)(j),T=(0,i/* ["default"] */.Z)(M),P=t.modifiersData.popperOffsets,A=t.rects.reference,R=t.rects.popper,z="function"==typeof _?_(Object.assign({},t.rects,{placement:t.placement})):_,B="number"==typeof z?{mainAxis:z,altAxis:z}:Object.assign({mainAxis:0,altAxis:0},z),I=t.modifiersData.offset?t.modifiersData.offset[t.placement]:null,L={x:0,y:0};if(P){if(v){var N,D="y"===M?o/* .top */.we:o/* .left */.t$,q="y"===M?o/* .bottom */.I:o/* .right */.F2,H="y"===M?"height":"width",V=P[M],$=V+O[D],U=V-O[q],W=C?-R[H]/2:0,G=E===o/* .start */.BL?A[H]:R[H],Q=E===o/* .start */.BL?-R[H]:-A[H],K=t.elements.arrow,X=C&&K?(0,c/* ["default"] */.Z)(K):{width:0,height:0},Y=t.modifiersData["arrow#persistent"]?t.modifiersData["arrow#persistent"].padding:(0,f/* ["default"] */.Z)(),J=Y[D],ee=Y[q],te=(0,a/* .within */.u)(0,A[H],X[H]),ne=F?A[H]/2-W-te-J-B.mainAxis:G-te-J-B.mainAxis,oe=F?-A[H]/2+W+te+ee+B.mainAxis:Q+te+ee+B.mainAxis,re=t.elements.arrow&&(0,l/* ["default"] */.Z)(t.elements.arrow),se=re?"y"===M?re.clientTop||0:re.clientLeft||0:0,ie=null!=(N=null==I?void 0:I[M])?N:0,ae=V+ne-ie-se,ce=V+oe-ie,le=(0,a/* .within */.u)(C?(0,p/* .min */.VV)($,ae):$,V,C?(0,p/* .max */.Fp)(U,ce):U);P[M]=le,L[M]=le-V}if(b){var ue,de="x"===M?o/* .top */.we:o/* .left */.t$,fe="x"===M?o/* .bottom */.I:o/* .right */.F2,pe=P[T],me="y"===T?"height":"width",he=pe+O[de],ve=pe-O[fe],ge=-1!==[o/* .top */.we,o/* .left */.t$].indexOf(j),be=null!=(ue=null==I?void 0:I[T])?ue:0,ye=ge?he:pe-A[me]-R[me]-be+B.altAxis,we=ge?pe+A[me]+R[me]-be-B.altAxis:ve,xe=C&&ge?(0,a/* .withinMaxClamp */.q)(ye,pe,we):(0,a/* .within */.u)(C?ye:he,pe,C?we:ve);P[T]=xe,L[T]=xe-pe}t.modifiersData[m]=L}},requiresIfExists:["offset"]};
 /***/},
 /***/83781:
 /***/(e,t,n)=>{"use strict";
@@ -929,7 +929,7 @@ t.modifiersData[n]=(0,o/* ["default"] */.Z)({reference:t.rects.reference,element
 /* harmony export */fi:()=>/* binding */m
 /* harmony export */});
 /* unused harmony export defaultModifiers */
-/* harmony import */var o=n(85943),r=n(65377),s=n(66915),i=n(66938),a=n(46087),c=n(16415),u=n(46190),l=n(53898),d=n(2089),f=n(67801),p=[r/* ["default"] */.Z,s/* ["default"] */.Z,i/* ["default"] */.Z,a/* ["default"] */.Z,c/* ["default"] */.Z,u/* ["default"] */.Z,l/* ["default"] */.Z,d/* ["default"] */.Z,f/* ["default"] */.Z],m=(0,o/* .popperGenerator */.kZ)({defaultModifiers:p});
+/* harmony import */var o=n(85943),r=n(65377),s=n(66915),i=n(66938),a=n(46087),c=n(16415),l=n(46190),u=n(53898),d=n(2089),f=n(67801),p=[r/* ["default"] */.Z,s/* ["default"] */.Z,i/* ["default"] */.Z,a/* ["default"] */.Z,c/* ["default"] */.Z,l/* ["default"] */.Z,u/* ["default"] */.Z,d/* ["default"] */.Z,f/* ["default"] */.Z],m=(0,o/* .popperGenerator */.kZ)({defaultModifiers:p});
 /* harmony import */}// eslint-disable-next-line import/no-unused-modules
 // eslint-disable-next-line import/no-unused-modules
 // eslint-disable-next-line import/no-unused-modules
@@ -940,8 +940,8 @@ t.modifiersData[n]=(0,o/* ["default"] */.Z)({reference:t.rects.reference,element
 /* harmony export */Z:()=>/* binding */a
 /* harmony export */});
 /* harmony import */var o=n(15262),r=n(71899),s=n(30822),i=n(56066);
-/* harmony import */function a(e,t){void 0===t&&(t={});var n=t,a=n.placement,c=n.boundary,u=n.rootBoundary,l=n.padding,d=n.flipVariations,f=n.allowedAutoPlacements,p=void 0===f?r/* .placements */.Ct:f,m=(0,o/* ["default"] */.Z)(a),h=m?d?r/* .variationPlacements */.bw:r/* .variationPlacements.filter */.bw.filter((function(e){return(0,o/* ["default"] */.Z)(e)===m})):r/* .basePlacements */.mv,v=h.filter((function(e){return p.indexOf(e)>=0}));0===v.length&&(v=h);// $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
-var g=v.reduce((function(t,n){return t[n]=(0,s/* ["default"] */.Z)(e,{placement:n,boundary:c,rootBoundary:u,padding:l})[(0,i/* ["default"] */.Z)(n)],t}),{});return Object.keys(g).sort((function(e,t){return g[e]-g[t]}))}
+/* harmony import */function a(e,t){void 0===t&&(t={});var n=t,a=n.placement,c=n.boundary,l=n.rootBoundary,u=n.padding,d=n.flipVariations,f=n.allowedAutoPlacements,p=void 0===f?r/* .placements */.Ct:f,m=(0,o/* ["default"] */.Z)(a),h=m?d?r/* .variationPlacements */.bw:r/* .variationPlacements.filter */.bw.filter((function(e){return(0,o/* ["default"] */.Z)(e)===m})):r/* .basePlacements */.mv,v=h.filter((function(e){return p.indexOf(e)>=0}));0===v.length&&(v=h);// $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
+var g=v.reduce((function(t,n){return t[n]=(0,s/* ["default"] */.Z)(e,{placement:n,boundary:c,rootBoundary:l,padding:u})[(0,i/* ["default"] */.Z)(n)],t}),{});return Object.keys(g).sort((function(e,t){return g[e]-g[t]}))}
 /***/},
 /***/2012:
 /***/(e,t,n)=>{"use strict";
@@ -949,7 +949,7 @@ var g=v.reduce((function(t,n){return t[n]=(0,s/* ["default"] */.Z)(e,{placement:
 /* harmony export */Z:()=>/* binding */a
 /* harmony export */});
 /* harmony import */var o=n(56066),r=n(15262),s=n(46159),i=n(71899);
-/* harmony import */function a(e){var t,n=e.reference,a=e.element,c=e.placement,u=c?(0,o/* ["default"] */.Z)(c):null,l=c?(0,r/* ["default"] */.Z)(c):null,d=n.x+n.width/2-a.width/2,f=n.y+n.height/2-a.height/2;switch(u){case i/* .top */.we:t={x:d,y:n.y-a.height};break;case i/* .bottom */.I:t={x:d,y:n.y+n.height};break;case i/* .right */.F2:t={x:n.x+n.width,y:f};break;case i/* .left */.t$:t={x:n.x-a.width,y:f};break;default:t={x:n.x,y:n.y}}var p=u?(0,s/* ["default"] */.Z)(u):null;if(null!=p){var m="y"===p?"height":"width";switch(l){case i/* .start */.BL:t[p]=t[p]-(n[m]/2-a[m]/2);break;case i/* .end */.ut:t[p]=t[p]+(n[m]/2-a[m]/2)}}return t}
+/* harmony import */function a(e){var t,n=e.reference,a=e.element,c=e.placement,l=c?(0,o/* ["default"] */.Z)(c):null,u=c?(0,r/* ["default"] */.Z)(c):null,d=n.x+n.width/2-a.width/2,f=n.y+n.height/2-a.height/2;switch(l){case i/* .top */.we:t={x:d,y:n.y-a.height};break;case i/* .bottom */.I:t={x:d,y:n.y+n.height};break;case i/* .right */.F2:t={x:n.x+n.width,y:f};break;case i/* .left */.t$:t={x:n.x-a.width,y:f};break;default:t={x:n.x,y:n.y}}var p=l?(0,s/* ["default"] */.Z)(l):null;if(null!=p){var m="y"===p?"height":"width";switch(u){case i/* .start */.BL:t[p]=t[p]-(n[m]/2-a[m]/2);break;case i/* .end */.ut:t[p]=t[p]+(n[m]/2-a[m]/2)}}return t}
 /***/},
 /***/28346:
 /***/(e,t,n)=>{"use strict";
@@ -962,11 +962,11 @@ var g=v.reduce((function(t,n){return t[n]=(0,s/* ["default"] */.Z)(e,{placement:
 /* harmony export */n.d(t,{
 /* harmony export */Z:()=>/* binding */f
 /* harmony export */});
-/* harmony import */var o=n(63957),r=n(55565),s=n(31778),i=n(2012),a=n(14515),c=n(71899),u=n(53817),l=n(62631),d=n(8104);
+/* harmony import */var o=n(63957),r=n(55565),s=n(31778),i=n(2012),a=n(14515),c=n(71899),l=n(53817),u=n(62631),d=n(8104);
 /* harmony import */
 // eslint-disable-next-line import/no-unused-modules
-function f(e,t){void 0===t&&(t={});var n=t,f=n.placement,p=void 0===f?e.placement:f,m=n.boundary,h=void 0===m?c/* .clippingParents */.zV:m,v=n.rootBoundary,g=void 0===v?c/* .viewport */.Pj:v,b=n.elementContext,y=void 0===b?c/* .popper */.k5:b,w=n.altBoundary,x=void 0!==w&&w,Z=n.padding,k=void 0===Z?0:Z,C=(0,l/* ["default"] */.Z)("number"!=typeof k?k:(0,d/* ["default"] */.Z)(k,c/* .basePlacements */.mv)),S=y===c/* .popper */.k5?c/* .reference */.YP:c/* .popper */.k5,_=e.rects.popper,O=e.elements[x?S:y],j=(0,o/* ["default"] */.Z)((0,u/* .isElement */.kK)(O)?O:O.contextElement||(0,r/* ["default"] */.Z)(e.elements.popper),h,g),E=(0,s/* ["default"] */.Z)(e.elements.reference),F=(0,i/* ["default"] */.Z)({reference:E,element:_,strategy:"absolute",placement:p}),T=(0,a/* ["default"] */.Z)(Object.assign({},_,F)),M=y===c/* .popper */.k5?T:E,P={top:j.top-M.top+C.top,bottom:M.bottom-j.bottom+C.bottom,left:j.left-M.left+C.left,right:M.right-j.right+C.right},z=e.modifiersData.offset;// Offsets can be applied only to the popper element
-if(y===c/* .popper */.k5&&z){var R=z[p];Object.keys(P).forEach((function(e){var t=[c/* .right */.F2,c/* .bottom */.I].indexOf(e)>=0?1:-1,n=[c/* .top */.we,c/* .bottom */.I].indexOf(e)>=0?"y":"x";P[e]+=R[n]*t}))}return P}
+function f(e,t){void 0===t&&(t={});var n=t,f=n.placement,p=void 0===f?e.placement:f,m=n.boundary,h=void 0===m?c/* .clippingParents */.zV:m,v=n.rootBoundary,g=void 0===v?c/* .viewport */.Pj:v,b=n.elementContext,y=void 0===b?c/* .popper */.k5:b,w=n.altBoundary,x=void 0!==w&&w,Z=n.padding,k=void 0===Z?0:Z,C=(0,u/* ["default"] */.Z)("number"!=typeof k?k:(0,d/* ["default"] */.Z)(k,c/* .basePlacements */.mv)),S=y===c/* .popper */.k5?c/* .reference */.YP:c/* .popper */.k5,_=e.rects.popper,O=e.elements[x?S:y],j=(0,o/* ["default"] */.Z)((0,l/* .isElement */.kK)(O)?O:O.contextElement||(0,r/* ["default"] */.Z)(e.elements.popper),h,g),E=(0,s/* ["default"] */.Z)(e.elements.reference),F=(0,i/* ["default"] */.Z)({reference:E,element:_,strategy:"absolute",placement:p}),M=(0,a/* ["default"] */.Z)(Object.assign({},_,F)),T=y===c/* .popper */.k5?M:E,P={top:j.top-T.top+C.top,bottom:T.bottom-j.bottom+C.bottom,left:j.left-T.left+C.left,right:T.right-j.right+C.right},A=e.modifiersData.offset;// Offsets can be applied only to the popper element
+if(y===c/* .popper */.k5&&A){var R=A[p];Object.keys(P).forEach((function(e){var t=[c/* .right */.F2,c/* .bottom */.I].indexOf(e)>=0?1:-1,n=[c/* .top */.we,c/* .bottom */.I].indexOf(e)>=0?"y":"x";P[e]+=R[n]*t}))}return P}
 /***/},
 /***/8104:
 /***/(e,t,n)=>{"use strict";
@@ -1209,7 +1209,7 @@ function a(e,t,n,o){var r=t>=1.5*n;return Math.round(e/n)+" "+o+(r?"s":"")}
  * @return {String|Number}
  * @api public
  */
-e.exports=function(e,c){c=c||{};var u=typeof e;if("string"===u&&e.length>0)
+e.exports=function(e,c){c=c||{};var l=typeof e;if("string"===l&&e.length>0)
 /**
  * Parse the given `str` and return milliseconds.
  *
@@ -1224,7 +1224,7 @@ return function(e){if((e=String(e)).length>100)return;var a=/^(-?(?:\d+)?\.?\d+)
  * @param {Number} ms
  * @return {String}
  * @api private
- */(e);if("number"===u&&isFinite(e))return c.long?
+ */(e);if("number"===l&&isFinite(e))return c.long?
 /**
  * Long format for `ms`.
  *
@@ -1262,7 +1262,7 @@ for(var t={},n=0;n<10;n++)t["_"+String.fromCharCode(n)]=n;if("0123456789"!==Obje
 // https://bugs.chromium.org/p/v8/issues/detail?id=3056
 var o={};return"abcdefghijklmnopqrst".split("").forEach((function(e){o[e]=e})),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},o)).join("")}catch(e){
 // We don't expect any of the above to throw, but better to be safe.
-return!1}}()?Object.assign:function(e,r){for(var s,i,a=function(e){if(null==e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}(e),c=1;c<arguments.length;c++){for(var u in s=Object(arguments[c]))n.call(s,u)&&(a[u]=s[u]);if(t){i=t(s);for(var l=0;l<i.length;l++)o.call(s,i[l])&&(a[i[l]]=s[i[l]])}}return a}}
+return!1}}()?Object.assign:function(e,r){for(var s,i,a=function(e){if(null==e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}(e),c=1;c<arguments.length;c++){for(var l in s=Object(arguments[c]))n.call(s,l)&&(a[l]=s[l]);if(t){i=t(s);for(var u=0;u<i.length;u++)o.call(s,i[u])&&(a[i[u]]=s[i[u]])}}return a}}
 /***/,
 /***/54335:
 /***/e=>{
@@ -1271,7 +1271,7 @@ var t="undefined"!=typeof Element,n="function"==typeof Map,o="function"==typeof 
 // Note: We **don't** need `envHasBigInt64Array` in fde es6/index.js
 function s(e,i){
 // START: fast-deep-equal es6/index.js 3.1.3
-if(e===i)return!0;if(e&&i&&"object"==typeof e&&"object"==typeof i){if(e.constructor!==i.constructor)return!1;var a,c,u,l;if(Array.isArray(e)){if((a=e.length)!=i.length)return!1;for(c=a;0!=c--;)if(!s(e[c],i[c]))return!1;return!0}
+if(e===i)return!0;if(e&&i&&"object"==typeof e&&"object"==typeof i){if(e.constructor!==i.constructor)return!1;var a,c,l,u;if(Array.isArray(e)){if((a=e.length)!=i.length)return!1;for(c=a;0!=c--;)if(!s(e[c],i[c]))return!1;return!0}
 // START: Modifications:
 // 1. Extra `has<Type> &&` helpers in initial condition allow es6 code
 //    to co-exist with es5.
@@ -1292,7 +1292,7 @@ if(e===i)return!0;if(e&&i&&"object"==typeof e&&"object"==typeof i){if(e.construc
 //    ```
 
 //    **Note**: `i` access switches to `i.value`.
-if(n&&e instanceof Map&&i instanceof Map){if(e.size!==i.size)return!1;for(l=e.entries();!(c=l.next()).done;)if(!i.has(c.value[0]))return!1;for(l=e.entries();!(c=l.next()).done;)if(!s(c.value[1],i.get(c.value[0])))return!1;return!0}if(o&&e instanceof Set&&i instanceof Set){if(e.size!==i.size)return!1;for(l=e.entries();!(c=l.next()).done;)if(!i.has(c.value[0]))return!1;return!0}
+if(n&&e instanceof Map&&i instanceof Map){if(e.size!==i.size)return!1;for(u=e.entries();!(c=u.next()).done;)if(!i.has(c.value[0]))return!1;for(u=e.entries();!(c=u.next()).done;)if(!s(c.value[1],i.get(c.value[0])))return!1;return!0}if(o&&e instanceof Set&&i instanceof Set){if(e.size!==i.size)return!1;for(u=e.entries();!(c=u.next()).done;)if(!i.has(c.value[0]))return!1;return!0}
 // END: Modifications
 if(r&&ArrayBuffer.isView(e)&&ArrayBuffer.isView(i)){if((a=e.length)!=i.length)return!1;for(c=a;0!=c--;)if(e[c]!==i[c])return!1;return!0}if(e.constructor===RegExp)return e.source===i.source&&e.flags===i.flags;
 // START: Modifications:
@@ -1301,13 +1301,13 @@ if(r&&ArrayBuffer.isView(e)&&ArrayBuffer.isView(i)){if((a=e.length)!=i.length)re
 // - https://github.com/epoberezkin/fast-deep-equal/issues/49
 if(e.valueOf!==Object.prototype.valueOf&&"function"==typeof e.valueOf&&"function"==typeof i.valueOf)return e.valueOf()===i.valueOf();if(e.toString!==Object.prototype.toString&&"function"==typeof e.toString&&"function"==typeof i.toString)return e.toString()===i.toString();
 // END: Modifications
-if((a=(u=Object.keys(e)).length)!==Object.keys(i).length)return!1;for(c=a;0!=c--;)if(!Object.prototype.hasOwnProperty.call(i,u[c]))return!1;
+if((a=(l=Object.keys(e)).length)!==Object.keys(i).length)return!1;for(c=a;0!=c--;)if(!Object.prototype.hasOwnProperty.call(i,l[c]))return!1;
 // END: fast-deep-equal
 // START: react-fast-compare
 // custom handling for DOM elements
 if(t&&e instanceof Element)return!1;
 // custom handling for React/Preact
-for(c=a;0!=c--;)if(("_owner"!==u[c]&&"__v"!==u[c]&&"__o"!==u[c]||!e.$$typeof)&&!s(e[u[c]],i[u[c]]))return!1;
+for(c=a;0!=c--;)if(("_owner"!==l[c]&&"__v"!==l[c]&&"__o"!==l[c]||!e.$$typeof)&&!s(e[l[c]],i[l[c]]))return!1;
 // all other properties should be traversed as usual
 // END: react-fast-compare
 // START: fast-deep-equal
@@ -1326,9 +1326,9 @@ throw e}}}
 /***/69570:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */D:()=>/* binding */l
+/* harmony export */D:()=>/* binding */u
 /* harmony export */});
-/* harmony import */var o=n(99196),r=n(91850),s=n(83781),i=n(54335),a=n.n(i),c=n(75907),u=[],l=function(e,t,n){void 0===n&&(n={});var i=o.useRef(null),l={onFirstUpdate:n.onFirstUpdate,placement:n.placement||"bottom",strategy:n.strategy||"absolute",modifiers:n.modifiers||u},d=o.useState({styles:{popper:{position:l.strategy,left:"0",top:"0"},arrow:{position:"absolute"}},attributes:{}}),f=d[0],p=d[1],m=o.useMemo((function(){return{name:"updateState",enabled:!0,phase:"write",fn:function(e){var t=e.state,n=Object.keys(t.elements);r.flushSync((function(){p({styles:(0,c/* .fromEntries */.sq)(n.map((function(e){return[e,t.styles[e]||{}]}))),attributes:(0,c/* .fromEntries */.sq)(n.map((function(e){return[e,t.attributes[e]]})))})}))},requires:["computeStyles"]}}),[]),h=o.useMemo((function(){var e={onFirstUpdate:l.onFirstUpdate,placement:l.placement,strategy:l.strategy,modifiers:[].concat(l.modifiers,[m,{name:"applyStyles",enabled:!1}])};return a()(i.current,e)?i.current||e:(i.current=e,e)}),[l.onFirstUpdate,l.placement,l.strategy,l.modifiers,m]),v=o.useRef();return(0,c/* .useIsomorphicLayoutEffect */.LI)((function(){v.current&&v.current.setOptions(h)}),[h]),(0,c/* .useIsomorphicLayoutEffect */.LI)((function(){if(null!=e&&null!=t){var o=(n.createPopper||s/* .createPopper */.fi)(e,t,h);return v.current=o,function(){o.destroy(),v.current=null}}}),[e,t,n.createPopper]),{state:v.current?v.current.state:null,styles:f.styles,attributes:f.attributes,update:v.current?v.current.update:null,forceUpdate:v.current?v.current.forceUpdate:null}};
+/* harmony import */var o=n(99196),r=n(91850),s=n(83781),i=n(54335),a=n.n(i),c=n(75907),l=[],u=function(e,t,n){void 0===n&&(n={});var i=o.useRef(null),u={onFirstUpdate:n.onFirstUpdate,placement:n.placement||"bottom",strategy:n.strategy||"absolute",modifiers:n.modifiers||l},d=o.useState({styles:{popper:{position:u.strategy,left:"0",top:"0"},arrow:{position:"absolute"}},attributes:{}}),f=d[0],p=d[1],m=o.useMemo((function(){return{name:"updateState",enabled:!0,phase:"write",fn:function(e){var t=e.state,n=Object.keys(t.elements);r.flushSync((function(){p({styles:(0,c/* .fromEntries */.sq)(n.map((function(e){return[e,t.styles[e]||{}]}))),attributes:(0,c/* .fromEntries */.sq)(n.map((function(e){return[e,t.attributes[e]]})))})}))},requires:["computeStyles"]}}),[]),h=o.useMemo((function(){var e={onFirstUpdate:u.onFirstUpdate,placement:u.placement,strategy:u.strategy,modifiers:[].concat(u.modifiers,[m,{name:"applyStyles",enabled:!1}])};return a()(i.current,e)?i.current||e:(i.current=e,e)}),[u.onFirstUpdate,u.placement,u.strategy,u.modifiers,m]),v=o.useRef();return(0,c/* .useIsomorphicLayoutEffect */.LI)((function(){v.current&&v.current.setOptions(h)}),[h]),(0,c/* .useIsomorphicLayoutEffect */.LI)((function(){if(null!=e&&null!=t){var o=(n.createPopper||s/* .createPopper */.fi)(e,t,h);return v.current=o,function(){o.destroy(),v.current=null}}}),[e,t,n.createPopper]),{state:v.current?v.current.state:null,styles:f.styles,attributes:f.attributes,update:v.current?v.current.update:null,forceUpdate:v.current?v.current.forceUpdate:null}};
 /* harmony import */}
 /***/,
 /***/75907:
@@ -1350,7 +1350,7 @@ throw e}}}
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */n(62525);var o=n(99196),r=60103;if(t.Fragment=60107,"function"==typeof Symbol&&Symbol.for){var s=Symbol.for;r=s("react.element"),t.Fragment=s("react.fragment")}var i=o.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,a=Object.prototype.hasOwnProperty,c={key:!0,ref:!0,__self:!0,__source:!0};function u(e,t,n){var o,s={},u=null,l=null;for(o in void 0!==n&&(u=""+n),void 0!==t.key&&(u=""+t.key),void 0!==t.ref&&(l=t.ref),t)a.call(t,o)&&!c.hasOwnProperty(o)&&(s[o]=t[o]);if(e&&e.defaultProps)for(o in t=e.defaultProps)void 0===s[o]&&(s[o]=t[o]);return{$$typeof:r,type:e,key:u,ref:l,props:s,_owner:i.current}}t.jsx=u,t.jsxs=u}
+ */n(62525);var o=n(99196),r=60103;if(t.Fragment=60107,"function"==typeof Symbol&&Symbol.for){var s=Symbol.for;r=s("react.element"),t.Fragment=s("react.fragment")}var i=o.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,a=Object.prototype.hasOwnProperty,c={key:!0,ref:!0,__self:!0,__source:!0};function l(e,t,n){var o,s={},l=null,u=null;for(o in void 0!==n&&(l=""+n),void 0!==t.key&&(l=""+t.key),void 0!==t.ref&&(u=t.ref),t)a.call(t,o)&&!c.hasOwnProperty(o)&&(s[o]=t[o]);if(e&&e.defaultProps)for(o in t=e.defaultProps)void 0===s[o]&&(s[o]=t[o]);return{$$typeof:r,type:e,key:l,ref:u,props:s,_owner:i.current}}t.jsx=l,t.jsxs=l}
 /***/,
 /***/24246:
 /***/(e,t,n)=>{"use strict";e.exports=n(71426)}
@@ -1358,11 +1358,11 @@ throw e}}}
 /***/55512:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */Z:()=>l
+/* harmony export */Z:()=>u
 /* harmony export */});
-/* harmony import */var o=n(69307),r=n(92819),s=n.n(r),i=n(9818),a=n(70602),c=n(52994),u=n(58320);
+/* harmony import */var o=n(69307),r=n(92819),s=n.n(r),i=n(9818),a=n(70602),c=n(52994),l=n(58320);
 /* harmony import */
-/* harmony default export */const l=
+/* harmony default export */const u=
 /**
  * External dependencies
  */
@@ -1382,21 +1382,21 @@ throw e}}}
  * @param {Function}   [props.beforeEach]     A function to run before each step.
  * @param {Object}     [props.extraConfig={}] Additional configuration options for the tour kit.
  */
-function(e){let{tourName:t,trackId:n,steps:r,beforeEach:l=(()=>{}),extraConfig:d={}}=e;const{showTour:f}=(0,i.useSelect)((e=>{const{shouldShowTour:t}=e(a/* .SENSEI_TOUR_STORE */.si);return{showTour:t()}})),{setTourShowStatus:p}=(0,i.useDispatch)(a/* .SENSEI_TOUR_STORE */.si),m=(0,o.useCallback)((e=>{if(n&&e<r.length){const t=r[e];window.sensei_log_event(n,{step:t.slug})}}),[n,r]),h=e=>{l(r[e]),(0,c/* .performStepAction */.T$)(e,r)},v={steps:r,closeHandler:()=>{(0,c/* .removeHighlightClasses */.y)(),p(!1,!0,t)},options:{effects:{spotlight:null,
+function(e){let{tourName:t,trackId:n,steps:r,beforeEach:u=(()=>{}),extraConfig:d={}}=e;const{showTour:f}=(0,i.useSelect)((e=>{const{shouldShowTour:t}=e(a/* .SENSEI_TOUR_STORE */.si);return{showTour:t()}})),{setTourShowStatus:p}=(0,i.useDispatch)(a/* .SENSEI_TOUR_STORE */.si),m=(0,o.useCallback)((e=>{if(n&&e<r.length){const t=r[e];window.sensei_log_event(n,{step:t.slug})}}),[n,r]),h=e=>{u(r[e]),(0,c/* .performStepAction */.T$)(e,r)},v={steps:r,closeHandler:()=>{(0,c/* .removeHighlightClasses */.y)(),p(!1,!0,t)},options:{effects:{spotlight:null,
 // spotlight: { // To enable spotlighting
 // 	interactivity: {
 // 		enabled: true, // Needed to allow the user to click inside the spotlighted element
 // 	},
 // },
-liveResize:{mutation:!0,resize:!0,rootElementSelector:"#root"}},callbacks:{onNextStep:e=>{h(e+1)},onPreviousStep:e=>{h(e-1)},onGoToStep:e=>{e===r.length-1?h(0):(0,c/* .removeHighlightClasses */.y)()},onMaximize:e=>{h(e)},onMinimize:()=>{(0,c/* .removeHighlightClasses */.y)()},onStepViewOnce:e=>{0===e&&h(e),m(e)}}},placement:"bottom-start"};return f?(0,o.createElement)(u/* ["default"] */.Z,{config:s().merge(v,d)}):null};
+liveResize:{mutation:!0,resize:!0,rootElementSelector:"#root"}},callbacks:{onNextStep:e=>{h(e+1)},onPreviousStep:e=>{h(e-1)},onGoToStep:e=>{e===r.length-1?h(0):(0,c/* .removeHighlightClasses */.y)()},onMaximize:e=>{h(e)},onMinimize:()=>{(0,c/* .removeHighlightClasses */.y)()},onStepViewOnce:e=>{0===e&&h(e),m(e)}}},placement:"bottom-start"};return f?(0,o.createElement)(l/* ["default"] */.Z,{config:s().merge(v,d)}):null};
 /***/},
 /***/13025:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */Z:()=>v
+/* harmony export */Z:()=>g
 /* harmony export */});
 /* unused harmony export getCourseOutlineBlock */
-/* harmony import */var o=n(69307),r=n(4981),s=n(65736),i=n(55609),a=n(9818),c=n(52175),u=n(12238),l=n(69973),d=n(52994);
+/* harmony import */var o=n(69307),r=n(4981),s=n(65736),i=n(55609),a=n(9818),c=n(52175),l=n(12238),u=n(80688),d=n(69973),f=n(52994);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1404,28 +1404,32 @@ liveResize:{mutation:!0,resize:!0,rootElementSelector:"#root"}},callbacks:{onNex
 /**
  * Internal dependencies
  */
-const f=()=>(0,l/* .getFirstBlockByName */.H4)("sensei-lms/course-outline",(0,a.select)(c.store).getBlocks());function p(e){const t=f();if(t){const{insertBlock:n}=(0,a.dispatch)(c.store);n((0,r.createBlock)("sensei-lms/course-outline-lesson",{title:e}),0,t.clientId)}}function m(){const e=f();e&&(0,a.dispatch)(u.store).selectBlock(e.clientId)}async function h(){const e=".wp-block-sensei-lms-course-outline__placeholder__option-blank";if(document.querySelector(".wp-block-sensei-lms-course-outline-lesson"))return;const t=document.querySelector(e);
+const p=()=>(0,d/* .getFirstBlockByName */.H4)("sensei-lms/course-outline",(0,a.select)(c.store).getBlocks());function m(e){const t=p();if(t){const{insertBlock:n}=(0,a.dispatch)(c.store);n((0,r.createBlock)("sensei-lms/course-outline-lesson",{title:e}),0,t.clientId)}}function h(){const e=p();e&&(0,a.dispatch)(c.store).selectBlock(e.clientId)}async function v(){const e=".wp-block-sensei-lms-course-outline__placeholder__option-blank";if(document.querySelector(".wp-block-sensei-lms-course-outline-lesson"))return;const t=document.querySelector(e);
 // When the Course Outline block has the "Start with blank" option shown in it, instead of just inserting a lesson block,
 // We click on that option to insert the lesson block.
-t?await(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e])}},{action:()=>{t.click()},delay:600}]):p("Lesson 1")}
+t?await(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e])}},{action:()=>{t.click()},delay:600}]):m("Lesson 1")}
+/**
+ * Check all modules have titles, if not, assign a default title.
+ */
+/* harmony default export */const g=
 /**
  * Returns the tour steps for the Course Outline block.
  *
  * @return {Array.<TourStep>} An array containing the tour steps.
  */
-/* harmony default export */const v=function(){return[{slug:"welcome",meta:{heading:(0,s.__)("Welcome to the Course Outline block","sensei-lms"),descriptions:{desktop:(0,s.__)("Take this short tour to learn how to create your course outline right in the editor. Click an option in the block to get started.","sensei-lms"),mobile:null},referenceElements:{desktop:""}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:async()=>{(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{m();const e='[data-type="sensei-lms/course-outline"] div';(0,d/* .highlightElementsWithBorders */.QH)([e]),(0,d/* .scrollToCenter */.XT)(e)},delay:0}])}},{slug:"renaming-existing-lesson",meta:{heading:(0,s.__)("Renaming an existing lesson","sensei-lms"),descriptions:{desktop:(0,s.__)("Click on an existing lesson to select it. Then give it a new name.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:async()=>{await h(),await(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{const e=document.querySelector('[data-type="sensei-lms/course-outline-lesson"]');e&&e.focus()}},{action:()=>{const e=document.querySelector('[data-type="sensei-lms/course-outline-lesson"] textarea');e&&e.focus(),(0,d/* .highlightElementsWithBorders */.QH)(['[data-type="sensei-lms/course-outline-lesson"] .wp-block-sensei-lms-course-outline-lesson'])},delay:100},{action:()=>{(0,d/* .scrollToCenter */.XT)('[data-type="sensei-lms/course-outline-lesson"] .wp-block-sensei-lms-course-outline-lesson')},delay:200}])}},{slug:"adding-new-module",meta:{heading:(0,s.__)("Adding a module","sensei-lms"),descriptions:{desktop:(0,s.__)("A module is a container for a group of related lessons in a course. Click + to open the inserter. Then click the Module option.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await h();const e=".wp-block-sensei-lms-course-outline .block-editor-inserter__toggle",t=".components-dropdown-menu__popover .components-dropdown-menu__menu .components-dropdown-menu__menu-item:last-child";await(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{
+function(){return[{slug:"welcome",meta:{heading:(0,s.__)("Welcome to the Course Outline block","sensei-lms"),descriptions:{desktop:(0,s.__)("Take this short tour to learn how to create your course outline right in the editor. Click an option in the block to get started.","sensei-lms"),mobile:null},referenceElements:{desktop:""}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:async()=>{(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{h();const e='[data-type="sensei-lms/course-outline"] div';(0,f/* .highlightElementsWithBorders */.QH)([e]),(0,f/* .scrollToCenter */.XT)(e)},delay:0}])}},{slug:"renaming-existing-lesson",meta:{heading:(0,s.__)("Renaming an existing lesson","sensei-lms"),descriptions:{desktop:(0,s.__)("Click on an existing lesson to select it. Then give it a new name.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},referenceElements:{desktop:""},action:async()=>{await v(),await(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{const e=document.querySelector('[data-type="sensei-lms/course-outline-lesson"]');e&&e.focus()}},{action:()=>{const e=document.querySelector('[data-type="sensei-lms/course-outline-lesson"] textarea');e&&e.focus(),(0,f/* .highlightElementsWithBorders */.QH)(['[data-type="sensei-lms/course-outline-lesson"] .wp-block-sensei-lms-course-outline-lesson'])},delay:100},{action:()=>{(0,f/* .scrollToCenter */.XT)('[data-type="sensei-lms/course-outline-lesson"] .wp-block-sensei-lms-course-outline-lesson')},delay:200}])}},{slug:"adding-new-module",meta:{heading:(0,s.__)("Adding a module","sensei-lms"),descriptions:{desktop:(0,s.__)("A module is a container for a group of related lessons in a course. Click + to open the inserter. Then click the Module option and give it a name.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await v();const e=".wp-block-sensei-lms-course-outline .block-editor-inserter__toggle",t=".components-dropdown-menu__popover .components-dropdown-menu__menu .components-dropdown-menu__menu-item:last-child";await(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{
 // Necessary to focus on the Course Outline block here otherwise inserter won't appear.
-m()}},{action:()=>{(0,d/* .scrollToCenter */.XT)(e);const t=document.querySelector(e);t&&t.click()},delay:400},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e])}},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([t]);const e=document.querySelector(t);e&&e.focus()},delay:400}])}},{slug:"adding-new-lesson",meta:{heading:(0,s.__)("Adding a new lesson","sensei-lms"),descriptions:{desktop:(0,s.__)("Click + to open the inserter. Then click the Lesson option.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await h();const e=".wp-block-sensei-lms-course-outline .block-editor-inserter__toggle",t=".components-dropdown-menu__popover .components-dropdown-menu__menu .components-dropdown-menu__menu-item:first-child";(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{
+h()}},{action:()=>{(0,f/* .scrollToCenter */.XT)(e);const t=document.querySelector(e);t&&t.click()},delay:400},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e])}},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([t]);const e=document.querySelector(t);e&&e.focus()},delay:400}])}},{slug:"adding-new-lesson",meta:{heading:(0,s.__)("Adding a new lesson","sensei-lms"),descriptions:{desktop:(0,s.__)("Click + to open the inserter. Then click the Lesson option.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await v();const e=".wp-block-sensei-lms-course-outline .block-editor-inserter__toggle",t=".components-dropdown-menu__popover .components-dropdown-menu__menu .components-dropdown-menu__menu-item:first-child";(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{
 // Necessary to focus on the Course Outline block here otherwise inserter won't appear.
-m()}},{action:()=>{(0,d/* .scrollToCenter */.XT)(e);const t=document.querySelector(e);t&&t.click()},delay:400},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e]),(0,d/* .scrollToCenter */.XT)(e)}},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([t]);const e=document.querySelector(t);e&&e.focus(),(0,d/* .scrollToCenter */.XT)(t)},delay:400}])}},{slug:"deleting-lesson",meta:{heading:(0,s.__)("Deleting a lesson","sensei-lms"),descriptions:{desktop:(0,s.__)("Use the Options menu in the toolbar to delete a selected lesson.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await h();const e=".block-editor-block-contextual-toolbar .components-dropdown-menu.block-editor-block-settings-menu button";(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{const e=document.querySelector(".wp-block-sensei-lms-course-outline-lesson");e&&e.parentElement.focus(),(0,d/* .highlightElementsWithBorders */.QH)(['[data-type="sensei-lms/course-outline-lesson"] .wp-block-sensei-lms-course-outline-lesson'])}},{action:()=>{(0,d/* .scrollToCenter */.XT)(".wp-block-sensei-lms-course-outline-lesson"),(0,d/* .highlightElementsWithBorders */.QH)([e])},delay:400},{action:()=>{const t=document.querySelector(e);t&&t.click()},delay:400},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e])}},{action:()=>{const e=".block-editor-block-settings-menu__popover.components-dropdown-menu__popover .components-menu-group:last-child .components-button.components-menu-item__button:last-child",t=document.querySelector(e);t&&t.focus(),(0,d/* .highlightElementsWithBorders */.QH)([e])},delay:400}])}},{slug:"saving-lessons",meta:{heading:(0,s.__)("Saving lessons","sensei-lms"),descriptions:{desktop:(0,s.__)('Click the "Save to edit lesson" option in the toolbar to save all lessons.',"sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await h();const e=".block-editor-block-contextual-toolbar .wp-block-sensei-lms-course-outline-lesson__save",t=".wp-block-sensei-lms-course-outline-lesson:not([data-lesson-id]):not(.is-auto-draft)",n=[];document.querySelector(t)||n.push({action:()=>{p((0,s.__)("Unsaved new lesson","sensei-lms"))}}),(0,d/* .performStepActionsAsync */.Bm)([...n,{action:()=>{const e=document.querySelector(t);e&&e.parentElement.focus(),(0,d/* .highlightElementsWithBorders */.QH)([t])}},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e]),(0,d/* .scrollToCenter */.XT)(e)},delay:400}])}},{slug:"editing-lesson",meta:{heading:(0,s.__)("Editing a lesson","sensei-lms"),descriptions:{desktop:(0,s.__)('Use the "Edit lesson" option in the toolbar to navigate to the lesson editor and add your content.',"sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await h();const e=".block-editor-block-contextual-toolbar .block-editor-block-toolbar .wp-block-sensei-lms-course-outline-lesson__edit",t=".wp-block-sensei-lms-course-outline-lesson[data-lesson-id]";if(!document.querySelector(t)){const{savePost:e}=(0,a.dispatch)(u.store);e(),await(0,d/* .waitForElement */.br)(t,15)}(0,d/* .performStepActionsAsync */.Bm)([{action:()=>{const e=document.querySelector(t);e&&e.parentElement.focus(),(0,d/* .highlightElementsWithBorders */.QH)([t])}},{action:()=>{(0,d/* .highlightElementsWithBorders */.QH)([e]),(0,d/* .scrollToCenter */.XT)(e)},delay:400}])}},{slug:"congratulations",meta:{heading:(0,s.__)("Congratulations!","sensei-lms"),descriptions:{desktop:(0,o.createInterpolateElement)((0,s.__)("You've mastered the basics. View the <link_to_course_outline_block_doc>course outline docs</link_to_course_outline_block_doc> to learn more.","sensei-lms"),{link_to_course_outline_block_doc:(0,o.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/courses/#course-outline",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,d/* .removeHighlightClasses */.y)()}}]};
+h()}},{action:()=>{(0,f/* .scrollToCenter */.XT)(e);const t=document.querySelector(e);t&&t.click()},delay:400},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e]),(0,f/* .scrollToCenter */.XT)(e)}},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([t]);const e=document.querySelector(t);e&&e.focus(),(0,f/* .scrollToCenter */.XT)(t)},delay:400}])}},{slug:"deleting-lesson",meta:{heading:(0,s.__)("Deleting a lesson","sensei-lms"),descriptions:{desktop:(0,s.__)("Use the Options menu in the toolbar to delete a selected lesson.","sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await v();const e=".block-editor-block-contextual-toolbar .components-dropdown-menu.block-editor-block-settings-menu button";(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{const e=document.querySelector(".wp-block-sensei-lms-course-outline-lesson");e&&e.parentElement.focus(),(0,f/* .highlightElementsWithBorders */.QH)(['[data-type="sensei-lms/course-outline-lesson"] .wp-block-sensei-lms-course-outline-lesson'])}},{action:()=>{(0,f/* .scrollToCenter */.XT)(".wp-block-sensei-lms-course-outline-lesson"),(0,f/* .highlightElementsWithBorders */.QH)([e])},delay:400},{action:()=>{const t=document.querySelector(e);t&&t.click()},delay:400},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e])}},{action:()=>{const e=".block-editor-block-settings-menu__popover.components-dropdown-menu__popover .components-menu-group:last-child .components-button.components-menu-item__button:last-child",t=document.querySelector(e);t&&t.focus(),(0,f/* .highlightElementsWithBorders */.QH)([e])},delay:400}])}},{slug:"saving-lessons",meta:{heading:(0,s.__)("Saving lessons","sensei-lms"),descriptions:{desktop:(0,s.__)('Click the "Save to edit lesson" option in the toolbar to save all lessons.',"sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await v();const e=".block-editor-block-contextual-toolbar .wp-block-sensei-lms-course-outline-lesson__save",t=".wp-block-sensei-lms-course-outline-lesson:not([data-lesson-id]):not(.is-auto-draft)",n=[];document.querySelector(t)||n.push({action:()=>{m((0,s.__)("Unsaved new lesson","sensei-lms"))}}),(0,f/* .performStepActionsAsync */.Bm)([...n,{action:()=>{const e=document.querySelector(t);e&&e.parentElement.focus(),(0,f/* .highlightElementsWithBorders */.QH)([t])}},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e]),(0,f/* .scrollToCenter */.XT)(e)},delay:400}])}},{slug:"editing-lesson",meta:{heading:(0,s.__)("Editing a lesson","sensei-lms"),descriptions:{desktop:(0,s.__)('Use the "Edit lesson" option in the toolbar to navigate to the lesson editor and add your content.',"sensei-lms"),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:async()=>{await v();const e=".block-editor-block-contextual-toolbar .block-editor-block-toolbar .wp-block-sensei-lms-course-outline-lesson__edit",t=".wp-block-sensei-lms-course-outline-lesson[data-lesson-id]";if(!document.querySelector(t)){!function(){const e=p().innerBlocks.filter((e=>"sensei-lms/course-outline-module"===e.name)),t=e.map((e=>{var t,n;return"sensei-lms/course-outline-module"!==e.name?null:(null===(t=e.attributes)||void 0===t||null===(n=t.title)||void 0===n?void 0:n.trim())||null})).filter((e=>!!e));if(e.length>0){let n=0;e.forEach((e=>{var o,r;let i=null===(o=e.attributes)||void 0===o||null===(r=o.title)||void 0===r?void 0:r.trim();if(""===i){do{i=(0,s.__)("Module","sensei-lms")+" "+ ++n}while(t.includes(i));e.attributes.title=i,(0,u/* .setBlockMeta */.O0)(e.clientId,e.attributes)}}))}}();const{savePost:e}=(0,a.dispatch)(l.store);e(),await(0,f/* .waitForElement */.br)(t,15)}(0,f/* .performStepActionsAsync */.Bm)([{action:()=>{const e=document.querySelector(t);e&&e.parentElement.focus(),(0,f/* .highlightElementsWithBorders */.QH)([t])}},{action:()=>{(0,f/* .highlightElementsWithBorders */.QH)([e]),(0,f/* .scrollToCenter */.XT)(e)},delay:400}])}},{slug:"congratulations",meta:{heading:(0,s.__)("Congratulations!","sensei-lms"),descriptions:{desktop:(0,o.createInterpolateElement)((0,s.__)("You've mastered the basics. View the <link_to_course_outline_block_doc>course outline docs</link_to_course_outline_block_doc> to learn more.","sensei-lms"),{link_to_course_outline_block_doc:(0,o.createElement)(i.ExternalLink,{href:"https://senseilms.com/documentation/courses/#course-outline",children:null})}),mobile:null}},options:{classNames:{desktop:"",mobile:""}},action:()=>{(0,f/* .removeHighlightClasses */.y)()}}]};
 /***/},
 /***/70602:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
 /* harmony export */si:()=>/* binding */c
 /* harmony export */});
-/* unused harmony exports DEFAULT_STATE, actions, selectors, reducers, store */
-/* harmony import */var o=n(9818),r=n(20832),s=n(23418),i=n(86989),a=n.n(i);
+/* unused harmony exports DEFAULT_STATE, actions, selectors, reducers */
+/* harmony import */var o=n(23418),r=n(86989),s=n.n(r),i=n(20832);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -1433,7 +1437,7 @@ m()}},{action:()=>{(0,d/* .scrollToCenter */.XT)(e);const t=document.querySelect
 /**
  * Internal dependencies
  */
-const c="sensei/tour",u={
+const a={
 /**
    * Sets whether the tour should be shown.
    *
@@ -1443,7 +1447,7 @@ const c="sensei/tour",u={
    *
    * @return {Object} The setTourShowStatus action.
    */
-setTourShowStatus:(e,t,n)=>(t&&a()({path:"sensei-internal/v1/tour",method:"POST",data:{complete:!e,tour_id:n}}),{type:"SET_TOUR_SHOW_STATUS",showTour:e})},l=(0,o.createReduxStore)(c,{reducer:(0,r/* .createReducerFromActionMap */.lA)({
+setTourShowStatus:(e,t,n)=>(t&&s()({path:"sensei-internal/v1/tour",method:"POST",data:{complete:!e,tour_id:n}}),{type:"SET_TOUR_SHOW_STATUS",showTour:e})},c=(0,i/* .createStore */.MT)("sensei/tour",{reducer:(0,i/* .createReducerFromActionMap */.lA)({
 /**
    * Sets the show tour status.
    *
@@ -1453,7 +1457,7 @@ setTourShowStatus:(e,t,n)=>(t&&a()({path:"sensei-internal/v1/tour",method:"POST"
    *
    * @return {Object} The new state.
    */
-SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:n}=e;return{...t,showTour:n}},DEFAULT:(e,t)=>t},{showTour:!0}),actions:u,selectors:{
+SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:n}=e;return{...t,showTour:n}},DEFAULT:(e,t)=>t},{showTour:!0}),actions:a,selectors:{
 /**
    * Get if the tour should be shown.
    *
@@ -1462,7 +1466,10 @@ SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:n}=e;return{...t,showTour:n}},DEFAULT:
    *
    * @return {boolean} If the tour should be shown.
    */
-shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:s.controls});(0,o.register)(l)}
+shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:o.controls});
+/**
+ * Tour store actions.
+ */}
 /***/,
 /***/52994:
 /***/(e,t,n)=>{"use strict";
@@ -1470,8 +1477,8 @@ shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:s.controls});(0,o.regis
 /* harmony export */T$:()=>/* binding */r
 /* harmony export */,QH:()=>/* binding */s
 /* harmony export */,y:()=>/* binding */i
-/* harmony export */,Bm:()=>/* binding */u
-/* harmony export */,br:()=>/* binding */l
+/* harmony export */,Bm:()=>/* binding */l
+/* harmony export */,br:()=>/* binding */u
 /* harmony export */,XT:()=>/* binding */d
 /* harmony export */});
 /* unused harmony export HIGHLIGHT_CLASS */
@@ -1501,7 +1508,7 @@ const o="sensei-tour-highlight";
  *
  * @param {Array} stepActions An array of selectors to highlight.
  */
-async function u(e){i(),
+async function l(e){i(),
 // Clear the timeout and reject the last promise if it exists, so it stops the step if actions from another step started.
 clearTimeout(a),c&&c();try{for(const t of e)t&&await new Promise(((e,n)=>{var o;c=n,a=setTimeout((()=>{t.action(),e()}),null!==(o=t.delay)&&void 0!==o?o:0)}))}catch(e){
 // Do nothing.
@@ -1514,7 +1521,7 @@ clearTimeout(a),c&&c();try{for(const t of e)t&&await new Promise(((e,n)=>{var o;
  * @param {number} delay     The delay between checks.
  *
  * @return {Promise<unknown>} A promise that resolves when the element is available.
- */async function l(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:10,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:300;return new Promise(((o,r)=>{let s=0;!function i(){const a=document.querySelector(e);a?o(a):(s++,s>=t?r():setTimeout(i,n))}()}))}
+ */async function u(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:10,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:300;return new Promise(((o,r)=>{let s=0;!function i(){const a=document.querySelector(e);a?o(a):(s++,s>=t?r():setTimeout(i,n))}()}))}
 /**
  * Scrolls element to the center for better visibility.
  *
@@ -1558,17 +1565,88 @@ clearTimeout(a),c&&c();try{for(const t of e)t&&await new Promise(((e,n)=>{var o;
  */
 const r={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-outline-lesson"},s=(0,o.invert)(r),i=((0,o.curry)(((e,t)=>{const{name:n,attributes:o}=t,r=Object.keys(s).includes(n),i="module"===e.type;return!!r&&(i?[e.title,e.lastTitle].includes(o.title):o.id?e.id===o.id:void 0)})),(e,t)=>{for(let n=0;n<t.length;n++){const o=t[n];if(e===o.name)return o;if(o.innerBlocks&&o.innerBlocks.length>0){const t=i(e,o.innerBlocks);if(t)return t}}return!1})}
 /***/,
+/***/80688:
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */O0:()=>/* binding */v
+/* harmony export */});
+/* unused harmony exports BLOCK_META_STORE, useBlockMeta, withBlockMetaProvider, useBlockMetaContext, withBlockMeta */
+/* harmony import */var o=n(25773),r=n(69307),s=n(92819),i=n(67455),a=n(94333),c=n(9818),l=n(20832);
+/* harmony import */
+/**
+ * External dependencies
+ */
+/**
+ * WordPress dependencies
+ */
+/**
+ * Internal dependencies
+ */
+/**
+ * Block metadata store definition.
+ */
+const u={reducer:(0,l/* .createReducerFromActionMap */.lA)({SET_BLOCK_META:(e,t)=>{let{clientId:n,metadata:o}=e;return{...t,[n]:{...t[n]||{},...o}}},CLEAR:(e,t)=>t?{...e,[t]:void 0}:{},DEFAULT:e=>e},{}),actions:{
+/**
+     * Set metadata for a block.
+     *
+     * Input is merged with existing metadata.
+     *
+     * @param {string} clientId Block ID.
+     * @param {string} metadata Changed block metadata.
+     */
+setBlockMeta:(e,t)=>({type:"SET_BLOCK_META",clientId:e,metadata:t}),
+/**
+     * Clear metadata for the block or all blocks.
+     *
+     * @param {string} [clientId] Block ID, or null to clear all blocks.
+     */
+clear:function(){return{type:"CLEAR",clientId:arguments.length>0&&void 0!==arguments[0]?arguments[0]:null}}},selectors:{
+/**
+     * Get metadata for a block.
+     *
+     * @param {Object} state
+     * @param {string} clientId Block ID.
+     * @param {string} [key]    Only return metadata for the given key.
+     * @return {*} Block metadata.
+     */
+getBlockMeta:function(e,t){var n;let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;return o?null===(n=e[t])||void 0===n?void 0:n[o]:e[t]},
+/**
+     * Get metadata for multiple blocks.
+     *
+     * @param {Object}   state
+     * @param {string[]} clientIds Block ID.
+     * @param {string}   [key]     Only return metadata for the given key.
+     * @return {Object} Blocks metadata, indexed by block ID.
+     */
+getMultipleBlockMeta:(0,i/* ["default"] */.Z)((function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;const o=null!=t&&t.length?(0,s.pick)(e,t):e;return n?(0,s.mapValues)(o,n):o}),(e=>[e]))}},d=(0,l/* .createStore */.MT)("sensei/block-metadata",u),f=(0,r.createContext)({}),p=e=>{const t=(0,c.useSelect)((t=>t(d).getBlockMeta(e)),[e]),{setBlockMeta:n}=(0,c.useDispatch)(d),o=m(),s=(0,r.useCallback)((t=>n(e,t)),[e,n]);return[(0,r.useMemo)((()=>({...o,...t})),[t,o]),s]},m=((0,a.createHigherOrderComponent)((e=>h((t=>{const[n]=p(t.clientId);return(0,r.createElement)(f.Provider,{value:n},(0,r.createElement)(e,t))}))),"withBlockMetaProvider"),()=>(0,r.useContext)(f)
+/**
+ * Attach metadata store to the block.
+ * Provides the following props:
+ *
+ * @property {Object}   meta    Block metadata.
+ * @property {Function} setMeta Block metadata setter.
+ */),h=(0,a.createHigherOrderComponent)((e=>t=>{const[n,s]=p(t.clientId);return(0,r.createElement)(e,(0,o/* ["default"] */.Z)({},t,{meta:n,setMeta:s}))}),"withBlockMeta"),v=(e,t)=>(0,c.dispatch)(d).setBlockMeta(e,t)
+/***/;
+/**
+ * Block metadata store.
+ *
+ * @type {string|Object}
+ */},
 /***/20832:
 /***/(e,t,n)=>{"use strict";
 /* harmony export */n.d(t,{
-/* harmony export */lA:()=>/* binding */o
+/* harmony export */lA:()=>/* binding */s
+/* harmony export */,MT:()=>/* binding */i
 /* harmony export */});
-/* unused harmony exports composeFetchAction, createStore */
-/* harmony import */n(9818);
+/* unused harmony export composeFetchAction */
+/* harmony import */var o=n(9818);
 /* harmony import */
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:r}=window,s=(e,t)=>function(){let n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,o=arguments.length>1?arguments[1]:void 0;return(e[o.type]||e.DEFAULT)(o,n)},i=(e,t)=>{if(r[e])return r[e];const n=(0,o.createReduxStore)(e,t);return(0,o.register)(n),r[e]=n,n};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -1577,18 +1655,6 @@ const r={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const o=(e,t)=>function(){let n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,o=arguments.length>1?arguments[1]:void 0;return(e[o.type]||e.DEFAULT)(o,n)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/61282:
@@ -1711,11 +1777,11 @@ s.diff=c,s.prev=n,s.curr=i,n=i,o[0]=t.coerce(o[0]),"string"!=typeof o[0]&&
 // Anything else let's inspect with %O
 o.unshift("%O");
 // Apply any `formatters` transformations
-var u=0;o[0]=o[0].replace(/%([a-zA-Z%])/g,(function(e,n){
+var l=0;o[0]=o[0].replace(/%([a-zA-Z%])/g,(function(e,n){
 // If we encounter an escaped % then don't increase the array index
-if("%%"===e)return"%";u++;var r=t.formatters[n];if("function"==typeof r){var i=o[u];e=r.call(s,i),
+if("%%"===e)return"%";l++;var r=t.formatters[n];if("function"==typeof r){var i=o[l];e=r.call(s,i),
 // Now we need to remove `args[index]` since it's inlined in the `format`
-o.splice(u,1),u--}return e})),
+o.splice(l,1),l--}return e})),
 // Apply env-specific formatting (colors, etc.)
 t.formatArgs.call(s,o),(s.log||t.log).apply(s,o)}}return a.namespace=e,a.useColors=t.useColors(),a.color=t.selectColor(e),a.extend=r,a.destroy=t.destroy,// XXX Temporary. Will be removed in the next major release.
 Object.defineProperty(a,"enabled",{enumerable:!0,configurable:!1,get:function(){return null!==i?i:(o!==t.namespaces&&(o=t.namespaces,s=t.enabled(e)),s)},set:function(e){i=e}}),
@@ -1907,6 +1973,170 @@ function(e){for(var n=0,o=0;o<e.length;o++)n=(n<<5)-n+e.charCodeAt(o),n|=0;retur
 /* harmony export */Z:()=>/* binding */r
 /* harmony export */});
 /* harmony import */var o=n(1793);function r(e,t){if(e){if("string"==typeof e)return(0,o/* ["default"] */.Z)(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?(0,o/* ["default"] */.Z)(e,t):void 0}}
+/***/},
+/***/67455:
+/***/(e,t,n)=>{"use strict";
+/* harmony export */n.d(t,{
+/* harmony export */Z:()=>/* export default binding */i
+/* harmony export */});
+/** @typedef {(...args: any[]) => *[]} GetDependants */
+/** @typedef {() => void} Clear */
+/**
+ * @typedef {{
+ *   getDependants: GetDependants,
+ *   clear: Clear
+ * }} EnhancedSelector
+ */
+/**
+ * Internal cache entry.
+ *
+ * @typedef CacheNode
+ *
+ * @property {?CacheNode|undefined} [prev] Previous node.
+ * @property {?CacheNode|undefined} [next] Next node.
+ * @property {*[]} args Function arguments for cache entry.
+ * @property {*} val Function result.
+ */
+/**
+ * @typedef Cache
+ *
+ * @property {Clear} clear Function to clear cache.
+ * @property {boolean} [isUniqueByDependants] Whether dependants are valid in
+ * considering cache uniqueness. A cache is unique if dependents are all arrays
+ * or objects.
+ * @property {CacheNode?} [head] Cache head.
+ * @property {*[]} [lastDependants] Dependants from previous invocation.
+ */
+/**
+ * Arbitrary value used as key for referencing cache object in WeakMap tree.
+ *
+ * @type {{}}
+ */
+var o={};
+/**
+ * Returns the first argument as the sole entry in an array.
+ *
+ * @template T
+ *
+ * @param {T} value Value to return.
+ *
+ * @return {[T]} Value returned as entry in array.
+ */function r(e){return[e]}
+/**
+ * Returns true if the value passed is object-like, or false otherwise. A value
+ * is object-like if it can support property assignment, e.g. object or array.
+ *
+ * @param {*} value Value to test.
+ *
+ * @return {boolean} Whether value is object-like.
+ */
+/**
+ * Returns true if entries within the two arrays are strictly equal by
+ * reference from a starting index.
+ *
+ * @param {*[]} a First array.
+ * @param {*[]} b Second array.
+ * @param {number} fromIndex Index from which to start comparison.
+ *
+ * @return {boolean} Whether arrays are shallowly equal.
+ */
+function s(e,t,n){var o;if(e.length!==t.length)return!1;for(o=n;o<e.length;o++)if(e[o]!==t[o])return!1;return!0}
+/**
+ * Returns a memoized selector function. The getDependants function argument is
+ * called before the memoized selector and is expected to return an immutable
+ * reference or array of references on which the selector depends for computing
+ * its own return value. The memoize cache is preserved only as long as those
+ * dependant references remain the same. If getDependants returns a different
+ * reference(s), the cache is cleared and the selector value regenerated.
+ *
+ * @template {(...args: *[]) => *} S
+ *
+ * @param {S} selector Selector function.
+ * @param {GetDependants=} getDependants Dependant getter returning an array of
+ * references used in cache bust consideration.
+ */
+/* harmony default export */function i(e,t){
+/** @type {WeakMap<*,*>} */
+var n,i=t||r;
+/** @type {GetDependants} */
+/**
+	 * Resets root memoization cache.
+	 */
+function a(){n=new WeakMap}
+/* eslint-disable jsdoc/check-param-names */
+/**
+	 * The augmented selector call, considering first whether dependants have
+	 * changed before passing it to underlying memoize function.
+	 *
+	 * @param {*}    source    Source object for derivation.
+	 * @param {...*} extraArgs Additional arguments to pass to selector.
+	 *
+	 * @return {*} Selector result.
+	 */
+/* eslint-enable jsdoc/check-param-names */function c(){var t,r,a,c,l,u=arguments.length;
+// Create copy of arguments (avoid leaking deoptimization).
+for(c=new Array(u),a=0;a<u;a++)c[a]=arguments[a];for(t=
+/**
+	 * Returns the cache for a given dependants array. When possible, a WeakMap
+	 * will be used to create a unique cache for each set of dependants. This
+	 * is feasible due to the nature of WeakMap in allowing garbage collection
+	 * to occur on entries where the key object is no longer referenced. Since
+	 * WeakMap requires the key to be an object, this is only possible when the
+	 * dependant is object-like. The root cache is created as a hierarchy where
+	 * each top-level key is the first entry in a dependants set, the value a
+	 * WeakMap where each key is the next dependant, and so on. This continues
+	 * so long as the dependants are object-like. If no dependants are object-
+	 * like, then the cache is shared across all invocations.
+	 *
+	 * @see isObjectLike
+	 *
+	 * @param {*[]} dependants Selector dependants.
+	 *
+	 * @return {Cache} Cache object.
+	 */
+function(e){var t,r,s,i,a,c=n,l=!0;for(t=0;t<e.length;t++){
+// Can only compose WeakMap from object-like key.
+if(!(a=r=e[t])||"object"!=typeof a){l=!1;break}
+// Does current segment of cache already have a WeakMap?
+c.has(r)?
+// Traverse into nested WeakMap.
+c=c.get(r):(
+// Create, set, and traverse into a new one.
+s=new WeakMap,c.set(r,s),c=s)}
+// We use an arbitrary (but consistent) object as key for the last item
+// in the WeakMap to serve as our running cache.
+return c.has(o)||((i=
+/**
+ * Creates and returns a new cache object.
+ *
+ * @return {Cache} Cache object.
+ */
+function(){
+/** @type {Cache} */
+var e={clear:function(){e.head=null}};return e}()).isUniqueByDependants=l,c.set(o,i)),c.get(o)}(l=i.apply(null,c)),
+// If not guaranteed uniqueness by dependants (primitive type), shallow
+// compare against last dependants and, if references have changed,
+// destroy cache to recalculate result.
+t.isUniqueByDependants||(t.lastDependants&&!s(l,t.lastDependants,0)&&t.clear(),t.lastDependants=l),r=t.head;r;){
+// Check whether node arguments match arguments
+if(s(r.args,c,1))
+// Return immediately
+// At this point we can assume we've found a match
+// Surface matched node to head if not already
+return r!==t.head&&(
+// Adjust siblings to point to each other.
+/** @type {CacheNode} */r.prev.next=r.next,r.next&&(r.next.prev=r.prev),r.next=t.head,r.prev=null,
+/** @type {CacheNode} */t.head.prev=r,t.head=r),r.val;r=r.next}
+// No cached value found. Continue to insertion phase:
+return r=/** @type {CacheNode} */{
+// Generate the result from original function
+val:e.apply(null,c)},
+// Avoid including the source object in the cache.
+c[0]=null,r.args=c,
+// Don't need to check whether node is already head, since it would
+// have been returned above already if it was
+// Shift existing head down list
+t.head&&(t.head.prev=r,r.next=t.head),t.head=r,r.val}return c.getDependants=i,c.clear=a,a(),/** @type {S & EnhancedSelector} */c}
 /***/
 /******/}},t={};
 /************************************************************************/

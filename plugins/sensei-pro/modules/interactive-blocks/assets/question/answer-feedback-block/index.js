@@ -6,7 +6,10 @@ import {
 	answerFeedbackIncorrectBlock as senseiAnswerFeedbackIncorrectBlock,
 } from 'sensei/assets/blocks/quiz/answer-feedback-block';
 import { ReactComponent as icon } from 'sensei/assets/icons/question.svg';
-
+/**
+ * WordPress dependencies
+ */
+import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
@@ -48,10 +51,14 @@ export const answerFeedbackCorrectBlock = {
 	...senseiAnswerFeedbackCorrectBlock,
 	...sharedSettings,
 	name: 'sensei-pro/question-answer-feedback-correct',
+	title: __( 'Correct Answer Feedback', 'sensei-pro' ),
+	description: __( 'Display correct answer feedback.', 'sensei-pro' ),
 };
 
 export const answerFeedbackIncorrectBlock = {
 	...senseiAnswerFeedbackIncorrectBlock,
 	...sharedSettings,
 	name: 'sensei-pro/question-answer-feedback-incorrect',
+	title: __( 'Incorrect Answer Feedback', 'sensei-pro' ),
+	description: __( 'Display incorrect answer feedback.', 'sensei-pro' ),
 };

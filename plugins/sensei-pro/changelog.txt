@@ -1,5 +1,11 @@
 # Sensei Pro Changelog
 
+## 1.24.1 - 2024-08-08
+### Fixed
+- Ensure lesson preview setting takes precedence over course expiration
+- Deprecation notices on PHP 8.2
+- Missing translations for interactive blocks
+
 ## 1.24.0 - 2024-04-25
 ### Security
 - Sanitize user's display name

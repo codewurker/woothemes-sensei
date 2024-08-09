@@ -52,9 +52,9 @@ const l={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
 /***/25852:
 /***/(e,s,t)=>{
 /* harmony export */t.d(s,{
-/* harmony export */F:()=>/* binding */m
+/* harmony export */F:()=>/* binding */w
 /* harmony export */});
-/* harmony import */var n=t(9818),l=t(65736),o=t(41650);
+/* harmony import */var n=t(9818),l=t(65736),o=t(52175),i=t(72067),r=t(12238),a=t(41650);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -63,17 +63,17 @@ const l={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
  * Internal dependencies
  */
 // Sensei blocks by post type.
-const i={course:{outline:"sensei-lms/course-outline",takeCourse:"sensei-lms/button-take-course",contactTeacher:"sensei-lms/button-contact-teacher",courseProgress:"sensei-lms/course-progress",viewResults:"sensei-lms/button-view-results"},lesson:{lessonActions:"sensei-lms/lesson-actions",lessonProperties:"sensei-lms/lesson-properties",contactTeacher:"sensei-lms/button-contact-teacher",featuredVideo:"sensei-lms/featured-video"}},r={course:{"meta-box-course-lessons":[i.course.outline],"meta-box-module_course_mb":[i.course.outline],"meta-box-course-video":Object.values(i.course)},lesson:{"meta-box-lesson-info":[i.lesson.lessonProperties]}},a=(0,n.select)("core/block-editor"),c=(0,n.select)("core/edit-post"),u=(0,n.dispatch)("core/edit-post"),m=e=>{if(!a)return;const{createWarningNotice:s,removeNotice:t}=(0,n.dispatch)("core/notices");let m;(0,o/* ["default"] */.Z)({subscribeListener:()=>{const e=a.getBlocks();
+const c={course:{outline:"sensei-lms/course-outline",takeCourse:"sensei-lms/button-take-course",contactTeacher:"sensei-lms/button-contact-teacher",courseProgress:"sensei-lms/course-progress",viewResults:"sensei-lms/button-view-results"},lesson:{lessonActions:"sensei-lms/lesson-actions",lessonProperties:"sensei-lms/lesson-properties",contactTeacher:"sensei-lms/button-contact-teacher",featuredVideo:"sensei-lms/featured-video"}},u={course:{"meta-box-course-lessons":[c.course.outline],"meta-box-module_course_mb":[c.course.outline],"meta-box-course-video":Object.values(c.course)},lesson:{"meta-box-lesson-info":[c.lesson.lessonProperties]}},d=(0,n.select)(o.store),m=(0,n.select)(r.store),p=(0,n.dispatch)(r.store),_=(0,n.select)(i.store),g=(0,n.dispatch)(i.store),h=m.isEditorPanelEnabled?m.isEditorPanelEnabled:_.isEditorPanelEnabled,b=p.toggleEditorPanelEnabled?p.toggleEditorPanelEnabled:g.toggleEditorPanelEnabled,w=e=>{if(!d)return;const{createWarningNotice:s,removeNotice:t}=(0,n.dispatch)("core/notices");let o;(0,a/* ["default"] */.Z)({subscribeListener:()=>{const e=d.getBlocks();
 // Check if blocks were changed.
-e!==m&&(m=e,d(),p())}});
+e!==o&&(o=e,i(),r())}});
 /**
    * Check whether it has Sensei blocks.
    */
-const d=()=>{Object.entries(r[e]).forEach((e=>{let[s,t]=e;!_(t)!==c.isEditorPanelEnabled(s)&&u.toggleEditorPanelEnabled(s)})),
+const i=()=>{Object.entries(u[e]).forEach((e=>{let[s,t]=e;!m(t)!==h(s)&&b(s)})),
 // Prevent submit course modules.
-document.querySelectorAll("#module_course_mb input").forEach((e=>{e.disabled=!c.isEditorPanelEnabled("meta-box-module_course_mb")})),
+document.querySelectorAll("#module_course_mb input").forEach((e=>{e.disabled=!h("meta-box-module_course_mb")})),
 // Don't submit lesson length and complexity values in metaboxes.
-document.querySelectorAll("#lesson-info input, #lesson-info select").forEach((e=>{e.disabled=!c.isEditorPanelEnabled("meta-box-lesson-info")}))},p=()=>{var n,o;const r=_(Object.values(i[e])),a=null===(n=window)||void 0===n||null===(o=n.sensei)||void 0===o?void 0:o.courseThemeEnabled;r||a?t("sensei-using-template"):s((0,l.__)("It looks like this course page doesn't have any Sensei blocks. This means that content will be handled by custom templates.","sensei-lms"),{id:"sensei-using-template",isDismissible:!0,actions:[{label:(0,l.__)("Learn more","sensei-lms"),url:"https://senseilms.com/documentation/course-page-blocks/"}]})},_=e=>e.some((e=>a.getGlobalBlockCount(e)>0));
+document.querySelectorAll("#lesson-info input, #lesson-info select").forEach((e=>{e.disabled=!h("meta-box-lesson-info")}))},r=()=>{var n,o;const i=m(Object.values(c[e])),r=null===(n=window)||void 0===n||null===(o=n.sensei)||void 0===o?void 0:o.courseThemeEnabled;i||r?t("sensei-using-template"):s((0,l.__)("It looks like this course page doesn't have any Sensei blocks. This means that content will be handled by custom templates.","sensei-lms"),{id:"sensei-using-template",isDismissible:!0,actions:[{label:(0,l.__)("Learn more","sensei-lms"),url:"https://senseilms.com/documentation/course-page-blocks/"}]})},m=e=>e.some((e=>d.getGlobalBlockCount(e)>0));
 /**
    * Toggle metaboxes if a replacement block is present or not.
    */};
@@ -101,7 +101,7 @@ const i=()=>(0,n.createElement)(l.PanelBody,{title:(0,o.__)("Access Period","sen
 /* harmony export */t.d(s,{
 /* harmony export */Z:()=>p
 /* harmony export */});
-/* harmony import */var n=t(69307),l=t(65736),o=t(9818),i=t(55609),r=t(37798),a=t(86989),c=t.n(a),u=t(92694),m=t(41650),d=t(69973);
+/* harmony import */var n=t(69307),l=t(65736),o=t(9818),i=t(55609),r=t(37798),a=t(86989),c=t.n(a),u=t(92694),d=t(41650),m=t(69973);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -109,7 +109,7 @@ const i=()=>(0,n.createElement)(l.PanelBody,{title:(0,o.__)("Access Period","sen
 /**
  * Internal dependencies
  */
-const p=()=>{var e;const s=(0,o.useSelect)((e=>e("core/editor").getCurrentPost())),[t,a]=(0,n.useState)(window.sensei.courseSettingsSidebar.author);let p=window.sensei.courseSettingsSidebar.courses;p&&p.length&&(p=p.map((e=>({label:e.post_title,value:e.ID}))),p.push({label:(0,l.__)("None","sensei-lms"),value:0}));let _=window.sensei.courseSettingsSidebar.teachers;_&&_.length&&(_=_.map((e=>({label:e.display_name,value:e.ID}))));const[g,h]=(0,r.useEntityProp)("postType","course","meta"),b=g._course_featured,w=g._course_prerequisite,E=g.disable_notification,v=g._sensei_self_enrollment_not_allowed,f=g._open_access;(0,n.useEffect)((()=>(0,m/* ["default"] */.Z)({onSaveStart:()=>{if(t!==s.author){const e=(0,d/* .getFirstBlockByName */.H4)("sensei-lms/course-outline",(0,o.select)("core/block-editor").getBlocks()),n=e&&(0,d/* .extractStructure */.Vw)(e.innerBlocks).filter((e=>e.slug)).map((e=>e.slug));c()({path:"/sensei-internal/v1/course-utils/update-teacher",method:"PUT",data:{[window.sensei.courseSettingsSidebar.nonce_name]:window.sensei.courseSettingsSidebar.nonce_value,post_id:s.id,teacher:t,custom_slugs:JSON.stringify(n)}}).catch((e=>{e.message&&(0,o.dispatch)("core/notices").createNotice("warning",e.message,{isDismissible:!0})}))}}})));
+const p=()=>{var e;const s=(0,o.useSelect)((e=>e("core/editor").getCurrentPost())),[t,a]=(0,n.useState)(window.sensei.courseSettingsSidebar.author);let p=window.sensei.courseSettingsSidebar.courses;p&&p.length&&(p=p.map((e=>({label:e.post_title,value:e.ID}))),p.push({label:(0,l.__)("None","sensei-lms"),value:0}));let _=window.sensei.courseSettingsSidebar.teachers;_&&_.length&&(_=_.map((e=>({label:e.display_name,value:e.ID}))));const[g,h]=(0,r.useEntityProp)("postType","course","meta"),b=g._course_featured,w=g._course_prerequisite,E=g.disable_notification,v=g._sensei_self_enrollment_not_allowed,f=g._open_access;(0,n.useEffect)((()=>(0,d/* ["default"] */.Z)({onSaveStart:()=>{if(t!==s.author){const e=(0,m/* .getFirstBlockByName */.H4)("sensei-lms/course-outline",(0,o.select)("core/block-editor").getBlocks()),n=e&&(0,m/* .extractStructure */.Vw)(e.innerBlocks).filter((e=>e.slug)).map((e=>e.slug));c()({path:"/sensei-internal/v1/course-utils/update-teacher",method:"PUT",data:{[window.sensei.courseSettingsSidebar.nonce_name]:window.sensei.courseSettingsSidebar.nonce_value,post_id:s.id,teacher:t,custom_slugs:JSON.stringify(n)}}).catch((e=>{e.message&&(0,o.dispatch)("core/notices").createNotice("warning",e.message,{isDismissible:!0})}))}}})));
 /**
    * Allows to show or hide the multiple teachers upgrade.
    *
@@ -117,14 +117,14 @@ const p=()=>{var e;const s=(0,o.useSelect)((e=>e("core/editor").getCurrentPost()
    *
    * @param {boolean} Whether the upgrade should be hidden or not. Default false. True will hide the upgrade.
    */
-const S=(0,u.applyFilters)("senseiCourseSettingsMultipleTeachersUpgradeHide",!1),y=(0,n.useMemo)((()=>(0,u.applyFilters)("senseiCourseSettingsTeachersAfter",(()=>null))),[]);
+const S=(0,u.applyFilters)("senseiCourseSettingsMultipleTeachersUpgradeHide",!1),P=(0,n.useMemo)((()=>(0,u.applyFilters)("senseiCourseSettingsTeachersAfter",(()=>null))),[]);
 /**
    * Returns the component to render after the teacher course setting.
    *
    * @since 4.9.0
    *
    * @param {Function} The existing component hooked into the filter.
-   */return(0,n.createElement)(i.PanelBody,{title:(0,l.__)("General","sensei-lms"),initialOpen:!0},(0,n.createElement)("h3",null,(0,l.__)("Teacher","sensei-lms")),_.length?(0,n.createElement)(i.SelectControl,{value:t,options:_,onChange:e=>{e=parseInt(e),a(e),(0,o.dispatch)("core").editEntityRecord("postType","course",s.id,{author:e})}}):null,!S&&(0,n.createElement)("div",{className:"sensei-course-coteachers-wrapper"},(0,l.__)("Multiple teachers?","sensei-lms")," ",(0,n.createElement)(i.ExternalLink,{href:"https://senseilms.com/sensei-pro/?utm_source=plugin_sensei&utm_medium=upsell&utm_campaign=co-teachers"},(0,l.__)("Upgrade to Sensei Pro","sensei-lms"))),(0,n.createElement)(y,{courseAuthorId:t,courseId:s.id}),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Course Prerequisite","sensei-lms")),p.length?null:(0,n.createElement)("p",null,(0,l.__)("No courses exist yet. Please add some first.","sensei-lms")),p.length?(0,n.createElement)(i.SelectControl,{value:w,options:p,onChange:e=>h({...g,_course_prerequisite:e})}):null,(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Enrollment","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Don't allow self-enrollment","sensei-lms"),checked:v,onChange:e=>h({...g,_sensei_self_enrollment_not_allowed:e}),help:(0,l.__)("Students need to be manually enrolled by teachers or administrators. Not available for paid courses.","sensei-lms")}),(null===(e=window.sensei.courseSettingsSidebar.features)||void 0===e?void 0:e.open_access)&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Access","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Open access","sensei-lms"),checked:f,onChange:e=>h({...g,_open_access:e}),help:(0,l.__)("Visitors can take this course without signing up. Not available for paid courses.","sensei-lms")})),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Featured Course","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Feature this course","sensei-lms"),checked:"featured"==b,onChange:e=>h({...g,_course_featured:e?"featured":""})}),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Course Notifications","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Disable notifications on this course","sensei-lms"),checked:E,onChange:e=>h({...g,disable_notification:e})}),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Course Management","sensei-lms")),(0,n.createElement)("p",null,(0,n.createElement)("a",{href:`/wp-admin/admin.php?page=sensei_learners&course_id=${s.id}&view=learners`},(0,l.__)("Manage Students","sensei-lms"))),(0,n.createElement)("p",null,(0,n.createElement)("a",{href:`/wp-admin/admin.php?page=sensei_grading&course_id=${s.id}&view=learners`},(0,l.__)("Manage Grading","sensei-lms"))))};
+   */return(0,n.createElement)(i.PanelBody,{title:(0,l.__)("General","sensei-lms"),initialOpen:!0},(0,n.createElement)("h3",null,(0,l.__)("Teacher","sensei-lms")),_.length?(0,n.createElement)(i.SelectControl,{value:t,options:_,onChange:e=>{e=parseInt(e),a(e),(0,o.dispatch)("core").editEntityRecord("postType","course",s.id,{author:e})}}):null,!S&&(0,n.createElement)("div",{className:"sensei-course-coteachers-wrapper"},(0,l.__)("Multiple teachers?","sensei-lms")," ",(0,n.createElement)(i.ExternalLink,{href:"https://senseilms.com/sensei-pro/?utm_source=plugin_sensei&utm_medium=upsell&utm_campaign=co-teachers"},(0,l.__)("Upgrade to Sensei Pro","sensei-lms"))),(0,n.createElement)(P,{courseAuthorId:t,courseId:s.id}),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Course Prerequisite","sensei-lms")),p.length?null:(0,n.createElement)("p",null,(0,l.__)("No courses exist yet. Please add some first.","sensei-lms")),p.length?(0,n.createElement)(i.SelectControl,{value:w,options:p,onChange:e=>h({...g,_course_prerequisite:e})}):null,(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Enrollment","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Don't allow self-enrollment","sensei-lms"),checked:v,onChange:e=>h({...g,_sensei_self_enrollment_not_allowed:e}),help:(0,l.__)("Students need to be manually enrolled by teachers or administrators. Not available for paid courses.","sensei-lms")}),(null===(e=window.sensei.courseSettingsSidebar.features)||void 0===e?void 0:e.open_access)&&(0,n.createElement)(n.Fragment,null,(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Access","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Open access","sensei-lms"),checked:f,onChange:e=>h({...g,_open_access:e}),help:(0,l.__)("Visitors can take this course without signing up. Not available for paid courses.","sensei-lms")})),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Featured Course","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Feature this course","sensei-lms"),checked:"featured"==b,onChange:e=>h({...g,_course_featured:e?"featured":""})}),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Course Notifications","sensei-lms")),(0,n.createElement)(i.CheckboxControl,{label:(0,l.__)("Disable notifications on this course","sensei-lms"),checked:E,onChange:e=>h({...g,disable_notification:e})}),(0,n.createElement)(i.HorizontalRule,null),(0,n.createElement)("h3",null,(0,l.__)("Course Management","sensei-lms")),(0,n.createElement)("p",null,(0,n.createElement)("a",{href:`/wp-admin/admin.php?page=sensei_learners&course_id=${s.id}&view=learners`},(0,l.__)("Manage Students","sensei-lms"))),(0,n.createElement)("p",null,(0,n.createElement)("a",{href:`/wp-admin/admin.php?page=sensei_grading&course_id=${s.id}&view=learners`},(0,l.__)("Manage Grading","sensei-lms"))))};
 /* harmony default export */}
 /***/,
 /***/17323:
@@ -155,12 +155,12 @@ const e=(0,o.applyFilters)("senseiCoursePricingDescription",(0,l.__)("Sell this 
 /***/28292:
 /***/(e,s,t)=>{
 /* harmony export */t.d(s,{
-/* harmony export */bM:()=>/* binding */g
-/* harmony export */,OR:()=>/* binding */h
-/* harmony export */,jv:()=>/* binding */b
-/* harmony export */,iB:()=>/* binding */w
+/* harmony export */bM:()=>/* binding */h
+/* harmony export */,OR:()=>/* binding */b
+/* harmony export */,jv:()=>/* binding */w
+/* harmony export */,iB:()=>/* binding */E
 /* harmony export */});
-/* harmony import */var n=t(69307),l=t(92694),o=t(72067),i=t(65736),r=t(9818),a=t(55609),c=t(17323),u=t(10328),m=t(33735),d=t(5965),p=t(33124),_=t(33731);
+/* harmony import */var n=t(69307),l=t(92694),o=t(72067),i=t(12238),r=t(65736),a=t(9818),c=t(55609),u=t(17323),d=t(10328),m=t(33735),p=t(5965),_=t(33124),g=t(33731);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -168,7 +168,7 @@ const e=(0,o.applyFilters)("senseiCoursePricingDescription",(0,l.__)("Sell this 
 /**
  * Internal dependencies
  */
-const g="sensei-lms-course-settings-sidebar",h="sensei-lms-document-settings-sidebar",b=()=>{
+i.PluginDocumentSettingPanel||(i.PluginDocumentSettingPanel=o.PluginDocumentSettingPanel),i.PluginSidebar||(i.PluginSidebar=o.PluginSidebar),i.PluginSidebarMoreMenuItem||(i.PluginSidebarMoreMenuItem=o.PluginSidebarMoreMenuItem);const h="sensei-lms-course-settings-sidebar",b="sensei-lms-document-settings-sidebar",w=()=>{
 /**
    * Filter to show or hide course pricing component.
    *
@@ -185,10 +185,10 @@ const e=(0,l.applyFilters)("senseiCoursePricingHide",!1),s=(0,l.applyFilters)("s
    *
    * @hook  senseiCourseAccessPeriodHide This hook allows to pass a boolean value for hiding course expiration (access period) upsell.
    * @return {boolean} 				   Hide the component.
-   */return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(o.PluginSidebarMoreMenuItem,{target:g,icon:(0,n.createElement)(_/* ["default"] */.Z,{height:"20",width:"20"})},(0,i.__)("Course Settings","sensei-lms")),(0,n.createElement)(o.PluginSidebar,{name:g,title:(0,i.__)("Course Settings","sensei-lms"),icon:(0,n.createElement)(_/* ["default"] */.Z,{height:"20",width:"20"})},!e&&(0,n.createElement)(c/* ["default"] */.Z,null),!s&&(0,n.createElement)(u/* ["default"] */.Z,null),(0,n.createElement)(a.Slot,{name:"SenseiCourseSidebar"}),(0,n.createElement)(m/* ["default"] */.Z,null),(0,n.createElement)(d/* ["default"] */.Z,null),(0,n.createElement)(p/* ["default"] */.Z,null)))},w=()=>((0,r.useSelect)((e=>e("core/edit-post").isEditorPanelOpened(`${h}/${h}`)))&&(
+   */return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(i.PluginSidebarMoreMenuItem,{target:h,icon:(0,n.createElement)(g/* ["default"] */.Z,{height:"20",width:"20"})},(0,r.__)("Course Settings","sensei-lms")),(0,n.createElement)(i.PluginSidebar,{name:h,title:(0,r.__)("Course Settings","sensei-lms"),icon:(0,n.createElement)(g/* ["default"] */.Z,{height:"20",width:"20"})},!e&&(0,n.createElement)(u/* ["default"] */.Z,null),!s&&(0,n.createElement)(d/* ["default"] */.Z,null),(0,n.createElement)(c.Slot,{name:"SenseiCourseSidebar"}),(0,n.createElement)(m/* ["default"] */.Z,null),(0,n.createElement)(p/* ["default"] */.Z,null),(0,n.createElement)(_/* ["default"] */.Z,null)))},E=()=>{if((0,a.useSelect)((e=>(e(i.store).isEditorPanelOpened?e(i.store).isEditorPanelOpened:e(o.store).isEditorPanelOpened)(`${b}/${b}`)))){const e=(0,a.dispatch)(i.store).toggleEditorPanelOpened?(0,a.dispatch)(i.store).toggleEditorPanelOpened:(0,a.dispatch)(o.store).toggleEditorPanelOpened;
 // when 'Course Settings' is clicked, isSenseiEditorPanelOpen returns true, so we open the 'Course Settings'
 // plugin sidebar and then close the 'Sensei Settings' panel which sets isSenseiEditorPanelOpen back to false.
-(0,r.dispatch)("core/edit-post").openGeneralSidebar(`${g}/${g}`),(0,r.dispatch)("core/edit-post").toggleEditorPanelOpened(`${h}/${h}`)),(0,n.createElement)(o.PluginDocumentSettingPanel,{name:h,title:(0,i.__)("Course Settings","sensei-lms"),className:"sensei-plugin-document-setting-panel"}))}
+(0,a.dispatch)(o.store).openGeneralSidebar(`${h}/${h}`),e(`${b}/${b}`)}return(0,n.createElement)(i.PluginDocumentSettingPanel,{name:b,title:(0,r.__)("Course Settings","sensei-lms"),className:"sensei-plugin-document-setting-panel"})}}
 /***/,
 /***/45485:
 /***/(e,s,t)=>{
@@ -202,7 +202,7 @@ const n="sensei-theme",l="wordpress-theme"}
 /***/33735:
 /***/(e,s,t)=>{
 /* harmony export */t.d(s,{
-/* harmony export */Z:()=>m
+/* harmony export */Z:()=>d
 /* harmony export */});
 /* harmony import */var n=t(69307),l=t(65736),o=t(55609),i=t(88698),r=t(45485),a=t(9200),c=t(86057),u=t(37231);
 /* harmony import */
@@ -212,7 +212,7 @@ const n="sensei-theme",l="wordpress-theme"}
 /**
  * Internal dependencies
  */
-a.name,c.name,u.name;const m=()=>{var e,s;const t=(null===(e=window.sensei)||void 0===e||null===(s=e.senseiSettings)||void 0===s?void 0:s.sensei_learning_mode_all)||!1,[a,c]=(0,i/* ["default"] */.Z)("_course_theme");return(0,n.createElement)(o.PanelBody,{title:(0,l.__)("Learning Mode","sensei-lms"),initialOpen:!0},t?(0,n.createElement)("p",null,(0,n.createElement)("a",{href:"/wp-admin/admin.php?page=sensei-settings&tab=appearance-settings"},(0,l.__)("Learning Mode is enabled globally.","sensei-lms"))):(0,n.createElement)(n.Fragment,null,(0,n.createElement)(o.ToggleControl,{label:(0,l.__)("Enable Learning Mode","sensei-lms"),help:(0,l.__)("Show an immersive and distraction-free view for lessons and quizzes.","sensei-lms"),checked:a===r/* .SENSEI_THEME */.q6,onChange:e=>c(e?r/* .SENSEI_THEME */.q6:r/* .WORDPRESS_THEME */.kU)}),(0,n.createElement)("p",null,(0,n.createElement)("a",{href:"/wp-admin/admin.php?page=sensei-settings&tab=appearance-settings"},(0,l.__)("Change Template","sensei-lms")))))}}
+a.name,c.name,u.name;const d=()=>{var e,s;const t=(null===(e=window.sensei)||void 0===e||null===(s=e.senseiSettings)||void 0===s?void 0:s.sensei_learning_mode_all)||!1,[a,c]=(0,i/* ["default"] */.Z)("_course_theme");return(0,n.createElement)(o.PanelBody,{title:(0,l.__)("Learning Mode","sensei-lms"),initialOpen:!0},t?(0,n.createElement)("p",null,(0,n.createElement)("a",{href:"/wp-admin/admin.php?page=sensei-settings&tab=appearance-settings"},(0,l.__)("Learning Mode is enabled globally.","sensei-lms"))):(0,n.createElement)(n.Fragment,null,(0,n.createElement)(o.ToggleControl,{label:(0,l.__)("Enable Learning Mode","sensei-lms"),help:(0,l.__)("Show an immersive and distraction-free view for lessons and quizzes.","sensei-lms"),checked:a===r/* .SENSEI_THEME */.q6,onChange:e=>c(e?r/* .SENSEI_THEME */.q6:r/* .WORDPRESS_THEME */.kU)}),(0,n.createElement)("p",null,(0,n.createElement)("a",{href:"/wp-admin/admin.php?page=sensei-settings&tab=appearance-settings"},(0,l.__)("Change Template","sensei-lms")))))}}
 /***/,
 /***/5965:
 /***/(e,s,t)=>{
@@ -292,6 +292,9 @@ r=n,l()):r=n}))};
 /***/86989:
 /***/e=>{e.exports=window.wp.apiFetch;
 /***/},
+/***/52175:
+/***/e=>{e.exports=window.wp.blockEditor;
+/***/},
 /***/4981:
 /***/e=>{e.exports=window.wp.blocks;
 /***/},
@@ -309,6 +312,9 @@ r=n,l()):r=n}))};
 /***/},
 /***/72067:
 /***/e=>{e.exports=window.wp.editPost;
+/***/},
+/***/12238:
+/***/e=>{e.exports=window.wp.editor;
 /***/},
 /***/69307:
 /***/e=>{e.exports=window.wp.element;

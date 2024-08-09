@@ -37,7 +37,7 @@ return r.createElement("svg",o({viewBox:"0 0 24 24",fill:"none",xmlns:"http://ww
 /**
  * Editor wizard modal component.
  */
-const u=()=>{const e=(0,n.useState)({}),t=e[0],{editPost:s,savePost:u}=(0,i.useDispatch)(o.store),{setTourShowStatus:m}=(0,i.useDispatch)(d/* .SENSEI_TOUR_STORE */.si),p=(0,c/* .useLogEvent */.an)(),[_,E]=(0,c/* .useWizardOpenState */.lk)(),w=(0,a/* ["default"] */.Z)(),g=(0,c/* .useSetDefaultPattern */.dm)({"sensei-content-description":t.description}),h=()=>{E(!0),s({meta:{_new_post:!1}}),u(),m(!0)},v=()=>{g(),h()};return(0,n.useEffect)((()=>{m(!1)}),[m]),_&&(0,n.createElement)(r.Modal,{className:"sensei-editor-wizard-modal",onRequestClose:()=>{v(),p("editor_wizard_close_modal")}},(0,n.createElement)(l/* ["default"] */.Z,{steps:w,wizardDataState:e,onCompletion:h,skipWizard:v}))};
+const u=()=>{const e=(0,n.useState)({}),t=e[0],{editPost:s,savePost:u}=(0,i.useDispatch)(o.store),{setTourShowStatus:m}=(0,i.useDispatch)(d/* .SENSEI_TOUR_STORE */.si),p=(0,c/* .useLogEvent */.an)(),[_,w]=(0,c/* .useWizardOpenState */.lk)(),E=(0,a/* ["default"] */.Z)(),g=(0,c/* .useSetDefaultPattern */.dm)({"sensei-content-description":t.description}),h=()=>{w(!0),s({meta:{_new_post:!1}}),u(),m(!0)},v=()=>{g(),h()};return(0,n.useEffect)((()=>{m(!1)}),[m]),_&&(0,n.createElement)(r.Modal,{className:"sensei-editor-wizard-modal",onRequestClose:()=>{v(),p("editor_wizard_close_modal")}},(0,n.createElement)(l/* ["default"] */.Z,{steps:E,wizardDataState:e,onCompletion:h,skipWizard:v}))};
 /* harmony default export */}
 /***/,
 /***/91839:
@@ -118,7 +118,7 @@ const u=e=>{var t;const s=null===(t=(0,d.getBlockType)(e.name))||void 0===t?void
    */
 const e=(0,l.applyFilters)("sensei.editorWizard.noLayoutsWarning",(0,a.__)("No layouts available for this theme.","sensei-lms"));return(0,i.createElement)("div",{className:"sensei-patterns-list__warning"},(0,i.createElement)("div",{className:"sensei-patterns-list__warning-title"},e))},_=e=>{let{onChoose:t}=e;const{patterns:s}=(0,o.useSelect)((e=>{var t;return{patterns:(null===(t=e(r.store))||void 0===t?void 0:t.getPatternsByBlockTypes("sensei-lms/post-content"))||e(r.store).__experimentalGetPatternsByBlockTypes("sensei-lms/post-content")}}));return s&&0!==s.length?(0,i.createElement)("div",{className:"sensei-patterns-list",role:"listbox","aria-label":(0,a.__)("Sensei block patterns","sensei-lms")},s.filter((e=>{let{categories:t}=e;return t&&t.includes("sensei-lms")})).map((e=>{let{name:s,title:o,description:l,blocks:a,viewportWidth:d,template:p}=e;
 // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-return(0,i.createElement)("div",(0,n/* ["default"] */.Z)({key:s,className:"sensei-patterns-list__item",title:l,role:"option",tabIndex:0},{onClick:_=()=>{t(a,s,p)},onKeyUp:e=>{[c.ENTER,c.SPACE].includes(e.keyCode)&&_(e)}}),(0,i.createElement)("div",{className:"sensei-patterns-list__item-preview"},(0,i.createElement)(r.BlockPreview,{__experimentalPadding:30,blocks:a.filter(m).map(u),viewportWidth:null!=d?d:800})),(0,i.createElement)("div",{className:"sensei-patterns-list__item-title"},o));var _;
+return(0,i.createElement)("div",(0,n/* ["default"] */.Z)({key:s,className:"sensei-patterns-list__item",title:l,role:"option",tabIndex:0},{onClick:_=()=>{t(a,s,p)},onKeyUp:e=>{[c.ENTER,c.SPACE].includes(e.keyCode)&&_(e)}}),(0,i.createElement)("div",{className:"sensei-patterns-list__item-preview"},(0,i.createElement)(r.BlockPreview,{additionalStyles:[{css:"body { padding: 30px; }"}],blocks:a.filter(m).map(u),viewportWidth:null!=d?d:800})),(0,i.createElement)("div",{className:"sensei-patterns-list__item-title"},o));var _;
 /**
  * Use the block's example option for the block's content in the pattern preview.
  *
@@ -344,8 +344,8 @@ const o=e=>{let{steps:t,wizardDataState:s,onCompletion:o,skipWizard:l}=e;const[a
 /* harmony export */s.d(t,{
 /* harmony export */si:()=>/* binding */a
 /* harmony export */});
-/* unused harmony exports DEFAULT_STATE, actions, selectors, reducers, store */
-/* harmony import */var n=s(9818),i=s(20832),r=s(23418),o=s(86989),l=s.n(o);
+/* unused harmony exports DEFAULT_STATE, actions, selectors, reducers */
+/* harmony import */var n=s(23418),i=s(86989),r=s.n(i),o=s(20832);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -353,7 +353,7 @@ const o=e=>{let{steps:t,wizardDataState:s,onCompletion:o,skipWizard:l}=e;const[a
 /**
  * Internal dependencies
  */
-const a="sensei/tour",c={
+const l={
 /**
    * Sets whether the tour should be shown.
    *
@@ -363,7 +363,7 @@ const a="sensei/tour",c={
    *
    * @return {Object} The setTourShowStatus action.
    */
-setTourShowStatus:(e,t,s)=>(t&&l()({path:"sensei-internal/v1/tour",method:"POST",data:{complete:!e,tour_id:s}}),{type:"SET_TOUR_SHOW_STATUS",showTour:e})},d=(0,n.createReduxStore)(a,{reducer:(0,i/* .createReducerFromActionMap */.lA)({
+setTourShowStatus:(e,t,s)=>(t&&r()({path:"sensei-internal/v1/tour",method:"POST",data:{complete:!e,tour_id:s}}),{type:"SET_TOUR_SHOW_STATUS",showTour:e})},a=(0,o/* .createStore */.MT)("sensei/tour",{reducer:(0,o/* .createReducerFromActionMap */.lA)({
 /**
    * Sets the show tour status.
    *
@@ -373,7 +373,7 @@ setTourShowStatus:(e,t,s)=>(t&&l()({path:"sensei-internal/v1/tour",method:"POST"
    *
    * @return {Object} The new state.
    */
-SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:s}=e;return{...t,showTour:s}},DEFAULT:(e,t)=>t},{showTour:!0}),actions:c,selectors:{
+SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:s}=e;return{...t,showTour:s}},DEFAULT:(e,t)=>t},{showTour:!0}),actions:l,selectors:{
 /**
    * Get if the tour should be shown.
    *
@@ -382,7 +382,10 @@ SET_TOUR_SHOW_STATUS:(e,t)=>{let{showTour:s}=e;return{...t,showTour:s}},DEFAULT:
    *
    * @return {boolean} If the tour should be shown.
    */
-shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:r.controls});(0,n.register)(d)}
+shouldShowTour:e=>{let{showTour:t}=e;return t}},controls:n.controls});
+/**
+ * Tour store actions.
+ */}
 /***/,
 /***/60698:
 /***/(e,t,s)=>{
@@ -504,7 +507,7 @@ setError:e=>({type:"SET_ERROR",error:e})},u={getExtensions:e=>{let{extensionSlug
 /**
    * Loads the extensions during initialization.
    */
-*getExtensions(){const e=yield(0,r.apiFetch)({path:"/sensei-internal/v1/sensei-extensions?type=plugin"});yield d.setEntities({extensions:(0,n.keyBy)(e.extensions,"product_slug")}),yield d.setExtensions(e.extensions.map((e=>e.product_slug)))}},p={SET_EXTENSIONS:(e,t)=>{let{extensionSlugs:s}=e;return{...t,extensionSlugs:s}},SET_EXTENSIONS_STATUS:(e,t)=>{let{slugs:s,status:n}=e;return{...t,entities:{...t.entities,extensions:Object.keys(t.entities.extensions).reduce(((e,i)=>({...e,[i]:{...t.entities.extensions[i],status:s.includes(i)?n:t.entities.extensions[i].status}})),{})}}},SET_CONNECTION_STATUS:(e,t)=>{let{connected:s}=e;return{...t,connected:s}},SET_LAYOUT:(e,t)=>{let{layout:s}=e;return{...t,layout:s}},SET_ENTITIES:(e,t)=>{let{entities:s}=e;return{...t,entities:(0,n.merge)({},t.entities,s)}},ADD_TO_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:[...t.queue,s]}},REMOVE_FROM_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:t.queue.filter((e=>!(0,n.isEqual)(e,s)))}},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},DEFAULT:(e,t)=>t},_=(0,i.createReduxStore)("sensei/extensions",{reducer:(0,l/* .createReducerFromActionMap */.lA)(p,{
+*getExtensions(){const e=yield(0,r.apiFetch)({path:"/sensei-internal/v1/sensei-extensions?type=plugin"});yield d.setEntities({extensions:(0,n.keyBy)(e.extensions,"product_slug")}),yield d.setExtensions(e.extensions.map((e=>e.product_slug)))}},p={SET_EXTENSIONS:(e,t)=>{let{extensionSlugs:s}=e;return{...t,extensionSlugs:s}},SET_EXTENSIONS_STATUS:(e,t)=>{let{slugs:s,status:n}=e;return{...t,entities:{...t.entities,extensions:Object.keys(t.entities.extensions).reduce(((e,i)=>({...e,[i]:{...t.entities.extensions[i],status:s.includes(i)?n:t.entities.extensions[i].status}})),{})}}},SET_CONNECTION_STATUS:(e,t)=>{let{connected:s}=e;return{...t,connected:s}},SET_LAYOUT:(e,t)=>{let{layout:s}=e;return{...t,layout:s}},SET_ENTITIES:(e,t)=>{let{entities:s}=e;return{...t,entities:(0,n.merge)({},t.entities,s)}},ADD_TO_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:[...t.queue,s]}},REMOVE_FROM_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:t.queue.filter((e=>!(0,n.isEqual)(e,s)))}},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},DEFAULT:(e,t)=>t},_=(0,l/* .createStore */.MT)("sensei/extensions",{reducer:(0,l/* .createReducerFromActionMap */.lA)(p,{
 /**
    * Extensions list. It is mapped with the entities and served through the selectors.
    */
@@ -516,7 +519,7 @@ extensionSlugs:[],
 entities:{extensions:{}},connected:!1,layout:[],queue:[],error:null}),actions:d,selectors:u,resolvers:m,controls:r.controls});
 /**
  * Default store state.
- */(0,i.register)(_)}
+ */}
 /***/,
 /***/16400:
 /***/(e,t,s)=>{
@@ -534,14 +537,18 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /***/20832:
 /***/(e,t,s)=>{
 /* harmony export */s.d(t,{
-/* harmony export */lA:()=>/* binding */n
+/* harmony export */lA:()=>/* binding */r
+/* harmony export */,MT:()=>/* binding */o
 /* harmony export */});
-/* unused harmony exports composeFetchAction, createStore */
-/* harmony import */s(9818);
+/* unused harmony export composeFetchAction */
+/* harmony import */var n=s(9818);
 /* harmony import */
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:i}=window,r=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)},o=(e,t)=>{if(i[e])return i[e];const s=(0,n.createReduxStore)(e,t);return(0,n.register)(s),i[e]=s,s};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -550,18 +557,6 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const n=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/67959:

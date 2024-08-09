@@ -413,7 +413,7 @@ const d={attributes:{},icon:{src:(0,r.createElement)(l/* ["default"] */.Z,{width
  */
 function i(e){let t=!1;const s=s=>{if(s===t)return;t=s;const n=s?r.registerBlockType:r.unregisterBlockType;e.forEach((e=>{const{name:t,...s}=e;n(t,s)}))};s(!0),
 // TODO Only subscribe when in the post editor.
-(0,n.subscribe)((()=>{var e;const t=null===(e=(0,n.select)("core/editor"))||void 0===e?void 0:e.getCurrentPostType(),r=(0,n.select)("core/edit-post");if(!t||!r||"wp_template"===t)return;const i="lesson"===t&&r.isEditingTemplate();s(i)}))}
+(0,n.subscribe)((()=>{var e;const t=null===(e=(0,n.select)("core/editor"))||void 0===e?void 0:e.getCurrentPostType(),r=(0,n.select)("core/edit-post");t&&r&&"wp_template"!==t&&s(!1)}))}
 /***/},
 /***/62152:
 /***/(e,t,s)=>{"use strict";

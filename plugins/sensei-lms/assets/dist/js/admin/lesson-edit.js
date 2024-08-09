@@ -4,9 +4,9 @@
 /***/25852:
 /***/(e,s,o)=>{
 /* harmony export */o.d(s,{
-/* harmony export */F:()=>/* binding */d
+/* harmony export */F:()=>/* binding */g
 /* harmony export */});
-/* harmony import */var t=o(9818),n=o(65736),r=o(41650);
+/* harmony import */var t=o(9818),n=o(65736),r=o(52175),i=o(72067),l=o(12238),c=o(41650);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -15,17 +15,17 @@
  * Internal dependencies
  */
 // Sensei blocks by post type.
-const i={course:{outline:"sensei-lms/course-outline",takeCourse:"sensei-lms/button-take-course",contactTeacher:"sensei-lms/button-contact-teacher",courseProgress:"sensei-lms/course-progress",viewResults:"sensei-lms/button-view-results"},lesson:{lessonActions:"sensei-lms/lesson-actions",lessonProperties:"sensei-lms/lesson-properties",contactTeacher:"sensei-lms/button-contact-teacher",featuredVideo:"sensei-lms/featured-video"}},l={course:{"meta-box-course-lessons":[i.course.outline],"meta-box-module_course_mb":[i.course.outline],"meta-box-course-video":Object.values(i.course)},lesson:{"meta-box-lesson-info":[i.lesson.lessonProperties]}},c=(0,t.select)("core/block-editor"),a=(0,t.select)("core/edit-post"),u=(0,t.dispatch)("core/edit-post"),d=e=>{if(!c)return;const{createWarningNotice:s,removeNotice:o}=(0,t.dispatch)("core/notices");let d;(0,r/* ["default"] */.Z)({subscribeListener:()=>{const e=c.getBlocks();
+const a={course:{outline:"sensei-lms/course-outline",takeCourse:"sensei-lms/button-take-course",contactTeacher:"sensei-lms/button-contact-teacher",courseProgress:"sensei-lms/course-progress",viewResults:"sensei-lms/button-view-results"},lesson:{lessonActions:"sensei-lms/lesson-actions",lessonProperties:"sensei-lms/lesson-properties",contactTeacher:"sensei-lms/button-contact-teacher",featuredVideo:"sensei-lms/featured-video"}},u={course:{"meta-box-course-lessons":[a.course.outline],"meta-box-module_course_mb":[a.course.outline],"meta-box-course-video":Object.values(a.course)},lesson:{"meta-box-lesson-info":[a.lesson.lessonProperties]}},d=(0,t.select)(r.store),p=(0,t.select)(l.store),m=(0,t.dispatch)(l.store),b=(0,t.select)(i.store),v=(0,t.dispatch)(i.store),w=p.isEditorPanelEnabled?p.isEditorPanelEnabled:b.isEditorPanelEnabled,h=m.toggleEditorPanelEnabled?m.toggleEditorPanelEnabled:v.toggleEditorPanelEnabled,g=e=>{if(!d)return;const{createWarningNotice:s,removeNotice:o}=(0,t.dispatch)("core/notices");let r;(0,c/* ["default"] */.Z)({subscribeListener:()=>{const e=d.getBlocks();
 // Check if blocks were changed.
-e!==d&&(d=e,m(),p())}});
+e!==r&&(r=e,i(),l())}});
 /**
    * Check whether it has Sensei blocks.
    */
-const m=()=>{Object.entries(l[e]).forEach((e=>{let[s,o]=e;!b(o)!==a.isEditorPanelEnabled(s)&&u.toggleEditorPanelEnabled(s)})),
+const i=()=>{Object.entries(u[e]).forEach((e=>{let[s,o]=e;!p(o)!==w(s)&&h(s)})),
 // Prevent submit course modules.
-document.querySelectorAll("#module_course_mb input").forEach((e=>{e.disabled=!a.isEditorPanelEnabled("meta-box-module_course_mb")})),
+document.querySelectorAll("#module_course_mb input").forEach((e=>{e.disabled=!w("meta-box-module_course_mb")})),
 // Don't submit lesson length and complexity values in metaboxes.
-document.querySelectorAll("#lesson-info input, #lesson-info select").forEach((e=>{e.disabled=!a.isEditorPanelEnabled("meta-box-lesson-info")}))},p=()=>{var t,r;const l=b(Object.values(i[e])),c=null===(t=window)||void 0===t||null===(r=t.sensei)||void 0===r?void 0:r.courseThemeEnabled;l||c?o("sensei-using-template"):s((0,n.__)("It looks like this course page doesn't have any Sensei blocks. This means that content will be handled by custom templates.","sensei-lms"),{id:"sensei-using-template",isDismissible:!0,actions:[{label:(0,n.__)("Learn more","sensei-lms"),url:"https://senseilms.com/documentation/course-page-blocks/"}]})},b=e=>e.some((e=>c.getGlobalBlockCount(e)>0));
+document.querySelectorAll("#lesson-info input, #lesson-info select").forEach((e=>{e.disabled=!w("meta-box-lesson-info")}))},l=()=>{var t,r;const i=p(Object.values(a[e])),l=null===(t=window)||void 0===t||null===(r=t.sensei)||void 0===r?void 0:r.courseThemeEnabled;i||l?o("sensei-using-template"):s((0,n.__)("It looks like this course page doesn't have any Sensei blocks. This means that content will be handled by custom templates.","sensei-lms"),{id:"sensei-using-template",isDismissible:!0,actions:[{label:(0,n.__)("Learn more","sensei-lms"),url:"https://senseilms.com/documentation/course-page-blocks/"}]})},p=e=>e.some((e=>d.getGlobalBlockCount(e)>0));
 /**
    * Toggle metaboxes if a replacement block is present or not.
    */};
@@ -62,11 +62,20 @@ l=t,r()):!l&&t?(
 l=t,n()):l=t}))};
 /* harmony default export */}
 /***/,
+/***/52175:
+/***/e=>{e.exports=window.wp.blockEditor;
+/***/},
 /***/9818:
 /***/e=>{e.exports=window.wp.data;
 /***/},
 /***/47701:
 /***/e=>{e.exports=window.wp.domReady;
+/***/},
+/***/72067:
+/***/e=>{e.exports=window.wp.editPost;
+/***/},
+/***/12238:
+/***/e=>{e.exports=window.wp.editor;
 /***/},
 /***/65736:
 /***/e=>{e.exports=window.wp.i18n;

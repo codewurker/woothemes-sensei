@@ -204,7 +204,7 @@ class Scheduler {
 
 		$schedule_parts    = explode( ' ', $schedule );
 		$minutes           = $gmt_offset * 60;
-		$time              = current_datetime()->setTime( $schedule_parts[1], $schedule_parts[0], 0 )->modify( "-{$minutes} minutes" );
+		$time              = current_datetime()->setTime( $schedule_parts[1], $schedule_parts[0], 0 )->modify( "{$minutes} minutes" );
 		$hour              = (int) $time->format( 'G' );
 		$minute            = (int) $time->format( 'i' );
 		$schedule_parts[0] = $minute;

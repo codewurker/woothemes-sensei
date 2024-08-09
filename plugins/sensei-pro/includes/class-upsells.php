@@ -19,6 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class Upsells {
 	/**
+	 * Assets class instance.
+	 *
+	 * @var \Sensei_Pro\Assets
+	 */
+	private $assets;
+
+	/**
 	 * Instance of class.
 	 *
 	 * @var Upsells

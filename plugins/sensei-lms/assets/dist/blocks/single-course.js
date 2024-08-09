@@ -394,10 +394,10 @@ const r={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
 /***/63028:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */Z:()=>/* binding */d
-/* harmony export */,C:()=>m
+/* harmony export */Z:()=>/* binding */m
+/* harmony export */,C:()=>p
 /* harmony export */});
-/* harmony import */var n=s(69307),l=s(55609),o=s(9818),r=s(72067),i=s(12238),a=s(65736),c=s(1849);
+/* harmony import */var n=s(25773),l=s(69307),o=s(55609),r=s(9818),i=s(72067),a=s(12238),c=s(65736),u=s(1849);
 /* harmony import */
 /**
  * WordPress dependencies
@@ -405,22 +405,23 @@ const r={module:"sensei-lms/course-outline-module",lesson:"sensei-lms/course-out
 /**
  * Internal dependencies
  */
-const u=e=>`post.php?post=${e}&action=edit`
+const d=e=>`post.php?post=${e}&action=edit`
 /**
  * Link to edit the Lesson in a new tab.
  *
  * @param {Object} props          Component props.
  * @param {number} props.lessonId The lesson ID.
- */,d=e=>{let{lessonId:t}=e;return(0,n.createElement)("a",{href:u(t),className:"wp-block-sensei-lms-course-outline-lesson__edit"},(0,a.__)("Edit lesson","sensei-lms"))},m=e=>{let{lessonId:t,lessonTitle:s}=e;
+ * @param {Object} forwardedRef   The forwarded ref.
+ */,m=(0,l.forwardRef)(((e,t)=>{let{lessonId:s,...o}=e;return(0,l.createElement)("a",(0,n/* ["default"] */.Z)({ref:t,href:d(s),className:"wp-block-sensei-lms-course-outline-lesson__edit"},o),(0,c.__)("Edit lesson","sensei-lms"))})),p=e=>{let{lessonId:t,lessonTitle:s}=e;
 // Determine whether we are currently saving.
-const{isSavingPost:u,isSavingMetaBoxes:m,isSavingStructure:p}=(0,o.useSelect)((e=>({isSavingPost:e(i.store).isSavingPost(),isSavingMetaBoxes:e(r.store).isSavingMetaBoxes(),isSavingStructure:e(c/* .COURSE_STORE */.v).getIsSavingStructure()}))),{savePost:h}=(0,o.useDispatch)(i.store);
+const{isSavingPost:n,isSavingMetaBoxes:d,isSavingStructure:p}=(0,r.useSelect)((e=>({isSavingPost:e(a.store).isSavingPost(),isSavingMetaBoxes:e(i.store).isSavingMetaBoxes(),isSavingStructure:e(u/* .COURSE_STORE */.v).getIsSavingStructure()}))),{savePost:h}=(0,r.useDispatch)(a.store);
 // Function to trigger saving the post.
 // If we don't have an ID or a title yet, don't render anything.
 if(!t&&!s)return null;
 // Component for the "Save and edit lesson" button.
-const g=(0,n.createElement)(l.ToolbarItem,{as:l.Button,onClick:h,className:"wp-block-sensei-lms-course-outline-lesson__save"},(0,a.__)("Save to edit lesson","sensei-lms")),_=(0,n.createElement)(l.ToolbarItem,{as:l.Spinner});
+const g=(0,l.createElement)(o.ToolbarItem,{as:o.Button,onClick:h,className:"wp-block-sensei-lms-course-outline-lesson__save"},(0,c.__)("Save to edit lesson","sensei-lms")),_=(0,l.createElement)(o.ToolbarItem,{as:o.Spinner});
 // Spinner.
-let E=g;return t?E=(0,n.createElement)(d,{lessonId:t}):(u||p||m)&&(E=_),(0,n.createElement)(l.Toolbar,{className:"components-button"},E)}}
+let E=g;return t?E=(0,l.createElement)(o.ToolbarItem,{as:m,lessonId:t}):(n||p||d)&&(E=_),(0,l.createElement)(o.ToolbarGroup,{className:"components-button"},E)}}
 /***/,
 /***/28880:
 /***/(e,t,s)=>{"use strict";
@@ -487,7 +488,7 @@ const E=(0,d/* .withColorSettings */.ku)({backgroundColor:{style:"background-col
  * @param {string}   props.attributes.fontSize The lesson block font size.
  * @param {string}   props.attributes.title    The lesson title.
  */
-const d=e=>{let{previewStatus:t,setPreviewStatus:s,setAttributes:d,attributes:{id:m,fontSize:p,title:h}}=e;const{fontSizes:g}=(0,r.useSelect)((e=>e("core/block-editor").getSettings()));return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(l.InspectorControls,null,m&&(0,n.createElement)(o.PanelBody,{title:(0,i.__)("Lesson","sensei-lms")},(0,n.createElement)("h2",null,(0,n.createElement)(u/* .EditLessonLink */.Z,{lessonId:m})),(0,n.createElement)("p",null,(0,i.__)("Edit details such as lesson content, prerequisite, quiz settings and more.","sensei-lms"))),(0,n.createElement)(o.PanelBody,{title:(0,i.__)("Typography","sensei-lms")},(0,n.createElement)(o.FontSizePicker,{fontSizes:g,value:p,onChange:e=>{d({fontSize:e})}})),(0,n.createElement)(o.PanelBody,{title:(0,i.__)("Status","sensei-lms"),initialOpen:!1},(0,n.createElement)(c/* .StatusControl */.I,{status:t,setStatus:s,options:[a/* .Status.NOT_STARTED */.q.NOT_STARTED,a/* .Status.COMPLETED */.q.COMPLETED],disabled:!h}))),(0,n.createElement)(l.BlockControls,null,(0,n.createElement)(u/* ["default"] */.C,{lessonId:m,lessonTitle:h})))};
+const d=e=>{let{previewStatus:t,setPreviewStatus:s,setAttributes:d,attributes:{id:m,fontSize:p,title:h}}=e;const{fontSizes:g}=(0,r.useSelect)((e=>e("core/block-editor").getSettings()));return(0,n.createElement)(n.Fragment,null,(0,n.createElement)(l.InspectorControls,null,m&&(0,n.createElement)(o.PanelBody,{title:(0,i.__)("Lesson","sensei-lms")},(0,n.createElement)("h2",null,(0,n.createElement)(u/* .EditLessonLink */.Z,{lessonId:m})),(0,n.createElement)("p",null,(0,i.__)("Edit details such as lesson content, prerequisite, quiz settings and more.","sensei-lms"))),(0,n.createElement)(o.PanelBody,{title:(0,i.__)("Typography","sensei-lms")},(0,n.createElement)(o.FontSizePicker,{__nextHasNoMarginBottom:!0,fontSizes:g,value:p,onChange:e=>{d({fontSize:e})}})),(0,n.createElement)(o.PanelBody,{title:(0,i.__)("Status","sensei-lms"),initialOpen:!1},(0,n.createElement)(c/* .StatusControl */.I,{status:t,setStatus:s,options:[a/* .Status.NOT_STARTED */.q.NOT_STARTED,a/* .Status.COMPLETED */.q.COMPLETED],disabled:!h}))),(0,n.createElement)(l.BlockControls,null,(0,n.createElement)(u/* ["default"] */.C,{lessonId:m,lessonTitle:h})))};
 /* harmony default export */}
 /***/,
 /***/76515:
@@ -1152,10 +1153,10 @@ IGNORE_LESSON:(e,t)=>{let{lessonId:s}=e;const n=t.completedLessons.filter((e=>e!
    *
    * @return {Object} The new state.
    */
-TRACK_LESSON:(e,t)=>{let{lessonId:s}=e;const n=[...t.trackedLessons];return n.includes(s)?t:(n.push(s),{...t,trackedLessons:n})},DEFAULT:(e,t)=>t},u="sensei/course-status";
+TRACK_LESSON:(e,t)=>{let{lessonId:s}=e;const n=[...t.trackedLessons];return n.includes(s)?t:(n.push(s),{...t,trackedLessons:n})},DEFAULT:(e,t)=>t},u=(0,r/* .createStore */.MT)("sensei/course-status",{reducer:(0,r/* .createReducerFromActionMap */.lA)(c,{completedLessons:[],trackedLessons:[]}),actions:i,selectors:a,controls:o.controls});
 /**
  * Status store actions.
- */(0,n.registerStore)(u,{reducer:(0,r/* .createReducerFromActionMap */.lA)(c,{completedLessons:[],trackedLessons:[]}),actions:i,selectors:a,controls:o.controls})}
+ */}
 /***/,
 /***/31884:
 /***/(e,t,s)=>{"use strict";
@@ -1361,7 +1362,7 @@ setError:e=>({type:"SET_ERROR",error:e})},d={getExtensions:e=>{let{extensionSlug
 /**
    * Loads the extensions during initialization.
    */
-*getExtensions(){const e=yield(0,o.apiFetch)({path:"/sensei-internal/v1/sensei-extensions?type=plugin"});yield u.setEntities({extensions:(0,n.keyBy)(e.extensions,"product_slug")}),yield u.setExtensions(e.extensions.map((e=>e.product_slug)))}},p={SET_EXTENSIONS:(e,t)=>{let{extensionSlugs:s}=e;return{...t,extensionSlugs:s}},SET_EXTENSIONS_STATUS:(e,t)=>{let{slugs:s,status:n}=e;return{...t,entities:{...t.entities,extensions:Object.keys(t.entities.extensions).reduce(((e,l)=>({...e,[l]:{...t.entities.extensions[l],status:s.includes(l)?n:t.entities.extensions[l].status}})),{})}}},SET_CONNECTION_STATUS:(e,t)=>{let{connected:s}=e;return{...t,connected:s}},SET_LAYOUT:(e,t)=>{let{layout:s}=e;return{...t,layout:s}},SET_ENTITIES:(e,t)=>{let{entities:s}=e;return{...t,entities:(0,n.merge)({},t.entities,s)}},ADD_TO_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:[...t.queue,s]}},REMOVE_FROM_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:t.queue.filter((e=>!(0,n.isEqual)(e,s)))}},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},DEFAULT:(e,t)=>t},h=(0,l.createReduxStore)("sensei/extensions",{reducer:(0,i/* .createReducerFromActionMap */.lA)(p,{
+*getExtensions(){const e=yield(0,o.apiFetch)({path:"/sensei-internal/v1/sensei-extensions?type=plugin"});yield u.setEntities({extensions:(0,n.keyBy)(e.extensions,"product_slug")}),yield u.setExtensions(e.extensions.map((e=>e.product_slug)))}},p={SET_EXTENSIONS:(e,t)=>{let{extensionSlugs:s}=e;return{...t,extensionSlugs:s}},SET_EXTENSIONS_STATUS:(e,t)=>{let{slugs:s,status:n}=e;return{...t,entities:{...t.entities,extensions:Object.keys(t.entities.extensions).reduce(((e,l)=>({...e,[l]:{...t.entities.extensions[l],status:s.includes(l)?n:t.entities.extensions[l].status}})),{})}}},SET_CONNECTION_STATUS:(e,t)=>{let{connected:s}=e;return{...t,connected:s}},SET_LAYOUT:(e,t)=>{let{layout:s}=e;return{...t,layout:s}},SET_ENTITIES:(e,t)=>{let{entities:s}=e;return{...t,entities:(0,n.merge)({},t.entities,s)}},ADD_TO_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:[...t.queue,s]}},REMOVE_FROM_QUEUE:(e,t)=>{let{process:s}=e;return{...t,queue:t.queue.filter((e=>!(0,n.isEqual)(e,s)))}},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},DEFAULT:(e,t)=>t},h=(0,i/* .createStore */.MT)("sensei/extensions",{reducer:(0,i/* .createReducerFromActionMap */.lA)(p,{
 /**
    * Extensions list. It is mapped with the entities and served through the selectors.
    */
@@ -1373,7 +1374,7 @@ extensionSlugs:[],
 entities:{extensions:{}},connected:!1,layout:[],queue:[],error:null}),actions:u,selectors:d,resolvers:m,controls:o.controls});
 /**
  * Default store state.
- */(0,l.register)(h)}
+ */}
 /***/,
 /***/39359:
 /***/(e,t,s)=>{"use strict";
@@ -1601,14 +1602,18 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
 /***/20832:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */lA:()=>/* binding */n
+/* harmony export */lA:()=>/* binding */o
+/* harmony export */,MT:()=>/* binding */r
 /* harmony export */});
-/* unused harmony exports composeFetchAction, createStore */
-/* harmony import */s(9818);
+/* unused harmony export composeFetchAction */
+/* harmony import */var n=s(9818);
 /* harmony import */
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:l}=window,o=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)},r=(e,t)=>{if(l[e])return l[e];const s=(0,n.createReduxStore)(e,t);return(0,n.register)(s),l[e]=s,s};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -1617,18 +1622,6 @@ function(){const e={};return(t,s)=>("string"!=typeof t.path||"GET"!==t.method&&t
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const n=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,n=arguments.length>1?arguments[1]:void 0;return(e[n.type]||e.DEFAULT)(n,s)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/67227:

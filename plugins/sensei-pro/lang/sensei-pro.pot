@@ -2,14 +2,14 @@
 # This file is distributed under the GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html.
 msgid ""
 msgstr ""
-"Project-Id-Version: Sensei Pro 1.24.0\n"
+"Project-Id-Version: Sensei Pro 1.24.1\n"
 "Report-Msgid-Bugs-To: https://woocommerce.com/support\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-06-13T15:07:43+00:00\n"
+"POT-Creation-Date: 2024-08-07T20:47:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: sensei-pro\n"
@@ -332,7 +332,7 @@ msgstr ""
 msgid "Block is visible only for selected period of time."
 msgstr ""
 
-#: modules/co-teachers/includes/class-co-teachers-quiz-handler.php:212
+#: modules/co-teachers/includes/class-co-teachers-quiz-handler.php:219
 msgid "Whether the current user is a co-teacher of the course."
 msgstr ""
 
@@ -530,8 +530,8 @@ msgstr ""
 msgid "Content Drip is now part of the Sensei Pro plugin. Please deactivate the Content Drip plugin in order to use the latest features."
 msgstr ""
 
-#: modules/content-drip/includes/class-sensei-content-drip.php:258
-#: modules/content-drip/includes/class-sensei-content-drip.php:267
+#: modules/content-drip/includes/class-sensei-content-drip.php:321
+#: modules/content-drip/includes/class-sensei-content-drip.php:330
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
@@ -543,7 +543,7 @@ msgstr ""
 #. translators: Placeholder is the expiration date.
 #. translators: Placeholder is the date.
 #: modules/course-expiration/includes/class-course-expiration.php:442
-#: modules/course-expiration/includes/class-course-expiration.php:1484
+#: modules/course-expiration/includes/class-course-expiration.php:1492
 #: modules/student-groups/includes/class-access-control.php:123
 msgid "Your access expired on %s."
 msgstr ""
@@ -574,30 +574,30 @@ msgstr ""
 msgid "Expired"
 msgstr ""
 
-#: modules/course-expiration/includes/class-course-expiration.php:1092
+#: modules/course-expiration/includes/class-course-expiration.php:1100
 msgid "Access Expiration"
 msgstr ""
 
-#: modules/course-expiration/includes/class-course-expiration.php:1116
+#: modules/course-expiration/includes/class-course-expiration.php:1124
 msgid "Start Access"
 msgstr ""
 
-#: modules/course-expiration/includes/class-course-expiration.php:1146
+#: modules/course-expiration/includes/class-course-expiration.php:1154
 msgid "Incomplete"
 msgstr ""
 
 #. translators: Placeholder is the expiration date.
-#: modules/course-expiration/includes/class-course-expiration.php:1338
+#: modules/course-expiration/includes/class-course-expiration.php:1346
 msgid "Expired on %s"
 msgstr ""
 
 #. translators: Placeholder is the expiration date.
-#: modules/course-expiration/includes/class-course-expiration.php:1339
+#: modules/course-expiration/includes/class-course-expiration.php:1347
 msgid "Expires today"
 msgstr ""
 
 #. translators: Placeholder is the number of days.
-#: modules/course-expiration/includes/class-course-expiration.php:1341
+#: modules/course-expiration/includes/class-course-expiration.php:1349
 msgid "Expires in %d day"
 msgid_plural "Expires in %d days"
 msgstr[0] ""
@@ -605,14 +605,14 @@ msgstr[1] ""
 
 #. translators: Placeholder is the date.
 #. translators: %s is replaced with start date string in format YYYY-MM-DD
-#: modules/course-expiration/includes/class-course-expiration.php:1343
+#: modules/course-expiration/includes/class-course-expiration.php:1351
 #: assets/dist/course-expiration/block-editor/course-expiration.js:7
 msgid "Expires on %s"
 msgstr ""
 
 #. translators: Placeholder is the expiration date.
 #. translators: %s is replaced with start date string in format YYYY-MM-DD
-#: modules/course-expiration/includes/class-course-expiration.php:1371
+#: modules/course-expiration/includes/class-course-expiration.php:1379
 #: assets/dist/course-expiration/block-editor/course-expiration.js:4
 msgid "Starts on %s"
 msgstr ""
@@ -1587,11 +1587,11 @@ msgstr ""
 msgid "Active with Cancelled Orders"
 msgstr ""
 
-#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:164
+#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:167
 msgid "Sensei Pro (WC Paid Courses) has detected active memberships associated with cancelled orders."
 msgstr ""
 
-#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:173
+#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:176
 msgid ""
 "Prior to Sensei Pro (WC Paid Courses) 3.0, active memberships with cancelled orders\n"
 "\t\t\t\t\t\t<strong>did not</strong> provide learners with access to the membership's associated courses.\n"
@@ -1599,13 +1599,13 @@ msgid ""
 "\t\t\t\t\t\t<strong>do</strong> provide learners with access to the membership's associated courses."
 msgstr ""
 
-#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:186
+#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:189
 msgid ""
 "Please review and manually cancel any memberships where the learner should not have access to\n"
 "\t\t\t\t\tthe courses associated with that membership."
 msgstr ""
 
-#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:195
+#: modules/wc-paid-courses/includes/admin/class-woocommerce-memberships-cancelled-orders-notice.php:198
 msgid "View Active Memberships with Cancelled Orders"
 msgstr ""
 
@@ -2491,6 +2491,14 @@ msgid "Add question description or type / to choose a block."
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Description"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Question Description."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
 #: assets/dist/sensei-pro-ai/js/sensei-gpt.js:1
 msgid "Answer Feedback"
 msgstr ""
@@ -2498,6 +2506,14 @@ msgstr ""
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
 #: assets/dist/sensei-pro-ai/js/sensei-gpt.js:1
 msgid "Show feedback once the question is answered."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Answers"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Question Answers."
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
@@ -2558,6 +2574,52 @@ msgid "Video is blocked after:"
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Interactive Video - Timeline"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+msgid "Timeline for the Interactive Video Block."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:7
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:9
+msgid "sensei"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "video"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "interactive"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "videopress"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "youtube"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "vimeo"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "timeline"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:1
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
 msgid "Interactive Video"
 msgstr ""
 
@@ -2633,6 +2695,10 @@ msgid "Videos from the provider \"%s\" are not supported in the Interactive Vide
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "Interactive Video Block."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
 #: assets/dist/interactive-blocks/interactive-blocks-frontend.js:9
 msgid "Complete first required Break Point"
 msgstr ""
@@ -2688,6 +2754,22 @@ msgid "Continue"
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "Break Point"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "Break Point for the Interactive Video Block."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "break"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
+msgid "point"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:3
 msgid "Edit content"
 msgstr ""
 
@@ -2705,11 +2787,6 @@ msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:7
 msgid "Add a two-sided flashcard that can be flipped by the reader."
-msgstr ""
-
-#: assets/dist/interactive-blocks/interactive-blocks-editor.js:7
-#: assets/dist/interactive-blocks/interactive-blocks-editor.js:9
-msgid "sensei"
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:7
@@ -2915,9 +2992,33 @@ msgstr ""
 msgid "Show the expanded 'open' view of this section by default."
 msgstr ""
 
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:11
+msgid "Section"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:11
+msgid "Individual expandable block with title and content."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:11
+msgid "Content"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:11
+msgid "The accordion section content."
+msgstr ""
+
 #. translators: %s replace with the block name
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
 msgid "The Accordion section can't contain the block %s."
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
+msgid "Title"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
+msgid "The accordion section title."
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
@@ -2930,6 +3031,14 @@ msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
 msgid "Open one section at a time on your published page"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
+msgid "Accordion"
+msgstr ""
+
+#: assets/dist/interactive-blocks/interactive-blocks-editor.js:14
+msgid "Contains one or more sections with title and content."
 msgstr ""
 
 #: assets/dist/interactive-blocks/interactive-blocks-editor.js:14

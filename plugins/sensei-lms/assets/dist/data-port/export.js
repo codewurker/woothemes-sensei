@@ -23,7 +23,7 @@
  * @param {Function} props.reset
  * @param {Function} props.cancel
  */
-const c=e=>{let{job:t,error:s,start:c,reset:u,cancel:d}=e;return(0,o/* .useSenseiColorTheme */.I)(),(0,r.createElement)("div",{className:"sensei-page-export"},(0,r.createElement)("section",{className:"sensei-data-port-step"},(0,r.createElement)("header",{className:"sensei-data-port-step__header"},(0,r.createElement)("h2",null,(0,n.__)("Export content to a CSV file","sensei-lms")),(0,r.createElement)("p",null,(0,n.__)("This tool enables you to export courses, lessons, and questions to CSV files. These files are bundled together and downloaded to your computer in .zip format.","sensei-lms"))),s&&(0,r.createElement)(i.Notice,{status:"error",isDismissible:!1},s),t&&"creating"!==t.status?(0,r.createElement)(l/* .ExportProgressPage */.y,{job:t,reset:u,cancel:d}):(0,r.createElement)(a/* .ExportSelectContentPage */.B,{onSubmit:c,job:t})))};
+const c=e=>{let{job:t,error:s,start:c,reset:d,cancel:u}=e;return(0,o/* .useSenseiColorTheme */.I)(),(0,r.createElement)("div",{className:"sensei-page-export"},(0,r.createElement)("section",{className:"sensei-data-port-step"},(0,r.createElement)("header",{className:"sensei-data-port-step__header"},(0,r.createElement)("h2",null,(0,n.__)("Export content to a CSV file","sensei-lms")),(0,r.createElement)("p",null,(0,n.__)("This tool enables you to export courses, lessons, and questions to CSV files. These files are bundled together and downloaded to your computer in .zip format.","sensei-lms"))),s&&(0,r.createElement)(i.Notice,{status:"error",isDismissible:!1},s),t&&"creating"!==t.status?(0,r.createElement)(l/* .ExportProgressPage */.y,{job:t,reset:d,cancel:u}):(0,r.createElement)(a/* .ExportSelectContentPage */.B,{onSubmit:c,job:t})))};
 /***/},
 /***/73487:
 /***/(e,t,s)=>{"use strict";
@@ -58,7 +58,7 @@ const c=e=>{let{job:t,error:s,start:c,reset:u,cancel:d}=e;return(0,o/* .useSense
  * @param {Function} props.reset  Function to return to initial export screen.
  * @param {Function} props.cancel Function to request job cancellation.
  */
-const a=e=>{let{job:t,reset:s,cancel:a}=e;const{status:c,percentage:u,files:d,error:p}=t||{},m="completed"!==c;return(0,r.useEffect)((()=>{!m&&d&&d.forEach(i/* .downloadFile */.S)}),[d,m]),(0,r.createElement)("section",{className:"sensei-data-port-step__body"},m?(0,r.createElement)(r.Fragment,null,(0,r.createElement)("p",null,(0,r.createElement)("progress",{className:"sensei-data-port__progressbar",max:"100",value:u||0})),(0,r.createElement)("div",{className:"sensei-data-port-step__footer"},(0,r.createElement)(n.Button,{isPrimary:!0,onClick:()=>a()},(0,o.__)("Cancel","sensei-lms")))):(0,r.createElement)(r.Fragment,null,(0,r.createElement)("div",{className:"sensei-export__output-result"},d&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)("p",null,(0,o._n)("The following file was exported:","The following files were exported:",d.length,"sensei-lms")),(0,r.createElement)("ul",{className:"sensei-export__output-files"},d.map((e=>{let{name:t,url:s}=e;return(0,r.createElement)("li",{className:"sensei-export__output-file sensei-data-port-step__line",key:t},(0,r.createElement)("a",{href:s,download:t},t))})))),p&&(0,r.createElement)("div",{className:"sensei-data-port-step__line"},(0,r.createElement)(l/* .Notice */.q,{isError:!0,message:p}))),(0,r.createElement)("div",{className:"sensei-data-port-step__footer"},(0,r.createElement)(n.Button,{isPrimary:!0,onClick:()=>s()},(0,o.__)("Export More Content","sensei-lms")))))};
+const a=e=>{let{job:t,reset:s,cancel:a}=e;const{status:c,percentage:d,files:u,error:p}=t||{},m="completed"!==c;return(0,r.useEffect)((()=>{!m&&u&&u.forEach(i/* .downloadFile */.S)}),[u,m]),(0,r.createElement)("section",{className:"sensei-data-port-step__body"},m?(0,r.createElement)(r.Fragment,null,(0,r.createElement)("p",null,(0,r.createElement)("progress",{className:"sensei-data-port__progressbar",max:"100",value:d||0})),(0,r.createElement)("div",{className:"sensei-data-port-step__footer"},(0,r.createElement)(n.Button,{isPrimary:!0,onClick:()=>a()},(0,o.__)("Cancel","sensei-lms")))):(0,r.createElement)(r.Fragment,null,(0,r.createElement)("div",{className:"sensei-export__output-result"},u&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)("p",null,(0,o._n)("The following file was exported:","The following files were exported:",u.length,"sensei-lms")),(0,r.createElement)("ul",{className:"sensei-export__output-files"},u.map((e=>{let{name:t,url:s}=e;return(0,r.createElement)("li",{className:"sensei-export__output-file sensei-data-port-step__line",key:t},(0,r.createElement)("a",{href:s,download:t},t))})))),p&&(0,r.createElement)("div",{className:"sensei-data-port-step__line"},(0,r.createElement)(l/* .Notice */.q,{isError:!0,message:p}))),(0,r.createElement)("div",{className:"sensei-data-port-step__footer"},(0,r.createElement)(n.Button,{isPrimary:!0,onClick:()=>s()},(0,o.__)("Export More Content","sensei-lms")))))};
 /***/},
 /***/6180:
 /***/(e,t,s)=>{"use strict";
@@ -73,7 +73,7 @@ const a=e=>{let{job:t,reset:s,cancel:a}=e;const{status:c,percentage:u,files:d,er
 /**
  * Internal dependencies
  */
-const c=e=>{let{onSubmit:t,job:s}=e;const[c,u]=(0,i/* .useMergeReducer */.x)({course:!1,lesson:!1,question:!1}),d=Object.values(c).some((e=>e)),p=s&&"creating"===s.status;return(0,r.createElement)("form",{onSubmit:e=>{e.preventDefault(),t((0,l/* .getSelectedKeys */.V)(c))}},(0,r.createElement)("div",{className:"sensei-data-port-step__body"},(0,r.createElement)("p",{className:"sensei-export__select-content__label"},(0,o.__)("Which type of content would you like to export?","sensei-lms")),(0,r.createElement)("div",{className:"sensei-export__select-content__options"},["course","lesson","question"].map((e=>(0,r.createElement)(n.CheckboxControl,{className:"sensei-export__select-content__option sensei-data-port-step__line",key:e,name:e,checked:c[e],onChange:t=>u({[e]:t}),label:a/* .postTypeLabels */.h[e]})))),(0,r.createElement)("div",{className:"sensei-data-port-step__footer"},(0,r.createElement)(n.Button,{type:"submit",isPrimary:!0,disabled:!d||p,isBusy:p},(0,o.__)("Continue","sensei-lms")))))};
+const c=e=>{let{onSubmit:t,job:s}=e;const[c,d]=(0,i/* .useMergeReducer */.x)({course:!1,lesson:!1,question:!1}),u=Object.values(c).some((e=>e)),p=s&&"creating"===s.status;return(0,r.createElement)("form",{onSubmit:e=>{e.preventDefault(),t((0,l/* .getSelectedKeys */.V)(c))}},(0,r.createElement)("div",{className:"sensei-data-port-step__body"},(0,r.createElement)("p",{className:"sensei-export__select-content__label"},(0,o.__)("Which type of content would you like to export?","sensei-lms")),(0,r.createElement)("div",{className:"sensei-export__select-content__options"},["course","lesson","question"].map((e=>(0,r.createElement)(n.CheckboxControl,{className:"sensei-export__select-content__option sensei-data-port-step__line",key:e,name:e,checked:c[e],onChange:t=>d({[e]:t}),label:a/* .postTypeLabels */.h[e]})))),(0,r.createElement)("div",{className:"sensei-data-port-step__footer"},(0,r.createElement)(n.Button,{type:"submit",isPrimary:!0,disabled:!u||p,isBusy:p},(0,o.__)("Continue","sensei-lms")))))};
 /***/},
 /***/97290:
 /***/(e,t,s)=>{"use strict";
@@ -113,10 +113,10 @@ const i="/sensei-internal/v1/export",l=e=>({type:"SET_JOB",job:e}),a=e=>({type:"
  * Set error.
  *
  * @param {string} error Error message.
- */,u=e=>({type:"SET_ERROR",error:e})
+ */,d=e=>({type:"SET_ERROR",error:e})
 /**
  * Clear job state.
- */,d=function*(e){e&&!e.error&&"pending"===e.status.status&&(yield(0,o/* .timeout */.Vs)(y,1e3))},p=function*(e){yield l({status:"creating"}),yield g();const t=yield h(e);yield d(t)},m=function*(){yield(0,o/* .cancelTimeout */._1)(),yield{type:"CLEAR_JOB"}},_=function*(e){yield(0,o/* .cancelTimeout */._1)(),e||(e=yield c()),yield{type:"CLEAR_JOB"},yield b({method:"DELETE",jobId:e})},y=function*(){let e=yield c();if(!e)return;const t=yield b({endpoint:"process",method:"POST",jobId:e});e=yield c(),e&&(yield a(t),yield d(t),yield f(t))},f=function*(e){if("completed"===e.status.status){const e=yield b({endpoint:"logs",skipJobCheck:!0});e.items.length>0&&(yield u(e.items.map((e=>e.message)).join(" ")))}},E=function*(){const e=yield b({jobId:"active"});e&&e.id&&("setup"===e.status.status?yield _(e.id):(yield l(e),yield d(e)))},b=function*(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},{jobId:t,...s}=e;if(t||(t=yield c(),t))return yield*v({jobId:t,...s});yield u("No job ID")},v=function*(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};const{skipJobCheck:t,endpoint:s,jobId:n,...o}=e,l=[i,n,s].filter((e=>!!e)).join("/");try{const e=yield(0,r.apiFetch)({path:l,...o});if(t||!e||!n||n===e.id||"active"===n)return e}catch(e){if("active"===n&&"sensei_data_port_job_not_found"===e.code)return yield{type:"CLEAR_JOB"};yield u(e.message)}},g=function*(){const e=yield v({method:"POST"});yield l(e)},h=function*(e){const t=yield b({endpoint:"start",method:"POST",data:{content_types:e}}),s=e.map((e=>e+"s")).join(",");
+ */,u=function*(e){e&&!e.error&&"pending"===e.status.status&&(yield(0,o/* .timeout */.Vs)(y,1e3))},p=function*(e){yield l({status:"creating"}),yield g();const t=yield h(e);yield u(t)},m=function*(){yield(0,o/* .cancelTimeout */._1)(),yield{type:"CLEAR_JOB"}},_=function*(e){yield(0,o/* .cancelTimeout */._1)(),e||(e=yield c()),yield{type:"CLEAR_JOB"},yield b({method:"DELETE",jobId:e})},y=function*(){let e=yield c();if(!e)return;const t=yield b({endpoint:"process",method:"POST",jobId:e});e=yield c(),e&&(yield a(t),yield u(t),yield f(t))},f=function*(e){if("completed"===e.status.status){const e=yield b({endpoint:"logs",skipJobCheck:!0});e.items.length>0&&(yield d(e.items.map((e=>e.message)).join(" ")))}},E=function*(){const e=yield b({jobId:"active"});e&&e.id&&("setup"===e.status.status?yield _(e.id):(yield l(e),yield u(e)))},b=function*(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},{jobId:t,...s}=e;if(t||(t=yield c(),t))return yield*v({jobId:t,...s});yield d("No job ID")},v=function*(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};const{skipJobCheck:t,endpoint:s,jobId:n,...o}=e,l=[i,n,s].filter((e=>!!e)).join("/");try{const e=yield(0,r.apiFetch)({path:l,...o});if(t||!e||!n||n===e.id||"active"===n)return e}catch(e){if("active"===n&&"sensei_data_port_job_not_found"===e.code)return yield{type:"CLEAR_JOB"};yield d(e.message)}},g=function*(){const e=yield v({method:"POST"});yield l(e)},h=function*(e){const t=yield b({endpoint:"start",method:"POST",data:{content_types:e}}),s=e.map((e=>e+"s")).join(",");
 // Log when users start an export.
 return window.sensei_log_event("export_continue_click",{type:s}),yield a(t),t};
 /**
@@ -161,11 +161,11 @@ return window.sensei_log_event("export_continue_click",{type:s}),yield a(t),t};
 /**
  * Internal dependencies
  */
-const a={},c=e=>e&&!e.deleted?{job:{...e,...e.status,files:e.files&&Object.values(e.files)}}:a,u={UPDATE_JOB:(e,t)=>{let{job:s}=e;return t.job?c(s):t},SET_JOB:e=>{let{job:t}=e;return c(t)},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},CLEAR_JOB:()=>a,DEFAULT:(e,t)=>t},d={
+const a={},c=e=>e&&!e.deleted?{job:{...e,...e.status,files:e.files&&Object.values(e.files)}}:a,d={UPDATE_JOB:(e,t)=>{let{job:s}=e;return t.job?c(s):t},SET_JOB:e=>{let{job:t}=e;return c(t)},SET_ERROR:(e,t)=>{let{error:s}=e;return{...t,error:s}},CLEAR_JOB:()=>a,DEFAULT:(e,t)=>t},u={
 /**
    * Check for active job on first access.
    */
-getJob:()=>l.checkForActiveJob()},p={getJobId:e=>{let{job:t}=e;return t&&t.id||null},getJob:e=>{let{job:t}=e;return t},getError:e=>{let{error:t}=e;return t}},m="sensei/export",_=()=>(0,r.registerStore)(m,{reducer:(0,i/* .createReducerFromActionMap */.lA)(u,a),actions:l,selectors:p,resolvers:d,controls:{...n.controls,...o/* ["default"] */.ZP}})
+getJob:()=>l.checkForActiveJob()},p={getJobId:e=>{let{job:t}=e;return t&&t.id||null},getJob:e=>{let{job:t}=e;return t},getError:e=>{let{error:t}=e;return t}},m="sensei/export",_=()=>(0,r.registerStore)(m,{reducer:(0,i/* .createReducerFromActionMap */.lA)(d,a),actions:l,selectors:p,resolvers:u,controls:{...n.controls,...o/* ["default"] */.ZP}})
 /* harmony default export */}
 /***/,
 /***/29822:
@@ -228,7 +228,7 @@ function n(){(0,r.useLayoutEffect)((()=>(document.body.classList.add("sensei-col
 /***/20832:
 /***/(e,t,s)=>{"use strict";
 /* harmony export */s.d(t,{
-/* harmony export */lA:()=>/* binding */r
+/* harmony export */lA:()=>/* binding */n
 /* harmony export */});
 /* unused harmony exports composeFetchAction, createStore */
 /* harmony import */s(9818);
@@ -236,6 +236,9 @@ function n(){(0,r.useLayoutEffect)((()=>(document.body.classList.add("sensei-col
 /**
  * WordPress dependencies
  */
+// We register the store in the global scope to avoid registering it multiple times.
+// The reason to be in the global scope is that some times we have different built files using the same source.
+window.senseiStores=window.senseiStores||[];const{senseiStores:r}=window,n=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,r=arguments.length>1?arguments[1]:void 0;return(e[r.type]||e.DEFAULT)(r,s)};
 /**
  * Compose an action creator with the given start, success and error actions.
  *
@@ -244,18 +247,6 @@ function n(){(0,r.useLayoutEffect)((()=>(document.body.classList.add("sensei-col
  * @param {string}   successAction Success action type.
  * @param {string}   errorAction   Error action type.
  * @return {Function} The wrapped action creator.
- */
-const r=(e,t)=>function(){let s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t,r=arguments.length>1?arguments[1]:void 0;return(e[r.type]||e.DEFAULT)(r,s)};
-/**
- * Create reducer from a map of action type keys and reducer function.
- *
- * @example
- *  createSimpleReducer({ SAMPLE_ACTION: ( { actionProperty }, state ) => ({ ...state, actionProperty }) )
- *
- * @param {Object} reducers     Map of action type - reducer functions.
- * @param {Object} defaultState Default state.
- *
- * @return {Function} Store reducer.
  */}
 /***/,
 /***/80573:

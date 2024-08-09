@@ -104,7 +104,7 @@ class Course_Expiration {
 		add_action( 'sensei_course_enrolment_status_changed', [ $instance, 'set_access_period_start_date' ], 10, 3 );
 
 		add_filter( 'sensei_can_user_manually_enrol', [ $instance, 'can_user_enroll' ], 10, 2 );
-		add_filter( 'sensei_can_user_view_lesson', [ $instance, 'can_user_view_lesson' ], 10, 2 );
+		add_filter( 'sensei_can_user_view_lesson', [ $instance, 'can_user_view_lesson' ], 10, 4 );
 
 		// Expand Students.
 		add_action( 'sensei_admin_enrol_user', [ $instance, 'handle_manual_enrolment' ], 10, 2 );
@@ -1058,14 +1058,22 @@ class Course_Expiration {
 	 * @access private
 	 * @since 1.23.0
 	 *
-	 * @param bool $can_user_view_lesson Whether the user can view the lesson.
-	 * @param int  $lesson_id            Lesson ID.
+	 * @param bool  $can_user_view_lesson Whether the user can view the lesson.
+	 * @param int   $lesson_id            Lesson ID.
+	 * @param int   $user_id              User ID.
+	 * @param array $checks              The checks.
 	 *
 	 * @return bool true if the user can view the lesson, false otherwise.
 	 */
-	public function can_user_view_lesson( $can_user_view_lesson, $lesson_id ) {
+	public function can_user_view_lesson( $can_user_view_lesson, $lesson_id, $user_id, $checks = [] ) {
 		$user_id   = get_current_user_id();
 		$course_id = Sensei()->lesson->get_course_id( $lesson_id );
+
+		$is_preview_lesson = (bool) ( $checks['is_preview_lesson'] ?? false );
+
+		if ( $can_user_view_lesson && $is_preview_lesson ) {
+			return $can_user_view_lesson;
+		}
 
 		return $can_user_view_lesson && ! $this->is_access_expired_or_not_started( $user_id, (int) $course_id );
 	}
